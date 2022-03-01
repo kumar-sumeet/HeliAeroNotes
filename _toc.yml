@@ -1,0 +1,55 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro    #cover??
+parts:
+  - caption: Front Matter
+    chapters:
+    - file: FrontMatter/acknowledgements
+
+  - caption: Theory
+    chapters:
+#    - file: Lectures/Tutorial_0
+    - file: Lectures/0_Introduction
+    - file: Lectures/1_MomentumTheory
+    - file: Lectures/2_BEMT/BEMT
+      sections:
+        - file: Lectures/2_BEMT/BladeGeometry
+        - file: Lectures/2_BEMT/BladeAerodynamics
+        - file: Lectures/2_BEMT/AirfoilTables
+
+  - caption: Hover
+    chapters:
+    - file: Lectures/3_Hover/Overview
+    - file: Lectures/3_Hover/FM
+
+
+  - caption: Foward Flight
+    chapters:
+    - file: Lectures/5_ForwardFlight/Overview
+    - file: Lectures/5_ForwardFlight/Transition
+    - file: Lectures/5_ForwardFlight/FastForwardFlight
+    - file: Lectures/5_ForwardFlight/Aerodynamics
+    - file: Lectures/5_ForwardFlight/Control
+    
+  - caption: Modern Rotors
+    chapters:
+      - file: Lectures/7_ModernRotors/ModernRotors
+        sections:
+          - file: Lectures/7_ModernRotors/IBC
+
+
+  - caption: Advanced topics
+    chapters:
+      - file: Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics
+        sections:
+          - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
+          - file: Lectures/8_UnsteadyAerodynamics/Loewy
+      - file: Lectures/10_Autogyro/Autogyro
+        sections:
+          - file: Lectures/10_Autogyro/Autorotation
+#          - file: Lectures/10_Autogyro/Autogyro
+      - file: Lectures/11_DynamicInflow/DynamicInflow
+        sections:
+          - file: Lectures/11_DynamicInflow/PetersHe

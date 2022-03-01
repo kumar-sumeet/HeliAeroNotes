@@ -12,7 +12,7 @@ parts:
     chapters:
 #    - file: Lectures/Tutorial_0
     - file: Lectures/0_Introduction
-    - file: Lectures/1_MomentumTheory
+    - file: Lectures/1_MT/MT
     - file: Lectures/2_BEMT/BEMT
       sections:
         - file: Lectures/2_BEMT/BladeGeometry

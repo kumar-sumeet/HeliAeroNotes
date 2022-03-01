@@ -1,3 +1,0 @@
-# Acknowledgements
-
-To be written.

@@ -23,6 +23,7 @@ parts:
     chapters:
     - file: Lectures/3_Hover/Overview
     - file: Lectures/3_Hover/FM
+    - file: Lectures/3_Hover/Tutorial_0
 
 
   - caption: Foward Flight

@@ -15,15 +15,20 @@ parts:
     - file: Lectures/1_MT/MT
     - file: Lectures/2_BEMT/BEMT
       sections:
+        - file: Lectures/BET
+        - file: Lectures/BEM
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
         - file: Lectures/2_BEMT/AirfoilTables
+
+
 
   - caption: Hover
     chapters:
     - file: Lectures/3_Hover/Overview
     - file: Lectures/3_Hover/FM
     - file: Lectures/3_Hover/Tutorial_0
+    - file: Lectures/3_Hover/TailRotor
 
 
   - caption: Foward Flight

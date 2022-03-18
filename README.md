@@ -65,6 +65,13 @@ Turn your Jupyter Notebooks into a live presentation (slideshow).
 The toolbar has to contain toggles shown bottom right of the above image. These are respectively for split cell, hide input, equation auto numbering, and RISE. 
 <!-- #endregion -->
 
+Note: If you have any problem with bibtex, make sure sphinxcontrib-bibtex is installed. 
+
+install using , 
+
+ $ pip install sphinxcontrib-bibtex
+
+
 ## How to build jupyter book
 
 Please do not use jupyter book build alone since html images can not be copied. Use the following command. 

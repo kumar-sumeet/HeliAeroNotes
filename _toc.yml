@@ -54,3 +54,7 @@ parts:
       - file: Lectures/11_DynamicInflow/DynamicInflow
         sections:
           - file: Lectures/11_DynamicInflow/PetersHe
+  - caption: References
+    chapters:
+    - file: Lectures/References
+    

@@ -1,0 +1,134 @@
+<style>
+
+
+p.caption{
+    color: gray;
+    font-size: 80%;
+    text-align:left;
+}
+
+p.left{
+    text-align: left;
+
+}
+
+p.right{
+    text-align: right;
+
+}
+
+p.center{
+    text-align: center;
+}
+
+
+img.smalsmal{
+    width:5%
+}
+
+
+img.small{
+    width: 20%;
+}
+
+img.medium
+{
+width: 30%;
+}
+
+img.big
+{
+    width: 120%;
+}
+
+img.large
+{
+    width: 70%;
+}
+
+
+img.left {
+    float: left;
+}
+
+img.right {
+    float: right;
+}
+
+
+.image-grid{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px; 
+
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.image-grid > p {
+    color: grey;
+    font-size: 60%;
+    text-align:left;
+    
+}
+
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+
+.image-grid4{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px; 
+
+}
+
+.image-grid4 > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.image-grid4 > p {
+    color: grey;
+    font-size: 60%;
+    text-align:left;
+    
+}
+
+
+
+.image-grid2{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; 
+
+}
+
+.image-grid2 > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.image-grid2 > p {
+    color: gray;
+    font-size: 60%;
+    text-align:left;
+    
+}
+
+
+</style>

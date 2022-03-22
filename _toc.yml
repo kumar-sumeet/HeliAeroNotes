@@ -13,10 +13,10 @@ parts:
 #    - file: Lectures/Tutorial_0
     - file: Lectures/0_Introduction
     - file: Lectures/1_MT/MT
-    - file: Lectures/2_BEMT/BEMT
+    - file: Lectures/2_BEMT/Overview
       sections:
-        - file: Lectures/BET
-        - file: Lectures/BEM
+        - file: Lectures/2_BEMT/BET
+        - file: Lectures/2_BEMT/BEM
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
         - file: Lectures/2_BEMT/AirfoilTables
@@ -46,7 +46,7 @@ parts:
  
   - caption: Compound Helicopters
     chapters:
-      - file: Lectures/6_CompundHelicopters/CompundHelicopters
+      - file: Lectures/6_CompoundHelicopters/CompundHelicopters
        
     
   - caption: Modern Rotors

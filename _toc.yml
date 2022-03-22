@@ -27,8 +27,13 @@ parts:
     chapters:
     - file: Lectures/3_Hover/Overview
     - file: Lectures/3_Hover/FM
+    - file: Lectures/3_Hover/Performance
     - file: Lectures/3_Hover/Tutorial_0
     - file: Lectures/3_Hover/TailRotor
+
+  - caption: Assignment
+    chapters:
+    - file: Lectures/Assignment
 
 
   - caption: Foward Flight
@@ -38,6 +43,11 @@ parts:
     - file: Lectures/5_ForwardFlight/FastForwardFlight
     - file: Lectures/5_ForwardFlight/Aerodynamics
     - file: Lectures/5_ForwardFlight/Control
+ 
+  - caption: Compound Helicopters
+    chapters:
+      - file: Lectures/6_CompundHelicopters/CompundHelicopters
+       
     
   - caption: Modern Rotors
     chapters:

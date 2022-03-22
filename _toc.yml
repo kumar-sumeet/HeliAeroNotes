@@ -52,6 +52,9 @@ parts:
         sections:
           - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
           - file: Lectures/8_UnsteadyAerodynamics/Loewy
+      - file: Lectures/9_DynamicStall/DynamicStall
+#        sections:
+#          - file: Lectures/9_DynamicStall/PetersHe
       - file: Lectures/10_Autogyro/Autogyro
         sections:
           - file: Lectures/10_Autogyro/Autorotation

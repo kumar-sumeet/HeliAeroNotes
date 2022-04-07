@@ -18,12 +18,15 @@ parts:
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
         - file: Lectures/2_BEMT/AirfoilTables
+        - file: Lectures/2_BEMT/BET_wn
 
   - caption: Hover
     chapters:
     - file: Lectures/3_Hover/Overview
     - file: Lectures/3_Hover/FM
     - file: Lectures/3_Hover/Tutorial_0
+    - file: Lectures/3_Hover/Hover_wn
+    - file: Lectures/3_Hover/Performance
 
 
   - caption: Foward Flight
@@ -33,6 +36,10 @@ parts:
     - file: Lectures/5_ForwardFlight/FastForwardFlight
     - file: Lectures/5_ForwardFlight/Aerodynamics
     - file: Lectures/5_ForwardFlight/Control
+    
+  - caption: CompoundHelicopters
+    chapters:
+    - file: Lectures/6_CompoundHelicopters/CompoundHelicopters
     
   - caption: Modern Rotors
     chapters:
@@ -54,6 +61,9 @@ parts:
       - file: Lectures/11_DynamicInflow/DynamicInflow
         sections:
           - file: Lectures/11_DynamicInflow/PetersHe
+        sections: 
+          - file: Lectures/WFuelPerformance/Wfuel_Performance
+
   - caption: References
     chapters:
     - file: Lectures/References

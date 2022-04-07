@@ -1,8 +1,6 @@
 _build
 
-
-Lectures/*-checkpoint.ipynb
-Slides_template/.ipynb_checkpoints/
+**/*.ipynb_checkpoints/
 
 
 

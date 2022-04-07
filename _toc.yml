@@ -15,18 +15,28 @@ parts:
     - file: Lectures/1_MT/MT
     - file: Lectures/2_BEMT/BEMT
       sections:
+        - file: Lectures/BET
+        - file: Lectures/BEM
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
         - file: Lectures/2_BEMT/AirfoilTables
         - file: Lectures/2_BEMT/BET_wn
 
+
+
   - caption: Hover
     chapters:
     - file: Lectures/3_Hover/Overview
     - file: Lectures/3_Hover/FM
+    - file: Lectures/3_Hover/Performance
     - file: Lectures/3_Hover/Tutorial_0
     - file: Lectures/3_Hover/Hover_wn
     - file: Lectures/3_Hover/Performance
+    - file: Lectures/3_Hover/TailRotor
+
+  - caption: Assignment
+    chapters:
+    - file: Lectures/Assignment
 
 
   - caption: Foward Flight
@@ -36,6 +46,11 @@ parts:
     - file: Lectures/5_ForwardFlight/FastForwardFlight
     - file: Lectures/5_ForwardFlight/Aerodynamics
     - file: Lectures/5_ForwardFlight/Control
+ 
+  - caption: Compound Helicopters
+    chapters:
+      - file: Lectures/6_CompundHelicopters/CompundHelicopters
+       
     
   - caption: CompoundHelicopters
     chapters:
@@ -54,6 +69,9 @@ parts:
         sections:
           - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
           - file: Lectures/8_UnsteadyAerodynamics/Loewy
+      - file: Lectures/9_DynamicStall/DynamicStall
+#        sections:
+#          - file: Lectures/9_DynamicStall/PetersHe
       - file: Lectures/10_Autogyro/Autogyro
         sections:
           - file: Lectures/10_Autogyro/Autorotation

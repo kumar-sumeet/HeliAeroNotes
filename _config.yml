@@ -19,6 +19,10 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+suppress_warnings: 
+  - bibtex.duplicate_label 
+  #to supress duplicate label warnings 
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/executablebooks/jupyter-book  # Online location of your book
@@ -30,3 +34,16 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+    - tasklist
+only_build_toc_files: true
+

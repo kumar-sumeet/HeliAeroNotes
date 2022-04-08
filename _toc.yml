@@ -46,7 +46,7 @@ parts:
  
   - caption: Compound Helicopters
     chapters:
-      - file: Lectures/6_CompoundHelicopters/CompundHelicopters
+      - file: Lectures/6_CompoundHelicopters/CompoundHelicopters
        
     
   - caption: Modern Rotors
@@ -72,6 +72,9 @@ parts:
       - file: Lectures/11_DynamicInflow/DynamicInflow
         sections:
           - file: Lectures/11_DynamicInflow/PetersHe
+        
+        sections: 
+          - file: Lectures/WFuelPerformance/Wfuel_Performance
   - caption: References
     chapters:
     - file: Lectures/References

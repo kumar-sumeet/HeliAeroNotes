@@ -1,3 +1,4 @@
+
 # Fundamentals of Helicopter Aerodynamics (TUM) 
 
 Course Notes for SoSe 2022
@@ -46,6 +47,11 @@ $ jupyter nbextension enable <nbextension require path>
 <!-- #region -->
 ## Enable configuration for nbextensions 
 
+
+
+
+
+<img src="assets/nbextensions0.png" />
 
 
 - **Split Cell Notebook**

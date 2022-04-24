@@ -4,15 +4,20 @@
 format: jb-book
 root: intro    #cover??
 parts:
-  - caption: Front Matter
-    chapters:
-    - file: FrontMatter/acknowledgements
+#  - caption: Front Matter
+#    chapters:
+#    - file: FrontMatter/acknowledgements
 
-  - caption: Theory
+  - caption: Introduction
     chapters:
-#    - file: Lectures/Tutorial_0
     - file: Lectures/0_Introduction
+
+  - caption: Momentum Theory
+    chapters:
     - file: Lectures/1_MT/MT
+
+  - caption: Blade Element Momentum Theory
+    chapters:
     - file: Lectures/2_BEMT/Overview
       sections:
         - file: Lectures/2_BEMT/BET
@@ -20,8 +25,7 @@ parts:
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
         - file: Lectures/2_BEMT/AirfoilTables
-
-
+        - file: Lectures/2_BEMT/SummaryAndBeyondBEMT
 
   - caption: Hover
     chapters:
@@ -40,9 +44,9 @@ parts:
     chapters:
     - file: Lectures/5_ForwardFlight/Overview
     - file: Lectures/5_ForwardFlight/Transition
-    - file: Lectures/5_ForwardFlight/FastForwardFlight
-    - file: Lectures/5_ForwardFlight/Aerodynamics
     - file: Lectures/5_ForwardFlight/Control
+    - file: Lectures/5_ForwardFlight/Aerodynamics
+    - file: Lectures/5_ForwardFlight/FastForwardFlight
  
   - caption: Compound Helicopters
     chapters:

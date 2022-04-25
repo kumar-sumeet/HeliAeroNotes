@@ -24,7 +24,6 @@ parts:
         - file: Lectures/2_BEMT/BEM
         - file: Lectures/2_BEMT/BladeGeometry
         - file: Lectures/2_BEMT/BladeAerodynamics
-        - file: Lectures/2_BEMT/AirfoilTables
         - file: Lectures/2_BEMT/SummaryAndBeyondBEMT
 
   - caption: Hover

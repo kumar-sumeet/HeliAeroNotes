@@ -25,9 +25,15 @@ suppress_warnings:
 
 # Information about where the book exists on the web
 #repository:
-#  url: https://github.com/kumar-sumeet/HeliAeroNotes  # Online location of your book
-  #path_to_book: docs  # Optional path to your book, relative to the repository root
-#  branch: main  # Which branch of the repository should be used when creating links (optional)
+# url: https://github.com/sumeet-kumar/HeliAeroNotes # Online location of your book
+#  path_to_book: docs  Optional path to your book, relative to the repository root
+#  branch: main   Which branch of the repository should be used when creating links (optional)
+
+repository:
+  url: https://github.com/yourusername/yourbookrepo  # Online location of your book
+  path_to_book: path/to/book  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

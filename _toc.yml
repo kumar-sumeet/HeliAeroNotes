@@ -10,7 +10,7 @@ parts:
 
   - caption: Introduction
     chapters:
-    - file: Lectures/0_Introduction
+    - file: Lectures/0_CourseOverview
 
 #  - caption: Momentum Theory
 #    chapters:

@@ -12,73 +12,73 @@ parts:
     chapters:
     - file: Lectures/0_Introduction
 
-  - caption: Momentum Theory
-    chapters:
-    - file: Lectures/1_MT/MT
-
-  - caption: Blade Element Momentum Theory
-    chapters:
-    - file: Lectures/2_BEMT/Overview
-      sections:
-        - file: Lectures/2_BEMT/BET
-        - file: Lectures/2_BEMT/BEM
-        - file: Lectures/2_BEMT/BladeGeometry
-        - file: Lectures/2_BEMT/BladeAerodynamics
-        - file: Lectures/2_BEMT/SummaryAndBeyondBEMT
-
-  - caption: Hover
-    chapters:
-    - file: Lectures/3_Hover/Overview
-    - file: Lectures/3_Hover/FM
-    - file: Lectures/3_Hover/Performance
-    - file: Lectures/3_Hover/Tutorial_0
-    - file: Lectures/3_Hover/TailRotor
-
-  - caption: Assignment
-    chapters:
-    - file: Lectures/Assignment
-
-
-  - caption: Foward Flight
-    chapters:
-    - file: Lectures/5_ForwardFlight/Overview
-    - file: Lectures/5_ForwardFlight/Transition
-    - file: Lectures/5_ForwardFlight/Control
-    - file: Lectures/5_ForwardFlight/Aerodynamics
-    - file: Lectures/5_ForwardFlight/FastForwardFlight
- 
-  - caption: Compound Helicopters
-    chapters:
-      - file: Lectures/6_CompoundHelicopters/CompoundHelicopters
-       
-    
-  - caption: Modern Rotors
-    chapters:
-      - file: Lectures/7_ModernRotors/ModernRotors
-        sections:
-          - file: Lectures/7_ModernRotors/IBC
-
-
-  - caption: Advanced topics
-    chapters:
-      - file: Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics
-        sections:
-          - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
-          - file: Lectures/8_UnsteadyAerodynamics/Loewy
-      - file: Lectures/9_DynamicStall/DynamicStall
+#  - caption: Momentum Theory
+#    chapters:
+#    - file: Lectures/1_MT/MT
+#
+#  - caption: Blade Element Momentum Theory
+#    chapters:
+#    - file: Lectures/2_BEMT/Overview
+#      sections:
+#        - file: Lectures/2_BEMT/BET
+#        - file: Lectures/2_BEMT/BEM
+#        - file: Lectures/2_BEMT/BladeGeometry
+#        - file: Lectures/2_BEMT/BladeAerodynamics
+#        - file: Lectures/2_BEMT/SummaryAndBeyondBEMT
+#
+#  - caption: Hover
+#    chapters:
+#    - file: Lectures/3_Hover/Overview
+#    - file: Lectures/3_Hover/FM
+#    - file: Lectures/3_Hover/Performance
+#    - file: Lectures/3_Hover/Tutorial_0
+#    - file: Lectures/3_Hover/TailRotor
+#
+#  - caption: Assignment
+#    chapters:
+#    - file: Lectures/Assignment
+#
+#
+#  - caption: Foward Flight
+#    chapters:
+#    - file: Lectures/5_ForwardFlight/Overview
+#    - file: Lectures/5_ForwardFlight/Transition
+#    - file: Lectures/5_ForwardFlight/Control
+#    - file: Lectures/5_ForwardFlight/Aerodynamics
+#    - file: Lectures/5_ForwardFlight/FastForwardFlight
+# 
+#  - caption: Compound Helicopters
+#    chapters:
+#      - file: Lectures/6_CompoundHelicopters/CompoundHelicopters
+#       
+#    
+#  - caption: Modern Rotors
+#    chapters:
+#      - file: Lectures/7_ModernRotors/ModernRotors
 #        sections:
-#          - file: Lectures/9_DynamicStall/PetersHe
-      - file: Lectures/10_Autogyro/Autogyro
-        sections:
-          - file: Lectures/10_Autogyro/Autorotation
-#          - file: Lectures/10_Autogyro/Autogyro
-      - file: Lectures/11_DynamicInflow/DynamicInflow
-        sections:
-          - file: Lectures/11_DynamicInflow/PetersHe
-        
-        sections: 
-          - file: Lectures/WFuelPerformance/Wfuel_Performance
-  - caption: References
-    chapters:
-    - file: Lectures/References
+#          - file: Lectures/7_ModernRotors/IBC
+#
+#
+#  - caption: Advanced topics
+#    chapters:
+#      - file: Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics
+#        sections:
+#          - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
+#          - file: Lectures/8_UnsteadyAerodynamics/Loewy
+#      - file: Lectures/9_DynamicStall/DynamicStall
+##        sections:
+##          - file: Lectures/9_DynamicStall/PetersHe
+#      - file: Lectures/10_Autogyro/Autogyro
+#        sections:
+#          - file: Lectures/10_Autogyro/Autorotation
+##          - file: Lectures/10_Autogyro/Autogyro
+#      - file: Lectures/11_DynamicInflow/DynamicInflow
+#        sections:
+#          - file: Lectures/11_DynamicInflow/PetersHe
+#        
+#        sections: 
+#          - file: Lectures/WFuelPerformance/Wfuel_Performance
+#  - caption: References
+#    chapters:
+#    - file: Lectures/References
     

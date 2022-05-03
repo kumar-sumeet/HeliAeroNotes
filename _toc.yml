@@ -12,27 +12,30 @@ parts:
     chapters:
     - file: Lectures/0_CourseOverview
 
-#  - caption: Momentum Theory
-#    chapters:
-#    - file: Lectures/1_MT/MT
-#
-#  - caption: Blade Element Momentum Theory
-#    chapters:
-#    - file: Lectures/2_BEMT/Overview
-#      sections:
-#        - file: Lectures/2_BEMT/BET
-#        - file: Lectures/2_BEMT/BEM
-#        - file: Lectures/2_BEMT/BladeGeometry
-#        - file: Lectures/2_BEMT/BladeAerodynamics
-#        - file: Lectures/2_BEMT/SummaryAndBeyondBEMT
-#
+  - caption: Momentum Theory
+    chapters:
+    - file: Lectures/1_MT/MT
+#    - file: Lectures/1_MT/AerodynamicsFundamentals
+   
+
 #  - caption: Hover
 #    chapters:
-#    - file: Lectures/3_Hover/Overview
-#    - file: Lectures/3_Hover/FM
-#    - file: Lectures/3_Hover/Performance
-#    - file: Lectures/3_Hover/Tutorial_0
-#    - file: Lectures/3_Hover/TailRotor
+#    - file: Lectures/2_Hover/1_Hover
+#    - file: Lectures/2_Hover/2_TailRotor
+#    - file: Lectures/2_Hover/FM
+#    - file: Lectures/2_Hover/Performance
+#    - file: Lectures/2_Hover/Tutorial_0
+
+#  - caption: Blade Element Momentum Theory
+#    chapters:
+#    - file: Lectures/3_BEMT/Overview
+#      sections:
+#        - file: Lectures/3_BEMT/BET
+#        - file: Lectures/3_BEMT/BEM
+#        - file: Lectures/3_BEMT/BladeGeometry
+#        - file: Lectures/3_BEMT/BladeAerodynamics
+#        - file: Lectures/3_BEMT/SummaryAndBeyondBEMT
+#
 #
 #  - caption: Assignment
 #    chapters:
@@ -78,7 +81,7 @@ parts:
 #        
 #        sections: 
 #          - file: Lectures/WFuelPerformance/Wfuel_Performance
-#  - caption: References
-#    chapters:
-#    - file: Lectures/References
+  - caption: References
+    chapters:
+    - file: Lectures/References
     

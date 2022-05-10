@@ -57,7 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Response to a question" href="ResponseToAQuestion.html" />
     <link rel="prev" title="Course Overview" href="../0_CourseOverview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -123,6 +123,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ResponseToAQuestion.html">
+   Response to a question
   </a>
  </li>
 </ul>
@@ -461,7 +466,7 @@
 <li><p>rotor radius R</p></li>
 <li><p>thrust T generated</p></li>
 <li><p>power P required</p></li>
-<li><p>induced velocity <span class="math notranslate nohighlight">\(v_i\)</span></p></li>
+<li><p>induced velocity <span class="math notranslate nohighlight">\(v\)</span></p></li>
 </ul>
 </div>
 <div class="section" id="why-is-a-new-model-even-necessary">
@@ -558,7 +563,7 @@
 <p>A control volume as shown in the figure below is considered and relation between T, P, R and v is obtained via the application of mass, momentum and energy conservation laws.
 The derivation below is for a rotor in hover i.e.</p>
 <div class="math notranslate nohighlight">
-\[ \overline{v}_{freestream}=0 \]</div>
+\[ \overline{V}_{freestream}=0 \]</div>
 <p>This includes vertical as well as horizontal velocities!</p>
 <p> 
  </p>
@@ -599,17 +604,17 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
   </p>
 </div>
 <div class="math notranslate nohighlight">
-\[p_1 +\frac{1}{2} \rho v_i^2 = p_0 = p_{\infty}\]</div>
+\[p_1 +\frac{1}{2} \rho v^2 = p_0 = p_{\infty}\]</div>
 <div class="math notranslate nohighlight">
-\[p_2 +\frac{1}{2} \rho v_i^2 = p_{\infty} +\frac{1}{2} \rho w^2\]</div>
+\[p_2 +\frac{1}{2} \rho v^2 = p_{\infty} +\frac{1}{2} \rho w^2\]</div>
 <div class="math notranslate nohighlight">
 \[p_2-p_1= \frac{T}{A}\]</div>
 <div class="math notranslate nohighlight">
 \[p_0+\frac{1}{2} \rho w^2-p_0 = \frac{T}{A}= \frac{1}{2} \rho w^2\]</div>
 <div class="math notranslate nohighlight">
-\[\Rightarrow p_1 = p_{\infty}-\frac{1}{2} \rho v_i^2 = p_{\infty}-\frac{1}{4}\left ( \frac{T}{A} \right )\]</div>
+\[\Rightarrow p_1 = p_{\infty}-\frac{1}{2} \rho v^2 = p_{\infty}-\frac{1}{4}\left ( \frac{T}{A} \right )\]</div>
 <div class="math notranslate nohighlight">
-\[\Rightarrow p_2 = p_{\infty}+\frac{1}{2}\rho w^2 -\frac{1}{2}\rho v_i^2 = p_{\infty}+\frac{3}{4}\left(\frac{T}{A}\right)\]</div>
+\[\Rightarrow p_2 = p_{\infty}+\frac{1}{2}\rho w^2 -\frac{1}{2}\rho v^2 = p_{\infty}+\frac{3}{4}\left(\frac{T}{A}\right)\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Momentum theory, with its uniform inflow velocity assumption gives the lowest estimate of required power. Its not due to the idealised flow conditions (i.e. neglecting certain phenomena that contribute to disspative power loss) but due to the uniform <span class="math notranslate nohighlight">\(v\)</span> assumption itself.</p>
@@ -630,7 +635,8 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
   <p>  T/P vs DL [taken from Helicopter Aerodynamic II by RW Prouty]
   </p>
 </div>
-<p>As is evident from the figures above, large helicopters tend to have smaller rotors (relative to their size) and thereby higher DL when compared to lighter helicopters. The rules of physics apply to all helicopters equally, so based on the above derivation they must consume relatively higher power in hover than lighter helicopters (and they do!). But a smaller rotor facilitates a relatively smaller fuselage which leads to lower drag in forward flight. However, the DL vs speed chart indicates that the higher speed requirement for helicopters has grown in tandem with the increase in MTOW. This requires that larger engines be installed to provide the requisite power to achieve those high forward speeds. These large engines make it possible for the helicopter to satisfy hover requirements even when the DL is high.</p>
+<p>As is evident from the figures above, large helicopters tend to have smaller rotors (relative to their size) and thereby higher DL when compared to lighter helicopters. The rules of physics apply to all helicopters equally, so based on the above derivation they must consume relatively higher power in hover than lighter helicopters (and they do!). This is because overall helicopter design, and the rotor design in particular, is dictated by the sole criterion of having minimum power consumption during hover. A helicopter should exhibit efficient forward flight performance as well and having a smaller main rotor facilitates a relatively smaller fuselage <a class="footnote-reference brackets" href="#smallfuselage" id="id1">1</a></p>
+<p>which leads to lower drag in forward flight. However, the DL vs speed chart indicates that the higher speed requirement for helicopters has grown in tandem with the increase in MTOW. This requires that larger engines be installed to provide the requisite power to achieve those high forward speeds. These large engines make it possible for the helicopter to satisfy hover requirements even when the DL is high.</p>
 </div>
 </div>
 <div class="section" id="summary">
@@ -709,7 +715,6 @@ The induced velocity <span class="math notranslate nohighlight">\(v\)</span> is 
     src="https://www.youtube.com/embed/RODMMX3SOBs"
     frameborder="0"
     allowfullscreen
-
 ></iframe>
 </div></div>
 </div>
@@ -746,22 +751,22 @@ The induced velocity <span class="math notranslate nohighlight">\(v\)</span> is 
 <div class="math notranslate nohighlight">
 \[ \Rightarrow \frac{1}{2} \rho w(w+V)=T / A \]</div>
 <p>substitute <span class="math notranslate nohighlight">\(2v\)</span> and solve quadratic equation in <span class="math notranslate nohighlight">\(v\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e673a27-f582-4a33-b2aa-6fdab82d0683">
-<span class="eqno">(1)<a class="headerlink" href="#equation-8e673a27-f582-4a33-b2aa-6fdab82d0683" title="Permalink to this equation">¶</a></span>\[\begin{align} V &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-96f4482f-5fb0-4464-be60-16afae13500f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-96f4482f-5fb0-4464-be60-16afae13500f" title="Permalink to this equation">¶</a></span>\[\begin{align} V &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
 <p>So climbing reduces the induced velocity!</p>
 <p>Why is the other root ignored?</p>
 <ul class="simple">
 <li><p>For steady climb case</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-a4299c08-2c61-4bf8-aa32-40b58cf96d33">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a4299c08-2c61-4bf8-aa32-40b58cf96d33" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-64b45ad7-538e-48a2-bfe6-c4492ee70035">
+<span class="eqno">(2)<a class="headerlink" href="#equation-64b45ad7-538e-48a2-bfe6-c4492ee70035" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T =W &amp;= \dot{m}w\\
 &amp;= 2 \dot{m}v
 \end{align}\]</div>
 <p>but in climb <span class="math notranslate nohighlight">\(\dot{m}\)</span> is larger than  <span class="math notranslate nohighlight">\(\rho A v_h\)</span></p>
 <p>Total power required in climb = Climb power (TV) + induced power (Tv)</p>
 <div class="math notranslate nohighlight">
-\[P = T (V+v)\]</div>
+\[P = T (V+v) &gt; P_h = Tv_h\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{P}{T} = \frac{V}{2}+ \sqrt{ \left(\frac{V}{2} \right)^2 + V_h^2}\]</div>
 </div>
@@ -773,7 +778,7 @@ T =W &amp;= \dot{m}w\\
 <li><p>tidal turbines</p></li>
 </ul>
 <center>
-    <img src="../../assets/HAWT_VAWT.gif" class="medium">
+    <img src="../../assets/HAWT_VAWT.gif" class="large">
     <p style="text-align:center; color:gray; font-size:16px;"> Turbines of different kinds <a href="https://commons.wikimedia.org/wiki/File:HAWT_and_VAWTs_in_operation_medium.gif">[source] </a></p>
 </center></div>
 <div class="section" id="limitations">
@@ -801,16 +806,6 @@ T =W &amp;= \dot{m}w\\
 <div class="section" id="modelling-losses-in-momentum-theory">
 <h2>Modelling losses in momentum theory<a class="headerlink" href="#modelling-losses-in-momentum-theory" title="Permalink to this headline">¶</a></h2>
 <p>The fact that the rotor is not an actuator disk but rather a geomteric entity with finite number of lifting surfaces (blades) leads to physical phenomena that have not been mentioned in the above discussion or the derivation of the results. Consequently, the derived momentum theory results do not include their effects. Turns out these effects are non-negligible and can result in an error of atleast 10-15% in the power calculation of most rotors if not accounted for. So, the way they are accounted for is using an empirical (i.e. based on experimental results) parameter called induced power factor <span class="math notranslate nohighlight">\(\kappa\)</span>. It is an adjustment adopted because momentum theory is not perfect.</p>
-<div class="image-grid2">
-    <img  src="../../assets/wingtipvortex.jpeg" class="medium"/>
-    <img  src="../../assets/rootcutout.png" class="medium"/>
-</div>
-<div class="image-grid2">
-  <p > Wing tip vortex  <a href="https://en.wikipedia.org/wiki/Wingtip_vortices#/media/File:FA-18C_vapor_LEX_and_wingtip_1.jpg" > </a>
-  </p> 
-  <p > Root cutout
-  </p>       
-</div>
 <ul class="simple">
 <li><p>tip losses</p></li>
 <li><p>blade root cutout</p></li>
@@ -821,6 +816,16 @@ T =W &amp;= \dot{m}w\\
 \[P_i=\kappa Tv_i=\kappa\frac{T^{3 / 2}}{\sqrt{2 \rho A}}\]</div>
 <div class="math notranslate nohighlight">
 \[\kappa\approx1.15\]</div>
+<div class="image-grid2">
+    <img  src="../../assets/wingtipvortex.jpeg" class="medium"/>
+    <img  src="../../assets/rootcutout.png" class="medium"/>
+</div>
+<div class="image-grid2">
+  <p > Wing tip vortex  <a href="https://en.wikipedia.org/wiki/Wingtip_vortices#/media/File:FA-18C_vapor_LEX_and_wingtip_1.jpg" > </a>
+  </p> 
+  <p > Root cutout
+  </p>       
+</div>
 <p>While <span class="math notranslate nohighlight">\(\kappa\)</span> helps improve the power prediction using momentum theory, all the shortcomings of momentum theory discussed earlier still persist. For e.g. nothing in the equation above tells us whether a rotor designed for (say) a 5-ton helicopter would also be able to generate 100-tons of thrust! Obviously, the answer is no. The fact that airfoil blades would stall after a certain point and fail to generate any further lift is simply not included in any form within the assumptions or the derivation (go ahead, scroll up and convince yourself that that is the case!)
 There are no free lunches. Since the momentum theory is based on approximations introduced to the NSE, we cannot obtain all information about the rotor operation or as quantitatively accurate results as can potentially be obtained using NSE. In other words the momentum theory approximations are appropriate in certain scenarios and as a consequence the theory will lead to pretty reliable results. In a lot of other scenarios where the approximations don’t apply or are violated, the results will be <em>bad</em>.</p>
 <div class="section" id="right-application-context">
@@ -835,13 +840,16 @@ There are no free lunches. Since the momentum theory is based on approximations 
 </li>
 </ul>
 </li>
+</ul>
+<ul class="simple">
 <li><p>relation between T, P, <span class="math notranslate nohighlight">\(v\)</span>, DL is desired</p></li>
+</ul>
+<ul class="simple">
 <li><p>easy to see direct cause and effect relations</p>
 <ul>
-<li><p>“…momentum approach may provide a clarity of the overall picture that could be lacking when more complicated theories are applied” <span id="id1">[<a class="reference internal" href="../References.html#id13">Ste79</a>]</span></p></li>
+<li><p>“…momentum approach may provide a clarity of the overall picture that could be lacking when more complicated theories are applied” <span id="id2">[<a class="reference internal" href="../References.html#id13">Ste79</a>]</span></p></li>
 </ul>
 </li>
-<li></li>
 </ul>
 <blockquote class="epigraph">
 <div><p>While historically the helicopter industry has relied extensively on more parsimonious aerodynamic methods such as various forms of ‘momentum theory’ combined with significant empiricism for helicopter design work, this is fast changing – JG Lieshman (Principles of Helicopter Aerodynamics ed. 2, 2006)</p>
@@ -863,6 +871,12 @@ There are no free lunches. Since the momentum theory is based on approximations 
 <li><p>Transient conditions - for e.g. maneuvers</p></li>
 </ul>
 <p>A higher fidelity (i.e. better) model is required to overcome the limitations of momentum theory. This is where the blade element momentum theory (BEMT) comes in!</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="smallfuselage"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>In the case of a conventional design, for e.g., the tail rotor cannot in the wake of the main rotor since ingesting the distrubed wake of the main rotor can lead to fluctuating performance of the tail rotor. So the tail boom length will grow in size together with the main rotor. In order to keep the helicopter CG close to the rotor chaft, the front of the fuselage will need to be expanded. This not only makes the overall design much heavier but also increases its parasite drag.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -899,10 +913,10 @@ There are no free lunches. Since the momentum theory is based on approximations 
             <p class="prev-next-title">Course Overview</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="ResponseToAQuestion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Response to a question</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

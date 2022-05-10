@@ -15,7 +15,7 @@ parts:
   - caption: Momentum Theory
     chapters:
     - file: Lectures/1_MT/MT
-#    - file: Lectures/1_MT/AerodynamicsFundamentals
+    - file: Lectures/1_MT/ResponseToAQuestion
    
 
 #  - caption: Hover

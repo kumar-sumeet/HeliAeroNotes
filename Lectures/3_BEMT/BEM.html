@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blade element momentum theory &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../References.html" />
+    <link rel="prev" title="Blade element theory" href="BET.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Opening.html">
+   Fundamentals of Helicopter Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_CourseOverview.html">
+   Course Overview
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Momentum Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/MT.html">
+   Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/Summary.html">
+   Summary
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fluid Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blade Element Momentum Theory
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BET.html">
+   Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Blade element momentum theory
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lectures/3_BEMT/BEM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/yourusername/yourbookrepo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/3_BEMT/BEM.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/3_BEMT/BEM.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practical-hovering-rotor">
+   Practical hovering rotor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-practical-sigma-text-taper-unsure">
+   <span class="math notranslate nohighlight">
+    \(\text{Practical} \)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\sigma / \text{taper} \)
+   </span>
+   <strong>
+    unsure???
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weighted-solidity">
+   Weighted Solidity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profile-power-of-optimal-rotor">
+     Profile power of Optimal Rotor:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blade-tip-losses">
+   Blade tip losses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt-in-a-nutshell">
+   BEMT in a nutshell
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-aerodynamics">
+     Blade aerodynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wake-model">
+     Wake model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt-review">
+   BEMT: review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt">
+   BEMT: …
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Blade element momentum theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practical-hovering-rotor">
+   Practical hovering rotor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-practical-sigma-text-taper-unsure">
+   <span class="math notranslate nohighlight">
+    \(\text{Practical} \)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\sigma / \text{taper} \)
+   </span>
+   <strong>
+    unsure???
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weighted-solidity">
+   Weighted Solidity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profile-power-of-optimal-rotor">
+     Profile power of Optimal Rotor:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blade-tip-losses">
+   Blade tip losses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt-in-a-nutshell">
+   BEMT in a nutshell
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-aerodynamics">
+     Blade aerodynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wake-model">
+     Wake model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt-review">
+   BEMT: review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bemt">
+   BEMT: …
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="blade-element-momentum-theory">
+<h1>Blade element momentum theory<a class="headerlink" href="#blade-element-momentum-theory" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(T=\dot{m} v=P A v^{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(P=\frac{1}{2} \dot{m} v^{2}=\frac{1}{2} P A v_{0}^{3}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-748bca5d-9e7e-4ca3-bc17-76a2ad8fd85c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-748bca5d-9e7e-4ca3-bc17-76a2ad8fd85c" title="Permalink to this equation">¶</a></span>\[\begin{align} d T &amp; =d \dot{m} v_{i} \\ &amp;=2 p 2 \pi y d y\left(v_{c}+v_{i}\right) v_{i} \\
+\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c2311138-3e0d-488b-a388-f9438f8ff2ee">
+<span class="eqno">(4)<a class="headerlink" href="#equation-c2311138-3e0d-488b-a388-f9438f8ff2ee" title="Permalink to this equation">¶</a></span>\[\begin{align}
+d C_{T} &amp;=\frac{4 \pi p\left(V_{c}+v_{i}\right) v_{i} y d y}{p \pi R^{2}(\Omega R)^{2}} \\ \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-17ff4f00-b799-4c05-b64d-7994e9f51cd9">
+<span class="eqno">(5)<a class="headerlink" href="#equation-17ff4f00-b799-4c05-b64d-7994e9f51cd9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;=4 \lambda \lambda_{i} r dr  =4 \lambda \left(\lambda-\lambda_{c}\right)r d r 
+\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-703e2b23-82d9-48b9-aa61-c38831ab2d7f">
+<span class="eqno">(6)<a class="headerlink" href="#equation-703e2b23-82d9-48b9-aa61-c38831ab2d7f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \text{Climb case}\\
+&amp;= 4 \int \lambda^{2} r d r \quad \quad \quad \quad \quad \text{Hover case}
+\end{align}\]</div>
+<p>From BEPT:          <span class="math notranslate nohighlight">\( \displaystyle \quad d C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\theta r^{2}-d r\right) d r\)</span></p>
+<p>From annular Momentum Theory :    <span class="math notranslate nohighlight">\(\displaystyle \quad d C_{T}=4 \lambda\left(\lambda-\lambda_{c}\right)rd r\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle d C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\theta r^{2}-d r\right) d r = d C_{T}=4 \lambda\left(\lambda-\lambda_{c}\right)rd r\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \Rightarrow \frac{\sigma C_{l_{\alpha}} \theta r}{8}-\frac{\sigma C_{l_{\alpha}}}{8} \lambda=\lambda^{2}-\lambda_{c} \lambda\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \Rightarrow \lambda^{2}+\left(\frac{\sigma C_{l_{\alpha}}}{8}-\lambda_{c}\right) \lambda-\frac{\sigma C_{l_{\alpha}} \theta r}{8}=0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lambda\left(r, \lambda_{c}\right)= \displaystyle \pm \sqrt{\frac{\left(\frac{\sigma C_{l_{\alpha}}}{8}-\lambda_c \right)^2+\frac{\sigma C_{l_{\alpha}} \theta_{r}}{2}}{4}} = \displaystyle \frac{  \frac{\sigma C_{l_{\alpha}}}{8}- \lambda_c}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a x^{2}+b x+c\)</span>
+<span class="math notranslate nohighlight">\(\longrightarrow-b \pm \sqrt{b^{2}-4 a c}\)</span>   <span class="math notranslate nohighlight">\( \quad \quad\)</span> For <span class="math notranslate nohighlight">\(\lambda_c=0\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-905f1556-5af3-4da1-8d08-f5eaebf3bb16">
+<span class="eqno">(7)<a class="headerlink" href="#equation-905f1556-5af3-4da1-8d08-f5eaebf3bb16" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\lambda (r)=\frac{\sigma C_{l_{\alpha}}}{16}\left[-1+\sqrt{1+\frac{32}{\sigma C_{l_{\alpha}}} \theta_{r}}\right]
+\end{equation}\]</div>
+<p>In here <span class="math notranslate nohighlight">\(\sigma\)</span> is blade sizing, <span class="math notranslate nohighlight">\(C_{l_{\alpha}}\)</span> airfoil aerodynamics, <span class="math notranslate nohighlight">\(\theta_r\)</span> blade twist.</p>
+<p>ALWAYS some form of simplification manifests in the engineering framework of rotorcraft problems. 3-D FEM and DNS is not possible for rotorcraft problems as of now. So, problem specific simplifications are introduced.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_p\)</span> during hover or high <span class="math notranslate nohighlight">\(M\)</span> can be solved using momentum theory and rigid blades fairly accurately.</p></li>
+<li><p>Obtaining accurate trim angles requires elastc blade modelling.</p></li>
+<li><p>Obtaining blade vibration during descent flight, for e.g. requires free wake modelling.</p></li>
+</ul>
+<p>Propellers are ALWAYS in climb mode and are highly twisted for this reason.</p>
+<p>After obtaining <span class="math notranslate nohighlight">\(\lambda(r)\)</span>, <span class="math notranslate nohighlight">\(C_T\)</span> can be obtained by just substituting back in
+<span class="math notranslate nohighlight">\(C_T = \int 4 \lambda (\lambda - \lambda_c)rdr \)</span></p>
+<p>This result is based on a lot of simple ideas but provides a lot of insight. A lot of what follows is a direct consequence of this formulation so it is really important to just be clean about how we got this expression.</p>
+<p>Remember</p>
+<ul class="simple">
+<li><p>from BET derivation:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-8bb13703-8241-49d1-9701-808af72f9203">
+<span class="eqno">(8)<a class="headerlink" href="#equation-8bb13703-8241-49d1-9701-808af72f9203" title="Permalink to this equation">¶</a></span>\[\begin{align}
+dC_T &amp;= \frac{\sigma}{2} C_l {r}^2d{r} \\ 
+&amp;=\frac{\sigma}{2} \left(\frac{\theta_{tip}}{r} - \frac{\bar{\lambda}}{r}\right){r}^2 d{r}     \quad \quad \text{ideal twist}\\ 
+\end{align}\]</div>
+<p>uniform <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-5b2c317f-a8f2-4c26-9ae2-1eecff2b053e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-5b2c317f-a8f2-4c26-9ae2-1eecff2b053e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\alpha &amp;= \displaystyle \frac{\theta_{tip}-\bar{\lambda}}{r}\\
+&amp;= \displaystyle \frac{ \alpha_{tip}}{r}
+\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow C_T= \frac{\sigma}{4}C_{l_{\alpha}}\alpha_{tip}\]</div>
+<div class="math notranslate nohighlight">
+\[C_l = C_{l_{\alpha}} \frac{\alpha_{tip}}{r}\]</div>
+<ul class="simple">
+<li><p>from M theory:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ d C_t = 4 \bar{{\lambda}}^2 r dr \]</div>
+<p><span class="math notranslate nohighlight">\( \Rightarrow \bar{{\lambda}} = \displaystyle \sqrt{\frac{\sigma r C_{l_{\alpha}}\bar{\alpha}}{8}}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-52a8b2a0-e34b-4e31-bab6-9dc7f7b9c55f">
+<span class="eqno">(10)<a class="headerlink" href="#equation-52a8b2a0-e34b-4e31-bab6-9dc7f7b9c55f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{C_{T}}{2}&amp;=\frac{\sigma r C_{l_{k}} \bar{\alpha}}{8} \\
+\sigma&amp;=\frac{4 C_{T}}{C_{l_{\alpha}} \bar{\alpha}} \frac{1}{r}
+\end{align}\]</div>
+<p>hyperbolic solidity!</p>
+<p>So optimum rotor with ideal twist would have to have increasingly high <span class="math notranslate nohighlight">\(C_l\)</span> values inboard.</p>
+<p>But <span class="math notranslate nohighlight">\(C_l\)</span> here is representative to the lift force generated and we have assumed <span class="math notranslate nohighlight">\(\sigma\)</span> is constant.</p>
+<p>We could alternately increase lifting surface area so as to get the most out of aerodynamic efficiency of lifting surfaces. Assuming all sections are at <span class="math notranslate nohighlight">\(\alpha = \alpha|_{L/D}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-959b5eee-c9db-4de8-b0fc-402842af6597">
+<span class="eqno">(11)<a class="headerlink" href="#equation-959b5eee-c9db-4de8-b0fc-402842af6597" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{array}{l}
+\Rightarrow d C_{T}=\frac{\sigma}{2} C_{l_{\alpha}} \alpha_{L/D} r^{2} d r \quad\left(\theta-\frac{\lambda}{r}\right) \text { mistake in Leishman }\\
+d C_{T}=4 d^{2} r d r \Rightarrow d= \displaystyle \sqrt{\frac{\sigma r C_{l_{k}}}\alpha_{L/D}} 
+\end{array}
+\end{equation}\]</div>
+<p><strong>above cell is unclear</strong></p>
+<p>to keep <span class="math notranslate nohighlight">\(\lambda \text { constant}\)</span></p>
+<p>make <span class="math notranslate nohighlight">\(\sigma r = \text{constant}\)</span></p>
+<div class="section" id="practical-hovering-rotor">
+<h2>Practical hovering rotor<a class="headerlink" href="#practical-hovering-rotor" title="Permalink to this headline">¶</a></h2>
+<p><span class="math notranslate nohighlight">\( K = \frac { C_{P_{actual}}}{C_{P_{ideal}}}\)</span>
+induced power factor (due to interaction of the linearity of <span class="math notranslate nohighlight">\(\theta\)</span>)</p>
+<p>too much twist detrimental for forward flight <span class="math notranslate nohighlight">\(\rightarrow\)</span> leads to inboard section stalling on the retreating side <strong>unreadable text</strong> negative loading on the outboard of advancing side.</p>
+</div>
+<div class="section" id="text-practical-sigma-text-taper-unsure">
+<h2><span class="math notranslate nohighlight">\(\text{Practical} \)</span> <span class="math notranslate nohighlight">\(\sigma / \text{taper} \)</span>    <strong>unsure???</strong><a class="headerlink" href="#text-practical-sigma-text-taper-unsure" title="Permalink to this headline">¶</a></h2>
+<p>Slight linear taper to avoid high <span class="math notranslate nohighlight">\(\alpha\)</span> near the root.
+In theory, allows to maintain best <span class="math notranslate nohighlight">\(\alpha_{L / D}\)</span> at all blade sections.</p>
+<p>Remember all this being done with sole objective of optimising a hovering rotor!</p>
+</div>
+<div class="section" id="weighted-solidity">
+<h2>Weighted Solidity<a class="headerlink" href="#weighted-solidity" title="Permalink to this headline">¶</a></h2>
+<p>The idea comes from a need for comparing two rotor designs that have different planform shapes.</p>
+<p>Note: Comparing two rotors using this concept only works when the designs are not significantly different from rectangular blades. Because <strong>otherwise other (???)</strong> aerodynamic effects come into play and this simple concept seizes to be useful.</p>
+<div class="math notranslate nohighlight">
+\[
+C_{T}=\frac{1}{2} \int_{0}^{1} \sigma C_{l} r^{2} d r=\frac{\sigma_{e}}{2} \int_{0}^{1} C_{l r^{2}} d r
+\]</div>
+<p>Assuming const. <span class="math notranslate nohighlight">\(C_{l} \quad \Rightarrow \sigma_{e} \int r^{2} d r=\int \sigma r^{2} d r\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\Rightarrow \sigma_{e}=3 \int \sigma r^{2} d r
+\]</div>
+<p>This definition is relevant because <span class="math notranslate nohighlight">\(C_T / \sigma\)</span> is used as a measure of the lifting capability of the rotor since it is nothing but the average lift coefficient of the blade sections.</p>
+<div class="math notranslate nohighlight">
+\[\frac{C_T}{\sigma_e}= \frac{\bar{C_l}}{6}\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{C_T}{\sigma_e}\vert_{max} \approx 0.15\]</div>
+<p>Increase in rotor <span class="math notranslate nohighlight">\(C_T\)</span> limited by lifting ability on retreating side. High <span class="math notranslate nohighlight">\(\sigma_e\)</span> will ensure larger blade area contributes to rotor thrust on the retreating side so angles of attack on retreating side can be made lower (for same <span class="math notranslate nohighlight">\(C_T\)</span>).</p>
+<div class="section" id="profile-power-of-optimal-rotor">
+<h3>Profile power of Optimal Rotor:<a class="headerlink" href="#profile-power-of-optimal-rotor" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[d F_{x}=d L \sin \phi+d D \cos \phi\]</div>
+<div class="math notranslate nohighlight">
+\[d P=(b d L+d D) N \Omega y\]</div>
+<div class="math notranslate nohighlight">
+\[d C_{P_0}=\frac{\sigma}{2} C_{d} r^{3} d r\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow C_P = \frac{1}{2} C_{d_{0}} \int {\frac{\sigma_{tip}r^3}{r}} d r=\frac{C_{d_{0}} \sigma_{tip}}{6}\]</div>
+</div>
+</div>
+<div class="section" id="blade-tip-losses">
+<h2>Blade tip losses<a class="headerlink" href="#blade-tip-losses" title="Permalink to this headline">¶</a></h2>
+<p>Where can this knowledge be applied:</p>
+<ul class="simple">
+<li><p>Generally rotors of any size without in-plane flow (i.e. hover &amp; climb modes) So definitely can use for propellers too!</p></li>
+<li><p>Difference between propeller and rotor?</p></li>
+</ul>
+<p>Helicopter Engineering involves a great deal of optimization.</p>
+<ul class="simple">
+<li><p>For e.g. even in jover <span class="math notranslate nohighlight">\(C_T = W\)</span> but <span class="math notranslate nohighlight">\(W\)</span> can very 30-40%.</p></li>
+<li><p>Including the effect of forward flight opens up a Pandora’s box of issues.</p></li>
+</ul>
+<p><strong>Q.</strong> Why does the inflow in hower case develop the way it does? i.e. from above the rotor to below. (Taking analogy from fixed-wing aircraft doesn’t really help)</p>
+<p><strong>Q.</strong> Difference between propellers (no edgewise flow) and rotors (wake not connected away easily) High <span class="math notranslate nohighlight">\(V_{ind}\)</span> so wake is connected away. (But they also have high rpm!?)</p>
+</div>
+<div class="section" id="bemt-in-a-nutshell">
+<h2>BEMT in a nutshell<a class="headerlink" href="#bemt-in-a-nutshell" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="blade-aerodynamics">
+<h3>Blade aerodynamics<a class="headerlink" href="#blade-aerodynamics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Airfoil tables</p></li>
+</ul>
+</div>
+<div class="section" id="wake-model">
+<h3>Wake model<a class="headerlink" href="#wake-model" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Momentum theory</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bemt-review">
+<h2>BEMT: review<a class="headerlink" href="#bemt-review" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li></li>
+</ul>
+</div>
+<div class="section" id="bemt">
+<h2>BEMT: …<a class="headerlink" href="#bemt" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>BEMT provides the simplest strategy of separating out the solutions of the blades aerodynamics and effect of the wake</p></li>
+<li><p>Higher-fidelity solution strategies employ same principle</p></li>
+<li><p>Different rotor wake models as well as methods to solve for the blade aerodynamics exist</p></li>
+<li><p>Solving for rotor aerodynamics</p></li>
+<li></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures/3_BEMT"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="BET.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Blade element theory</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sumeet Kumar<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

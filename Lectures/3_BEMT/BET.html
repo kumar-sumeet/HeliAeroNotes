@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Response to a question &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    <title>Blade element theory &#8212; Fundamentals of Helicopter Aerodynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -57,8 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Recap of Fundamentals in Aerodynamics - 2D" href="../AerodynamicsFundamentals_I.html" />
-    <link rel="prev" title="Momentum Theory" href="MT.html" />
+    <link rel="next" title="References" href="../References.html" />
+    <link rel="prev" title="Recap of Fundamentals in Aerodynamics - 2D" href="../AerodynamicsFundamentals_I.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,14 +119,14 @@
   Momentum Theory
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="MT.html">
+  <a class="reference internal" href="../1_MT/MT.html">
    Momentum Theory
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
    Response to a question
   </a>
  </li>
@@ -148,9 +148,9 @@
   Blade Element Momentum Theory
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../3_BEMT/BET.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Blade element theory
   </a>
  </li>
@@ -207,7 +207,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lectures/1_MT/ResponseToAQuestion.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/Lectures/3_BEMT/BET.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -227,7 +227,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/1_MT/ResponseToAQuestion.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/3_BEMT/BET.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -248,7 +248,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/1_MT/ResponseToAQuestion.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/3_BEMT/BET.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -265,6 +265,26 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation">
+   Mathematical formulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-and-conclusions">
+     Summary and conclusions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -272,45 +292,99 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Response to a question</h1>
+                <h1>Blade element theory</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation">
+   Mathematical formulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-and-conclusions">
+     Summary and conclusions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="response-to-a-question">
-<h1>Response to a question<a class="headerlink" href="#response-to-a-question" title="Permalink to this headline">¶</a></h1>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> Q. In the derivation of the momentum theory, the momentum conservation equation was applied as T = rate of change of momentum = (final momentum - initial momentum) / t; applying this between stations 0 and 2 in the slipstream leads to the following
-<div class="math notranslate nohighlight">
-\[ T = \dot{m}v - 0 = (\rho A v) v\]</div>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> and not, 
-<div class="math notranslate nohighlight">
-\[ T = \dot{m}w - 0= (\rho A v) w \]</div>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> as was derived in the lecture. Which is the right equation? Why?<p> 
- 
- 
- </p>
-<p>The derivation shown in the lecture notes used the following equations applying the balance laws -</p>
-<div style="float:right; width:45%;" >
-    <img src="../../assets/MT_hover.png" class="large" />
-    <p style="text-align:center; color:gray; font-size:16px;"> Hovering rotor flowfield model in momentum theory 
-  </p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="blade-element-theory">
+<h1>Blade element theory<a class="headerlink" href="#blade-element-theory" title="Permalink to this headline">¶</a></h1>
+<blockquote class="epigraph">
+<div><p>“Remember that all models are wrong; the practical question is how wrong do they have to be to not be useful.”</p>
+</div></blockquote>
+<p style="text-align:right" > <a href="https://en.wikipedia.org/wiki/All_models_are_wrong"> G. Box (1987)</a> </p>
+<p>Despite all the simplifications involved in the theoretical framework involving momentum theory, all the reasons why it is relevant were laid out in an earlier lecture. This was the only theory known for rotor analysis around the time VTOL inventions were taking-off (pun intended). So, for what its worth, initial helicopter rotor designs were surely dictated in some manner by analyses based on momentum theory. One major drawback that has been stressed upon is the lack of any direct relation between rotor aerodynamics and blade sectional aerodynamics. The Blade Element Theory (BET) takes care of that by incorporating airfoil aerodynamics. Therefore, unlike momentum theory which only has radius as the design variable, BET can be used in a more detailed design of the rotor. The central idea is that rotors are made up of blades (or wings) whose cross-sections are shaped like airfoils. The integrated effect of discretized sections of the blades leads to all the rotor forces and moments experienced at the rotor hub.</p>
+<p>In the following, the airfoil aerodynamics are accounted for but certain simplfying assumptions are included lest things get hopelessly complicated.</p>
+<div class="section" id="mathematical-formulation">
+<h2>Mathematical formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this headline">¶</a></h2>
+<p>Now that rotor parameters (beyond just radius) can be accounted for using BET, the following definitions come in handy -</p>
+<p>Inflow ratio <span class="math notranslate nohighlight">\( \lambda  = v_i / \Omega R \)</span></p>
+<p>Non-dimensional radial location <span class="math notranslate nohighlight">\(r = y/R\)</span></p>
+<p>Solidity of the rotor <span class="math notranslate nohighlight">\(\sigma = NcR / \pi R^2 = Nc / \pi R\)</span></p>
+<center>
+    <img src="../../assets/BEMT_1.png" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;" > Schematic of the blade model in BET <a href=""> </a></p>
+</center><div style="float:right; width:43%;" >
+    <img src="../../assets/BET_airfoil_loads.png" class="big" />
 </div>
-<p>Mass Conservation:$<span class="math notranslate nohighlight">\( \dot{m} = \rho A v = \rho A_{\infty} w \)</span><span class="math notranslate nohighlight">\( 
-Momentum Conservation: \)</span><span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span><span class="math notranslate nohighlight">\( 
-Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v = \frac{1}{2} \dot{m} w^2\)</span>$</p>
-<p>The question raised above can be framed in the context of the energy balance equation as well. The following explains why the equations used in the lecture are correct.</p>
-<p>Fluid pressure works as a <em>push</em> rather than a <em>pull</em>. As work is done by the rotor, i.e. it increases pressure at station 2 within the actuator disk-based momentum theory model, the fluid can exchange that pressure increase for kinetic energy. This is the Bernoulli’s principle where the pressure can be thought of as a <em>potential energy</em> of the flow that can be exchanged for kinetic energy, and vice versa. This exchange occurs without any losses within the framework of the assumptions that the Bernoulli’s equation is based on -</p>
 <div class="math notranslate nohighlight">
-\[p+ \frac{1}{2}\rho v^2 = const\]</div>
-<p>So, high static pressure at station 2 and low static pressure at station <span class="math notranslate nohighlight">\(\infty\)</span> (atmospheric pressure) is going to set the direction of the flow within the stream tube. Fluid from station 1, and in turn from station 0, is set in motion since fluids are continuous and shocks do not occur at the low subsonic speeds that arise in VTOL rotor flows. Since all the work, and by extension the static pressure increase, is assumed to be confined to the thin actuator disk, the movement of flow from station 0 to station 1 occurs by exchanging some of the static pressure to dynamic pressure. The result is that the rate flow of momentum at the actuator disk becomes <span class="math notranslate nohighlight">\((\rho vA)v\)</span>. However, static pressure calculation using Bernoulli’s equation show that there is an additional pressure of <span class="math notranslate nohighlight">\(\frac{3}{4}\frac{T}{A}\)</span> at station 2. This provides an additional upwards <em>push</em> and in turn adds to the overall thrust that the rotor is generating. The external work done by the rotor is not just an increase in fluid momentum, the <em>potential energy</em> (i.e. the static pressure) of the fluid is changed as well and needs to be accounted for to get an accurate estimate of the force vector (i.e. thrust). Using the relation <span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span> avoids that because the stations where the final and the initial momentums are considered are where the static pressure is the same (and therefore no unaccounted for energy storage).</p>
-<p>The flow can be assumed to be incompressible throught the exercise since the Mach number never exceeds <span class="math notranslate nohighlight">\(M=0.3\)</span> at any point within the streamtube for conventional lifting rotors (this may not necessarily be true for jet exhaust in the case of the F35 or the Harrier jump-jet).</p>
-<p>In order to convince yourself further about this, the following literature can be referred - <span id="id1">[<a class="reference internal" href="../References.html#id19">Sen14</a>]</span> (Pg 21-23) and <span id="id2">[<a class="reference internal" href="../References.html#id17">Bat00</a>]</span> (Pg 156).</p>
+\[d F_{Z}=d L \cos \phi-d D \sin \phi\]</div>
+<div class="math notranslate nohighlight">
+\[d T=N(d L  \cos \phi-d D \sin \phi) \approx N d L\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow d C_{T}=\frac{N C_{l} \frac{1}{2} \rho U_{T}^{2} c d y}{\rho (\Omega R^{2}) R^{2}}\]</div>
+<div class="math notranslate nohighlight">
+\[d C_{T}=\frac{\sigma}{2} C_{l} r^{2} d r\]</div>
+<p>Assuming that the airfoil operates within the range where <span class="math notranslate nohighlight">\(C_l\)</span> varies linearly with <span class="math notranslate nohighlight">\(\alpha\)</span>, the thrust coefficient contribution due to the blade elements can be integrated and written as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{split}
+\int d C_{T} &amp;=\int\frac{\sigma}{2} C_{l} r^{2} d r \\
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int \alpha r^{2} dr \\ 
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\phi) r^{2} d r \\ 
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\frac{U_P}{U_R}) r^{2} d r \\ 
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\frac {\lambda \Omega R}{\Omega y}) r^{2} d r \\ 
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int (\theta r^2 - \lambda r) dr \\
+\end{split}
+\label{eq:CT_Cl} \tag{1}
+\end{equation*}\]</div>
+<p>In case of untwisted blades and uniform inflow, <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> are constants. This is a highly restrictive assumption and one that is not found on real-world VTOL aircraft. Blades on all rotors have some built-in twist, this includes aircraft propellers, helicopter rotors, wind turbines etc. Slender rotor blades, as seen on full-scale helicopters or on wind turbines, can never be manufactured to be perfectly rigid so they undergo elastic torsion deformation that brings in an additional component to the twist of the blade due to elastic torsion. This elastic twist is dynamic in nature which in turn leads to a dynamic variation in blade sectional pitch (which in turn affects the angle of attack) and the resulting aerodynamic loads. As you can imagine this opens up a Pandora’s box of physics that needs to be modelled. So for the purposes of our discussion here we also assume that the blades are perfectly rigid so that blade elastic deformation does not need to be accounted for at all.</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\frac{\theta_{0}}{3}-\frac{\lambda}{2}\right)=\frac{\sigma}{6} C_{l_{\alpha}}\left(\theta_{0}-\frac{3}{2} \sqrt{\frac{C_T}{2}}\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{3}{2} \sqrt{\frac{C_{T}}{2}}\)</span> is induced drag term. Correspondingly, if the amount of collective input is known then the resultant rotor thrust can be obtained. The maximum rotor thrust can be obtained using Eq <span class="math notranslate nohighlight">\(\eqref{eq:CT_Cl}\)</span> by assuming the lift coefficient at each blade section is <span class="math notranslate nohighlight">\(C_{l_{max}}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \theta_{0}=\frac{6 C_{T}}{\sigma C_{l_{\alpha}}}+\frac{3}{2} \sqrt{\frac{C_{T}}{2}}\]</div>
+<p>All the simplifying assumptions made under the umbrella of the BET now afford us the possibility to easily see the effect of one or more physical parameters, associated with the rotor, on the performance.</p>
+<p>In case of linear blade twist, the thrust coefficient can be calculated as follows</p>
+<p><span class="math notranslate nohighlight">\(\begin{aligned}
+\theta&amp;= \theta_{0} +\gamma \theta_{t \omega} \quad \quad\quad \lambda=\text { uniform } \\ C_{T} &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[ \frac{\theta_{0}}{3}+\frac{\theta_{t \omega}}{4}-\frac{\lambda}{2} \right] \\ &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[\frac{\theta_{75}}{3}-\frac{\lambda}{2}\right] \end{aligned}\)</span></p>
+<p>The collective angle value in case of a linearly twisted blade is measured using <span class="math notranslate nohighlight">\(r=0.75\)</span> as the reference pitch angle. The Bo 105 helicopter rotor has a linear blade twist of <span class="math notranslate nohighlight">\(-8^°\)</span> over a span of <span class="math notranslate nohighlight">\(R=4.912\)</span> m. Due to the presence of root cut out, the lifting section of the blade has an effective twist of only <span class="math notranslate nohighlight">\(-6.6^°\)</span> over its span.</p>
+<div class="section" id="summary-and-conclusions">
+<h3>Summary and conclusions<a class="headerlink" href="#summary-and-conclusions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BET models the rotor aerodynamics as a cumulative of the airfoil aerodynamic properties</p></li>
+<li><p>Uniform inflow has been used in the above formulation</p></li>
+<li><p>In reality <span class="math notranslate nohighlight">\(\lambda\)</span> is not uniform, so there is room for a better model</p></li>
+</ul>
+<p>A natural extension from here then is to account for the variation <span class="math notranslate nohighlight">\(\lambda (r)\)</span>. Alfred Gessow proposed the blade element momentum theory (BEMT) that does precisely that.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -326,7 +400,7 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Lectures/1_MT"
+            path: "./Lectures/3_BEMT"
         },
         predefinedOutput: true
     }
@@ -338,17 +412,17 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="MT.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../AerodynamicsFundamentals_I.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Momentum Theory</p>
+            <p class="prev-next-title">Recap of Fundamentals in Aerodynamics - 2D</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../AerodynamicsFundamentals_I.html" title="next page">
+    <a class='right-next' id="next-link" href="../References.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Recap of Fundamentals in Aerodynamics - 2D</p>
+        <p class="prev-next-title">References</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

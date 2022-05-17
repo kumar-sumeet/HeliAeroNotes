@@ -16,6 +16,11 @@ parts:
     chapters:
     - file: Lectures/1_MT/MT
     - file: Lectures/1_MT/ResponseToAQuestion
+#    - file: Lectures/1_MT/Summary
+
+  - caption: Fluid Dynamics
+    chapters:
+    - file: Lectures/AerodynamicsFundamentals_I
    
 
 #  - caption: Hover
@@ -26,12 +31,10 @@ parts:
 #    - file: Lectures/2_Hover/Performance
 #    - file: Lectures/2_Hover/Tutorial_0
 
-#  - caption: Blade Element Momentum Theory
-#    chapters:
-#    - file: Lectures/3_BEMT/Overview
-#      sections:
-#        - file: Lectures/3_BEMT/BET
-#        - file: Lectures/3_BEMT/BEM
+  - caption: Blade Element Momentum Theory
+    chapters:
+    - file: Lectures/3_BEMT/BET
+#    - file: Lectures/3_BEMT/BEM
 #        - file: Lectures/3_BEMT/BladeGeometry
 #        - file: Lectures/3_BEMT/BladeAerodynamics
 #        - file: Lectures/3_BEMT/SummaryAndBeyondBEMT

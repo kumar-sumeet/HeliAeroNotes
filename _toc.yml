@@ -34,7 +34,7 @@ parts:
   - caption: Blade Element Momentum Theory
     chapters:
     - file: Lectures/3_BEMT/BET
-#    - file: Lectures/3_BEMT/BEM
+    - file: Lectures/3_BEMT/BEMT
 #        - file: Lectures/3_BEMT/BladeGeometry
 #        - file: Lectures/3_BEMT/BladeAerodynamics
 #        - file: Lectures/3_BEMT/SummaryAndBeyondBEMT

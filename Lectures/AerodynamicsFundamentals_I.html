@@ -154,6 +154,11 @@
    Blade element theory
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_BEMT/BEMT.html">
+   Blade element momentum theory
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -369,19 +374,19 @@
 <div><p>It’s easy to explain how a rocket works, but explaining how a wing works takes a rocket scientist.</p>
 </div></blockquote>
 <p style="text-align:right" > <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514"> Philippe Spalart</a> </p>
-<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id18">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
+<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id21">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
 <div class="section" id="navier-stokes-equations-nse">
 <h2>Navier-Stokes equations (NSE)<a class="headerlink" href="#navier-stokes-equations-nse" title="Permalink to this headline">¶</a></h2>
 <p>While we are not going to lay down the Navier-Stokes equations here, you are already familiar (at least vaguely) that these equations are essential to so many analyses you encounter involving fluid flows yet they can be solved without the use of a computer for only a handful of idealised scenarios. The fact that these equations are challenging to solve is what keeps many aerospace and mechanical engineers employed.</p>
-<div style="float:right; width:30%;" >
+<div style="float:right; width:35%;" >
     <img src="../assets/MT_heirarchy_noannot.png" class="big" />
     <p style="text-align:center; color:gray; font-size:60%;"> Heirarchy of physical theories [taken from "Understanding Aerodynamics" by Doug McLean] <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source] </a>
   </p>
 </div>
 <p>Principle aim of a model</p>
 <ul class="simple">
-<li><p>include just the relevant behavior of physical system</p></li>
-<li><p>superfluousness usually makes it computationally intensive</p></li>
+<li><p>include just relevant behavior of physical systems</p></li>
+<li><p>superfluousness makes it computationally intensive</p></li>
 <li><p>(too much) parsimoniousness can make it <em>useless</em></p></li>
 </ul>
 <p>NSE are an <em>approximate</em> model of fluids</p>
@@ -477,8 +482,8 @@
 </div>
 <div class="section" id="generation-of-lift">
 <h2>Generation of lift<a class="headerlink" href="#generation-of-lift" title="Permalink to this headline">¶</a></h2>
-<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id2">[<a class="reference internal" href="References.html#id18">McL13</a>]</span>.</p>
-<div style="float:right; width:30%;" >
+<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id2">[<a class="reference internal" href="References.html#id21">McL13</a>]</span>.</p>
+<div style="float:right; width:25%;" >
     <img src="../assets/AA_C1_CP_contour.png" class="big" />
     <p style="text-align:center; color:gray; font-size:60%;"> Coefficient of pressure contour plot of NACA23012 airfoil at $M=0.4$ and $\alpha = 2^°$ <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1101#:~:text=The%20aerodynamic%20efficiency%20was%20evaluated,%3D%200.6%20at%20Cl%20%3D%200.85.">[source] </a>
   </p>
@@ -518,7 +523,7 @@ and keeping track of it is imperative to get overall aerodynamics right.</p>
 </center><p>The circulation of the flow is a relevant quantity because it quanitifies the amount of lift being generated per the Kutta-Joukowski theorem.</p>
 <div class="math notranslate nohighlight">
 \[\Gamma = \oint \mathbf{V}\cdot \mathbf{dl}\]</div>
- <p  style=" text-align:center;"> Lift-per-unit-span$ = \rho V_{\infty}\Gamma$</div>
+ <p  style=" text-align:center;"> Lift-per-unit-span $ = \rho V_{\infty}\Gamma$</div>
 <div class="section" id="potential-flow-theory">
 <h2>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
@@ -527,18 +532,19 @@ and keeping track of it is imperative to get overall aerodynamics right.</p>
 <li><p>the early go-to model for obtaining airfoil pressure distribution</p></li>
 <li><p>bodies of any shape could be analysed</p></li>
 <li><p>conformal theory used to obtain analytic results of pressure distribution</p></li>
-<li><p>also used in unsteady aerodynamic theories - for e.g. Theordorsen theory</p></li>
+<li><p>also used in unsteady aerodynamic theories - for e.g. Theodorsen theory</p></li>
 </ul>
 <div class="section" id="kutta-condition">
 <h3>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h3>
-<p>Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id3">[<a class="reference internal" href="References.html#id22">RL13</a>]</span>. Potential flow theory, on its own cannot predict uniquely what amount of lift is an airfoil capable of generating. Alternately, either flow field representations below are valid within the framework of potential flow theory.</p>
+<p>Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id3">[<a class="reference internal" href="References.html#id25">RL13</a>]</span>. Potential flow theory, on its own cannot predict uniquely what amount of lift is an airfoil capable of generating. Alternately, either flow field representations below are valid within the framework of potential flow theory.</p>
 <div class="image-grid2">
     <img  src="../assets/BA3_fig7_1_3b.png" class="medium"/>
     <img  src="../assets/BA3_fig7_1_3c.png" class="medium"/>
 </div>
 <div class="image-grid2">
   <p > Streamlines around an airfoil (real flow) <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source] </a>
-  </p> Streamlines representation around an airfoil based on a mathematically valid potential flow solution (not a real flow) <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a>
+  </p> 
+  <p >  Streamlines representation around an airfoil based on a mathematically valid potential flow solution (not a real flow) <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a>
   </p>       
 </div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct (this is just one of those instances where observable physics guides a mathematical theory which would otherwise lead to a non-unique solution). This is achieved by enforcing what is called the Kutta condition.</p>
 </div>

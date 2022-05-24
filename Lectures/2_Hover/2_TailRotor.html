@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Response to a question &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    <title>Tail Rotor &#8212; Fundamentals of Helicopter Aerodynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -46,8 +46,6 @@
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -57,8 +55,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Recap of Fundamentals in Aerodynamics - 2D" href="../AerodynamicsFundamentals_I.html" />
-    <link rel="prev" title="Momentum Theory" href="MT.html" />
+    <link rel="next" title="Blade element theory" href="../3_BEMT/BET.html" />
+    <link rel="prev" title="Recap of Fundamentals in Aerodynamics - 2D" href="../AerodynamicsFundamentals_I.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,14 +117,14 @@
   Momentum Theory
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="MT.html">
+  <a class="reference internal" href="../1_MT/MT.html">
    Momentum Theory
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
    Response to a question
   </a>
  </li>
@@ -136,10 +134,15 @@
   Fluid Dynamics
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
    Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tail Rotor
   </a>
  </li>
 </ul>
@@ -152,11 +155,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../3_BEMT/BET.html">
    Blade element theory
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../3_BEMT/BEMT.html">
-   Blade element momentum theory
   </a>
  </li>
 </ul>
@@ -212,7 +210,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lectures/1_MT/ResponseToAQuestion.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/Lectures/2_Hover/2_TailRotor.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -232,7 +230,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/1_MT/ResponseToAQuestion.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/2_Hover/2_TailRotor.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -253,7 +251,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/1_MT/ResponseToAQuestion.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/2_Hover/2_TailRotor.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -270,6 +268,33 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-is-a-tail-rotor-needed">
+   Why is a tail rotor needed?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-needs-a-tail-rotor">
+   Who needs a
+   <em>
+    tail
+   </em>
+   rotor!?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surviving-loss-of-tail-rotor">
+   Surviving loss of tail rotor
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -277,45 +302,119 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Response to a question</h1>
+                <h1>Tail Rotor</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-is-a-tail-rotor-needed">
+   Why is a tail rotor needed?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-needs-a-tail-rotor">
+   Who needs a
+   <em>
+    tail
+   </em>
+   rotor!?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surviving-loss-of-tail-rotor">
+   Surviving loss of tail rotor
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="response-to-a-question">
-<h1>Response to a question<a class="headerlink" href="#response-to-a-question" title="Permalink to this headline">¶</a></h1>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> Q. In the derivation of the momentum theory, the momentum conservation equation was applied as T = rate of change of momentum = (final momentum - initial momentum) / t; applying this between stations 0 and 2 in the slipstream leads to the following
-<div class="math notranslate nohighlight">
-\[ T = \dot{m}v - 0 = (\rho A v) v\]</div>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> and not, 
-<div class="math notranslate nohighlight">
-\[ T = \dot{m}w - 0= (\rho A v) w \]</div>
-<p  style="  font-weight: bold; font-size:100%; color:black; text-align:left;"> as was derived in the lecture. Which is the right equation? Why?<p> 
- 
- 
- </p>
-<p>The derivation shown in the lecture notes used the following equations applying the balance laws -</p>
-<div style="float:right; width:45%;" >
-    <img src="../../assets/MT_hover.png" class="large" />
-    <p style="text-align:center; color:gray; font-size:16px;"> Hovering rotor flowfield model in momentum theory 
-  </p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tail-rotor">
+<h1>Tail Rotor<a class="headerlink" href="#tail-rotor" title="Permalink to this headline">¶</a></h1>
+<p>Quite simply, the reaction from rotating the main rotor (CCW, say) has the tendency to spin the rest of the helicopter in the opposite direction (CW). In forward, the vertical tail surface can be succesfully used to generate enough thrust (or moment about the helicopter CG) so as to counteract this CW moment. However, in hover or low speed flight a mechanism is needed to balance the overall yaw moments for the aircraft to be stable.</p>
+<p>Early designs focussed on two main rotor designs, tandem as well as coaxial, before the main rotor + tail rotor configuration was reliably shown by Igor Sikorsky to be the most viable design. The initial resitance to this approach is totally understandable, after all why should energy be expended separately just to balance the torque!?</p>
+<p>Multirotor designs were tried out first but ultimately the main rotor + tail rotor design from Igor Sikorsky became the norm. (show multirotor designs here)</p>
+<div class="section" id="why-is-a-tail-rotor-needed">
+<h2>Why is a tail rotor needed?<a class="headerlink" href="#why-is-a-tail-rotor-needed" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Provides directional stability, yaw control and balances main rotor torque</p></li>
+</ul>
+<p>Is a single rotor design possible?</p>
+<p>Sizing the tail rotor!!</p>
 </div>
-<p>Mass Conservation:$<span class="math notranslate nohighlight">\( \dot{m} = \rho A v = \rho A_{\infty} w \)</span><span class="math notranslate nohighlight">\( 
-Momentum Conservation: \)</span><span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span><span class="math notranslate nohighlight">\( 
-Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v = \frac{1}{2} \dot{m} w^2\)</span>$</p>
-<p>The question raised above can be framed in the context of the energy balance equation as well. The following explains why the equations used in the lecture are correct.</p>
-<p>Fluid pressure works as a <em>push</em> rather than a <em>pull</em>. As work is done by the rotor, i.e. it increases pressure at station 2 within the actuator disk-based momentum theory model, the fluid can exchange that pressure increase for kinetic energy. This is the Bernoulli’s principle where the pressure can be thought of as a <em>potential energy</em> of the flow that can be exchanged for kinetic energy, and vice versa. This exchange occurs without any losses within the framework of the assumptions that the Bernoulli’s equation is based on -</p>
-<div class="math notranslate nohighlight">
-\[p+ \frac{1}{2}\rho v^2 = const\]</div>
-<p>So, high static pressure at station 2 and low static pressure at station <span class="math notranslate nohighlight">\(\infty\)</span> (atmospheric pressure) is going to set the direction of the flow within the stream tube. Fluid from station 1, and in turn from station 0, is set in motion since fluids are continuous and shocks do not occur at the low subsonic speeds that arise in VTOL rotor flows. Since all the work, and by extension the static pressure increase, is assumed to be confined to the thin actuator disk, the movement of flow from station 0 to station 1 occurs by exchanging some of the static pressure to dynamic pressure. The result is that the rate flow of momentum at the actuator disk becomes <span class="math notranslate nohighlight">\((\rho vA)v\)</span>. However, static pressure calculation using Bernoulli’s equation show that there is an additional pressure of <span class="math notranslate nohighlight">\(\frac{3}{4}\frac{T}{A}\)</span> at station 2. This provides an additional upwards <em>push</em> and in turn adds to the overall thrust that the rotor is generating. The external work done by the rotor is not just an increase in fluid momentum, the <em>potential energy</em> (i.e. the static pressure) of the fluid is changed as well and needs to be accounted for to get an accurate estimate of the force vector (i.e. thrust). Using the relation <span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span> avoids that because the stations where the final and the initial momentums are considered are where the static pressure is the same (and therefore no unaccounted for energy storage).</p>
-<p>The flow can be assumed to be incompressible throught the exercise since the Mach number never exceeds <span class="math notranslate nohighlight">\(M=0.3\)</span> at any point within the streamtube for conventional lifting rotors (this may not necessarily be true for jet exhaust in the case of the F35 or the Harrier jump-jet).</p>
-<p>In order to convince yourself further about this, the following literature can be referred - <span id="id1">[<a class="reference internal" href="../References.html#id22">Sen14</a>]</span> (Pg 21-23) and <span id="id2">[<a class="reference internal" href="../References.html#id20">Bat00</a>]</span> (Pg 156).</p>
+<div class="section" id="who-needs-a-tail-rotor">
+<h2>Who needs a <em>tail</em> rotor!?<a class="headerlink" href="#who-needs-a-tail-rotor" title="Permalink to this headline">¶</a></h2>
+<center>
+    <img src="../../assets/FaireyGyrodyne.jpeg" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;"  > Fairey Gyrodyne <a href="https://en.wikipedia.org/wiki/Fairey_FB-1_Gyrodyne#/media/File:Fairey_FB-1_Gyrodyne.jpg"> [source]</a></p>
+</center><center>
+    <img src="../../assets/FaireyRotodyne.jpeg" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;"  > Fairey Rotodyne <a href="https://en.wikipedia.org/wiki/Fairey_Rotodyne#/media/File:SFF_002-1055526_Fairey_Rotodyne.jpg"> [source]</a></p>
+</center><center>
+    <img src="../../assets/Add17.png" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;"  > Add17 </p>
+</center>
+<p>Different ‘tail’ placement <span id="id1">[<a class="reference internal" href="../References.html#id3">Ben47</a>]</span></p>
+</div>
+<div class="section" id="surviving-loss-of-tail-rotor">
+<h2>Surviving loss of tail rotor<a class="headerlink" href="#surviving-loss-of-tail-rotor" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#could possibly also talk about the accident from Prouty II-38 but feels unnecessary</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Survivability or continued control of helicopter depends on</p>
+<ul>
+<li><p>flight condition when loss happens</p></li>
+<li><p>degree of damage/loss and helicopter design to cope with that loss</p></li>
+</ul>
+</li>
+<li><p>Loss at high speed</p>
+<ul>
+<li><p>Large vertical stabilizers allow continued operation using a side slip</p></li>
+<li><p>This has to be balanced with need for high speed sideward flight (an issue in the Apache program – read Prouty II chapter 40 for details)</p></li>
+</ul>
+</li>
+<li><p>Loss at low speed or hover</p>
+<ul>
+<li><p>Autorotation</p></li>
+</ul>
+</li>
+</ul>
+<div class="image-grid2">
+    <img  src="../../assets/bamby_faon.png" class="size_options"/>
+    <img  src="../../assets/Comanche.png" class="size_options"/>
+</div>
+<div class="image-grid2">
+  <p > Bamby Faon <a href="https://vtol.org/qr/may-2021"> [source]</a>
+  </p>   
+  <p > Comanche <a href="https://vtol.org/images/dmImage/SourceImage/2018-January.JPG"> [source]</a>
+  </p> 
+</div>
+<center>
+    <img src="../assets/CJC1A_HummingBird.png" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;" > CJC-1A Humming Bird <a href="https://vtol.org/qr/august-2019"> [source]</a></p>
+</center>
+<center>
+    <img src="../../assets/UH60_tailcant.jpg" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;" > UH60 tail rotor <a href="https://commons.wikimedia.org/wiki/File:MH-60M_DAP_firing_2.75_inch_rockets_at_a_test_ground.jpg"> [source]</a></p>
+</center>
+<p>The tail rotor of the UH60 is canted by 20 deg, generating lift of about 181 kg <a href="https://verticalmag.com/features/the-black-hawk-at-40/"> [source]</a>  <span id="id2">[<a class="reference internal" href="../References.html#id37">U1909</a>]</span>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -331,7 +430,7 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Lectures/1_MT"
+            path: "./Lectures/2_Hover"
         },
         predefinedOutput: true
     }
@@ -343,17 +442,17 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="MT.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../AerodynamicsFundamentals_I.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Momentum Theory</p>
+            <p class="prev-next-title">Recap of Fundamentals in Aerodynamics - 2D</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../AerodynamicsFundamentals_I.html" title="next page">
+    <a class='right-next' id="next-link" href="../3_BEMT/BET.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Recap of Fundamentals in Aerodynamics - 2D</p>
+        <p class="prev-next-title">Blade element theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

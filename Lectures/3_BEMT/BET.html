@@ -57,7 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Blade element momentum theory" href="BEMT.html" />
     <link rel="prev" title="Recap of Fundamentals in Aerodynamics - 2D" href="../AerodynamicsFundamentals_I.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -152,6 +152,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BEMT.html">
+   Blade element momentum theory
   </a>
  </li>
 </ul>
@@ -342,6 +347,7 @@
     <p style="font-size:16px; color:gray; text-align:center;" > Schematic of the blade model in BET <a href=""> </a></p>
 </center><div style="float:right; width:43%;" >
     <img src="../../assets/BET_airfoil_loads.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > 2D blade section aerodynamic loads <a href=""> </a></p>
 </div>
 <div class="math notranslate nohighlight">
 \[d F_{Z}=d L \cos \phi-d D \sin \phi\]</div>
@@ -372,8 +378,13 @@
 \[\Rightarrow \theta_{0}=\frac{6 C_{T}}{\sigma C_{l_{\alpha}}}+\frac{3}{2} \sqrt{\frac{C_{T}}{2}}\]</div>
 <p>All the simplifying assumptions made under the umbrella of the BET now afford us the possibility to easily see the effect of one or more physical parameters, associated with the rotor, on the performance.</p>
 <p>In case of linear blade twist, the thrust coefficient can be calculated as follows</p>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-\theta&amp;= \theta_{0} +\gamma \theta_{t \omega} \quad \quad\quad \lambda=\text { uniform } \\ C_{T} &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[ \frac{\theta_{0}}{3}+\frac{\theta_{t \omega}}{4}-\frac{\lambda}{2} \right] \\ &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[\frac{\theta_{75}}{3}-\frac{\lambda}{2}\right] \end{aligned}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{split}
+\theta&amp;= \theta_{0} +r \theta_{t \omega}; \quad \lambda=\text { uniform } \\ 
+C_{T} &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[ \frac{\theta_{0}}{3}+\frac{\theta_{t \omega}}{4}-\frac{\lambda}{2} \right] \\ &amp;=\frac{\sigma}{2} C_{l_{\alpha}}\left[\frac{\theta_{75}}{3}-\frac{\lambda}{2}\right] 
+\end{split}
+\end{equation*}\]</div>
 <p>The collective angle value in case of a linearly twisted blade is measured using <span class="math notranslate nohighlight">\(r=0.75\)</span> as the reference pitch angle. The Bo 105 helicopter rotor has a linear blade twist of <span class="math notranslate nohighlight">\(-8^°\)</span> over a span of <span class="math notranslate nohighlight">\(R=4.912\)</span> m. Due to the presence of root cut out, the lifting section of the blade has an effective twist of only <span class="math notranslate nohighlight">\(-6.6^°\)</span> over its span.</p>
 <div class="section" id="summary-and-conclusions">
 <h3>Summary and conclusions<a class="headerlink" href="#summary-and-conclusions" title="Permalink to this headline">¶</a></h3>
@@ -419,10 +430,10 @@
             <p class="prev-next-title">Recap of Fundamentals in Aerodynamics - 2D</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="BEMT.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Blade element momentum theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

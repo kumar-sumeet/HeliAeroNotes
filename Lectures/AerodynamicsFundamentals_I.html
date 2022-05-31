@@ -55,6 +55,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Blade element theory" href="3_BEMT/BET.html" />
@@ -157,6 +158,35 @@
  <li class="toctree-l1">
   <a class="reference internal" href="3_BEMT/BEMT.html">
    Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_BEMT/BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Assignment.html">
+   Aerodynamics of Human Powered Helicopter
   </a>
  </li>
 </ul>
@@ -374,7 +404,7 @@
 <div><p>It’s easy to explain how a rocket works, but explaining how a wing works takes a rocket scientist.</p>
 </div></blockquote>
 <p style="text-align:right" > <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514"> Philippe Spalart</a> </p>
-<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id21">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
+<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id23">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
 <div class="section" id="navier-stokes-equations-nse">
 <h2>Navier-Stokes equations (NSE)<a class="headerlink" href="#navier-stokes-equations-nse" title="Permalink to this headline">¶</a></h2>
 <p>While we are not going to lay down the Navier-Stokes equations here, you are already familiar (at least vaguely) that these equations are essential to so many analyses you encounter involving fluid flows yet they can be solved without the use of a computer for only a handful of idealised scenarios. The fact that these equations are challenging to solve is what keeps many aerospace and mechanical engineers employed.</p>
@@ -482,7 +512,7 @@
 </div>
 <div class="section" id="generation-of-lift">
 <h2>Generation of lift<a class="headerlink" href="#generation-of-lift" title="Permalink to this headline">¶</a></h2>
-<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id2">[<a class="reference internal" href="References.html#id21">McL13</a>]</span>.</p>
+<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id2">[<a class="reference internal" href="References.html#id23">McL13</a>]</span>.</p>
 <div style="float:right; width:25%;" >
     <img src="../assets/AA_C1_CP_contour.png" class="big" />
     <p style="text-align:center; color:gray; font-size:60%;"> Coefficient of pressure contour plot of NACA23012 airfoil at $M=0.4$ and $\alpha = 2^°$ <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1101#:~:text=The%20aerodynamic%20efficiency%20was%20evaluated,%3D%200.6%20at%20Cl%20%3D%200.85.">[source] </a>
@@ -536,7 +566,7 @@ and keeping track of it is imperative to get overall aerodynamics right.</p>
 </ul>
 <div class="section" id="kutta-condition">
 <h3>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h3>
-<p>Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id3">[<a class="reference internal" href="References.html#id25">RL13</a>]</span>. Potential flow theory, on its own cannot predict uniquely what amount of lift is an airfoil capable of generating. Alternately, either flow field representations below are valid within the framework of potential flow theory.</p>
+<p>Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id3">[<a class="reference internal" href="References.html#id27">RL13</a>]</span>. Potential flow theory, on its own cannot predict uniquely what amount of lift is an airfoil capable of generating. Alternately, either flow field representations below are valid within the framework of potential flow theory.</p>
 <div class="image-grid2">
     <img  src="../assets/BA3_fig7_1_3b.png" class="medium"/>
     <img  src="../assets/BA3_fig7_1_3c.png" class="medium"/>

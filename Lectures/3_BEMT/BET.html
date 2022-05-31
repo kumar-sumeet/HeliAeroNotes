@@ -55,6 +55,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Blade element momentum theory" href="BEMT.html" />
@@ -157,6 +158,35 @@
  <li class="toctree-l1">
   <a class="reference internal" href="BEMT.html">
    Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Assignment.html">
+   Aerodynamics of Human Powered Helicopter
   </a>
  </li>
 </ul>
@@ -364,12 +394,13 @@
 \int d C_{T} &amp;=\int\frac{\sigma}{2} C_{l} r^{2} d r \\
 &amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int \alpha r^{2} dr \\ 
 &amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\phi) r^{2} d r \\ 
-&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\frac{U_P}{U_R}) r^{2} d r \\ 
+&amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\frac{U_P}{U_T}) r^{2} d r \\ 
 &amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int(\theta-\frac {\lambda \Omega R}{\Omega y}) r^{2} d r \\ 
 &amp;=\frac{\sigma}{2} C_{l_{\alpha}} \int (\theta r^2 - \lambda r) dr \\
 \end{split}
 \label{eq:CT_Cl} \tag{1}
 \end{equation*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(U_P\)</span> is the flow velocity perpendicular to the rotor disk (which in the case of hover is simply <span class="math notranslate nohighlight">\(v_i\)</span>) and <span class="math notranslate nohighlight">\(U_T\)</span> is the tangential flow velocity in the plane of the rotor disk.</p>
 <p>In case of untwisted blades and uniform inflow, <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> are constants. This is a highly restrictive assumption and one that is not found on real-world VTOL aircraft. Blades on all rotors have some built-in twist, this includes aircraft propellers, helicopter rotors, wind turbines etc. Slender rotor blades, as seen on full-scale helicopters or on wind turbines, can never be manufactured to be perfectly rigid so they undergo elastic torsion deformation that brings in an additional component to the twist of the blade due to elastic torsion. This elastic twist is dynamic in nature which in turn leads to a dynamic variation in blade sectional pitch (which in turn affects the angle of attack) and the resulting aerodynamic loads. As you can imagine this opens up a Pandora’s box of physics that needs to be modelled. So for the purposes of our discussion here we also assume that the blades are perfectly rigid so that blade elastic deformation does not need to be accounted for at all.</p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\frac{\theta_{0}}{3}-\frac{\lambda}{2}\right)=\frac{\sigma}{6} C_{l_{\alpha}}\left(\theta_{0}-\frac{3}{2} \sqrt{\frac{C_T}{2}}\right)\]</div>

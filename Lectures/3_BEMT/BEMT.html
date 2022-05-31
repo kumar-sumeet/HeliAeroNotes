@@ -55,9 +55,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Blade Aerodynamics" href="BladeAerodynamics.html" />
     <link rel="prev" title="Blade element theory" href="BET.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -157,6 +158,35 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Assignment.html">
+   Aerodynamics of Human Powered Helicopter
   </a>
  </li>
 </ul>
@@ -388,20 +418,20 @@
 <h1>Blade element momentum theory<a class="headerlink" href="#blade-element-momentum-theory" title="Permalink to this headline">¶</a></h1>
 <p>From the momentum theory analysis, the following relations were obtained relating rate of mass flow of fluid (air) through the rotor disk, the thrust generated and the corresponding power required.</p>
 <div class="math notranslate nohighlight">
-\[T=\dot{m} v_i=\rho A v_i^{2}\]</div>
+\[T=\dot{m} w=2\rho A v_i^{2}\]</div>
 <div class="math notranslate nohighlight">
-\[P=\frac{1}{2} \dot{m} v_i^{2}=\frac{1}{2} \rho A v_{i}^{3}\]</div>
+\[P=\frac{1}{2} \dot{m} w^{2}=2 \rho A v_{i}^{3}\]</div>
 <p>It was assumed that the inflow velocity <span class="math notranslate nohighlight">\(v_i\)</span> was uniform over the entire rotor disk. In reality that is not true. However, instead of analysing the more general case where <span class="math notranslate nohighlight">\(v_i = f(r,\psi)\)</span>, we continue working with the axial flight scenario where <span class="math notranslate nohighlight">\(v_i\)</span> is some function of only <span class="math notranslate nohighlight">\(r\)</span> (azimuthal symmetry). In order to arrive at the thrust and power relations like above, the rotor disk is discretised into rings and elemental thrust contribution from each ring is calculated. The overall rotor thrust is then just an integrated quantity.</p>
 <div class="section" id="annular-momentum-theory">
 <h2>Annular momentum theory<a class="headerlink" href="#annular-momentum-theory" title="Permalink to this headline">¶</a></h2>
 <center>
     <img src="../../assets/BEMT_4.png" class="big">
     <p style="font-size:16px; color:gray; text-align:center;" > Annular momentum theory model </p>
-</center><div class="amsmath math notranslate nohighlight" id="equation-da058acb-adf4-45a6-a83e-62b6d8ebb57f">
-<span class="eqno">(3)<a class="headerlink" href="#equation-da058acb-adf4-45a6-a83e-62b6d8ebb57f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+</center><div class="amsmath math notranslate nohighlight" id="equation-7961c54b-16e3-46e2-b2a4-8f59cb346dc7">
+<span class="eqno">(3)<a class="headerlink" href="#equation-7961c54b-16e3-46e2-b2a4-8f59cb346dc7" title="Permalink to this equation">¶</a></span>\[\begin{align}
 d T &amp; =wd \dot{m} \\
 &amp;= 2v_{i} \rho 2 \pi y d y\left(V_{c}+v_{i}\right) \\
-d C_{T} &amp; =\frac{4 \pi p\left(V_{c}+v_{i}\right) v_{i} y d y}{\rho \pi R^{2}(\Omega R)^{2}}\\
+d C_{T} &amp; =\frac{4 \pi \rho\left(V_{c}+v_{i}\right) v_{i} y d y}{\rho \pi R^{2}(\Omega R)^{2}}\\
 &amp;=4 \lambda \lambda_{i} r dr \\
 &amp;=4 \lambda \left(\lambda-\lambda_{c}\right)r d r \\
 C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \text{Climb case}\\
@@ -441,11 +471,11 @@ C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \
 <p>Based on the inflow relation in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span>, it can be seen that the <span class="math notranslate nohighlight">\(\lambda(r)=\)</span> const is obtained if <span class="math notranslate nohighlight">\(\theta r =\)</span> const. This twist distribution is refered to as hyperbolic twist and would result in minimum induced power for a rotor (provided none of the other terms in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> are a function of <span class="math notranslate nohighlight">\(r\)</span> of course). In reality, helicopter blades tend to have more or less a linear twist distribution of about -8° to -16°. While better hover performance is possible with even greater blade twist, it is detrimental to forward flight performance (leads to inboard sections stalling on retreating side) and so a compromise needs to be made. Propellers on the other hand are always in climb mode and are therefore highly twisted.</p>
 <div class="math notranslate nohighlight">
 \[\lambda (r)=\frac{\sigma C_{l_{\alpha}}}{16}\left[-1+\sqrt{1+\frac{32}{\sigma C_{l_{\alpha}}} \theta r}\right]\]</div>
-<div class="image-grid">
+<div class="image-grid2">
     <img  src="../../assets/B3_fig3_6.png" class="medium"/>
     <img  src="../../assets/U2_figA_2.png" class="medium"/>
 </div>
-<div class="image-grid">
+<div class="image-grid2">
   <p style="text-align:center; color:gray; font-size:16px;"> Ideal blade twist distribution <a href="https://www.cambridge.org/de/academic/subjects/engineering/aerospace-engineering/principles-helicopter-aerodynamics-2nd-edition-1?format=HB&isbn=9781107013353">[source] </a> </p>
   <p style= "font-size:16px; color:gray; text-align:center;"> UH-60 rotor blade twist <a href="https://ntrs.nasa.gov/citations/19830004795"> [source]</a></p>
 </div></div>
@@ -462,11 +492,8 @@ dC_T &amp;= \frac{\sigma}{2} C_l {r}^2d{r} \\
 \label{eq:BEMT_idealtwist} \tag{3}
 \end{equation*}\]</div>
 <p>where the ideal blade twist assumption has been made and <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span> is the uniform inflow ratio and the angle of attack <span class="math notranslate nohighlight">\(\alpha\)</span> is given by,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ca9d1d17-e6f8-4e34-97ae-5d806aa8b924">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ca9d1d17-e6f8-4e34-97ae-5d806aa8b924" title="Permalink to this equation">¶</a></span>\[\begin{align}
-\alpha &amp;= \displaystyle \frac{\theta_{tip}-\bar{\lambda}}{r}\\
-&amp;= \displaystyle \frac{ \alpha_{tip}}{r}
-\end{align}\]</div>
+<div class="math notranslate nohighlight">
+\[ \alpha = \displaystyle \frac{\theta_{tip}-\bar{\lambda}}{r}= \displaystyle \frac{ \alpha_{tip}}{r}\]</div>
 <p>So, the lift generated at a given blade section can be given by,</p>
 <div class="math notranslate nohighlight">
 \[C_l = C_{l_{\alpha}} \frac{\alpha_{tip}}{r}\]</div>
@@ -599,8 +626,8 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 <li><p>Different rotor wake models as well as methods to solve for the blade aerodynamics exist</p>
 <ul>
 <li><p>some of the most high-fidelity analyses fall within the realm of CFD methods</p></li>
-<li><p>vortex particle methods <span id="id4">[<a class="reference internal" href="../References.html#id12">SF18</a>]</span></p></li>
-<li><p>dynamic inflow models <span id="id5">[<a class="reference internal" href="../References.html#id38">Ban20</a>, <a class="reference internal" href="../References.html#id37">He89</a>, <a class="reference internal" href="../References.html#id36">Mur08</a>]</span></p></li>
+<li><p>vortex particle methods <span id="id4">[<a class="reference internal" href="../References.html#id14">SF18</a>]</span></p></li>
+<li><p>dynamic inflow models <span id="id5">[<a class="reference internal" href="../References.html#id40">Ban20</a>, <a class="reference internal" href="../References.html#id39">He89</a>, <a class="reference internal" href="../References.html#id38">Mur08</a>]</span></p></li>
 <li><p>prescribed wake methods</p></li>
 </ul>
 </li>
@@ -652,10 +679,10 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
             <p class="prev-next-title">Blade element theory</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="BladeAerodynamics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Blade Aerodynamics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

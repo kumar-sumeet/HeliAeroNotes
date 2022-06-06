@@ -151,17 +151,17 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../3_BEMT/BET.html">
+  <a class="reference internal" href="../2_BEMT/1_BET.html">
    Blade element theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../3_BEMT/BEMT.html">
+  <a class="reference internal" href="../2_BEMT/2_BEMT.html">
    Blade element momentum theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../3_BEMT/BladeAerodynamics.html">
+  <a class="reference internal" href="../2_BEMT/3_BladeAerodynamics.html">
    Blade Aerodynamics
   </a>
  </li>
@@ -173,7 +173,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../2_Hover/1_Hover.html">
+  <a class="reference internal" href="../3_Hover/1_Hover.html">
    Hover
   </a>
  </li>
@@ -631,9 +631,12 @@ The derivation below is for a rotor in hover i.e.</p>
     <p style="text-align:center; color:gray; font-size:16px;"> Hovering rotor flowfield model in momentum theory 
   </p>
 </div>
-<p>Mass Conservation:$<span class="math notranslate nohighlight">\( \dot{m} = \rho A v = \rho A_{\infty} w \)</span><span class="math notranslate nohighlight">\( 
-Momentum Conservation: \)</span><span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span><span class="math notranslate nohighlight">\( 
-Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v = \frac{1}{2} \dot{m} w^2\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\text{Mass Conservation:}\quad\dot{m} = \rho A v = \rho A_{\infty} w \]</div>
+<div class="math notranslate nohighlight">
+\[\text{Momentum Conservation:}\quad T = \dot{m}w = (\rho A v) w \]</div>
+<div class="math notranslate nohighlight">
+\[\text{Energy Conservation:}\quad T v = \frac{1}{2} \dot{m} w^2\]</div>
 <div class="math notranslate nohighlight">
 \[\Rightarrow T / A = \frac{1}{2} \rho w^2\]</div>
 <div class="math notranslate nohighlight">
@@ -811,15 +814,15 @@ The induced velocity <span class="math notranslate nohighlight">\(v\)</span> is 
 <div class="math notranslate nohighlight">
 \[ \Rightarrow \frac{1}{2} \rho w(w+V)=T / A \]</div>
 <p>substitute <span class="math notranslate nohighlight">\(2v\)</span> and solve quadratic equation in <span class="math notranslate nohighlight">\(v\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-8913a269-7a45-4d7d-824a-b6301f5d80a9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-8913a269-7a45-4d7d-824a-b6301f5d80a9" title="Permalink to this equation">¶</a></span>\[\begin{align} v &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-24939cef-fa85-4a7b-882c-49b5e055e722">
+<span class="eqno">(1)<a class="headerlink" href="#equation-24939cef-fa85-4a7b-882c-49b5e055e722" title="Permalink to this equation">¶</a></span>\[\begin{align} v &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
 <p>So climbing reduces the induced velocity!</p>
 <p>Why is the other root ignored?</p>
 <ul class="simple">
 <li><p>For steady climb case</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-04fa55bc-a35d-4117-b00f-7f7297e69782">
-<span class="eqno">(2)<a class="headerlink" href="#equation-04fa55bc-a35d-4117-b00f-7f7297e69782" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-32dc5851-134c-438e-ad0c-77ddb0cb6d15">
+<span class="eqno">(2)<a class="headerlink" href="#equation-32dc5851-134c-438e-ad0c-77ddb0cb6d15" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T =W &amp;= \dot{m}w\\
 &amp;= 2 \dot{m}v
 \end{align}\]</div>

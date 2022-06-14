@@ -25,20 +25,19 @@ parts:
 
 #    - file: Lectures/2_Hover/Tutorial_0
 
-  - caption: Blade Element Momentum Theory
+  - caption: Blade Element Theory
     chapters:
-    - file: Lectures/3_BEMT/BET
-    - file: Lectures/3_BEMT/BEMT
-#        - file: Lectures/3_BEMT/BladeGeometry
-    - file: Lectures/3_BEMT/BladeAerodynamics
-#        - file: Lectures/3_BEMT/SummaryAndBeyondBEMT
+    - file: Lectures/2_BET/1_BET
+    - file: Lectures/2_BET/2_BEMT
+    - file: Lectures/2_BET/3_BladeAerodynamics
 #
   - caption: Hover
     chapters:
-    - file: Lectures/2_Hover/1_Hover
+    - file: Lectures/3_Hover/1_Hover
+    - file: Lectures/3_Hover/ResponseToAQuestion
 #    - file: Lectures/2_Hover/2_TailRotor
-#    - file: Lectures/2_Hover/FM
-#    - file: Lectures/2_Hover/Performance
+#    - file: Lectures/2_Hover/3_FM
+#    - file: Lectures/2_Hover/4_Performance
 #
   - caption: Assignment
     chapters:

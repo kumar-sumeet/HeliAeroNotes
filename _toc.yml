@@ -35,9 +35,9 @@ parts:
     chapters:
     - file: Lectures/3_Hover/1_Hover
     - file: Lectures/3_Hover/ResponseToAQuestion
-#    - file: Lectures/2_Hover/2_TailRotor
-#    - file: Lectures/2_Hover/3_FM
-#    - file: Lectures/2_Hover/4_Performance
+    - file: Lectures/3_Hover/2_TailRotor
+    - file: Lectures/3_Hover/3_FM
+    - file: Lectures/3_Hover/4_Performance
 #
   - caption: Assignment
     chapters:
@@ -52,16 +52,14 @@ parts:
 #    - file: Lectures/5_ForwardFlight/Aerodynamics
 #    - file: Lectures/5_ForwardFlight/FastForwardFlight
 # 
-#  - caption: Compound Helicopters
-#    chapters:
-#      - file: Lectures/6_CompoundHelicopters/CompoundHelicopters
-#       
 #    
-#  - caption: Modern Rotors
+#  - caption: Modern Designs
 #    chapters:
-#      - file: Lectures/7_ModernRotors/ModernRotors
+#      - file: Lectures/7_ModernDesigns/ModernRotors
 #        sections:
-#          - file: Lectures/7_ModernRotors/IBC
+#          - file: Lectures/7_ModernDesigns/IBC
+#          - file: Lectures/7_ModernDesigns/ABC
+#          - file: Lectures/7_ModernDesigns/CompoundHelicopters
 #
 #
 #  - caption: Advanced topics

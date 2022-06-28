@@ -46,12 +46,12 @@ parts:
 #
 #  - caption: Foward Flight
 #    chapters:
-#    - file: Lectures/5_ForwardFlight/Overview
-#    - file: Lectures/5_ForwardFlight/Transition
-#    - file: Lectures/5_ForwardFlight/Control
-#    - file: Lectures/5_ForwardFlight/Aerodynamics
-#    - file: Lectures/5_ForwardFlight/FastForwardFlight
-# 
+#    - file: Lectures/4_ForwardFlight/Overview
+#    - file: Lectures/4_ForwardFlight/Transition
+#    - file: Lectures/4_ForwardFlight/Control
+#    - file: Lectures/4_ForwardFlight/Aerodynamics
+#    - file: Lectures/4_ForwardFlight/FastForwardFlight
+ 
 #    
 #  - caption: Modern Designs
 #    chapters:

@@ -427,6 +427,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/Jk3HRrMhrjw"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -507,6 +508,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/JXkWSgU-CL0"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -525,6 +527,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/ViKYFsN3p24"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -543,12 +546,13 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/lslarZiRJhg"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
 <p>In order to accurately model a rotor in hover, the effect of the tip vortices needs to be captured with a high degree of accuracy. These strong concentrated <em>tornadoes</em> of air have a significant influence on the local aerodynamics at each blade section. This influence reduces with the distance from the tip vortex but that doesn’t mean that the inboard sections are shielded from this effect. As is clear from the foregoing discussion, tip vortices from preceding blades can pass close to the inboard sections of the following blades. In extreme scenarios like when the helicopter suddenly pitches or during a descent maneuver, the blades end up <em>slicing</em> through the tip vortices from preceding blades. This phenomenon is refered to as BVI (blade vortex interaction) and is a source of high vibrations felt within the helicopter fuselage and high noise radiation. Quite simply, this is due to sudden loading changes that occur on the blade as shown in the figure below.</p>
 <center>
-    <img src="../../assets/B0_fig9_22.png" class="medium">
+    <img src="../../assets/B0_fig9_22.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Schematic of blade-vortex interaction and the induce loading <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E">[source] </a></p>
 </center><p>‘Free-wake’ models are commonly used to model rotor tip vortices as shown below. There are many more solution strategies to model the effects of vortices trailing from the rotor blades and some of these are implemented in the rotor analysis codes such as CAMRAD II, RCAS, CHARM, Dymore etc. - these are just some of the standard codes used for rotorcraft analyses in industry and academia. The induced velocity, from these vortices, is calculated using the Biot-Savart law and gives a more accurate estimate compared to the annular momentum theory that was introduced in the BEMT chapter. It is worth noting the constriction of the rotor streamtube in the wake of the rotor. This constriction has been observed to occur for rotors in reality and is something that the momentum theory models as well.</p>
 <center>
@@ -596,8 +600,8 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 </div>
 <p>Such high thrust oscillations are intrinsic to coaxial rotor designs. High vibrations were one of the reasons that Sikorsky <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php">discontinued the XH-59A program </a> (precursor to the succesful X2 demonstrator). They still exist on the <a href="https://en.wikipedia.org/wiki/Sikorsky_S-97_Raider">Raider </a> and <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant">Defiant </a> designs, currently being extensively tested as a viable proposal to replace ageing helicopter fleet in the US armed forces, but are taken care of using vibration supressors.</p>
 <p>Another aspect of rotor design worth mentioning here is from the structural design point of view. Consider for e.g. the cases of the Bo 105 rotor (<span class="math notranslate nohighlight">\(R= 4.912\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 45\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 44.505\)</span> rad/s) and the UH60 rotor (<span class="math notranslate nohighlight">\(R= 8.178\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 95\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 27.017\)</span> rad/s). The former is a 2.5 ton helicopter and the latter a 10 ton design.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c712e05-03cd-487e-b17b-b853038a4b89">
-<span class="eqno">(4)<a class="headerlink" href="#equation-3c712e05-03cd-487e-b17b-b853038a4b89" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4f076497-ce12-49fd-bced-9f8a26010b17">
+<span class="eqno">(4)<a class="headerlink" href="#equation-4f076497-ce12-49fd-bced-9f8a26010b17" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{Bo 105 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\
 &amp;= 218906 \quad \text{N} \\
 \text{UH60 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\

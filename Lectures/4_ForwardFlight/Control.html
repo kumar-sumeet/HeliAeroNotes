@@ -215,11 +215,6 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="Transition.html">
    Transition
   </a>
@@ -362,7 +357,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#swashplateless-control">
-   Swashplateless control?
+   Swashplateless control
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -371,13 +366,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#torque-control-based-design">
-     Torque control-based design
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#active-control-rotors">
-     Active control rotors
+    <a class="reference internal nav-link" href="#torque-based-control-design">
+     Torque-based control design
     </a>
    </li>
   </ul>
@@ -409,7 +399,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#swashplateless-control">
-   Swashplateless control?
+   Swashplateless control
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -418,13 +408,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#torque-control-based-design">
-     Torque control-based design
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#active-control-rotors">
-     Active control rotors
+    <a class="reference internal nav-link" href="#torque-based-control-design">
+     Torque-based control design
     </a>
    </li>
   </ul>
@@ -441,6 +426,7 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="control">
 <h1>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h1>
 <p>Understanding the machinations of axial (hover/climb) flight is relatively straightforward. The same intuition acquired when learning about fixed-wing propellers carries over to VTOLs in axial flight. This changes dramatically, however, once there is flow in the plane of the rotor disk (also refered to as edgewise flow).</p>
+<p>In case of a fully rigid rotor, a swashplate tilt would produce a moment on the rotor hub in the direction of the tilt. This is due to the change in blade pitch angles as they undergo one revolution - increase pitch angle where the swashplate is tilted up and a decrease where it is tilted down. …</p>
 <center>
     <img src="../../assets/P152_6.png" class="medium">
     <p class="caption"> Azimuth of blade cyclic input to illicit pitch down response of aircraft <a href="https://vtol.org/store/product/the-abc-rotor-a-historical-perspective-4111.cfm"> [source] </a></p>
@@ -454,7 +440,26 @@
 </ul>
 </div>
 <div class="section" id="swashplateless-control">
-<h2>Swashplateless control?<a class="headerlink" href="#swashplateless-control" title="Permalink to this headline">¶</a></h2>
+<h2>Swashplateless control<a class="headerlink" href="#swashplateless-control" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;-kWhNi-MZAM&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/-kWhNi-MZAM"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 <div class="section" id="servo-flap">
 <h3>Servo flap<a class="headerlink" href="#servo-flap" title="Permalink to this headline">¶</a></h3>
 <p>These are mechanically controlled via linkages that run across the span of the blade inside it <a href="https://www.helis.com/howflies/servo.php#:~:text=The%20servo%20flap%20is%20a,elevator%20on%20fixed%20wing%20airplanes">[source]</a>.</p>
@@ -468,8 +473,8 @@
   <p > Root cutout <a href="https://en.wikipedia.org/wiki/Kaman_K-MAX#/media/File:N265ka_at_KBJC.JPG" > </a>
   </p>       
 </div></div>
-<div class="section" id="torque-control-based-design">
-<h3>Torque control-based design<a class="headerlink" href="#torque-control-based-design" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="torque-based-control-design">
+<h3>Torque-based control design<a class="headerlink" href="#torque-based-control-design" title="Permalink to this headline">¶</a></h3>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
@@ -499,10 +504,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="active-control-rotors">
-<h3>Active control rotors<a class="headerlink" href="#active-control-rotors" title="Permalink to this headline">¶</a></h3>
-<p>Active control rotors have been</p>
 </div>
 </div>
 </div>

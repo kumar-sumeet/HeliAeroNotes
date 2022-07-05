@@ -46,6 +46,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -355,19 +357,9 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Overview
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fixed-wing-wake">
-   Fixed-wing wake
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotary-wing-wake">
-   Rotary-wing wake
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixed-wing-wake-vs-rotary-wing-wake">
+   Fixed-wing wake vs Rotary-wing wake
   </a>
  </li>
 </ul>
@@ -390,19 +382,9 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Overview
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fixed-wing-wake">
-   Fixed-wing wake
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rotary-wing-wake">
-   Rotary-wing wake
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixed-wing-wake-vs-rotary-wing-wake">
+   Fixed-wing wake vs Rotary-wing wake
   </a>
  </li>
 </ul>
@@ -417,16 +399,15 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <blockquote class="epigraph">
-<div><p>“If we [helicopter engineers] could see air, we would be a lot smarter.”</p>
-<p class="attribution">—Ray W Prouty (Helicopter Aerodynamics I)  </p>
+<div><p>“The problem of the rotor in steady forward flight is the problem of defining the magnitude and direction of airflow encountered by each blade element”</p>
+<p class="attribution">—Alfred Gessow (Aerodynamics of the Helicopter)  </p>
 </div></blockquote>
 <p>On a conventional helicopter, the rotor is the sole entity responsible for generating thrust to counter the weight as well as the fuselage drag. While this characteristic itself leads to interesting aerodynamics and rotor performance attributes, there are a ton of pecularities arising just from edgewise rotor flight.</p>
 <center>
     <img src="../../assets/forces.png" class="medium">
-    <p style="font-size:12px; color:gray; text-align:center;" > UH60 <a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a></p>
-</center></div>
-<div class="tex2jax_ignore mathjax_ignore section" id="fixed-wing-wake">
-<h1>Fixed-wing wake<a class="headerlink" href="#fixed-wing-wake" title="Permalink to this headline">¶</a></h1>
+    <p style="font-size:12px; color:gray; text-align:center;" > UH-60A Helicopter <a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a></p>
+</center><div class="section" id="fixed-wing-wake-vs-rotary-wing-wake">
+<h2>Fixed-wing wake vs Rotary-wing wake<a class="headerlink" href="#fixed-wing-wake-vs-rotary-wing-wake" title="Permalink to this headline">¶</a></h2>
 <div class="image-grid2">
     <img  src="../../assets/C17Vortex.jpeg" class="medium"/>
     <img  src="../../assets/FA18CVortex.jpeg" class="medium"/>
@@ -436,10 +417,29 @@
   </p>   
   <p > FA18C Vortex <a href="https://en.wikipedia.org/wiki/Wingtip_vortices#/media/File:FA-18C_vapor_LEX_and_wingtip_1.jpg"> [source]</a>
   </p> 
+</div><center>
+    <img src="../../assets/4blade_02.gif" class="medium">
+    <p style="text-align:center; color:gray; font-size:16px;"> Free-wake simulation of a 4 bladed rotor in forward flight </p>
+</center><div style="float:right; width:40%;" >
+    <img src="../../assets/B0_fig9_1.png" class="big" />
+    <p style="text-align:center; color:gray; font-size:16px;"> Rotor tip vortex trajectories at difference advance ratios <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
 </div>
+<ul class="simple">
+<li><p>Note the changing wake pattern with <span class="math notranslate nohighlight">\(\mu\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v_i\)</span> due to vortex-induced velocity</p>
+<ul>
+<li><p>Biot-Savart law</p></li>
+</ul>
+</li>
+<li><p>high <span class="math notranslate nohighlight">\(v_i\)</span> with tightly spaced rings in hover</p></li>
+<li><p>low <span class="math notranslate nohighlight">\(v_i\)</span> when rotor quickly moves away</p>
+<ul>
+<li><p>fast forward flight</p></li>
+<li><p>rotor in climb</p></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="rotary-wing-wake">
-<h1>Rotary-wing wake<a class="headerlink" href="#rotary-wing-wake" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">

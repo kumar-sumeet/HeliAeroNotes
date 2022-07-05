@@ -365,6 +365,13 @@
    </span>
    &gt;0?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aircraft-control">
+     Aircraft Control
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#from-hover-to-v-f-0">
@@ -380,8 +387,13 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rotor-is-not-just-a-propeller-placed-in-a-different-plane">
-     Rotor is not just a propeller placed in a different plane
+    <a class="reference internal nav-link" href="#introduction-of-flapping-hinge">
+     Introduction of flapping hinge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-flapping">
+     Blade flapping
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -392,18 +404,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#juan-de-la-cierva-s-solution">
-   Juan de la Cierva’s solution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#closer-look-at-the-rotor-hub">
    Closer look at the rotor hub
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rotor-control">
-     Rotor control
+    <a class="reference internal nav-link" href="#rotorcraft-control">
+     Rotorcraft control
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -426,16 +433,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotor-types">
    Rotor types
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#characteristic-power-bucket-curve-its-all-about-rate-of-mass-flow">
-   Characteristic power bucket curve: its all about rate of mass flow!
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#empennage">
-   Empennage
   </a>
  </li>
 </ul>
@@ -466,6 +463,13 @@
    </span>
    &gt;0?
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aircraft-control">
+     Aircraft Control
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#from-hover-to-v-f-0">
@@ -481,8 +485,13 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rotor-is-not-just-a-propeller-placed-in-a-different-plane">
-     Rotor is not just a propeller placed in a different plane
+    <a class="reference internal nav-link" href="#introduction-of-flapping-hinge">
+     Introduction of flapping hinge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-flapping">
+     Blade flapping
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -493,18 +502,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#juan-de-la-cierva-s-solution">
-   Juan de la Cierva’s solution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#closer-look-at-the-rotor-hub">
    Closer look at the rotor hub
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rotor-control">
-     Rotor control
+    <a class="reference internal nav-link" href="#rotorcraft-control">
+     Rotorcraft control
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -529,16 +533,6 @@
    Rotor types
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#characteristic-power-bucket-curve-its-all-about-rate-of-mass-flow">
-   Characteristic power bucket curve: its all about rate of mass flow!
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#empennage">
-   Empennage
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -550,20 +544,25 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="transition">
 <h1>Transition<a class="headerlink" href="#transition" title="Permalink to this headline">¶</a></h1>
-<p>There needs to be some formulation of power at different flight speeds!!!!!!</p>
+<blockquote class="epigraph">
+<div><p>“If we [helicopter engineers] could see air, we would be a lot smarter.”</p>
+<p class="attribution">—Ray W Prouty (Helicopter Aerodynamics I)  </p>
+</div></blockquote>
 <p>As the helicopter moves from a hover flight state to a forward flight state, the rotor wake undergoes quite a bit of transformation so much so that the momentum theory approximations incur significant error making them inapplicable. Momentum theory again becomes applicable as higher forward flight speeds are attained. This <em>special</em> forward flight region 0&lt; <span class="math notranslate nohighlight">\({\mu}\)</span> &lt;0.1 is generally referred to as the transition region where due to the proximity of the rotor tip vortices to the following blades leads to impulsive loadings, which in turn results in high noise and vibrations. Needless to say transition region is not comfortable for people inside the helicopter or for those in the neighbourhoods it flies over.</p>
 <div class="section" id="how-does-one-achieve-v-f-0">
 <h2>How does one achieve <span class="math notranslate nohighlight">\(V_F\)</span>&gt;0?<a class="headerlink" href="#how-does-one-achieve-v-f-0" title="Permalink to this headline">¶</a></h2>
-<p>This is not a trivial question to ask. From basic understanding of airfoil aerodynamics, it is relatively obvious that to achieve hover at a given MTOW, the rotor collective needs to be increased until the helicopter leaves the ground. Once in hover, the main rotor thrust needs to be tilted so that a component of the rotor thrust accelerates the helicopter until enough parasite drag builds up to counter it.
-One possible mechanism of achieving forward motion would be to move the helicopter CG ahead of the rotor shaft. The thrust vector would induce a pitch down moment on the entire aircraft which would lead to the thrust vector tilting and accelerating it forward. Helicopters achieve this using a simpler mechanism that doesn’t involve moving the CG.</p>
+<p>This is not a trivial question to ask. From basic understanding of airfoil aerodynamics, it is relatively obvious that to achieve hover at a given MTOW, the rotor collective needs to be increased until the helicopter leaves the ground. Once in hover, the main rotor thrust vector needs to be tilted so that a forward component accelerates the helicopter until enough parasite drag builds up to counter it.
+One possible mechanism of achieving forward motion would be to move the helicopter CG ahead of the rotor shaft. The thrust vector would induce a pitch down moment on the entire aircraft which would lead to the thrust vector tilting and accelerating the rotorcaft forward. Helicopters achieve this using a simpler mechanism, relatively speaking, that doesn’t involve anything as complicated cumbersome as moving the CG of the aircraft.</p>
 <div style="float:right; width:55%"; >
     <img src="../../assets/forces_moment.png" />
-    <p style="font-size:12px; color:gray; text-align:center;"> Forces and moments balance about CG  (modified from<a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a>)</p>
+    <p style="font-size:16px; color:gray; text-align:center;"> Forces and moments balance about CG  (modified from<a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a>)</p>
 </div>
 <p> </p>
-<p>Net force and angular momentum of the aircraft should equal zero</p>
+<p>Net force and moment about the CG of the aircraft should equal zero</p>
 <p>Vertical component of thrust = aircraft weight</p>
 <p>Horizontal component of thrust = aircraft drag</p>
+<div class="section" id="aircraft-control">
+<h3>Aircraft Control<a class="headerlink" href="#aircraft-control" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>increase collective for hover (<span class="math notranslate nohighlight">\(V_F=0\)</span>)</p></li>
 <li></li>
@@ -572,33 +571,80 @@ One possible mechanism of achieving forward motion would be to move the helicopt
 <li><p>if rotor collective not decreased as <span class="math notranslate nohighlight">\(V_F\)</span> increases, hecliopter starts climbing (‘translational lift’)</p></li>
 </ul>
 </div>
+</div>
 <div class="section" id="from-hover-to-v-f-0">
 <span id="content-5-ff-t-la-labels"></span><h2>from hover to <span class="math notranslate nohighlight">\(V_F&gt;0\)</span><a class="headerlink" href="#from-hover-to-v-f-0" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="rotor-aerodynamics-assymetry-forward-flight">
 <h2>Rotor aerodynamics assymetry: forward flight<a class="headerlink" href="#rotor-aerodynamics-assymetry-forward-flight" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="rotor-is-not-just-a-propeller-placed-in-a-different-plane">
-<h3>Rotor is not just a propeller placed in a different plane<a class="headerlink" href="#rotor-is-not-just-a-propeller-placed-in-a-different-plane" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Forward (edgewise) motion of the rotor as a whole creates assymetry of dynamic pressure</p></li>
-<li><p>If nothing is done, this simply results in more aerodynamic lift in the region of higher dynamic pressure</p></li>
-<li><p>As revolutionary as it might have been to mechanically implement this during the early days of the evolution of the helicopter rotor system, pitching the rotor blade and thereby controlling the angle of attack has become the most reliable manner we can achieve this</p></li>
-</ul>
 <center>
-    <img src="../../assets/ABC1.png" class="medium">
-    <p style="font-size:12px; color:gray; text-align:center;"  > Rigid rotor requirement of roll moment balance <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php"> [source]</a></p>
+    <img src="../../assets/HT_hover_forward.png" class="medium">
+    <p style="font-size:16px; color:gray; text-align:center;"  > Tangential velocity distribution in hover versus forward flight (at &psi =90°) </p>
 </center>
-<p>Having said that, a rotor design that is basically a propeller placed horizontally on top of the helicopter fuselage presents a lot of interesting possibilities. Of course, the aforementioned problems wouldn’t magically go away. So the challenge is to come up with a solution strategy different from what the early pioneers of rotorcraft came up with. We’ll talk more about this when discussing modern rotor designs.</p>
+<center>
+    <img src="../../assets/B29_fig7_23.png" class="medium">
+    <p style="font-size:16px; color:gray; text-align:center;"  > Differential effect of oncoming flow velocity on the rotor [taken from Aerodynamics of the Helicopter by A Gessow] <a href=""> </a></p>
+</center>
+<div class="section" id="introduction-of-flapping-hinge">
+<h3>Introduction of flapping hinge<a class="headerlink" href="#introduction-of-flapping-hinge" title="Permalink to this headline">¶</a></h3>
+<p>Juan de la Cierva’s autogyro</p>
+<p>Introduced the flapping hinge (and later the lead-lag hinge)… This simple design solution has persisted to this day and is implemented (in some form) on all current rotor designs with more than 2 blades.</p>
+<p>Juan de la Cierva of Spain is credited with succesfully constructing a viable autogiro, complete with flap and lead-lag hinges - articulated hub design. So, the issue surrounding a helicopter in edgewise flight were actually practically solved on an autogyro.</p>
+<p>lateral lift assymetry, due to different dynamic pressures, is a problem</p>
+<ul class="simple">
+<li><p>First noticed on autogyros by Cierva, fixed by putting up (pin joints) mechanical hinges at the blade roots</p></li>
+<li><p>allowed each blade to flap up and down independent of other blades</p></li>
+<li><p>Highest blade lift occurs at <span class="math notranslate nohighlight">\(\psi=90\deg\)</span>, ergo blade flaps up at <span class="math notranslate nohighlight">\(\psi=180\deg\)</span></p>
+<ul>
+<li><p>opposite effect on retreating side leads to a positive</p></li>
+</ul>
+</li>
+<li><p>Blade flapping leads to in-plane coriolis forces</p>
+<ul>
+<li><p>lead-lag hinges needed to relieve in-plane fatigue loads</p></li>
+</ul>
+</li>
+</ul>
 </div>
+<div class="section" id="blade-flapping">
+<h3>Blade flapping<a class="headerlink" href="#blade-flapping" title="Permalink to this headline">¶</a></h3>
+<p>Blade flapping refers to the out-of-plane motion of the rotor blades as they undergo one rotor revolution. In steady flight, the blade motions undergo periodic motions and the flapping experienced by one blade can be given by the following expression -</p>
+<div class="math notranslate nohighlight">
+\[\beta = a_0 - a_1\cos \psi - b_1\sin \psi - a_2\cos 2\psi - b_2\sin 2\psi + ...\]</div>
+<p>Note that to have steady rotorcraft flight, the blade motion/aerodynamics have to be periodic. When the rotorcraft is undergoing maneuvers, the blade motion/aerodynamics are non-periodic for the transient period.</p>
+<div class="image-grid3">
+    <img  src="../../assets/B29_fig7_14.png" class="medium"/>
+    <img  src="../../assets/B29_fig7_16.png" class="medium"/>
+    <img  src="../../assets/B29_fig7_18.png" class="medium"/>
+</div>
+<div class="image-grid3">
+  <p style="text-align:center; color:gray; font-size:16px;"> Rotor with &beta; = a<sub>0</sub> </p>
+  <p style= "font-size:16px; color:gray; text-align:center;"> Rotor with &beta; = -a<sub>1</sub> cos &psi; </p>
+  <p style= "font-size:16px; color:gray; text-align:center;"> Rotor with &beta; = -b<sub>1</sub> sin &psi;</p>
+</div><div style="float:right; width:43%;" >
+    <img src="../../assets/B33_fig4_1.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > ... [from the Art of the Helicopter by John Watkinson] <a href=""> </p>
+</div>
+$a_0$ refers to rotor coning that occurs due to blade position that balances the moments, due to the centrifugal forces and the lifting forces, about the blade hinge. The blade hinge here doesn't necessarily have to lie at the center of the rotor disc but can have an 'offset' as shown later.<div style="float:right; width:43%;" >
+    <img src="../../assets/B29_fig7_27.png" class="medium" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Effect of rotor coning on longitudinal tilt  <a href=""> </p>
+</div>
+In forward flight, rotor coning leads to different effects of the oncoming flow velocity on the blade aerodynamics depending on the longitudinal position of the blade. When the blade is at $\psi=180°$, the free-stream oncoming flow velocity $V_f$ is such that it increases the overall blade section angle of attack. This results in higher aerodynamic loads and a corresponding increase in lateral blade flapping 90° later at $\psi=270°$. The free-stream velocity has the opposite effect at $\psi=360°$ (or 0°) so that now the blade flaps down 90° later at $\psi=90°$. The overall effect is a rightwards tilt (for CCW rotors) of the rotor disk. It is easy to see that in the absence of rotor coning the free-stream will have similar effect on the fore and aft positions and such lateral tilting of the rotor disk would not occur.<p>Similarly, the lateral assemtry in dynamic pressure results in high aerodynamic loads at <span class="math notranslate nohighlight">\(\psi=90°\)</span> to which the blade responds with maximum flapping occuring at <span class="math notranslate nohighlight">\(\psi=180°\)</span>. The opposite happens at <span class="math notranslate nohighlight">\(\psi=270°\)</span>, low aerodynamic loads due to low dynamic pressure and a corresponding flap down motion at <span class="math notranslate nohighlight">\(\psi=360°\)</span>. The overall effect is the rotor disk tilting back (<span class="math notranslate nohighlight">\(a_1\)</span>).</p>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/B33_fig3_31.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Tip-path-plane of rotor undergoing purely 2/rev lateral flapping ($b_2$) [adapted from the Art of the Helicopter by John Watkinson] <a href=""> </p>
+</div>
+<p>High harmonic flapping can be seens as a warping of the tip-path-plane. This occurs as a consequence of aerodynamic loading not entirely …, elasticity in the blades,</p>
+<p>A flap hinge offset facilitates a moment to be generated at the rotor hub, due to the tension in the blades, whenever the tip path plane is not perpendicular to the shaft.</p>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/B33_fig4_2.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > 2D blade section aerodynamic loads <a href="https://www.elsevier.com/books/art-of-the-helicopter/watkinson/978-0-7506-5715-0"> source </p>
+</div></div>
 <div class="section" id="dynamic-pressure">
 <h3>Dynamic pressure<a class="headerlink" href="#dynamic-pressure" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[u_T = V_f(\mu \sin \psi + r) \]</div>
 </div>
-</div>
-<div class="section" id="juan-de-la-cierva-s-solution">
-<h2>Juan de la Cierva’s solution<a class="headerlink" href="#juan-de-la-cierva-s-solution" title="Permalink to this headline">¶</a></h2>
-<p>Introduced the flapping hinge (and later the lead-lag hinge)… This simple design solution has persisted to this day and is implemented (in some form) on all current rotor designs with more than 2 blades.</p>
 </div>
 <div class="section" id="closer-look-at-the-rotor-hub">
 <h2>Closer look at the rotor hub<a class="headerlink" href="#closer-look-at-the-rotor-hub" title="Permalink to this headline">¶</a></h2>
@@ -615,8 +661,10 @@ One possible mechanism of achieving forward motion would be to move the helicopt
   <p   > Bo 105 transmission (note the IBC actuators!)
   </p>
 </div>
-<div class="section" id="rotor-control">
-<h3>Rotor control<a class="headerlink" href="#rotor-control" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rotorcraft-control">
+<h3>Rotorcraft control<a class="headerlink" href="#rotorcraft-control" title="Permalink to this headline">¶</a></h3>
+<p>Rotorcraft control is achieved by generating forces, moments, or a combination of the two, at the rotor hub.</p>
+<p>One mechanism of achieving longitu</p>
 <p>The rotor collective was already discussed in the context of controlling thrust generation to achieve hover. However, the swashplate is capable of providing the following scheduling to the pitch angle of a rotor blade.</p>
 <div style="float:right; width:43%;" >
     <img src="../../assets/B28_fig1_12.png" class="big" />
@@ -644,8 +692,6 @@ $<span class="math notranslate nohighlight">\(\theta = \theta + \theta_{1c}\cos(
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;Pu48f7s5Ru8&#39;</span><span class="p">)</span><span class="c1">#, width=500, height=00)</span>
-
-<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;Ug6W7_tafnc&#39;</span><span class="p">)</span><span class="c1">#, width=500, height=00)</span>
 </pre></div>
 </div>
 </div>
@@ -654,7 +700,7 @@ $<span class="math notranslate nohighlight">\(\theta = \theta + \theta_{1c}\cos(
 <iframe
     width="400"
     height="300"
-    src="https://www.youtube.com/embed/Ug6W7_tafnc"
+    src="https://www.youtube.com/embed/Pu48f7s5Ru8"
     frameborder="0"
     allowfullscreen
 
@@ -666,6 +712,8 @@ $<span class="math notranslate nohighlight">\(\theta = \theta + \theta_{1c}\cos(
 <div class="section" id="forces">
 <h3>Forces<a class="headerlink" href="#forces" title="Permalink to this headline">¶</a></h3>
 <p>The total vector at the rotor hub can be in any direction. In the case of the teetering rotor it is easy to visualise how that could come about to be -</p>
+<p>One way of achieving forward tilt of the thrust vector, for example, would be by tilting the entire rotor hub assembly itself. This is the case for some autogyros.</p>
+<p>Powered rotors usually achieve this using the swashplate mechanism and the pilot control of the swashplate tilt is achieved using a central control stick. The control linkages are arranged such that a forward stick motion, for example, generates a forward thrust vector tilt of the rotor. Collective pitch control is achieved using a side stick. The controls layout in case of multi-rotor designs can get complicated - for e.g. longitudinal control (forward stick) in case of tandem helicopters is achieved by forward tilt of both rotor disks as well as an change in the thrust share between the two rotors. All this while making sure that the overall torque is balanced.</p>
 <center>
     <img src="../../assets/B28_table_1_1.png" class="large">
     <p style="font-size:12px; color:gray; text-align:center;" >  Helicopter control achieved in different configurations <a href="https://ntrs.nasa.gov/citations/19790013868"> [source]</a>
@@ -723,20 +771,6 @@ Articulated rotor hubs are the most commonly used and the most complex and maint
 <li><p>bearingless</p></li>
 </ul>
 </div>
-<div class="section" id="characteristic-power-bucket-curve-its-all-about-rate-of-mass-flow">
-<h2>Characteristic power bucket curve: its all about rate of mass flow!<a class="headerlink" href="#characteristic-power-bucket-curve-its-all-about-rate-of-mass-flow" title="Permalink to this headline">¶</a></h2>
-<p>As was mentioned earlier for hover, large mass flow through the rotor disk is key to thrust efficiency of a rotor. When a rotor is tilted for forward flight, a component of the oncoming flow velocity goes through the rotor disk. This increases the effective mass flow rate of air through the disk.</p>
-<p> </p>
-<center>
-    <img src="../../assets/power_curve.png" class="large">
-    <p  style="font-size:12px; color:gray; text-align:center;">
-</center></div>
-<div class="section" id="empennage">
-<h2>Empennage<a class="headerlink" href="#empennage" title="Permalink to this headline">¶</a></h2>
-<center>
-    <img src="../assets/UH60_horizontal_tail.jpeg" class="medium">
-    <p  style="font-size:16px; color:gray; text-align:center;"> UH60 movable horizontal stabiliser <a href="https://b-domke.de/AviationImages/Blackhawk/17-6-024.html">[source] </a></p>
-</center></div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -44,12 +44,12 @@ parts:
     - file: Lectures/Assignment
 #
 #
-#  - caption: Foward Flight
-#    chapters:
+  - caption: Foward Flight
+    chapters:
 #    - file: Lectures/4_ForwardFlight/Overview
+    - file: Lectures/4_ForwardFlight/RotorAerodynamics
 #    - file: Lectures/4_ForwardFlight/Transition
 #    - file: Lectures/4_ForwardFlight/Control
-#    - file: Lectures/4_ForwardFlight/Aerodynamics
 #    - file: Lectures/4_ForwardFlight/FastForwardFlight
  
 #    

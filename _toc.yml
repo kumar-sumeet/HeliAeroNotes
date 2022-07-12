@@ -48,7 +48,7 @@ parts:
     chapters:
 #    - file: Lectures/4_ForwardFlight/Overview
     - file: Lectures/4_ForwardFlight/RotorAerodynamics
-#    - file: Lectures/4_ForwardFlight/Transition
+    - file: Lectures/4_ForwardFlight/BladeMotionAndControl
 #    - file: Lectures/4_ForwardFlight/Control
 #    - file: Lectures/4_ForwardFlight/FastForwardFlight
  
@@ -56,10 +56,9 @@ parts:
 #  - caption: Modern Designs
 #    chapters:
 #      - file: Lectures/7_ModernDesigns/ModernRotors
-#        sections:
-#          - file: Lectures/7_ModernDesigns/IBC
-#          - file: Lectures/7_ModernDesigns/ABC
-#          - file: Lectures/7_ModernDesigns/CompoundHelicopters
+#      - file: Lectures/7_ModernDesigns/IBC
+#      - file: Lectures/7_ModernDesigns/ABC
+#      - file: Lectures/7_ModernDesigns/CompoundHelicopters
 #
 #
 #  - caption: Advanced topics

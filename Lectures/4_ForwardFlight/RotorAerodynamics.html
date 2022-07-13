@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Blade Motion and Control" href="BladeMotionAndControl.html" />
     <link rel="prev" title="Aerodynamics of Human Powered Helicopter" href="../Assignment.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -219,6 +219,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Rotor Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BladeMotionAndControl.html">
+   Blade Motion and Control
   </a>
  </li>
 </ul>
@@ -563,8 +568,8 @@
     <img src="../../assets/HT_glauert_hover.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Hover <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-601f9781-d01c-4de6-aa4b-834e9341d19b">
-<span class="eqno">(6)<a class="headerlink" href="#equation-601f9781-d01c-4de6-aa4b-834e9341d19b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-10c6e0a0-0dc4-42ad-9f79-734d2f754334">
+<span class="eqno">(6)<a class="headerlink" href="#equation-10c6e0a0-0dc4-42ad-9f79-734d2f754334" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A U} \\
 &amp;=\frac{T}{2 \rho A \sqrt{\left(V_{\infty} \cos \alpha\right)^{2}+\left(-V_{\infty} \sin \alpha+v_{i}\right)^{2}}} \\
@@ -583,8 +588,8 @@ v_{i} &amp;=\sqrt{\frac{T}{2 \rho A}}
     <img src="../../assets/HT_glauert_climb.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Vertical climb <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-12f734ad-fc4a-4c69-a6ee-6aeee3e449d9">
-<span class="eqno">(7)<a class="headerlink" href="#equation-12f734ad-fc4a-4c69-a6ee-6aeee3e449d9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f0d6fab8-a977-4ce5-b49d-61b3e5b6e614">
+<span class="eqno">(7)<a class="headerlink" href="#equation-f0d6fab8-a977-4ce5-b49d-61b3e5b6e614" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+2 V_{\infty} v_{i}+v_{i}^{2}}} \\
@@ -600,8 +605,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <img src="../../assets/HT_glauert_low_speed.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Low speed forward flight <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-790d44a7-c357-471c-b6f9-add22dc1e433">
-<span class="eqno">(8)<a class="headerlink" href="#equation-790d44a7-c357-471c-b6f9-add22dc1e433" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f89e7d0a-7349-421f-a28e-3674649de1f5">
+<span class="eqno">(8)<a class="headerlink" href="#equation-f89e7d0a-7349-421f-a28e-3674649de1f5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+v_{i}^{2}}} \\
@@ -620,8 +625,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
 <p> 
  
  </p>
-<div class="amsmath math notranslate nohighlight" id="equation-50a20ae3-6fbf-46a1-b352-e0685ef29d62">
-<span class="eqno">(9)<a class="headerlink" href="#equation-50a20ae3-6fbf-46a1-b352-e0685ef29d62" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-278ca48e-9115-44c8-b03c-87e6e57ae911">
+<span class="eqno">(9)<a class="headerlink" href="#equation-278ca48e-9115-44c8-b03c-87e6e57ae911" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}}} \\
@@ -735,8 +740,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <p  style="font-size:16px; color:gray; text-align:center;"> Blade section drag due to in-plane velocity </p>
     <p  style="font-size:16px; color:gray; text-align:center;"> Rotor in forward flight </p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-c9605d4b-3117-4d95-866c-3158ac757b7e">
-<span class="eqno">(10)<a class="headerlink" href="#equation-c9605d4b-3117-4d95-866c-3158ac757b7e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-192915eb-27ce-4dc1-8e40-6275fd1c4808">
+<span class="eqno">(10)<a class="headerlink" href="#equation-192915eb-27ce-4dc1-8e40-6275fd1c4808" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{array}{l}
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} P_{0}^{\prime} d y d \Psi \\
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} D^{\prime}.V_T d y d \Psi \\
@@ -806,10 +811,10 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
             <p class="prev-next-title">Aerodynamics of Human Powered Helicopter</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="BladeMotionAndControl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Blade Motion and Control</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blade Motion and Control &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../References.html" />
+    <link rel="prev" title="Rotor Aerodynamics" href="RotorAerodynamics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Opening.html">
+   Fundamentals of Helicopter Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_CourseOverview.html">
+   Course Overview
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Momentum Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/MT.html">
+   Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fluid Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blade Element Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/1_BET.html">
+   Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/2_BEMT.html">
+   Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/3_BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/2_TailRotor.html">
+   Tail Rotor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/3_FM.html">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/4_Performance.html">
+   Performance: Aérospatiale SA 315B Lama
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Assignment.html">
+   Aerodynamics of Human Powered Helicopter
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foward Flight
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="RotorAerodynamics.html">
+   Rotor Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Blade Motion and Control
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lectures/4_ForwardFlight/BladeMotionAndControl.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/yourusername/yourbookrepo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/4_ForwardFlight/BladeMotionAndControl.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/4_ForwardFlight/BladeMotionAndControl.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-one-achieve-v-f-0">
+   How does one achieve
+   <span class="math notranslate nohighlight">
+    \(V_F\)
+   </span>
+   &gt;0?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control">
+   Control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#swashplate">
+     Swashplate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-of-flapping-hinge">
+     Introduction of flapping hinge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-flapping">
+     Blade flapping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-motion">
+     Blade motion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotor-vs-propellers-in-edgewise-flight">
+     Rotor vs propellers in edgewise flight
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Blade Motion and Control</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-one-achieve-v-f-0">
+   How does one achieve
+   <span class="math notranslate nohighlight">
+    \(V_F\)
+   </span>
+   &gt;0?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control">
+   Control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#swashplate">
+     Swashplate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-of-flapping-hinge">
+     Introduction of flapping hinge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-flapping">
+     Blade flapping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blade-motion">
+     Blade motion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotor-vs-propellers-in-edgewise-flight">
+     Rotor vs propellers in edgewise flight
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="blade-motion-and-control">
+<h1>Blade Motion and Control<a class="headerlink" href="#blade-motion-and-control" title="Permalink to this headline">¶</a></h1>
+<blockquote class="epigraph">
+<div><p>“Engineers sometimes take movies of the blade motion with a camera mounted on the hub. The results are spectacular enough that no one wants to show them to the pilots.”</p>
+<p class="attribution">—Ray W Prouty (Helicopter Aerodynamics I)  </p>
+</div></blockquote>
+<p>As the helicopter moves from a hover flight state to a forward flight state, the rotor wake undergoes quite a bit of transformation. This <em>special</em> forward flight region 0&lt; <span class="math notranslate nohighlight">\({\mu}\)</span> &lt;0.15 is generally referred to as the transition region where proximity of the rotor tip vortices to the following blades leads to impulsive loadings, which in turn results in high noise and vibrations. Needless to say transition region is not comfortable for people inside the helicopter or for those in the neighbourhoods it flies over. The momentum theory-based inflow together with BET is not enough to model all the aerodynamic effects occuring at certain blade sections due to BVI phenomena and vortex theory-based models are needed to model them. However, momentum theory results detailed in the last chapter represent the rotor inflow reasonable well.</p>
+<div class="section" id="how-does-one-achieve-v-f-0">
+<h2>How does one achieve <span class="math notranslate nohighlight">\(V_F\)</span>&gt;0?<a class="headerlink" href="#how-does-one-achieve-v-f-0" title="Permalink to this headline">¶</a></h2>
+<p>This is not a trivial question to ask. From basic understanding of airfoil aerodynamics, it is relatively obvious that to achieve hover at a given MTOW, the rotor collective needs to be increased until the helicopter leaves the ground. Once in hover, the main rotor thrust vector needs to be tilted so that a forward component accelerates the helicopter until enough parasite drag builds up to counter it and steady state forward flight is established. One possible mechanism of achieving forward motion would be to move the helicopter CG ahead of the rotor shaft. The thrust vector would induce a pitch down moment on the entire aircraft which would lead to the thrust vector tilting and accelerating the rotorcaft forward. Helicopters achieve this using a simpler mechanism, relatively speaking, that doesn’t involve anything as complicated or cumbersome as moving the CG of the aircraft.</p>
+<div style="float:right; width:55%"; >
+    <img src="../../assets/forces_moment.png" />
+    <p style="font-size:16px; color:gray; text-align:center;"> Forces and moments balance about CG  (modified from<a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a>)</p>
+</div>
+<p> </p>
+<p>Net force and moment about the CG of the aircraft should equal zero</p>
+<p>Vertical component of thrust = aircraft weight</p>
+<p>Horizontal component of thrust = aircraft drag</p>
+</div>
+<div class="section" id="control">
+<h2>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h2>
+<p>Understanding the machinations of axial (hover/climb) flight is relatively straightforward. The same intuition acquired when learning about fixed-wing propellers carries over to VTOLs in axial flight. This changes dramatically, however, once there is flow in the plane of the rotor disk (also refered to as edgewise flight).</p>
+<div class="section" id="swashplate">
+<h3>Swashplate<a class="headerlink" href="#swashplate" title="Permalink to this headline">¶</a></h3>
+<p>The rotor collective was already discussed in the context of controlling thrust generation to achieve hover/climb. In general, rotorcraft control is achieved by generating forces, moments, or a combination of the two, at the rotor hub (the structure at the center of the rotor disk that keeps everything together). While varying thrust production is required for horizontal/vertical acceleration, moments are required for the aircraft to pitch and roll. Much like a fixed-wing aircraft, rotorcraft can use control surfaces on the empennage to facilitate pitch motions in forward flight. However, in hover and low speed flight, the main rotor becomes the sole entity that is capable of providing these moments.</p>
+<p>You can watch this capability of the rotor in action below. The V-280 valor is an experimental tilt-rotor design but in the case of low speed maneuverability, the same principles are at work as in the case of a conventional helicopter. In particular, aircraft pitch changes are achieved by introducing hub moments at the centers of each rotor (roll on the other hand, for this particular configuration, is achieved via differential thrust). How are these moments achieved?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;xRiZhCAmr6Y&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/xRiZhCAmr6Y"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>The primary mechanism involved in instigating blade motion, such that desirable rotor forces and moments are obtained, is called a swashplate. The way it achieves this is via a harmonic change in the blade pitch angle and is capable of providing the following scheduling to the pitch angle of a rotor blade.</p>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/B28_fig1_12.png" class="big" />
+    <p style="text-align:center; color:gray; font-size:16px;"> Helicopter rotor control <a href="https://ntrs.nasa.gov/citations/19790013868"> [source]</a>  </p>
+</div>
+<p> 
+ 
+ 
+ 
+$<span class="math notranslate nohighlight">\(\theta = \theta_0 + \theta_{1c}\cos(\psi) + \theta_{1s}\sin(\psi)\)</span>$</p>
+<p> 
+ 
+ 
+ 
+ </p>
+<ul class="simple">
+<li><p>why this specific form?</p></li>
+</ul>
+<p> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </p>
+<p><em>Wait, what!? Collective movement of the blade pitch is understandable, but one harmonic pitching cycle as the blade completes one revolution!? Doesn’t the rotor rotate at like 5-7 Hz!?</em></p>
+<p>One way of achieving forward tilt of the thrust vector, for example, would be by tilting the entire rotor hub assembly itself. This is the case for some autogyros. Powered rotors usually achieve this using the swashplate mechanism and the pilot control of the swashplate tilt is achieved using a central control stick. The control linkages are arranged such that a forward stick motion, for example, generates a forward thrust vector tilt of the rotor. Collective pitch control is achieved using a side stick. The controls layout in case of multi-rotor designs can get complicated - for e.g. longitudinal control (forward stick) in case of tandem helicopters is achieved by forward tilt of both rotor disks as well as an change in the thrust share between the two rotors. All this while making sure that the overall torque is balanced.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Controlling the rotor blade pitch at even higher frequencies (<span class="math notranslate nohighlight">\(\approx\)</span> 40 Hz) is possible and has been demonstrated in experimental test flights. This falls under the realm of active rotor control, specifically individual blade control or IBC.</p>
+</div>
+<center>
+    <img src="../../assets/B28_table_1_1.png" class="large">
+    <p style="font-size:16px; color:gray; text-align:center;" >  Helicopter control achieved in different configurations <a href="https://ntrs.nasa.gov/citations/19790013868"> [source]</a>
+  </p>     
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;-kWhNi-MZAM&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/-kWhNi-MZAM"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>In case of a fully rigid rotor <a class="footnote-reference brackets" href="#rigidrotor" id="id1">1</a>, a swashplate tilt would produce a moment on the rotor hub in the direction of the tilt. This is due to the change in blade pitch angles as they undergo one revolution - increase in pitch angle where the swashplate is tilted up and a decrease where it is tilted down. In case of a pull of the longitudinal stick control (towards the pilot), the aircraft would pitch up due to an increase in the blade pitch (i.e. a negative <span class="math notranslate nohighlight">\(\theta_{1c}\)</span>) when the blades are close to <span class="math notranslate nohighlight">\(\psi=180°\)</span>. Based on the harmonic variation of blade pitch angle over the azimuth, this automatically leads to an opposite effect 180° later i.e. at <span class="math notranslate nohighlight">\(\psi=360°\)</span>.</p>
+<center>
+    <img src="../../assets/P152_6.png" class="big">
+    <p class="caption"> Azimuth of blade cyclic input to illicit pitch down response of aircraft <a href="https://vtol.org/store/product/the-abc-rotor-a-historical-perspective-4111.cfm"> [source] </a></p>
+</center><p>The figure above carries additional details for some of the different kinds of rotor systems on helicopters. The following discussion will attempt to throw light on the significance of the other arrows shown here.</p>
+</div>
+<div class="section" id="introduction-of-flapping-hinge">
+<h3>Introduction of flapping hinge<a class="headerlink" href="#introduction-of-flapping-hinge" title="Permalink to this headline">¶</a></h3>
+<p>Autogyros (or Gyrocopters) are a class of aircraft with a pusher prop and a rotor that is tilted backwards and rotate freely in the air.</p>
+<div style="float:right; width:55%"; >
+    <img src="../../assets/autogyro.jpg" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;" > Autogyro <a href="https://en.wikipedia.org/wiki/Autogyro#/media/File:362934-gryocopter-pilot-norman-surplus-uploaded-august-11-2015-taken-from-surplus-website.jpg"> [source]</a></p>
+</div>
+<ul class="simple">
+<li><p>Concieved before helicopters became mainstream</p></li>
+<li><p>Take-off only possible with some run-up</p></li>
+<li><p>Alternately, engine power diverted temporarily to rotor</p></li>
+<li><p>Rotate with low pitch setting and then quickly raise it</p></li>
+</ul>
+<p> 
+ 
+ 
+ 
+ 
+ </p>
+<div class="admonition-aside admonition">
+<p class="admonition-title">Aside</p>
+<p>Why does the autogyro pictured here not have a tail rotor?</p>
+</div>
+<p>Early autogyro designs had blades that were rigidly connected to the rotating shaft. This led to a lateral lift assymetry, due to different dynamic pressures, when the rotor spun in forward flight.</p>
+<ul class="simple">
+<li><p>noticed on autogyros by Cierva</p></li>
+<li><p>fixed by putting up (pin joints) mechanical hinges at the blade roots</p></li>
+<li><p>allowed each blade to flap up and down independent of other blades</p></li>
+<li><p>Highest blade lift occurs at <span class="math notranslate nohighlight">\(\psi=90\deg\)</span>, ergo blade flaps up at <span class="math notranslate nohighlight">\(\psi=180\deg\)</span></p>
+<ul>
+<li><p>opposite effect on retreating side leads to a positive pitch</p></li>
+</ul>
+</li>
+<li><p>Blade flapping leads to in-plane coriolis forces</p>
+<ul>
+<li><p>lead-lag hinges needed to relieve in-plane fatigue loads</p></li>
+</ul>
+</li>
+</ul>
+<p>The freedom of movement in the flap direction can lead to corioilis forces on the blade as it undergoes flapping motion during rotation. In other words, having a flap hinge can lead to motion of the blade in the plane of the rotor disk. This is refered to as the lead-lag motion. As counter intuitive as it may sound, this motion is a natural result of coriolis forces on the blade CG and can lead to high lead-lag or chordwise blade stresses if nothing is done to accomodate for it. Consequently, rotor blades also tend to have an additional hinge close to the rotor center of rotation in order to allow in-plane blade motion.</p>
+<center>
+    <img src="../../assets/B0_fig6_7.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Schematic of the rotor hinges and swashplate  <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source] </a></p>
+</center><p>This simple design solution has persisted to this day and is implemented (in some form) on all current rotor designs with more than 2 blades. As is evident from the figure above, the hinges are not necessarily at the center of rotation but can have an offset. A flap hinge offset facilitates a moment to be generated at the rotor hub, due to the tension in the blades, whenever the tip path plane is not perpendicular to the shaft. This is why designs that have this feature (for e.g. UH-60) are more agile than designs that don’t (for e.g. UH-1).</p>
+<center>
+    <img src="../../assets/B33_fig4_2.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > 2D blade section aerodynamic loads <a href="https://www.elsevier.com/books/art-of-the-helicopter/watkinson/978-0-7506-5715-0"> source </p>
+</center></div>
+<div class="section" id="blade-flapping">
+<h3>Blade flapping<a class="headerlink" href="#blade-flapping" title="Permalink to this headline">¶</a></h3>
+<p>Blade flapping refers to the out-of-plane motion of the rotor blades, as they undergo one rotor revolution, afforded by the flapping hinge or blade elastic flexibility. Flapping of the rotor disc generates moment at the rotor hub that in turn changes the orientation of the entire aircraft. Flap hinge is necessary to reduce the structural stresses experienced at the blade root and to remove the high roll moments that can arise if the blades were rigidly connected to the hub. If the flap hinge is located at the center of rotation itself, no bending moment from the blade can be transfered to the helicopter. This was true of the early autogyro designs and of teetering rotors.</p>
+<div class="image-grid">
+    <img  src="../../assets/Bell212_hub.jpeg" class="medium"/>
+    <img  src="../../assets/Bell212.jpeg" class="medium"/>
+</div>
+<div class="image-grid">
+  <p style="text-align:center; color:gray; font-size:16px;"> Bell 212 (teetering) rotor hub with flapping hinge at center of rotation<a href="https://b-domke.de/AviationImages/Rotorhead/32199.html"> </a> </p>
+  <p style= "font-size:16px; color:gray; text-align:center;"> Bell 212 <a href="https://en.wikipedia.org/wiki/Bell_212#/media/File:Kachina-b212-N212KA-030909-02cr.jpg"> </a></p>
+</div><div class="admonition-aside admonition">
+<p class="admonition-title">Aside</p>
+<p>While the autogyros had fixed-wings attached that could generate sufficient control in order to orient the aircraft and undergo maneuvers with requisite agility, the lack of moment transfer due to blade flapping seems like a pretty restrictive feature. In reality, teetering rotors can generate moments about the helicopter CG by tilting the thrust vector. The resulting agility is not as good as that of articulated or hingeless rotor.</p>
+</div>
+<p>In steady flight, the blade motions undergo periodic motions and the flapping experienced by one blade can be given by the following expression -</p>
+<div class="math notranslate nohighlight">
+\[\beta = a_0 - a_1\cos \psi - b_1\sin \psi - a_2\cos 2\psi - b_2\sin 2\psi + ...\]</div>
+<p>Note that to have steady rotorcraft flight, the blade motion/aerodynamics have to be periodic. When the rotorcraft is undergoing maneuvers, the blade motion/aerodynamics are non-periodic for the transient period. Flapping of the blade, due to hinges or blade elasticity or both, leads to the blades motion be a function of the azimuth angle <span class="math notranslate nohighlight">\(\psi\)</span> only. This leads to the rotor disc taking up specific orientations in space based on the magnitudes of <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(b_1\)</span>, etc. as shown below <a class="footnote-reference brackets" href="#imagesource" id="id2">2</a>.</p>
+<div class="image-grid">
+    <img  src="../../assets/B29_fig7_14.png" class="medium"/>
+    <img  src="../../assets/B29_fig7_16.png" class="medium"/>
+    <img  src="../../assets/B29_fig7_18.png" class="medium"/>
+</div>
+<div class="image-grid">
+  <p style="text-align:center; color:gray; font-size:16px;"> Rotor with &beta; = a<sub>0</sub> </p>
+  <p style= "font-size:16px; color:gray; text-align:center;"> Rotor with &beta; = -a<sub>1</sub> cos &psi; </p>
+  <p style= "font-size:16px; color:gray; text-align:center;"> Rotor with &beta; = -b<sub>1</sub> sin &psi;</p>
+</div><p><span class="math notranslate nohighlight">\(a_0\)</span> refers to rotor coning that occurs due to blade positions that balances the moments, due to the centrifugal forces and the lifting forces, about the blade hinge. Given the large magnitude of centrifugal forces on the rotating blades compared to the lifting forces generated by the blade, as was already discussed in a previous lecture, the coning angle is not large.</p>
+<center>
+    <img src="../../assets/B33_fig4_1.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Schematic of the rotor centrifugal and thrust forces [taken from the Art of the Helicopter by John Watkinson] <a href="">  </a></p>
+</center><p>In forward flight, rotor coning leads to different effects of the oncoming flow velocity on the blade aerodynamics depending on the longitudinal position of the blade. When the blade is at <span class="math notranslate nohighlight">\(\psi=180°\)</span>, the free-stream oncoming flow velocity <span class="math notranslate nohighlight">\(V_f\)</span> is such that it increases the overall blade section angle of attack. This results in higher aerodynamic loads and a corresponding increase in lateral blade flapping 90° later at <span class="math notranslate nohighlight">\(\psi=270°\)</span>. The free-stream velocity has the opposite effect at <span class="math notranslate nohighlight">\(\psi=360°\)</span> (or 0°) so that now the blade flaps down 90° later at <span class="math notranslate nohighlight">\(\psi=90°\)</span>. The overall effect is a rightwards tilt of the rotor disk. The preceding discussion is with regards to CCW rotors, in case of CW rotors the same physics applies but the rotor tilt would be in the opposite direction. It is easy to see that in the absence of rotor coning the free-stream will have similar effect on the fore and aft positions and such lateral tilting of the rotor disk would not occur.</p>
+<center>
+    <img src="../../assets/B29_fig7_27.png" class="medium" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Effect of rotor coning on longitudinal tilt  <a href=""> </a></p>
+</center><p>Similarly, the lateral assemtry in dynamic pressure results in high aerodynamic loads at <span class="math notranslate nohighlight">\(\psi=90°\)</span> to which the blade responds with maximum flapping occuring at <span class="math notranslate nohighlight">\(\psi=180°\)</span>. The opposite happens at <span class="math notranslate nohighlight">\(\psi=270°\)</span>, low aerodynamic loads due to low dynamic pressure and a corresponding flap down motion at <span class="math notranslate nohighlight">\(\psi=360°\)</span>. The overall effect is the rotor disk tilting back (<span class="math notranslate nohighlight">\(a_1\)</span>).</p>
+<p>High harmonic flapping can be seen as a warping of the tip-path-plane. This occurs as a consequence of additional harmonic effects on aerodynamic loading due to blade pitching, effects of the reverse flow region, elasticity in the blades etc.</p>
+<center>
+    <img src="../../assets/B33_fig3_31.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Tip-path-plane of rotor undergoing purely 2/rev lateral flapping ($b_2$) [adapted from the Art of the Helicopter by John Watkinson] <a href=""> </a> </p>
+</center></div>
+<div class="section" id="blade-motion">
+<h3>Blade motion<a class="headerlink" href="#blade-motion" title="Permalink to this headline">¶</a></h3>
+<p>The resulting blade motion due to blade pitching is of great aerodynamic relevance since blade section pitch is related to the section angle of attack. Likewise, blade flapping is related to the net out-of-plane velocity at a given blade section which, together with the section pitch angle, decides the angle of attack.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;Pu48f7s5Ru8&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/Pu48f7s5Ru8"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>The video is of a Bo 105 helicopter that has a rotation rate of 7 Hz. So the clip has been slowed down considerably and only represents about 3 s worth of real-time action.</p>
+<p>The following shows the periodic elastic blade motion for a simulated Bo 105 rotor at <span class="math notranslate nohighlight">\(\mu=0.3\)</span>. Given the slender nature of rotor blades cantileverd at one end, significant flapping can occur at the blade tips due to elastic bending as well. This is in addition to the flapping occuring due to the presence of a flapping hinge. Since these are also the locations where the highest dynamic pressure is encountered, it becomes imperative to accurately obtain the angle of attack of the blade sections there. The inflow velocity and the blade flapping velocity are two important quantities in this regard.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Video</span>
+<span class="n">Video</span><span class="p">(</span><span class="s2">&quot;../../assets/ElasticBlade_4.mp4&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">html_attributes</span><span class="o">=</span><span class="s2">&quot;loop autoplay&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="../../assets/ElasticBlade_4.mp4" loop autoplay  width="350" >
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+</div>
+<div class="section" id="rotor-vs-propellers-in-edgewise-flight">
+<h3>Rotor vs propellers in edgewise flight<a class="headerlink" href="#rotor-vs-propellers-in-edgewise-flight" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Forward (edgewise) motion of the rotor as a whole creates assymetry of dynamic pressure</p></li>
+<li><p>If nothing is done, this simply results in more aerodynamic lift in the region of higher dynamic pressure</p></li>
+<li><p>As revolutionary as it might have been to mechanically implement this during the early days of the evolution of the helicopter rotor system, pitching the rotor blade and thereby controlling the angle of attack has become the most reliable mechanism to overcoming the lateral assymetry of dynamic pressure via pitch change of the blades.</p></li>
+</ul>
+<center>
+    <img src="../../assets/ABC1.png" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;"  > Rigid rotor requirement of roll moment balance <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php"> [source]</a></p>
+</center><p>Having said that, a rotor design that is basically a propeller placed horizontally on top of the helicopter fuselage presents a lot of interesting possibilities. Of course, the aforementioned problems wouldn’t magically go away. So the challenge is to come up with a solution strategy different from what the early pioneers of rotorcraft came up with. The <em>rigid</em> rotors based coaxial system, also refered to as ABC (advancing blade concept) rotor, jointly proposed by Boeing and Sikorsky is one such setup.</p>
+<div class="image-grid">
+    <img  src="../../assets/Defiant.jpg" class="medium" />
+    <img src="../../assets/P152_1_1.png" class="medium">
+</div>
+<div class="image-grid">
+    <p style="font-size:16px; color:gray; text-align:left;"> Sikorsky-Boeing SB-1 Defiant <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant#/media/File:Sikorsky%E2%80%93Boeing_SB-1_Defiant_(cropped).jpg"> [source]</a></p>
+    <p style="font-size:16px; color:gray; text-align:left;"> Schematic of thrust generated by coaxial rotor in forward flight <a href="https://vtol.org/store/product/the-abc-rotor-a-historical-perspective-4111.cfm">[source] </a></p>
+</div><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="rigidrotor"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>imagine a rotor where blades do not deform under loads and are welded together with the shaft.</p>
+</dd>
+<dt class="label" id="imagesource"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>All these images are taken from ‘Aerodynamics of the Helicopter’ by Alfred A Gessow.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures/4_ForwardFlight"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="RotorAerodynamics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Rotor Aerodynamics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sumeet Kumar<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

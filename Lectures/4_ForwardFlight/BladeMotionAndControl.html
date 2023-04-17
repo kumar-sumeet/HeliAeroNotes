@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Control" href="Control.html" />
     <link rel="prev" title="Rotor Aerodynamics" href="RotorAerodynamics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="current reference internal" href="#">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -460,6 +541,7 @@
 <p class="attribution">—Ray W Prouty (Helicopter Aerodynamics I)  </p>
 </div></blockquote>
 <p>As the helicopter moves from a hover flight state to a forward flight state, the rotor wake undergoes quite a bit of transformation. This <em>special</em> forward flight region 0&lt; <span class="math notranslate nohighlight">\({\mu}\)</span> &lt;0.15 is generally referred to as the transition region where proximity of the rotor tip vortices to the following blades leads to impulsive loadings, which in turn results in high noise and vibrations. Needless to say transition region is not comfortable for people inside the helicopter or for those in the neighbourhoods it flies over. The momentum theory-based inflow together with BET is not enough to model all the aerodynamic effects occuring at certain blade sections due to BVI phenomena and vortex theory-based models are needed to model them. However, momentum theory results detailed in the last chapter represent the rotor inflow reasonable well.</p>
+<p>Since helicopter blades are essentially highly flexible cantilevered beams that get subjected to very high loads, it seems natural to ask if we are losing out on complete physical understanding of the aerodynamics by not talking about the blade elastic deformations. For e.g. consider a rotor in steady hover such that the airfoil sections that make up the blade get subjected to steady aerodynamic lift, drag and moment. From our discussions until now it is clear that the way the pilot would command a change in thrust (in order to be able to hover with different payloads, or climb up and down) is via a pitch change of the all the blades together referred to as the collective control. It is also clear that the commanded pitch of the blades would be less than the angle of attack that the blade sections experience due to the inflow through the rotor disk. Finally …. While the focus of the current course is rotor aerodynamics, it cannot be talked about in isolation without discussing the structural aspects of rotor operation. With that in mind, this lecture is a brief overview of the operational aspects of a rotor.</p>
 <div class="section" id="how-does-one-achieve-v-f-0">
 <h2>How does one achieve <span class="math notranslate nohighlight">\(V_F\)</span>&gt;0?<a class="headerlink" href="#how-does-one-achieve-v-f-0" title="Permalink to this headline">¶</a></h2>
 <p>This is not a trivial question to ask. From basic understanding of airfoil aerodynamics, it is relatively obvious that to achieve hover at a given MTOW, the rotor collective needs to be increased until the helicopter leaves the ground. Once in hover, the main rotor thrust vector needs to be tilted so that a forward component accelerates the helicopter until enough parasite drag builds up to counter it and steady state forward flight is established. One possible mechanism of achieving forward motion would be to move the helicopter CG ahead of the rotor shaft. The thrust vector would induce a pitch down moment on the entire aircraft which would lead to the thrust vector tilting and accelerating the rotorcaft forward. Helicopters achieve this using a simpler mechanism, relatively speaking, that doesn’t involve anything as complicated or cumbersome as moving the CG of the aircraft.</p>
@@ -494,6 +576,7 @@
     src="https://www.youtube.com/embed/xRiZhCAmr6Y"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -550,6 +633,26 @@ $<span class="math notranslate nohighlight">\(\theta = \theta_0 + \theta_{1c}\co
     src="https://www.youtube.com/embed/-kWhNi-MZAM"
     frameborder="0"
     allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;HK-pNadi8eI&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/HK-pNadi8eI"
+    frameborder="0"
+    allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -666,6 +769,29 @@ $<span class="math notranslate nohighlight">\(\theta = \theta_0 + \theta_{1c}\co
     src="https://www.youtube.com/embed/Pu48f7s5Ru8"
     frameborder="0"
     allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<center>
+    <img src="../../assets/CH-37.jpeg" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > CH-37 (company designation S-56) <a href="https://commons.wikimedia.org/wiki/File:H-37B_Mojave_US_Army_in_flight_(cropped).jpg"> [source] </a> </p>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;srjbnvTWRJI&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/srjbnvTWRJI"
+    frameborder="0"
+    allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -743,10 +869,10 @@ $<span class="math notranslate nohighlight">\(\theta = \theta_0 + \theta_{1c}\co
             <p class="prev-next-title">Rotor Aerodynamics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="Control.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Control</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

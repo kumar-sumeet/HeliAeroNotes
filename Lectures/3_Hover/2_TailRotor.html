@@ -198,18 +198,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -223,6 +211,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -354,6 +435,11 @@
    Surviving loss of tail rotor
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#single-rotor-design-possible">
+   Single rotor design possible?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -386,6 +472,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surviving-loss-of-tail-rotor">
    Surviving loss of tail rotor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#single-rotor-design-possible">
+   Single rotor design possible?
   </a>
  </li>
 </ul>
@@ -423,7 +514,7 @@
   </p>   
   <p  > d Ascenio (Italy, 1930) <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a>
   </p> 
-</div><p>The initial resitance to the main rotor + tail rotor configuration is totally understandable, after all why should energy be expended separately just to balance the torque!? The tail rotor contributes nothing towards thrust generation in hover or forward flight in order to counter the drag and weight of the aircraft - unless canted, the tail rotor of the UH60 is canted by 20 deg which helps it to contribute to lift by about 181 kg <span id="id1">[<a class="reference internal" href="../References.html#id42">Pro09</a>]</span>. The tail rotor of the experimental prototype RAH-66 was similarly canted. However, it contributes greatly towards aircraft maneuverability.</p>
+</div><p>The initial resitance to the main rotor + tail rotor configuration is totally understandable, after all why should energy be expended separately just to balance the torque!? The tail rotor contributes nothing towards thrust generation in hover or forward flight in order to counter the drag and weight of the aircraft - unless canted, the tail rotor of the UH60 is canted by 20 deg which helps it to contribute to lift by about 181 kg <span id="id1">[<a class="reference internal" href="../References.html#id46">Pro09a</a>]</span>. The tail rotor of the experimental prototype RAH-66 was similarly canted. However, it contributes greatly towards aircraft maneuverability.</p>
 <div class="image-grid2">
     <img src="../../assets/UH60_tailcant.jpg" class="medium">
     <img  src="../../assets/Comanche.png" class="size_options"/>
@@ -481,6 +572,28 @@
 </ul>
 </li>
 </ul>
+</div>
+<div class="section" id="single-rotor-design-possible">
+<h2>Single rotor design possible?<a class="headerlink" href="#single-rotor-design-possible" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ycUOa6GbaKA&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="270"
+    src="https://www.youtube.com/embed/ycUOa6GbaKA"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="autorotation-conditionsapply"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>

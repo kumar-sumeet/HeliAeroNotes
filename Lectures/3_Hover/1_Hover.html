@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -617,8 +698,8 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 </div>
 <p>Such high thrust oscillations are intrinsic to coaxial rotor designs. High vibrations were one of the reasons that Sikorsky <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php">discontinued the XH-59A program </a> (precursor to the succesful X2 demonstrator). They still exist on the <a href="https://en.wikipedia.org/wiki/Sikorsky_S-97_Raider">Raider </a> and <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant">Defiant </a> designs, currently being extensively tested as a viable proposal to replace ageing helicopter fleet in the US armed forces, but are taken care of using vibration supressors.</p>
 <p>Another aspect of rotor design worth mentioning here is from the structural design point of view. Consider for e.g. the cases of the Bo 105 rotor (<span class="math notranslate nohighlight">\(R= 4.912\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 45\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 44.505\)</span> rad/s) and the UH60 rotor (<span class="math notranslate nohighlight">\(R= 8.178\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 95\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 27.017\)</span> rad/s). The former is a 2.5 ton helicopter and the latter a 10 ton design.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25f4c996-8035-43c6-9ae3-1d440ef55e7f">
-<span class="eqno">(4)<a class="headerlink" href="#equation-25f4c996-8035-43c6-9ae3-1d440ef55e7f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0e1436a4-70cc-466b-ba50-bd5d1230eff2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-0e1436a4-70cc-466b-ba50-bd5d1230eff2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{Bo 105 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\
 &amp;= 218906 \quad \text{N} \\
 \text{UH60 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\

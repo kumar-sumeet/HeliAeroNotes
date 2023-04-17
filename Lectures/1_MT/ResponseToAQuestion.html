@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -382,7 +463,7 @@ Energy Conservation: \)</span><span class="math notranslate nohighlight">\( T v 
 \[p+ \frac{1}{2}\rho v^2 = const\]</div>
 <p>So, high static pressure at station 2 and low static pressure at station <span class="math notranslate nohighlight">\(\infty\)</span> (atmospheric pressure) is going to set the direction of the flow within the stream tube. Fluid from station 1, and in turn from station 0, is set in motion since fluids are continuous and shocks do not occur at the low subsonic speeds that arise in VTOL rotor flows. Since all the work, and by extension the static pressure increase, is assumed to be confined to the thin actuator disk, the movement of flow from station 0 to station 1 occurs by exchanging some of the static pressure to dynamic pressure. The result is that the rate flow of momentum at the actuator disk becomes <span class="math notranslate nohighlight">\((\rho vA)v\)</span>. However, static pressure calculation using Bernoulli’s equation show that there is an additional pressure of <span class="math notranslate nohighlight">\(\frac{3}{4}\frac{T}{A}\)</span> at station 2. This provides an additional upwards <em>push</em> and in turn adds to the overall thrust that the rotor is generating. The external work done by the rotor is not just an increase in fluid momentum, the <em>potential energy</em> (i.e. the static pressure) of the fluid is changed as well and needs to be accounted for to get an accurate estimate of the force vector (i.e. thrust). Using the relation <span class="math notranslate nohighlight">\( T = \dot{m}w = (\rho A v) w \)</span> avoids that because the stations where the final and the initial momentums are considered are where the static pressure is the same (and therefore no unaccounted for energy storage).</p>
 <p>The flow can be assumed to be incompressible throught the exercise since the Mach number never exceeds <span class="math notranslate nohighlight">\(M=0.3\)</span> at any point within the streamtube for conventional lifting rotors (this may not necessarily be true for jet exhaust in the case of the F35 or the Harrier jump-jet).</p>
-<p>In order to convince yourself further about this, the following literature can be referred - <span id="id1">[<a class="reference internal" href="../References.html#id24">Sen14</a>]</span> (Pg 21-23) and <span id="id2">[<a class="reference internal" href="../References.html#id22">Bat00</a>]</span> (Pg 156).</p>
+<p>In order to convince yourself further about this, the following literature can be referred - <span id="id1">[<a class="reference internal" href="../References.html#id27">Sen14</a>]</span> (Pg 21-23) and <span id="id2">[<a class="reference internal" href="../References.html#id25">Bat00</a>]</span> (Pg 156).</p>
 </div>
 
     <script type="text/x-thebe-config">

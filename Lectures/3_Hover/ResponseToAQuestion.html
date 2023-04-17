@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -368,8 +449,8 @@
 \[\text{Momentum of accelerated parcel} = m_p(v_i+\delta v_i)\]</div>
 <div class="math notranslate nohighlight">
 \[\text{Total KE of wake} = \text{KE of uniform inflow wake} + \frac{1}{2}m_p(v_i-\delta v_i)^2 + \frac{1}{2}m_p(v_i+\delta v_i)^2\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-001d72e5-d9f8-487f-93ed-07185749cfb7">
-<span class="eqno">(5)<a class="headerlink" href="#equation-001d72e5-d9f8-487f-93ed-07185749cfb7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e1b95906-5080-4cf5-b9bb-a068ef188584">
+<span class="eqno">(5)<a class="headerlink" href="#equation-e1b95906-5080-4cf5-b9bb-a068ef188584" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{Total KE of wake} &amp;= \text{KE of rest of uniform inflow wake} + \frac{1}{2}m_p(v_i-\delta v_i)^2 + \frac{1}{2}m_p(v_i+\delta v_i)^2 \\
 &amp;= \text{KE}_{rest-uniform} + m_p(v_i^2+\delta v_i^2) \\
 &amp;= \text{KE}_{uniform} + m_p(\delta v_i^2) \\

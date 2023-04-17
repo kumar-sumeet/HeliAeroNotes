@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -464,8 +545,8 @@
 <center>
     <img src="../../assets/BEMT_4.png" class="big">
     <p style="font-size:16px; color:gray; text-align:center;" > Annular momentum theory model </p>
-</center><div class="amsmath math notranslate nohighlight" id="equation-7ce895d9-5ae3-4f10-b454-f75ed2ec9225">
-<span class="eqno">(3)<a class="headerlink" href="#equation-7ce895d9-5ae3-4f10-b454-f75ed2ec9225" title="Permalink to this equation">¶</a></span>\[\begin{align}
+</center><div class="amsmath math notranslate nohighlight" id="equation-92ee2a02-dc44-4d56-860d-918f00352773">
+<span class="eqno">(3)<a class="headerlink" href="#equation-92ee2a02-dc44-4d56-860d-918f00352773" title="Permalink to this equation">¶</a></span>\[\begin{align}
 d T &amp; =wd \dot{m} \\
 &amp;= 2v_{i} \rho 2 \pi y d y\left(V_{c}+v_{i}\right) \\
 d C_{T} &amp; =\frac{4 \pi \rho\left(V_{c}+v_{i}\right) v_{i} y d y}{\rho \pi R^{2}(\Omega R)^{2}}\\
@@ -667,7 +748,7 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 <ul>
 <li><p>some of the most high-fidelity analyses fall within the realm of CFD methods</p></li>
 <li><p>vortex particle methods <span id="id4">[<a class="reference internal" href="../References.html#id14">SF18</a>]</span></p></li>
-<li><p>dynamic inflow models <span id="id5">[<a class="reference internal" href="../References.html#id40">Ban20</a>, <a class="reference internal" href="../References.html#id39">He89</a>, <a class="reference internal" href="../References.html#id38">Mur08</a>]</span></p></li>
+<li><p>dynamic inflow models <span id="id5">[<a class="reference internal" href="../References.html#id44">Ban20</a>, <a class="reference internal" href="../References.html#id43">He89</a>, <a class="reference internal" href="../References.html#id42">Mur08</a>]</span></p></li>
 <li><p>prescribed wake methods</p></li>
 </ul>
 </li>

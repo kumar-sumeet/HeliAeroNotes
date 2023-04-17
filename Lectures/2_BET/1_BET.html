@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -403,6 +484,7 @@
 <p style="text-align:right" > <a href="https://en.wikipedia.org/wiki/All_models_are_wrong"> G. Box (1987)</a> </p>
 <p>Despite all the simplifications involved in the theoretical framework involving momentum theory, all the reasons why it is relevant were laid out in an earlier lecture. This was the only theory known for rotor analysis around the time VTOL inventions were taking-off (pun intended). So, for what its worth, initial helicopter rotor designs were surely dictated in some manner by analyses based on momentum theory. One major drawback that has been stressed upon is the lack of any direct relation between rotor aerodynamics and blade sectional aerodynamics. The Blade Element Theory (BET) takes care of that by incorporating airfoil aerodynamics. Therefore, unlike momentum theory which only has radius as the design variable, BET can be used in a more detailed design of the rotor. The central idea is that rotors are made up of blades (or wings) whose cross-sections are shaped like airfoils. The integrated effect of discretized sections of the blades leads to all the rotor forces and moments experienced at the rotor hub.</p>
 <p>In the following, the airfoil aerodynamics are accounted for but certain simplfying assumptions are included lest things get hopelessly complicated.</p>
+<p>Helicopter blades are flexible structures generally classified as beams due to their slender nature i.e. their length or span is quite larger compared to their width or chord. Thrust producing rotors of any kind are basically cantilevered beams so they undergo quite a bit elastic deformation. In case of helicopters, edgewise flight of the rotor introduces periodic loading on the blades. Early rotor designs used blades made out of metal but current designs almost are constructed using composite materials due to their better fatigue properties <span id="id1">[<a class="reference internal" href="../References.html#id29">Hod06</a>]</span>(Chapter 1, Pg 2). Whenever elastic aerodynamic structures are involved, there can be no standalone structural analysis or standalone aerodynamic analysis that would lead to a accurate result. The aerodynamic loading affects the structural deformation and that in turn influences the aerodynamic loads. This is a classic fluid-structure interaction problem that is encountered on helicopter rotors. That said, the trends in rotor performance can be captured very well assuming rigid rotor blades</p>
 <div class="section" id="mathematical-formulation">
 <h2>Mathematical formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this headline">¶</a></h2>
 <p>Now that rotor parameters (beyond just radius) can be accounted for using BET, the following definitions come in handy -</p>

@@ -56,8 +56,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
-    <link rel="prev" title="Blade Motion and Control" href="../4_ForwardFlight/BladeMotionAndControl.html" />
+    <link rel="next" title="Compound Helicopters" href="CompoundHelicopters.html" />
+    <link rel="prev" title="Active Rotors" href="ActiveRotors.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -198,18 +198,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -224,6 +212,16 @@
    Blade Motion and Control
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -231,10 +229,81 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Advancing Blade Concept (ABC)
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -454,6 +523,42 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="advancing-blade-concept-abc">
 <h1>Advancing Blade Concept (ABC)<a class="headerlink" href="#advancing-blade-concept-abc" title="Permalink to this headline">¶</a></h1>
 <center>
+    <img src="../../assets/ABC2.png" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;"  > Lateral loading symmetry on ABC rotor  <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php"> [source]</a></p>
+</center>
+<p>The XH-59 from Sikorsky was the first design incorporating this design philosophy</p>
+<ul class="simple">
+<li><p>no blade hinges</p></li>
+<li><p>no tail rotor - yaw control?</p>
+<ul>
+<li><p>differential collective for yaw control in hover/low speed</p></li>
+<li><p>gearbox designed with differential speed capability!!</p></li>
+<li><p>vertical tail in fast</p></li>
+</ul>
+</li>
+<li><p>coaxial design makes controls more complicated</p></li>
+<li><p>overall design more compact</p>
+<ul>
+<li><p>largest dimension is often the rotor radius (show pics)</p></li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>read P152</p>
+<p>The version without thrust compounding achieved 296 km/hr and the one with turbojets installed achieved 488 km/hr <span id="id1">[<a class="reference internal" href="../References.html#id13">Orm16</a>]</span>.</p>
+<center>
+    <img src="../../assets/XH59Ad.png" class="medium">
+    <p style="font-size:12px; color:gray; text-align:center;"  > Sikorsky XH-59 <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php"> [source]</a></p>
+</center><blockquote class="epigraph">
+<div><p>“Being a concept demonstrator, the XH-59A had a number of compromises in its design to hold program cost down.  Primarily among these was the use of separate engines for rotor power and auxiliary propulsion.  In a more developed design, a single propulsion system would power both the rotor and an auxiliary propulsion propeller or ducted fan.  A high cost item at the time was the monolithic titanium blade spars.  Composite materials technology would soon appear which could produce a better blade, with almost infinite options in geometry, at a substantially reduced cost and lighter weight.</p>
+<p>Rotor vibration characteristics were acknowledged at the end of the test program as being too high for a production vehicle.  Design studies showed that four-bladed rotors would dramatically reduce the rotors’ vibratory characteristics. “</p>
+<p class="attribution">—<a class="reference external" href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php">Sikorsky Archives</a> </p>
+</div></blockquote>
+<div class="admonition-aside admonition">
+<p class="admonition-title">Aside</p>
+<p>Strangely, Sikorsky were a bit more upbeat during the development and testing phase writing - “…It has been determined that with no vibration treatment installed (absorbers or isolators) the vibration levels are the same magnitude as untreated current generation helicopters…” at the [36th AHS Annual Forum] (<a class="reference external" href="https://vtol.org/store/product/advancing-blade-concepts-abc-tm-high-speed-development-2257.cfm">https://vtol.org/store/product/advancing-blade-concepts-abc-tm-high-speed-development-2257.cfm</a>)</p>
+</div>
+<center>
     <img src="../../assets/P152_4.png" class="medium">
     <p class="caption"> Schematic of lift variation over a single rotor disk in forward flight <a href="https://vtol.org/store/product/the-abc-rotor-a-historical-perspective-4111.cfm"> [source] </a></p>
 </center><p>The limitations in thrust-producing abilities of the rotor on the retreating sides, due to low dynamic pressure, are a significant impediment to exploiting the full aerodynamic lifting characteristics of the blades. This is apparent from the figure above.</p>
@@ -501,7 +606,7 @@ Thrust-compounding with turbojets</p>
   <p style="font-size:55%; color:gray; text-align:left;"> X2 <a href="https://www.wired.com/2010/08/sikorsky-x2-breaks-helicopter-speed-record/"> [source]</a></p>   
   <p style="font-size:55%; color:gray; text-align:left;"> ABC concept aircraft <a href="https://en.wikipedia.org/wiki/Sikorsky_S-97_Raider#/media/File:Sikorsky_S-97_Raider_in_flight.jpg"> [source]</a></p>
   <p style="font-size:55%; color:gray; text-align:left;"> ABC concept armoured aircraft <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant#/media/File:Sikorsky%E2%80%93Boeing_SB-1_Defiant_(cropped).jpg"> [source]</a></p>
-</div><p>X2 set a speed record of 468 km/hr <span id="id1">[<a class="reference internal" href="../References.html#id13">Orm16</a>]</span>.</p>
+</div><p>X2 set a speed record of 468 km/hr <span id="id2">[<a class="reference internal" href="../References.html#id13">Orm16</a>]</span>.</p>
 </div>
 <div class="section" id="advantages">
 <h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
@@ -542,17 +647,17 @@ Thrust-compounding with turbojets</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../4_ForwardFlight/BladeMotionAndControl.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ActiveRotors.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Blade Motion and Control</p>
+            <p class="prev-next-title">Active Rotors</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="CompoundHelicopters.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Compound Helicopters</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

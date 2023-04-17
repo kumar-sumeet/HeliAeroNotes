@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -556,7 +637,7 @@
 <p style="text-align:right" > <a href="https://asmedigitalcollection.asme.org/fluidsengineering/article-abstract/99/1/8/435840/The-1976-Freeman-Scholar-Lecture-Some-Current?redirectedFrom=PDF"> W. J. McCROSKEY</a> </p><p>In case you were wondering that helicopters have been around for almost a century, surely engineers know everything there is to know about them. What contribution could you make to the state-of-the art in this field. The latter quote is particularly relevant.</p>
 <div class="section" id="objective">
 <h2>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
-<p>First order of business is to develop a framework to quantify a relation between the power necessary to develop a unit amount of thrust. One can imagine that this would be a highly relevant excercise in the early days of the invention of a rotorcraft - <em>is rotor-based VTOL flight even allowed within the laws of physics?!</em> The simplest framework that can be used to model the action of a rotor, which is also the framework that was used/developed by early practitioners in this field, and quantify the power consumption is called momentum theory.</p>
+<p>First order of business is to develop a framework to quantify a relation between the power necessary to develop a unit amount of thrust. One can imagine that this would be a highly relevant excercise in the early days of the invention of a rotorcraft - <em>is rotor-based VTOL flight even allowed within the laws of physics?!</em> The simplest framework that can be used to model the action of a rotor, which is also the framework that was used/developed by early practitioners in this field, and quantify the power consumption is called momentum theory. The idea is to model the dominant flow physics, which in the case of a rotor is a <em>push</em><a class="footnote-reference brackets" href="#push" id="id1">1</a> to the flow opposite to the direction of the generated thrust, and evaluate its effect. As the course progresses new elements from the rich feature-set exhibited by rotorcraft aerodynamics will be introduced along with ways to account for/model them.</p>
 <p>The objective is to detail rotor analysis model called <strong>momentum theory</strong> and derive a relation between the following quantities</p>
 <ul class="simple">
 <li><p>rotor radius R</p></li>
@@ -734,7 +815,7 @@ The derivation below is for a rotor in hover i.e.</p>
   <p>  T/P vs DL [taken from Helicopter Aerodynamic II by RW Prouty]
   </p>
 </div>
-<p>As is evident from the figures above, large helicopters tend to have smaller rotors (relative to their size) and thereby higher DL when compared to lighter helicopters. The rules of physics apply to all helicopters equally, so based on the above derivation they must consume relatively higher power in hover than lighter helicopters (and they do!). This is because overall helicopter design, and the rotor design in particular, is dictated by the sole criterion of having minimum power consumption during hover. A helicopter should exhibit efficient forward flight performance as well and having a smaller main rotor facilitates a relatively smaller fuselage <a class="footnote-reference brackets" href="#smallfuselage" id="id1">1</a></p>
+<p>As is evident from the figures above, large helicopters tend to have smaller rotors (relative to their size) and thereby higher DL when compared to lighter helicopters. The rules of physics apply to all helicopters equally, so based on the above derivation they must consume relatively higher power in hover than lighter helicopters (and they do!). This is because overall helicopter design, and the rotor design in particular, is dictated by the sole criterion of having minimum power consumption during hover. A helicopter should exhibit efficient forward flight performance as well and having a smaller main rotor facilitates a relatively smaller fuselage <a class="footnote-reference brackets" href="#smallfuselage" id="id2">2</a></p>
 <p>which leads to lower drag in forward flight. However, the DL vs speed chart indicates that the higher speed requirement for helicopters has grown in tandem with the increase in MTOW. This requires that larger engines be installed to provide the requisite power to achieve those high forward speeds. These large engines make it possible for the helicopter to satisfy hover requirements even when the DL is high.</p>
 </div>
 </div>
@@ -851,15 +932,15 @@ The induced velocity <span class="math notranslate nohighlight">\(v\)</span> is 
 <div class="math notranslate nohighlight">
 \[ \Rightarrow \frac{1}{2} \rho w(w+V)=T / A \]</div>
 <p>substitute <span class="math notranslate nohighlight">\(2v\)</span> and solve quadratic equation in <span class="math notranslate nohighlight">\(v\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3bae7709-544b-4ea4-b38e-1efb38e91ec5">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3bae7709-544b-4ea4-b38e-1efb38e91ec5" title="Permalink to this equation">¶</a></span>\[\begin{align} v &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7b2059ee-9714-4d86-bcca-107271ff24af">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7b2059ee-9714-4d86-bcca-107271ff24af" title="Permalink to this equation">¶</a></span>\[\begin{align} v &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+\frac{T}{2 \rho A}} \\ &amp;=-\frac{V}{2}+\sqrt{\left(\frac{V}{2}\right)^{2}+v_{h}^{2}} \text{         }&lt;v_{h} \end{align}\]</div>
 <p>So climbing reduces the induced velocity!</p>
 <p>Why is the other root ignored?</p>
 <ul class="simple">
 <li><p>For steady climb case</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-c99d0b09-dea0-4a29-8c57-6826b2c7bb28">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c99d0b09-dea0-4a29-8c57-6826b2c7bb28" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3a84680-14ad-4a5f-aaf8-bd6329b79557">
+<span class="eqno">(2)<a class="headerlink" href="#equation-a3a84680-14ad-4a5f-aaf8-bd6329b79557" title="Permalink to this equation">¶</a></span>\[\begin{align}
 T =W &amp;= \dot{m}w\\
 &amp;= 2 \dot{m}v
 \end{align}\]</div>
@@ -947,7 +1028,7 @@ There are no free lunches. Since the momentum theory is based on approximations 
 <ul class="simple">
 <li><p>easy to see direct cause and effect relations</p>
 <ul>
-<li><p>“…momentum approach may provide a clarity of the overall picture that could be lacking when more complicated theories are applied” <span id="id2">[<a class="reference internal" href="../References.html#id17">Ste79</a>]</span></p></li>
+<li><p>“…momentum approach may provide a clarity of the overall picture that could be lacking when more complicated theories are applied” <span id="id3">[<a class="reference internal" href="../References.html#id20">Ste79</a>]</span></p></li>
 </ul>
 </li>
 </ul>
@@ -973,7 +1054,10 @@ There are no free lunches. Since the momentum theory is based on approximations 
 <p>A higher fidelity (i.e. better) model is required to overcome the limitations of momentum theory. This is where the blade element momentum theory (BEMT) comes in!</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="smallfuselage"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="push"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>….</p>
+</dd>
+<dt class="label" id="smallfuselage"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>In the case of a conventional design, for e.g., the tail rotor cannot in the wake of the main rotor since ingesting the distrubed wake of the main rotor can lead to fluctuating performance of the tail rotor. So the tail boom length will grow in size together with the main rotor. In order to keep the helicopter CG close to the rotor chaft, the front of the fuselage will need to be expanded. This not only makes the overall design much heavier but also increases its parasite drag.</p>
 </dd>
 </dl>

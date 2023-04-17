@@ -59,7 +59,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Blade Motion and Control" href="BladeMotionAndControl.html" />
-    <link rel="prev" title="Aerodynamics of Human Powered Helicopter" href="../Assignment.html" />
+    <link rel="prev" title="Performance: Aérospatiale SA 315B Lama" href="../3_Hover/4_Performance.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -200,18 +200,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Assignment
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Assignment.html">
-   Aerodynamics of Human Powered Helicopter
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Foward Flight
  </span>
 </p>
@@ -225,6 +213,99 @@
   <a class="reference internal" href="BladeMotionAndControl.html">
    Blade Motion and Control
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -501,6 +582,7 @@
 <div><p>“The problem of the rotor in steady forward flight is the problem of defining the magnitude and direction of airflow encountered by each blade element”</p>
 <p class="attribution">—Alfred Gessow (Aerodynamics of the Helicopter)  </p>
 </div></blockquote>
+<p>Discussing about the details of forward flight state aerodynamics is also the perfect time to talk about the 2D aerodynamic characteristics of the airfoil sections that make up the blades of the rotor. You would not be prepostrously wrong in assuming that if the blade sections are made up of an airfoil with better airfoil characteristics then the overall rotor efficiency would be improved. ‘Efficiency’ of the rotor here refers to just the profile + induced power consumption of the rotor but in literature this term can also be used to refer to the acoustic noise or vibratory characteristics of the rotor. These are not within the scope of this course so we’ll just end up focussing on rotor power consumption. But what does ‘better airfoil characteristics’ precisely mean? Is it just larger <span class="math notranslate nohighlight">\(C_l/C_d\)</span>? Larger stall angle of attack? The way the question has been posed might suggest that indeed there is something <em>extra</em> that needs to be accounted for or considered in order to improve rotor performance in forward flight. What that ‘<em>extra</em>’ might be would become clear as the various aerodynamic phenomena, encountered by the rotor, in forward helicopter flight are discussed.</p>
 <p>On a conventional helicopter, the rotor is the sole entity responsible for generating thrust to counter the weight as well as the fuselage drag. While this characteristic itself leads to interesting aerodynamics and rotor performance attributes, there are a ton of pecularities arising just from edgewise rotor flight.</p>
 <center>
     <img src="../../assets/forces.png" class="medium">
@@ -552,7 +634,26 @@
 <center>
     <img src="../../assets/4blade_02.gif" class="medium">
     <p style="text-align:center; color:gray; font-size:16px;"> Free-wake simulation of a 4 bladed rotor in forward flight </p>
-</center></div>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;7PcowKB_Dwc&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="400"
+    height="200"
+    src="https://www.youtube.com/embed/7PcowKB_Dwc?start=0&end=40"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
 <div class="section" id="induced-power">
 <h2>Induced power<a class="headerlink" href="#induced-power" title="Permalink to this headline">¶</a></h2>
 <p>The induced velocity in forward flight is stated below. It is to be assumed as agiven. It can be derived using the same principles that the expression for hover and climb cases were obtained, and is again based on the uniform inflow velocity assumption.</p>
@@ -568,8 +669,8 @@
     <img src="../../assets/HT_glauert_hover.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Hover <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-10c6e0a0-0dc4-42ad-9f79-734d2f754334">
-<span class="eqno">(6)<a class="headerlink" href="#equation-10c6e0a0-0dc4-42ad-9f79-734d2f754334" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-53799152-bcf1-465c-957c-5ab646d68f81">
+<span class="eqno">(6)<a class="headerlink" href="#equation-53799152-bcf1-465c-957c-5ab646d68f81" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A U} \\
 &amp;=\frac{T}{2 \rho A \sqrt{\left(V_{\infty} \cos \alpha\right)^{2}+\left(-V_{\infty} \sin \alpha+v_{i}\right)^{2}}} \\
@@ -588,8 +689,8 @@ v_{i} &amp;=\sqrt{\frac{T}{2 \rho A}}
     <img src="../../assets/HT_glauert_climb.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Vertical climb <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-f0d6fab8-a977-4ce5-b49d-61b3e5b6e614">
-<span class="eqno">(7)<a class="headerlink" href="#equation-f0d6fab8-a977-4ce5-b49d-61b3e5b6e614" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a4c281c5-e222-4942-bd64-de2f1e45c671">
+<span class="eqno">(7)<a class="headerlink" href="#equation-a4c281c5-e222-4942-bd64-de2f1e45c671" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+2 V_{\infty} v_{i}+v_{i}^{2}}} \\
@@ -605,8 +706,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <img src="../../assets/HT_glauert_low_speed.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Low speed forward flight <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-f89e7d0a-7349-421f-a28e-3674649de1f5">
-<span class="eqno">(8)<a class="headerlink" href="#equation-f89e7d0a-7349-421f-a28e-3674649de1f5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fb867633-22e1-414d-92a3-d05adc26b7a7">
+<span class="eqno">(8)<a class="headerlink" href="#equation-fb867633-22e1-414d-92a3-d05adc26b7a7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+v_{i}^{2}}} \\
@@ -625,8 +726,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
 <p> 
  
  </p>
-<div class="amsmath math notranslate nohighlight" id="equation-278ca48e-9115-44c8-b03c-87e6e57ae911">
-<span class="eqno">(9)<a class="headerlink" href="#equation-278ca48e-9115-44c8-b03c-87e6e57ae911" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-93891bfb-6c99-43b5-b945-f89072036b80">
+<span class="eqno">(9)<a class="headerlink" href="#equation-93891bfb-6c99-43b5-b945-f89072036b80" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}}} \\
@@ -740,8 +841,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <p  style="font-size:16px; color:gray; text-align:center;"> Blade section drag due to in-plane velocity </p>
     <p  style="font-size:16px; color:gray; text-align:center;"> Rotor in forward flight </p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-192915eb-27ce-4dc1-8e40-6275fd1c4808">
-<span class="eqno">(10)<a class="headerlink" href="#equation-192915eb-27ce-4dc1-8e40-6275fd1c4808" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bbeec877-45a3-42e7-96b6-d4936630b886">
+<span class="eqno">(10)<a class="headerlink" href="#equation-bbeec877-45a3-42e7-96b6-d4936630b886" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{array}{l}
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} P_{0}^{\prime} d y d \Psi \\
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} D^{\prime}.V_T d y d \Psi \\
@@ -804,11 +905,11 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../Assignment.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../3_Hover/4_Performance.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Aerodynamics of Human Powered Helicopter</p>
+            <p class="prev-next-title">Performance: Aérospatiale SA 315B Lama</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="BladeMotionAndControl.html" title="next page">

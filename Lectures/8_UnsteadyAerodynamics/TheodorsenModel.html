@@ -1,0 +1,742 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theodorsen Theory &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loewy Model" href="Loewy.html" />
+    <link rel="prev" title="Unsteady Aerodynamics" href="UnsteadyAerodynamics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Opening.html">
+   Fundamentals of Helicopter Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_CourseOverview.html">
+   Course Overview
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Momentum Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/MT.html">
+   Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fluid Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blade Element Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/1_BET.html">
+   Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/2_BEMT.html">
+   Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/3_BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/2_TailRotor.html">
+   Tail Rotor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/3_FM.html">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/4_Performance.html">
+   Performance: Aérospatiale SA 315B Lama
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foward Flight
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/RotorAerodynamics.html">
+   Rotor Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
+   Blade Motion and Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ActiveRotors.html">
+   Active Rotors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/NovelBladePlanforms.html">
+   Novel Blade Planforms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lectures/8_UnsteadyAerodynamics/TheodorsenModel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/yourusername/yourbookrepo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/8_UnsteadyAerodynamics/TheodorsenModel.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/8_UnsteadyAerodynamics/TheodorsenModel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation-final-equations">
+   Mathematical formulation: final equations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apparent-mass-terms">
+     apparent mass terms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relevant-building-blocks">
+   Relevant building blocks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-flow-theory">
+     Potential flow theory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kutta-condition">
+     Kutta condition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#no-penetration-boundary-condition">
+     No penetration boundary condition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-circulation">
+     Conservation of circulation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conformal-mapping">
+     Conformal mapping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsteady-bernoulli-s-equation">
+     Unsteady Bernoulli’s equation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#putting-it-all-together">
+   Putting it all together
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#added-mass-laplace-no-penetration">
+     added mass - laplace + no-penetration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#circulatory-terms-kutta-circ-conservation">
+     circulatory terms - kutta + circ conservation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Theodorsen Theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation-final-equations">
+   Mathematical formulation: final equations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apparent-mass-terms">
+     apparent mass terms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relevant-building-blocks">
+   Relevant building blocks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-flow-theory">
+     Potential flow theory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kutta-condition">
+     Kutta condition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#no-penetration-boundary-condition">
+     No penetration boundary condition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-circulation">
+     Conservation of circulation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conformal-mapping">
+     Conformal mapping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsteady-bernoulli-s-equation">
+     Unsteady Bernoulli’s equation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#putting-it-all-together">
+   Putting it all together
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#added-mass-laplace-no-penetration">
+     added mass - laplace + no-penetration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#circulatory-terms-kutta-circ-conservation">
+     circulatory terms - kutta + circ conservation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="theodorsen-theory">
+<h1>Theodorsen Theory<a class="headerlink" href="#theodorsen-theory" title="Permalink to this headline">¶</a></h1>
+<p>Theodore Theodorsen was first to publish a complete and detailed solution to the problem of aerodynamic loads on an oscillating lifting surface. Chapter 5 in <span id="id1">[<a class="reference internal" href="../References.html#id28">BAH96</a>]</span> is a great resource for understanding the theoretical foundations of the Theodorsen model (even <em>better</em> than the original paper by Dr Theodorsen that describes the model <span id="id2">[<a class="reference internal" href="../References.html#id15">The40</a>]</span>).</p>
+<p>That said, the complete derivation is mathematically involved and requires meticulously solving a lot of complex-valued integrals. Here we will start with the final results proposed by Theodorsen and work our way to backwards with the motivation to understand the expressions involved intuitively and take assummptions involved at face value.</p>
+<p>Developed the frequency response of lift</p>
+<div class="section" id="mathematical-formulation-final-equations">
+<h2>Mathematical formulation: final equations<a class="headerlink" href="#mathematical-formulation-final-equations" title="Permalink to this headline">¶</a></h2>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/theodorsen_airfoil.jpeg" class="big" />
+    <p style="text-align:center; color:gray; font-size:16px;"> Mi-6
+  </p>
+</div><p>The final equations are a result of the airfoil kinematics and the complex valued function <span class="math notranslate nohighlight">\(C(k)\)</span>, commonly referred to as the Theodorsen function in literature. The former … and the latter manifests the time history of the oscillation, thereby incorporating hysteresis effects in the aerodynamic loads experienced by an airfoil.</p>
+<div class="section" id="apparent-mass-terms">
+<h3>apparent mass terms<a class="headerlink" href="#apparent-mass-terms" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>lift without circulation!</p>
+<ul>
+<li><p>this is impossible in steady state aerodynamics!!</p></li>
+</ul>
+</li>
+<li><p>relevant in high frequency oscillations</p></li>
+<li><p>ignored in civil engineering analyses</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="relevant-building-blocks">
+<h2>Relevant building blocks<a class="headerlink" href="#relevant-building-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Understanding the Theodorsen theory requires a refresher of a number of theoretical aerodynamics concepts.</p>
+<div class="section" id="potential-flow-theory">
+<h3>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h3>
+<p>The simple</p>
+<p>Basic building blocks -</p>
+<ul class="simple">
+<li><p>source</p></li>
+<li><p>sink</p></li>
+<li><p>vortex</p></li>
+<li><p>doublet pair</p></li>
+</ul>
+<p>Note that the flow representation in case of the vortex is valid everywhere except at its center where the vorticity is non-zero which implies that the fluid particles there have a rotation associate with them. Since potential flow theory models only irrotational flow, the flow velocity based on the potential flow theory formulation is undefined there.</p>
+</div>
+<div class="section" id="kutta-condition">
+<h3>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h3>
+<p>Potential flow theor alone cannot determine the amount of circulation around a body. This is true even in the case of steady aerodynamics and thin airfoil theory results such as the lift curve slope being <span class="math notranslate nohighlight">\(2\pi\)</span>, <span class="math notranslate nohighlight">\(C_m_{c/4}=0\)</span> etc. are obtained after imposing an additional condition based on the flow physics. Purely following the mathematical construct of potential flow theory would not give us a unique solution (and hence <em>no</em> solution)</p>
+<p>The amount of circulation decides where the stagnation points would be.</p>
+<ul class="simple">
+<li><p>Kutta condition</p></li>
+</ul>
+</div>
+<div class="section" id="no-penetration-boundary-condition">
+<h3>No penetration boundary condition<a class="headerlink" href="#no-penetration-boundary-condition" title="Permalink to this headline">¶</a></h3>
+<p>Fluid cannot penetrate the surface of the body in consideration. This seems like a trivial concept to state explicitly but remember that when a problem involving fluids is mathematically stated, the condition at the boundaries of the fluid need to be clearl defined. In the case of an airfoil moving about it <em>infinite</em> fluid, the surface of the airfoil forms one of the boundaries (the other boundary is at infinite distance away and not a source of any discturbance). What happens to the fluid at this boundary, i.e. the surface of the airfoil, dictates what happens in the rest of the fluid. This behavior of the fluid, specifically the velocity in the case of an incompressible flow, is the quantity of interest because this would then eventually lead to the amount of lift generated from the subsequent behavior of the fluid due to the airfoil motion. Since we know from physical observations that fluid parcels do not permeate through object surfaces, the motion of the fluid at this boundary is exactly matched with the motion of the airfoil surface. This is refered to as the no penetration boundary condition.</p>
+</div>
+<div class="section" id="conservation-of-circulation">
+<h3>Conservation of circulation<a class="headerlink" href="#conservation-of-circulation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="conformal-mapping">
+<h3>Conformal mapping<a class="headerlink" href="#conformal-mapping" title="Permalink to this headline">¶</a></h3>
+<p>The above four frameworks/concepts are sufficient to solve for the unsteady aerodynamic behavior. However, the Laplace’s equation cannot be directly solved for the flow around an airfoil (or flat plate even, the flat plate being an idealisation the solutions for which are much easier to obtain analytically in closed form).</p>
+<center>
+    <img src="../../assets/BAE0_fig5_14.png" class="medium">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Conformal mapping [taken from Aeroelasticity by Bisplinghoff, Ashley and Halfman]</p>
+</center>
+<p>Conformal mapping refers to a complex analysis technique of transforming one domain to another while preserving (signed) Euclidean angles.</p>
+<p>The conformal map that achieves this is called the Joukowski transformation where the body in the <span class="math notranslate nohighlight">\(\Xi\)</span> domain is a cylinder and it is mapped to a flat plate. How exactly the relation comes about is a different branch of mathematics altogether but for our purposes suffice it to say that this convenient relation exists and is simple enough to quickly see that indeed the boundary of the circle gets mapped to the boundary of the flat plate.</p>
+<ul class="simple">
+<li><p>Joukowski transformation</p></li>
+</ul>
+<p>The amount of circulation in the flow is undecided. Some more physics needs to be modelled in order to account for this. We could either go to the origins of the potential flow theory and see if some of the assumptions made can be relaxed to include more physics. This is bound to make the equations more involved that the Laplace equation. Alternately, … This is done using the Kutta condition.</p>
+</div>
+<div class="section" id="unsteady-bernoulli-s-equation">
+<h3>Unsteady Bernoulli’s equation<a class="headerlink" href="#unsteady-bernoulli-s-equation" title="Permalink to this headline">¶</a></h3>
+<p>Linearized unsteady Bernoulli’s equation -</p>
+</div>
+</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="added-mass-laplace-no-penetration">
+<h3>added mass - laplace + no-penetration<a class="headerlink" href="#added-mass-laplace-no-penetration" title="Permalink to this headline">¶</a></h3>
+<p>Sources and sinks balance to give a closed body
+If body accelerates then it is easy to imagine that the stregnth of the sources and sinks would not match (they would match if no acceleration, i.e. motion at constant velocity). Their strength comes from the velocity at the surface from the motion.
+When the body accelerates, there is an inertial effect the body feels that can translate to a force along the axis of motion. So if the general case of a pitching, plunging and surging airfoil is considered even a ‘drag’ effect is possible and so is a ‘thrust’ effect.</p>
+<p>accelerate airfoil in vaccum and accelerate it in fluid difference</p>
+<p>The added mass terms do not represent a dynamical system - any acceleration reflects an instantaneous change in loads. This is due to fluid incompressibility assumption.</p>
+<p>This is a valid mathematical solution to the Laplace equation but from the physics of the solution</p>
+</div>
+<div class="section" id="circulatory-terms-kutta-circ-conservation">
+<h3>circulatory terms - kutta + circ conservation<a class="headerlink" href="#circulatory-terms-kutta-circ-conservation" title="Permalink to this headline">¶</a></h3>
+<p>The no-penetration condition is again not violated. The added mass derivation took care of the motion of the flat plate by appropriately establishing the no-penetration condition. So the Kutta condition is now applied in order to make velocity at the trailing edge 0. The Kutta condition is satisfied by introducing circulation while keeping in mind that the circulation is conserved.</p>
+<div class="math notranslate nohighlight">
+\[v_{\theta_{NC}} + v_{\theta_C} = v_{\theta} = 0\]</div>
+<p>A non-zero <span class="math notranslate nohighlight">\(v_{\theta}\)</span> in the in the XZ-domain will lead to infinite velocity in the xz-domain at the trailing-edge. Since such a result is not physically possible, and indeed the velocity at the trailing-edge is zero</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures/8_UnsteadyAerodynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="UnsteadyAerodynamics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Unsteady Aerodynamics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Loewy.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Loewy Model</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sumeet Kumar<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

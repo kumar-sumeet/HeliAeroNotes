@@ -12,4 +12,9 @@ parts:
     chapters:
     - file: Lectures/0_CourseOverview
 
-    
+  - caption: Momentum Theory
+    chapters:
+    - file: Lectures/1_MT/MT
+    - file: Lectures/1_MT/ResponseToAQuestion
+#    - file: Lectures/1_MT/Summary
+

@@ -452,6 +452,11 @@
   <a class="reference internal nav-link" href="#potential-flow-theory">
    Potential flow theory
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kutta-joukowski-theorem">
+   Kutta-Joukowski theorem
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kutta-condition">
@@ -459,6 +464,16 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kelvin-s-circulation-theorem">
+   Kelvin’s circulation theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-comments">
+   Final Comments
+  </a>
  </li>
 </ul>
 
@@ -509,6 +524,11 @@
   <a class="reference internal nav-link" href="#potential-flow-theory">
    Potential flow theory
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kutta-joukowski-theorem">
+   Kutta-Joukowski theorem
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kutta-condition">
@@ -516,6 +536,16 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kelvin-s-circulation-theorem">
+   Kelvin’s circulation theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-comments">
+   Final Comments
+  </a>
  </li>
 </ul>
 
@@ -532,7 +562,7 @@
 <div><p>… if we all designed bodies to have stagnation points at the back, then D’Alembert would rest happy, and we would have no drag. Presumably that would be a Good Thing generally, except for parachutists!</p>
 </div></blockquote>
 <p style="text-align:right" > <a href="https://arc.aiaa.org/doi/abs/10.2514/6.1996-161"> PBS Lissaman</a> </p>
-<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id26">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
+<p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id27">McL13</a>]</span>, in particular Chapter 7 from this reference.</p>
 <p>Additionally, <span id="id2">[<a class="reference internal" href="References.html#id16">PJ06a</a>]</span> and <span id="id3">[<a class="reference internal" href="References.html#id17">PJ06b</a>]</span> provide a good overview of the historical development of the field of fluid dynamics that</p>
 <div class="section" id="bodies-in-fluids">
 <h2>Bodies in fluids<a class="headerlink" href="#bodies-in-fluids" title="Permalink to this headline">¶</a></h2>
@@ -659,10 +689,17 @@
 </div>
 </div>
 <p>Notice that viscosity did not come up in explanation above. Viscosity plays a key role in the ability of airfoil sections to produce lift in that it ensures that the fluid doesn’t turn around the trailing edge. However, beyond that it doesn’t play a significant role in explaining the physics behind airfoil lift.</p>
+<div class="admonition-aside admonition">
+<p class="admonition-title">Aside</p>
+<p>…..</p>
+<p>“To those who fear flying, it is probably disconcerting that physicists and aeronautical engineers still passionately debate the fundamental issue underlying this endeavor: what keeps planes in the air?”</p>
+<p>— <a class="reference external" href="https://www.nytimes.com/2003/12/09/news/staying-aloft-what-does-keep-them-up-there.html">STAYING ALOFT; What Does Keep Them Up There?</a></p>
+<p>“On a strictly mathematical level, engineers know how to design planes that will stay aloft. But equations don’t explain why aerodynamic lift occurs. There are two competing theories that illuminate the forces and factors of lift. Both are incomplete explanations. Aerodynamicists have recently tried to close the gaps in understanding. Still, no consensus exists.”</p>
+</div>
 </div>
 <div class="section" id="generation-of-lift">
 <h2>Generation of lift<a class="headerlink" href="#generation-of-lift" title="Permalink to this headline">¶</a></h2>
-<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id5">[<a class="reference internal" href="References.html#id26">McL13</a>]</span>.</p>
+<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id5">[<a class="reference internal" href="References.html#id27">McL13</a>]</span>.</p>
 <div style="float:right; width:25%;" >
     <img src="../assets/AA_C1_CP_contour.png" class="big" />
     <p style="text-align:center; color:gray; font-size:60%;"> Coefficient of pressure contour plot of NACA23012 airfoil at $M=0.4$ and $\alpha = 2^°$ <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1101#:~:text=The%20aerodynamic%20efficiency%20was%20evaluated,%3D%200.6%20at%20Cl%20%3D%200.85.">[source] </a>
@@ -690,22 +727,43 @@
 </div>
 <div class="section" id="vorticity-and-circulation">
 <h2>Vorticity and circulation<a class="headerlink" href="#vorticity-and-circulation" title="Permalink to this headline">¶</a></h2>
+<p>Vorticity <span class="math notranslate nohighlight">\(\mathbf{\omega}\)</span> is a measure of the local rotation of fluid elements i.e. the element rotation about its own axis. If the velocity flow field <span class="math notranslate nohighlight">\(\mathbf{V}\)</span> is known at every point then mathematical this ‘rotation’ can be quantified using the following equation -</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{\omega} = \nabla \times \mathbf{V}\]</div>
 <center>
     <img src="../assets/BA3_fig3_3_5.png" class="big">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Vorticity of a continuum particle (modified from <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a></p>
-</center><p>Fluid dynamics, as it concerns aerospace engineering, is largely about keeping track of vorticity generation and vorticity transport. It is introduced into the flow at surface boundaries due to no-slip condition at the airfoil surface (or the surface of any body for that matter). This vorticity doesn‘t just immediately dissipate/dissapear
-and keeping track of it is imperative to get overall aerodynamics right.</p>
+    <p  style="font-size:16px; color:gray; text-align:center;"> Vorticity of a continuum particle/element (modified from <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a></p>
+</center><p>Fluid dynamics, as it concerns aerospace engineering, is largely about keeping track of vorticity generation and vorticity transport. It is introduced into the flow due to no-slip condition at the airfoil surface (or the surface of any body for that matter). This vorticity doesn‘t just immediately dissipate/dissapear and keeping track of it is imperative to get overall aerodynamics right. Recall that the velocity profile within the boundary layer on the upper surface looks like that shown in figure (c) above, where the lower fluid layers always have a lower velocity than the ones above them leading to a shearing effect and consequently generate vorticity in the fluid.</p>
 <center>
-    <img src="../assets/BA3_mix.png" class="big">
+    <img src="../assets/BA3_BA1_mix.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Schematic showing the origins of flow vorticity in the boundary layer (modified from <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a></p>
 </center><p>The circulation of the flow is a relevant quantity because it quanitifies the amount of lift being generated per the Kutta-Joukowski theorem.</p>
 <div class="math notranslate nohighlight">
 \[\Gamma = \oint \mathbf{V}\cdot \mathbf{dl}\]</div>
- <p  style=" text-align:center;"> Lift-per-unit-span $ = \rho V_{\infty}\Gamma$</div>
+<p>The following video presents some interesting experimental demonstrations that you might find useful to further help clarify the two concepts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;pOA3VJHCnWs&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="900"
+    height="600"
+    src="https://www.youtube.com/embed/pOA3VJHCnWs"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
 <div class="section" id="potential-flow-theory">
 <h2>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h2>
+<p>Due to the low magnitude of kinematic viscosity (<span class="math notranslate nohighlight">\(\nu/\rho\)</span>) of air, most flows of interest to an aerospace engineer occur at high Reynolds numbers (&gt;<span class="math notranslate nohighlight">\(10^6\)</span>) and low angles of attack <span class="math notranslate nohighlight">\(\alpha\)</span>. In such conditions the flow can be modelled reasonably well by dropping the viscous terms (i.e. assuming <span class="math notranslate nohighlight">\(\nu=0\)</span>).  Of course, one runs the risk of not being able to model effects of flow separation (which are viscous in nature), viscous drag etc. But the speed and ease of solving the fluid flow equations assuming <span class="math notranslate nohighlight">\(\nu=0\)</span> and the physicality of the results has led to a number of techniques to account for the viscous effects but without having to solve the full NSE equations. In fact for low Mach number flows, the fluid equations can be further simplified and yet be physically representative of the real flow field.</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{V} = \nabla \phi\]</div>
 <ul class="simple">
@@ -714,9 +772,20 @@ and keeping track of it is imperative to get overall aerodynamics right.</p>
 <li><p>conformal theory used to obtain analytic results of pressure distribution</p></li>
 <li><p>also used in unsteady aerodynamic theories - for e.g. Theodorsen theory</p></li>
 </ul>
+</div>
+<div class="section" id="kutta-joukowski-theorem">
+<h2>Kutta-Joukowski theorem<a class="headerlink" href="#kutta-joukowski-theorem" title="Permalink to this headline">¶</a></h2>
+<p>This result is based on the observation that lifting force generated by an airfoil or a rotating cyclinder is proportional to the circulation around it and perpendicular to the oncoming flow velocity direction. More precisely, the aerodynamic force in an incompressible, inviscid, irrotational flow in an unbounded fluid is given as -</p>
+ <p  style=" text-align:center;"> $L´ = \rho V_{\infty}\Gamma$<p>A more general notation for identifying the direction of resultant force using the Kutta-Joukowski theorem can be obtained by defining the direction of <span class="math notranslate nohighlight">\(\Gamma\)</span> as a vector quantity based on the right hand rule and using the following relation to give the resultant lift force per unit span (<span class="math notranslate nohighlight">\(\mathbf{Q}_{\infty}=\mathbf{V}_{\infty}\)</span>) -</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{L´}= \rho \mathbf{Q}_{\infty} \times  \mathbf{\Gamma}\]</div>
+<center>
+    <img src="../assets/B24_Fig316.png" class="big">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Vector notation for Kutta-Joukowski theorem (<a href="https://www.cambridge.org/core/books/lowspeed-aerodynamics/077FAF851C4582F1B7593809752C44AE">[source]) </a></p>
+</center><p>This relation tells us the simple fact that lift is related to the circulation around the body in question. So if the circulation were zero, there would be no lift generated. On the other hand, if you knew precisely the circulation around the cross-section of a wing or a blade, you could get the lift per unit span and the total lift would simply be an integral over all such sections over its span.</p>
 <div class="section" id="kutta-condition">
 <h3>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h3>
-<p>Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id6">[<a class="reference internal" href="References.html#id31">RL13</a>]</span>. Potential flow theory, on its own cannot predict uniquely what amount of lift is an airfoil capable of generating. Alternately, either flow field representations below are valid within the framework of potential flow theory.</p>
+<p>Based on the potential flow theory, lift generation can be predicted using a simple relation given by the Kutta-Joukowski theorem. The question remains, how does one obtain <span class="math notranslate nohighlight">\(\Gamma\)</span>. Potential flow theory, on its own cannot uniquely predict the amount of lift an airfoil is capable of generating. For example, either flow field representations given below for the same <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(V_{\infty}\)</span>, and by extension the different circulations around the airfoils, are valid/possible within the framework of potential flow theory. Which one is correct?</p>
 <div class="image-grid2">
     <img  src="../assets/BA3_fig7_1_3b.png" class="medium"/>
     <img  src="../assets/BA3_fig7_1_3c.png" class="medium"/>
@@ -726,14 +795,31 @@ and keeping track of it is imperative to get overall aerodynamics right.</p>
   </p> 
   <p >  Streamlines representation around an airfoil based on a mathematically valid potential flow solution (not a real flow) <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a>
   </p>       
-</div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct (this is just one of those instances where observable physics guides a mathematical theory which would otherwise lead to a non-unique solution). This is achieved by enforcing what is called the Kutta condition.</p>
+</div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct (this is just one of those instances where observable physics guides a mathematical theory which would otherwise lead to a non-unique solution). This is achieved by enforcing what is called the Kutta condition. Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id6">[<a class="reference internal" href="References.html#id32">RL13</a>]</span>.</p>
+</div>
+</div>
+<div class="section" id="kelvin-s-circulation-theorem">
+<h2>Kelvin’s circulation theorem<a class="headerlink" href="#kelvin-s-circulation-theorem" title="Permalink to this headline">¶</a></h2>
+<p>For an inviscid, incompressible fluid of constant density, the circulation around any closed loop within the fluid remains time-invariant. For an airfoil initially at rest within a fluid, the circulation around any contour within the fluid is going to be zero. When the fluid is set in motion there is vorticity due to the uniform fluid velocity, yet we now know (from the discussion aboce) that there would be a circulation set around the airfoil. The Kelvin’s circulation theorem implies that a vorticity of opposite sign must be getting introduced in the fluid so that the net circulation around any closed contour, that includes the airfoil in it, must be zero.</p>
+<div class="image-grid2">
+    <img  src="../assets/B37_fig421_a.png" class="medium"/>
+    <img  src="../assets/B37_fig421_b.png" class="medium"/>
+</div>
+<div class="image-grid2">
+  <p > Zero circulation in a fluid at rest (<a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source]) </a>
+  </p> 
+  <p >  Starting vortex observed behind an airfoil in a fluid (<a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source]) </a>
+  </p>       
+</div></div>
+<div class="section" id="final-comments">
+<h2>Final Comments<a class="headerlink" href="#final-comments" title="Permalink to this headline">¶</a></h2>
+<p>The above, seemingly dissociated, set of concepts are nothing new and have been covered at length in fundamental fluid dynamics courses. These would be revisited when we build the framework for unsteady aerodynamics analyses.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="rotorwake"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>When modelling rotor wake there is not much to be gained from solving the most complex form of the problem. For e.g., most rotorcraft (atleast conventional designs) don’t fly faster than M=0.3 so right away density can be assumed to be constant. So can temperature and viscosity, and thermal conductivity is just zero. From the continuity and the momentumt conservation equations, the problem then boils down to solving for the three velocity components and the pressure distribution. More on that later.</p>
 </dd>
 </dl>
-</div>
 </div>
 </div>
 

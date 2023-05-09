@@ -545,6 +545,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/Jk3HRrMhrjw"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -625,6 +626,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/JXkWSgU-CL0"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -643,6 +645,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/ViKYFsN3p24"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -661,10 +664,11 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
     src="https://www.youtube.com/embed/lslarZiRJhg"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
-<p>The right cylindrical wake model of a rotor was first proposed by Joukowsky as the case of an ideal model <span id="id1">[<a class="reference internal" href="../References.html#id30">Kui18</a>]</span>(Section 1.2). Such a wake structure is valid only in the limit of a lightly loaded rotor because otherwise wake contraction has to be accounted for in order to obtain accurate results.</p>
+<p>The right cylindrical wake model of a rotor was first proposed by Joukowsky as the case of an ideal model <span id="id1">[<a class="reference internal" href="../References.html#id31">Kui18</a>]</span>(Section 1.2). Such a wake structure is valid only in the limit of a lightly loaded rotor because otherwise wake contraction has to be accounted for in order to obtain accurate results.</p>
 <p>‘Free-wake’ models are commonly used to model rotor tip vortices as shown below. There are many more solution strategies to model the effects of vortices trailing from the rotor blades and some of these are implemented in the rotor analysis codes such as CAMRAD II, RCAS, CHARM, Dymore etc. - these are just some of the standard codes used for rotorcraft analyses in industry and academia. The induced velocity, from these vortices, is calculated using the Biot-Savart law and gives a more accurate estimate compared to the annular momentum theory that was introduced in the BEMT chapter. It is worth noting the constriction of the rotor streamtube in the wake of the rotor. This constriction has been observed to occur for rotors in reality and is something that the momentum theory models as well.</p>
 <center>
     <img src="../../assets/4blade_hover.gif" class="medium">
@@ -676,7 +680,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 </center></div>
 <div class="section" id="momentum-theory-meets-vortex-theory">
 <h2>Momentum theory meets vortex theory<a class="headerlink" href="#momentum-theory-meets-vortex-theory" title="Permalink to this headline">¶</a></h2>
-<p>Ths abstraction of the rotor as an actuator disk proposed by Froude was not immediately apparent to folks studying rotor/propeller flows during the early 20th century and indeed it took vortex theory contribution from  to <span id="id2">[<a class="reference internal" href="../References.html#id30">Kui18</a>]</span>(Section 1.2). Here the familiar horseshoe vortex analysis approach of fixed-wings was applied to rotating wings</p>
+<p>Ths abstraction of the rotor as an actuator disk proposed by Froude was not immediately apparent to folks studying rotor/propeller flows during the early 20th century and indeed it took vortex theory contribution from  to <span id="id2">[<a class="reference internal" href="../References.html#id31">Kui18</a>]</span>(Section 1.2). Here the familiar horseshoe vortex analysis approach of fixed-wings was applied to rotating wings</p>
 <p>The schematics below represent the vortex models based on the Joukowsky and Betz, respectively.</p>
 <div class="image-grid2">
     <img  src="../../assets/BDI1_Fig11a.png" class="small"/>
@@ -685,7 +689,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 <div class="image-grid2">
   <p style="font-size:16px; color:gray; text-align:left;"> BERP rotor <a href="https://repository.tudelft.nl/islandora/object/uuid%3A45821f64-7948-4aa7-9753-16282e61671e"> [source]</a></p>
   <p style="font-size:16px; color:gray; text-align:left;"> Blue Edge rotor <a href="https://repository.tudelft.nl/islandora/object/uuid%3A45821f64-7948-4aa7-9753-16282e61671e"> [source]</a></p>
-</div><p><span id="id3">[<a class="reference internal" href="../References.html#id30">Kui18</a>]</span>((Section …) show that in the limit of an infinite number of blades and rotating at infinite speed, either models converge to the momentum theory results. So indeed the real rotor, modelled here using <em>real</em> effects such as vorticity effects of blades, could be modelled perfectly using momentum theory if only in a slightly unrealistic limiting case. Of course there are no rotors with an infinite number of blades that spin an infinite speed, so clearly the momentum theory result would fall short of predicting reality but….</p>
+</div><p><span id="id3">[<a class="reference internal" href="../References.html#id31">Kui18</a>]</span>((Section …) show that in the limit of an infinite number of blades and rotating at infinite speed, either models converge to the momentum theory results. So indeed the real rotor, modelled here using <em>real</em> effects such as vorticity effects of blades, could be modelled perfectly using momentum theory if only in a slightly unrealistic limiting case. Of course there are no rotors with an infinite number of blades that spin an infinite speed, so clearly the momentum theory result would fall short of predicting reality but….</p>
 </div>
 <div class="section" id="blade-vortex-interaction">
 <h2>Blade-vortex interaction<a class="headerlink" href="#blade-vortex-interaction" title="Permalink to this headline">¶</a></h2>
@@ -711,7 +715,7 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 \[\boldsymbol{u} = \nabla \times \boldsymbol{B}\]</div>
 <div class="math notranslate nohighlight">
 \[ \Rightarrow \quad \nabla \times \boldsymbol{u}=\boldsymbol{\omega} = \nabla \times \nabla \times \boldsymbol{B}\]</div>
-<p><span id="id4">[<a class="reference internal" href="../References.html#id25">Bat00</a>]</span>(Section 2.4)</p>
+<p><span id="id4">[<a class="reference internal" href="../References.html#id26">Bat00</a>]</span>(Section 2.4)</p>
 <p>The Poisson equation can be solved using the Green’s function approach</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{u}_v=-\frac{\kappa}{4 \pi} \oint \frac{\mathbf{s} \times d \mathbf{l}\left(\mathbf{x}^{\prime}\right)}{s^3}\]</div>
@@ -755,8 +759,8 @@ Helicopter center of gravity (CG) does not lie exactly below the rotor shaft. Fu
 </div>
 <p>Such high thrust oscillations are intrinsic to coaxial rotor designs. High vibrations were one of the reasons that Sikorsky <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php">discontinued the XH-59A program </a> (precursor to the succesful X2 demonstrator). They still exist on the <a href="https://en.wikipedia.org/wiki/Sikorsky_S-97_Raider">Raider </a> and <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant">Defiant </a> designs, currently being extensively tested as a viable proposal to replace ageing helicopter fleet in the US armed forces, but are taken care of using vibration supressors.</p>
 <p>Another aspect of rotor design worth mentioning here is from the structural design point of view. Consider for e.g. the cases of the Bo 105 rotor (<span class="math notranslate nohighlight">\(R= 4.912\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 45\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 44.505\)</span> rad/s) and the UH60 rotor (<span class="math notranslate nohighlight">\(R= 8.178\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 95\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 27.017\)</span> rad/s). The former is a 2.5 ton helicopter and the latter a 10 ton design.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97d0dd2c-686b-498d-bcf8-337c440c6001">
-<span class="eqno">(4)<a class="headerlink" href="#equation-97d0dd2c-686b-498d-bcf8-337c440c6001" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d6791bd-cee7-4a95-a46f-108c171b6f81">
+<span class="eqno">(5)<a class="headerlink" href="#equation-8d6791bd-cee7-4a95-a46f-108c171b6f81" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{Bo 105 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\
 &amp;= 218906 \quad \text{N} \\
 \text{UH60 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\

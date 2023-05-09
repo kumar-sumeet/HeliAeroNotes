@@ -539,14 +539,14 @@
 \[T=\dot{m} w=2\rho A v_i^{2}\]</div>
 <div class="math notranslate nohighlight">
 \[P=\frac{1}{2} \dot{m} w^{2}=2 \rho A v_{i}^{3}\]</div>
-<p>It was assumed that the inflow velocity <span class="math notranslate nohighlight">\(v_i\)</span> was uniform over the entire rotor disk. In reality that is not true. However, instead of analysing the more general case where <span class="math notranslate nohighlight">\(v_i = f(r,\psi)\)</span>, we continue working with the axial flight scenario where <span class="math notranslate nohighlight">\(v_i\)</span> is some function of only <span class="math notranslate nohighlight">\(r\)</span> (azimuthal symmetry). In order to arrive at the thrust and power relations like above, the rotor disk is discretised into rings and elemental thrust contribution from each ring is calculated. The overall rotor thrust is then just an integrated quantity.</p>
 <div class="section" id="annular-momentum-theory">
 <h2>Annular momentum theory<a class="headerlink" href="#annular-momentum-theory" title="Permalink to this headline">¶</a></h2>
+<p>It was assumed that the inflow velocity <span class="math notranslate nohighlight">\(v_i\)</span> was uniform over the entire rotor disk. In reality that is not true. However, instead of analysing the more general case where <span class="math notranslate nohighlight">\(v_i = f(r,\psi)\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is the azimuth or polar angle over the rotor disk, we continue working with the axial flight scenario where <span class="math notranslate nohighlight">\(v_i\)</span> is some function of only <span class="math notranslate nohighlight">\(r\)</span> (i.e. an azimuthal symmetry exists). In order to arrive at the thrust and power relations like above, the rotor disk is discretised into rings and elemental thrust contribution from each ring is calculated. The overall rotor thrust is then just an integrated quantity.</p>
 <center>
-    <img src="../../assets/BEMT_4.png" class="big">
+    <img src="../../assets/BEMT_4.png" class="large">
     <p style="font-size:16px; color:gray; text-align:center;" > Annular momentum theory model </p>
-</center><div class="amsmath math notranslate nohighlight" id="equation-a6b1a138-5026-4e81-9412-83f3cf273cb2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-a6b1a138-5026-4e81-9412-83f3cf273cb2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+</center><div class="amsmath math notranslate nohighlight" id="equation-5adf6de9-ddcb-43ce-9610-a507f47eb75f">
+<span class="eqno">(4)<a class="headerlink" href="#equation-5adf6de9-ddcb-43ce-9610-a507f47eb75f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 d T &amp; =wd \dot{m} \\
 &amp;= 2v_{i} \rho 2 \pi y d y\left(V_{c}+v_{i}\right) \\
 d C_{T} &amp; =\frac{4 \pi \rho\left(V_{c}+v_{i}\right) v_{i} y d y}{\rho \pi R^{2}(\Omega R)^{2}}\\
@@ -572,7 +572,7 @@ C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \
 \[
 \lambda\left(r\right)= \displaystyle \pm \sqrt{\frac{\left(\frac{\sigma C_{l_{\alpha}}}{8}-\lambda_c \right)^2+\frac{\sigma C_{l_{\alpha}} \theta r}{2}}{4}} - \displaystyle \frac{  \frac{\sigma C_{l_{\alpha}}}{8}- \lambda_c}{2}
 \]</div>
-<p>Here again the negative root is ignored because it does not comply with the physical system we assumed in the beginning i.e. flow velocity at every cross-section of the stream tube is downwards. Further, if just the hover inflow velocity is concerned, the following expression can be derived:</p>
+<p>Much like the momentum theory analysis of a climbing rotor, here again the negative root is ignored because it does not comply with the physical system we assumed in the beginning i.e. flow velocity at every cross-section of the stream tube is downwards. Further, if just the hover inflow velocity is concerned, the following expression can be derived:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \begin{split}
@@ -580,9 +580,9 @@ C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \
 \end{split}
 \label{eq:BEMT_lambda} \tag{2}
 \end{equation*}\]</div>
-<p>Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> is one the most useful results one can obtain in so far as the amount of effort required in understanding the origins of that result, as well the ease of analysing real rotors with it, is concerned. This expression takes into account the following - blade geometry via <span class="math notranslate nohighlight">\(\sigma\)</span>, airfoil aerodynamics via <span class="math notranslate nohighlight">\(C_{l_{\alpha}}\)</span> and blade twist distribution via <span class="math notranslate nohighlight">\(\theta\)</span>. After obtaining <span class="math notranslate nohighlight">\(\lambda(r)\)</span>, <span class="math notranslate nohighlight">\(C_T\)</span> can be obtained by just substituting back in <span class="math notranslate nohighlight">\(C_T = \int 4 \lambda (\lambda - \lambda_c)rdr \)</span> (or should you use the BET expression <span class="math notranslate nohighlight">\( \displaystyle \quad d C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\theta r^{2}-\lambda r\right) d r\)</span> ?).</p>
+<p>Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> is one of the most useful results one can obtain in so far as the amount of effort required in understanding the origins of that result as well the ease of analysing real rotors with it is concerned. This expression takes into account the following - blade geometry via <span class="math notranslate nohighlight">\(\sigma\)</span>, airfoil aerodynamics via <span class="math notranslate nohighlight">\(C_{l_{\alpha}}\)</span> and blade twist distribution via <span class="math notranslate nohighlight">\(\theta\)</span>. After obtaining <span class="math notranslate nohighlight">\(\lambda(r)\)</span>, <span class="math notranslate nohighlight">\(C_T\)</span> can be obtained by just substituting back in <span class="math notranslate nohighlight">\(C_T = \int 4 \lambda (\lambda - \lambda_c)rdr \)</span> (or should you use the BET expression <span class="math notranslate nohighlight">\( \displaystyle \quad d C_{T}=\frac{\sigma}{2} C_{l_{\alpha}}\left(\theta r^{2}-\lambda r\right) d r\)</span> ?).</p>
 <p><strong>Is there something that you can think of that Eq. <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> doesn’t model/account for?</strong></p>
-<p><em>Airfoils are a 2D entity whose aerodynamic characteristics provide us with basic building blocks for modelling overall aerodynamics of real 3D wings (the technical term usually used to refer to the 3D wing aerodynamics is finite-wing aerodynamics). In reality aerodynamics are always 3D, atleast in the context of flying vehicles. Turns out the situation in 3D is not a straightforward conglomeration of the 2D section aerodynamics. There are additional effects that occur in real flows over wings which do not occur when the flow is assumed to be 2D. Not accounting for these 3D effects, depending on how potent they are compared to the 2D aerodynamics, can lead to inaccurate results. So, while the Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> is useful for all the reasons given earlier, it doesn’t model everything. For example, the trailing tip vortex from the blade tips has a significant influence on the blade aerodynamics but is not modelled in the formulation presented above. In addition, the effects of blade spanwise radial flow, unsteady aerodynamics (these occur also in 2D), dynamic stall margin, additional vortex roll-ups are not accounted for.</em></p>
+<p><em>Airfoils are a 2D entity whose aerodynamic characteristics provide us with basic building blocks for modelling overall aerodynamics of real 3D wings (the technical term usually used to refer to the 3D wing aerodynamics is finite-wing aerodynamics). In reality aerodynamics are always 3D, atleast in the context of flying vehicles. Turns out the situation in 3D is not a straightforward conglomeration of the 2D section aerodynamics. There are additional effects that occur in real flows over wings which do not occur when the flow is assumed to be 2D. Not accounting for these 3D effects, depending on how potent they are compared to the 2D aerodynamics, can lead to inaccurate results. So, while the Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> is useful for all the reasons given earlier, it doesn’t model everything. For example,  the effects of blade spanwise radial flow, unsteady aerodynamics, dynamic stall, additional vortex roll-ups are not accounted for.</em></p>
 </div>
 <div class="section" id="ideal-twist">
 <h2>Ideal twist<a class="headerlink" href="#ideal-twist" title="Permalink to this headline">¶</a></h2>
@@ -590,7 +590,7 @@ C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \
     <img src="../../assets/propeller.jpg" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Propeller <a href="https://commons.wikimedia.org/wiki/File:Engine_and_propellers_of_aircraft_close_up.jpg">[source] </a></p>
 </div>
-<p>Based on the inflow relation in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span>, it can be seen that the <span class="math notranslate nohighlight">\(\lambda(r)=\)</span> const is obtained if <span class="math notranslate nohighlight">\(\theta r =\)</span> const. This twist distribution is refered to as hyperbolic twist and would result in minimum induced power for a rotor (provided none of the other terms in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> are a function of <span class="math notranslate nohighlight">\(r\)</span> of course). In reality, helicopter blades tend to have more or less a linear twist distribution of about -8° to -16°. While better hover performance is possible with even greater blade twist, it is detrimental to forward flight performance (leads to inboard sections stalling on retreating side) and so a compromise needs to be made. Propellers on the other hand are always in climb mode, which makes their operational environment to always have azimuthal symmetry (function of <span class="math notranslate nohighlight">\(r\)</span>), and are therefore highly twisted.</p>
+<p>Based on the inflow relation in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span>, it can be seen that <span class="math notranslate nohighlight">\(\lambda(r)=\)</span> const is obtained if <span class="math notranslate nohighlight">\(\theta r =\)</span> const. This twist distribution is refered to as hyperbolic twist and results in minimum induced power for a rotor (provided none of the other terms in Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_lambda}\)</span> change as a function of <span class="math notranslate nohighlight">\(r\)</span> of course). In reality, helicopter blades tend to have more or less a linear twist distribution of about -8° to -16° based on the span. While better hover performance is possible with even greater blade twist, it is detrimental to forward flight performance (leads to inboard sections stalling on retreating side) and so a compromise needs to be made. Propellers on the other hand are always in climb mode, which makes their operational environment to always have azimuthal symmetry (function of <span class="math notranslate nohighlight">\(r\)</span>), and are therefore highly twisted.</p>
 <div class="math notranslate nohighlight">
 \[\lambda (r)=\frac{\sigma C_{l_{\alpha}}}{16}\left[-1+\sqrt{1+\frac{32}{\sigma C_{l_{\alpha}}} \theta r}\right]\]</div>
 <div class="image-grid2">
@@ -603,7 +603,7 @@ C_{T} &amp;= 4 \int \lambda \left(\lambda-\lambda_{c}\right) r d r \quad \quad \
 </div></div>
 <div class="section" id="optimum-hovering-rotor">
 <h2>Optimum hovering rotor<a class="headerlink" href="#optimum-hovering-rotor" title="Permalink to this headline">¶</a></h2>
-<p>From a theoretical point of view, a rotor design with a uniform distribution of inflow velocity over the rotor disk will lead to minimum induced power consumption. This is the power expended to impart kinetic energy to the flow in the rotor wake. Turns out, minimum work needs to be done by the rotor (and hence minimum induced power) when this flow velocity is constant over the disk. With the development of the BEMT principles above, we now look at what design requirements could the uniform inflow condition pose on the rotor geometry.</p>
+<p>From a theoretical point of view, a rotor design with a uniform distribution of inflow velocity over the rotor disk will lead to minimum induced power consumption. This is the power expended to impart kinetic energy to the flow in the rotor wake. Turns out, minimum work needs to be done by the rotor (and hence minimum induced power) when this flow velocity is constant over the disk. This can be proven using variational calculus but will not be taken up here. With the development of the BEMT principles above, we now look at what design requirements could the uniform inflow condition pose on the rotor geometry.</p>
 <p>Recall from BET derivation:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -619,12 +619,12 @@ dC_T &amp;= \frac{\sigma}{2} C_l {r}^2d{r} \\
 <p>So, the lift generated at a given blade section can be given by,</p>
 <div class="math notranslate nohighlight">
 \[C_l = C_{l_{\alpha}} \frac{\alpha_{tip}}{r}\]</div>
-<p>The overall rotor thrust, based on Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_idealtwist}\)</span>, is then a function of the relative lifting surface area of the blades with respect to the rotos disk (i.e <span class="math notranslate nohighlight">\(\sigma\)</span>).</p>
+<p>The overall rotor thrust, based on Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_idealtwist}\)</span>, is then given by the expression</p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow C_T= \frac{\sigma}{4}C_{l_{\alpha}}\alpha_{tip}\]</div>
-<p>So, within the scope of momentum and blade element momentum theories, a uniform induced velocity requires a hyperbolic blade twist which translates to a hyperbolic angle of attack distribution over the span of the blade. Even if it is not immediately obvious why such a design is not a practically feasible, it certainly sounds <em>wrong</em> - afterall hyperbolic twist is not realisable in practice. The more pertinent fact relates to the aerodynamics of airfoils, in that they don’t keep producing lift as the angle of attack is increased hyperbolically - they stall beyond an angle, called the static stall angle. However, given the way Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_idealtwist}\)</span> has been written down can be a recipe for confusion if one forgets that it is valid only in the linear regime of airfoil angle of attack. The presence of a root cut-out region on the rotor brings some relief, even if the hyperbolic profile is followed, because the angle of attack doesn’t need to keep increasing infinitely to realise uniform inflow towards the center of rotation.</p>
+<p>So, within the scope of blade element momentum theory, a uniform induced velocity requires a hyperbolic blade twist which translates to a hyperbolic angle of attack distribution over the span of the blade. Even if it is not immediately obvious why such a design is not a practically feasible, it certainly sounds <em>wrong</em> - afterall hyperbolic twist is not realisable in practice. The more pertinent fact relates to the aerodynamics of airfoils, in that they don’t keep producing lift as the angle of attack is increased hyperbolically - they stall beyond an angle, called the static stall angle. However, given the way Eq <span class="math notranslate nohighlight">\(\eqref{eq:BEMT_idealtwist}\)</span> has been written down can be a recipe for confusion if one forgets that it is valid only in the linear regime of airfoil angle of attack. The presence of a root cut-out region on the rotor brings some relief, even if the hyperbolic profile is followed, because the angle of attack doesn’t need to keep increasing infinitely to realise uniform inflow towards the center of rotation.</p>
 <p>Airfoils tend to exhibit best aerodynamic efficiency (i.e. generating highest lift for a unit amount of drag incurred) only at a certain <span class="math notranslate nohighlight">\(\alpha\)</span> for a given <span class="math notranslate nohighlight">\(M\)</span>. So it seems desirable that all the blade sections should be operating at that value in order to minimise profile drag. Note that we have not discussed profile drag until now but it doesn’t take a stretch of the imagination to realise that the overall rotor would be most efficient if all blade sections were operating at <span class="math notranslate nohighlight">\(\alpha\)</span> for best <span class="math notranslate nohighlight">\(L/D\)</span> (henceforth refered to as <span class="math notranslate nohighlight">\(\alpha_{L/D}\)</span>). This angle varies slightly as a function of <span class="math notranslate nohighlight">\(M\)</span>, so different blade sections would need to operate at slightly different <span class="math notranslate nohighlight">\(\alpha_{L/D}\)</span> in reality. We look at the geometric consequences of operating every blade section at <span class="math notranslate nohighlight">\(\alpha_{L/D}\)</span> and assume that it is independent of <span class="math notranslate nohighlight">\(M\)</span> and hence constant for all blade sections.</p>
-<p>Recall from momentum theory:</p>
+<p>Recall from annular momentum theory:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \begin{split}
@@ -642,12 +642,12 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 \end{equation*}\]</div>
 <p>With all blade sections operating at constant <span class="math notranslate nohighlight">\(\bar{\alpha}_{L/D}\)</span>, and uniform inflow over the entire rotor disk, from Eq. <span class="math notranslate nohighlight">\(\eqref{eq:optimum_rotor}\)</span> it is apparent that the rotor solidity would need to vary hyperbolically. This result is again not physically feasible but points to the benefits of introducing blade taper - i.e. progressively smaller chord outboard would help achieve best rotor performance based on the discussion so far.</p>
 <center>
-    <img src="../../assets/B3_fig3_11.png" class="big" />
+    <img src="../../assets/B3_fig3_11.png" class="large" />
     <p style="font-size:16px; color:gray; text-align:center;" > Optimum blade taper <a href="https://www.cambridge.org/de/academic/subjects/engineering/aerospace-engineering/principles-helicopter-aerodynamics-2nd-edition-1?format=HB&isbn=9781107013353">[source] </a></p>
 </center></div>
 <div class="section" id="profile-power">
 <h2>Profile power<a class="headerlink" href="#profile-power" title="Permalink to this headline">¶</a></h2>
-<p>The power consumption of a thrust-producing rotor in hover can be divided into induced power and profile power. The former has been discussed at length and is a result of the rotor imparting kinetic energy to the flow perpendicular to the rotor disk. This is real phenomena that occurs in operational rotors and can be attributed to the 3D nature of the flow over a rotor blade (more on this later). The power expended to overcome drag due to viscosity of the flow is refered to as profile power and can be obtained in a straightforward manner following the same principles used to obtain induced power.</p>
+<p>The power consumption of a thrust-producing rotor in hover can be divided into induced power and profile power. The former has been discussed at length and is a result of the rotor imparting kinetic energy to the flow. The power expended to overcome drag due to viscosity of the flow is refered to as profile power and can be obtained in a straightforward manner following the same principles used to obtain induced power.</p>
 <div style="float:right; width:43%;" >
     <img src="../../assets/BET_airfoil_loads.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > 2D blade section aerodynamic loads <a href=""> </a></p>
@@ -660,7 +660,7 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 \[d P_0=N \Omega y dD\]</div>
 <div class="math notranslate nohighlight">
 \[d C_{P_0}=\frac{\sigma}{2} C_{d} r^{3} d r\]</div>
-<p>Caarying out the above integration for the case of the optimum hovering rotor:</p>
+<p>Carrying out the above integration for the case of the optimum hovering rotor:</p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow C_{P_0} = \frac{1}{2} C_{d_{0}} \int {\frac{\sigma_{tip}r^3}{r}} d r=\frac{C_{d_{0}} \sigma_{tip}}{6}\]</div>
 </div>
@@ -717,19 +717,19 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 ></iframe>
 </div></div>
 </div>
-<p>The new Chinook rotor in action can be seen here <a href="https://www.boeing.com/features/2017/01/chinook-blades-01-17.page"> [source]</a>. Although, the ride was probably not a very smooth one <a href="https://verticalmag.com/news/new-chinook-rotor-blades-rattle-troops-early-testing/"> [source]</a>.</p>
+<p>The new Chinook rotor in action can be seen here <a href="https://www.boeing.com/defense/ch-47-chinook/#/video/advanced-chinook-rotor-blades-takeoff"> [source]</a>. Although, the ride was probably not a very smooth one <a href="https://verticalmag.com/news/new-chinook-rotor-blades-rattle-troops-early-testing/"> [source]</a>.</p>
 </div>
 <div class="section" id="weighted-solidity">
 <h2>Weighted Solidity<a class="headerlink" href="#weighted-solidity" title="Permalink to this headline">¶</a></h2>
-<p>The idea comes from a need for comparing two rotor designs that have different planform shapes<a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
+<p>The rotor solidity is a geometric quantity defining the ratio of the total blade area by the area of the rotor disk. As seen already it comes up often in rotor analysis and holds information about a number of rotor geometric quantities together in one non-dimensional parameter. However, solidity can also be defined locally…….  The idea comes from a need for comparing two rotor designs that have different planform shapes<a class="footnote-reference brackets" href="#id5" id="id2">2</a>.</p>
 <div class="math notranslate nohighlight">
 \[\sigma_{rotor} = \frac{\text {blade area}}{\text {rotor area}} =\int_{0}^{1}\sigma dr \]</div>
-<p>The thrust-weighted solidity, as the name implies, is the <em>fictional</em> solidity of the rotor obtained by weighting the solidity at a particular section with the corresponding thrust generated. A rotor with a larger lifting area on the outboard sections can, in principle, be more efficient than a rotor with rectangular blades for the same overall solidity. This is because the former has larger lifting surface in the region of high dynamic pressure and can generate more thrust, and a naive comparision might suggest this rotor to be <em>better</em> than the rotor with rectangular blades. In such a scenario, the thrust-weighted solidity of the rotors needs to be matched for a fair comparison.</p>
+<p>The thrust-weighted solidity, as the name implies, is the <em>fictional</em> solidity of the rotor obtained by weighting the solidity at a particular section with the corresponding thrust generated. A rotor with a larger lifting area on the outboard sections (for e.g. BERP rotor) can, in principle, be more efficient than a rotor with rectangular blades for the same overall solidity. This is because the former has larger lifting surface in the outer region where high dynamic pressure can help generate more thrust. A naive comparision might at equal solidities of the two rotors may not entirely be fair. In such a scenario, if the rotors are being compared at the same thrust setting then the thrust-weighted solidity of the rotors needs to be matched for a fair comparison.</p>
 <div class="math notranslate nohighlight">
 \[C_T=\frac{1}{2}\int_{0}^{1}\sigma C_l r^2 dr = \frac{\sigma_e}{2}\int_{0}^{1} C_l r^2 dr\]</div>
 <div class="math notranslate nohighlight">
 \[\Rightarrow \sigma_e=\frac{\frac{1}{2}\int_{0}^{1}\sigma \bar{C_l} r^2 dr}{\frac{1}{2}\int_{0}^{1} \bar{C_l} r^2 dr} = 3\int_{0}^{1}\sigma r^2 dr\]</div>
-<p><span class="math notranslate nohighlight">\(\sigma_e\)</span> here is the thrust-weighted solidity for the case of a uniform <span class="math notranslate nohighlight">\(C_l\)</span> rotor. Alternately, power-weighted solidity is also used as a basis for comparing different rotor designs.</p>
+<p><span class="math notranslate nohighlight">\(\sigma_e\)</span> here is the thrust-weighted solidity for the case of a uniform <span class="math notranslate nohighlight">\(C_l\)</span> rotor. Alternately, if the rotors are being compared at the same power setting then the power-weighted solidity is also used as a basis for comparing different rotor designs.</p>
 <div class="math notranslate nohighlight">
 \[ \sigma_e=\frac{\frac{1}{2}\int_{0}^{1}\sigma C_{d0} r^3 dr}{\frac{1}{2}\int_{0}^{1} C_{d0} r^3 dr} = 4\int_{0}^{1}\sigma r^2 dr\]</div>
 <p>This definition is also relevant because <span class="math notranslate nohighlight">\(C_T / \sigma\)</span> is used as a measure of the lifting capability of the rotor since it is nothing but the average lift coefficient of the blade sections.</p>
@@ -737,18 +737,18 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 \[\frac{C_T}{\sigma_e}= \frac{\bar{C_l}}{6}\]</div>
 <div class="math notranslate nohighlight">
 \[ \frac{C_T}{\sigma_e}\vert_{max} \approx 0.15\]</div>
-<p>The rotor <span class="math notranslate nohighlight">\(C_T\)</span> in forward flight is limited by the lifting ability of the blades when they are on the retreating side. High <span class="math notranslate nohighlight">\(\sigma_e\)</span> will ensure larger blade area contributes to rotor thrust on the retreating side so angles of attack on retreating side can be made lower (for same <span class="math notranslate nohighlight">\(C_T\)</span>)<a class="footnote-reference brackets" href="#loaded-statement" id="id3">3</a>.</p>
+<p>The rotor <span class="math notranslate nohighlight">\(C_T\)</span> in forward flight is limited by the lifting ability of the blades when they are on the retreating side. High <span class="math notranslate nohighlight">\(\sigma_e\)</span> will ensure larger blade area contributes to rotor thrust on the retreating side so angles of attack on retreating side can be made lower (for same <span class="math notranslate nohighlight">\(C_T\)</span>). This will become clearer when forward flight has been discussed.</p>
 </div>
 <div class="section" id="summary-and-conclusion">
 <h2>Summary and conclusion<a class="headerlink" href="#summary-and-conclusion" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Simplest strategy of separating out the solutions of the blades aerodynamics and effect of the inflow</p></li>
+<li><p>Simplest strategy of separating blades aerodynamics and inflow</p></li>
 <li><p>Higher-fidelity solution strategies employ same principle!</p></li>
-<li><p>Different rotor wake models as well as methods to solve for the blade aerodynamics exist</p>
+<li><p>Different rotor wake (to evaluate <span class="math notranslate nohighlight">\(v_i(r,\psi\)</span>)) exist</p>
 <ul>
-<li><p>some of the most high-fidelity analyses fall within the realm of CFD methods</p></li>
-<li><p>vortex particle methods <span id="id4">[<a class="reference internal" href="../References.html#id14">SF18</a>]</span></p></li>
-<li><p>dynamic inflow models <span id="id5">[<a class="reference internal" href="../References.html#id44">Ban20</a>, <a class="reference internal" href="../References.html#id43">He89</a>, <a class="reference internal" href="../References.html#id42">Mur08</a>]</span></p></li>
+<li><p>high-fidelity analyses using CFD methods</p></li>
+<li><p>vortex particle methods <span id="id3">[<a class="reference internal" href="../References.html#id14">SF18</a>]</span></p></li>
+<li><p>dynamic inflow models <span id="id4">[<a class="reference internal" href="../References.html#id45">Ban20</a>, <a class="reference internal" href="../References.html#id44">He89</a>, <a class="reference internal" href="../References.html#id43">Mur08</a>]</span></p></li>
 <li><p>prescribed wake methods</p></li>
 </ul>
 </li>
@@ -758,11 +758,8 @@ d C_T = 4 \bar{{\lambda}}^2 r dr
 <dt class="label" id="lambda"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>in a past lecture, <span class="math notranslate nohighlight">\(\lambda = v_i/\Omega R\)</span> was stated for hover case. In general, it is the ratio of the total flow velocity at the rotor disk and the blade tip speed.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Comparing two rotors using this concept only works when the designs are not significantly different from rectangular blades. Because different aerodynamic effects come into play otherwise and this simple concept seizes to be useful.</p>
-</dd>
-<dt class="label" id="loaded-statement"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>This is a pretty loaded statement and will become clearer when forward flight has been discussed.</p>
 </dd>
 </dl>
 </div>

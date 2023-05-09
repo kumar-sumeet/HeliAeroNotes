@@ -567,11 +567,32 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 </div>
 </div>
 </div>
+<p>Recall the Kelvin’s circulation theorem and the generation of the starting vortex that takes place as a result of bound circulation getting established around an wing section.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;VcggiVSf5F&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="270"
+    src="https://www.youtube.com/embed/VcggiVSf5F"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>A series of stillshots from the video above are also available in <span id="id1">[]</span>.</p>
 <p>The figure below shows the build-up of lift when the angle of attack of is changed instantaneously. The airfoil lift coefficient (<span class="math notranslate nohighlight">\(C_L\)</span>), instead of following an instantaneous change, undergoes a gradual rise in <span class="math notranslate nohighlight">\(C_L\)</span> and theoretically reaching the steady state value at infinite time. However, <span class="math notranslate nohighlight">\(C_L\)</span> is considered to have reached a steady-state value after a finite time… The peculiar aspect about the form of the <span class="math notranslate nohighlight">\(C_L\)</span> curve is that it is no longer directly proportional to the <span class="math notranslate nohighlight">\(\alpha\)</span>, with the proportionality constant given by <span class="math notranslate nohighlight">\(2\pi\)</span> from thin airfoil theory. We will later discuss the Theodorsen theory to predict this unsteady behavior of pitching and plunging airfoils with reasonable accuracy. This theory is based on potential flow assumption so clearly this <em>delay</em> in lift exhibited is not somehow related compressibility of the fluid (incompressiblity assumption used in potential flow analyses).</p>
 <center>
     <img src="../../assets/A23_2_AirfoilStepInput.png" class="small">
     <p  style="font-size:16px; color:gray; text-align:center;"> Airfoil lift developement after step-input <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1853">[source] </a> </p>
-</center><p>The above result is not purely of academic interest. Autogyros<a class="footnote-reference brackets" href="#autogyros" id="id1">1</a> are capable of undertaking a jump take-off where the rotors are spun to high RPM at zero collective and then a rapid increase in collective allows the autogyro to take off as a helicopter. While the change in blade section <span class="math notranslate nohighlight">\(\alpha\)</span> is not exactly instantaneous, the central point is that the associated unsteadiness cannot be ignored if one needs to accurately quantify blade aerodynamics.</p>
+</center><p>The above result is not purely of academic interest. Autogyros<a class="footnote-reference brackets" href="#autogyros" id="id2">1</a> are capable of undertaking a jump take-off where the rotors are spun to high RPM at zero collective and then a rapid increase in collective allows the autogyro to take off as a helicopter. While the change in blade section <span class="math notranslate nohighlight">\(\alpha\)</span> is not exactly instantaneous, the central point is that the associated unsteadiness cannot be ignored if one needs to accurately quantify blade aerodynamics.</p>
 <div class="image-grid2">
     <img  src="../../assets/Add40_Fig24_AutogyroJumpTakeOff.png" class="medium"/>
     <img  src="../../assets/B3_Fig1048_CollectiveRamp.png" class="medium"/>
@@ -582,7 +603,7 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
   <p >  Effect of "ramp" increase in rotor collective on rotor thrust  <a href="https://www.cambridge.org/us/academic/subjects/engineering/aerospace-engineering/principles-helicopter-aerodynamics-2nd-edition-1?format=HB&isbn=9781107013353">[source]) </a>
   </p>       
 </div><p>At first sight the results corresponding to step change in airfoil <span class="math notranslate nohighlight">\(\alpha\)</span> and ramp change in rotor collective (which by extension can be seen as a ramp change in blade section <span class="math notranslate nohighlight">\(\alpha\)</span>) might suggest that there are different aerodynamic mechanisms at play here in the two scenarios. The unsteady lift approaches the steady state lift assymptotically from the bottom while there is a clear overshoot in the latter case. This is in part because the former is a purely 2D case but the latter is a 3D case. From the ensuing disccusion it’ll be clear that …</p>
-<p><strong>the bit about unsteadiness given by differential equation and not algebraic equation</strong><span id="id2">[]</span></p>
+<p><strong>the bit about unsteadiness given by differential equation and not algebraic equation</strong><span id="id3">[]</span></p>
 <p>The difference between the flow behavior in … and .. is immediately apparent.</p>
 <p>In summary, <em>unsteadiness</em> comes from accounting for the vorticity in the wake and when wake vorticity (as in the case of the starting vortex) is not acocunted for the flow is considered to be steady. In addition, a steady airfoil generates lift which is purely due to the circulation of the flow but an airfoil undergoing unsteady motion will generate an added lift that is due to the displacement of the surrounding fluid.</p>
 </div>
@@ -651,10 +672,10 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 ></iframe>
 </div></div>
 </div>
-<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given defined shape <span id="id3">[]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the construct since all that changes between them is the sign of the flow direction</p>
+<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given defined shape <span id="id4">[]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the construct since all that changes between them is the sign of the flow direction</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="autogyros"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="autogyros"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>They are a class of rotorcraft where an unpowered rotor spins in windmill operating state during flight to generate the vertical thrust necessary to stay aloft while a propeller generates horizontal thrust to overcome drag from the free-spinning rotor. On some designs a clutch mechanism allows to divert engine power to the rotor for initial spin-up while on the ground to facilitate the jump take-off maneuver.</p>
 </dd>
 </dl>

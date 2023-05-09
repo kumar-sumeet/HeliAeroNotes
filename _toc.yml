@@ -17,4 +17,18 @@ parts:
     - file: Lectures/1_MT/MT
     - file: Lectures/1_MT/ResponseToAQuestion
 #    - file: Lectures/1_MT/Summary
+   
 
+#    - file: Lectures/2_Hover/Tutorial_0
+
+  - caption: Blade Element Theory
+    chapters:
+    - file: Lectures/2_BET/1_BET
+    - file: Lectures/2_BET/2_BEMT
+    - file: Lectures/2_BET/3_BladeAerodynamics
+
+
+  - caption: References
+    chapters:
+    - file: Lectures/References
+    

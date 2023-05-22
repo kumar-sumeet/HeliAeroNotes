@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotor Aerodynamics &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Blade Motion and Control" href="BladeMotionAndControl.html" />
+    <link rel="prev" title="Aerodynamics of Human Powered Helicopter" href="../Assignment.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Opening.html">
+   Fundamentals of Helicopter Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_CourseOverview.html">
+   Course Overview
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Momentum Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/MT.html">
+   Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blade Element Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/1_BET.html">
+   Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/2_BEMT.html">
+   Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/3_BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/2_TailRotor.html">
+   Tail Rotor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/3_FM.html">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/4_Performance.html">
+   Performance: Aérospatiale SA 315B Lama
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Assignment.html">
+   Aerodynamics of Human Powered Helicopter
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foward Flight
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Rotor Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BladeMotionAndControl.html">
+   Blade Motion and Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fluid Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lectures/4_ForwardFlight/RotorAerodynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/yourusername/yourbookrepo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/4_ForwardFlight/RotorAerodynamics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/4_ForwardFlight/RotorAerodynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixed-wing-wake-vs-rotary-wing-wake">
+   Fixed-wing wake vs Rotary-wing wake
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#induced-power">
+   Induced power
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hover">
+     Hover
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-climb">
+     Vertical climb
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#low-forward-speed">
+     Low forward speed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-forward-speed">
+     High forward speed
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aside-rotor-aerodynamics-in-descent-flight">
+   Aside: rotor aerodynamics in descent flight
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotor-aerodynamics-assymetry">
+   Rotor aerodynamics assymetry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-flow">
+   Reverse flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#profile-power">
+   Profile power
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parasite-power">
+   Parasite power
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#power-bucket-curve">
+   Power bucket curve
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Rotor Aerodynamics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixed-wing-wake-vs-rotary-wing-wake">
+   Fixed-wing wake vs Rotary-wing wake
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#induced-power">
+   Induced power
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hover">
+     Hover
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vertical-climb">
+     Vertical climb
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#low-forward-speed">
+     Low forward speed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-forward-speed">
+     High forward speed
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aside-rotor-aerodynamics-in-descent-flight">
+   Aside: rotor aerodynamics in descent flight
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotor-aerodynamics-assymetry">
+   Rotor aerodynamics assymetry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-flow">
+   Reverse flow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#profile-power">
+   Profile power
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parasite-power">
+   Parasite power
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#power-bucket-curve">
+   Power bucket curve
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="rotor-aerodynamics">
+<h1>Rotor Aerodynamics<a class="headerlink" href="#rotor-aerodynamics" title="Permalink to this headline">¶</a></h1>
+<blockquote class="epigraph">
+<div><p>“The problem of the rotor in steady forward flight is the problem of defining the magnitude and direction of airflow encountered by each blade element”</p>
+<p class="attribution">—Alfred Gessow (Aerodynamics of the Helicopter)  </p>
+</div></blockquote>
+<p>Discussing about the details of forward flight state aerodynamics is also the perfect time to talk about the 2D aerodynamic characteristics of the airfoil sections that make up the blades of the rotor. You would not be prepostrously wrong in assuming that if the blade sections are made up of an airfoil with better airfoil characteristics then the overall rotor efficiency would be improved. ‘Efficiency’ of the rotor here refers to just the profile + induced power consumption of the rotor but in literature this term can also be used to refer to the acoustic noise or vibratory characteristics of the rotor. These are not within the scope of this course so we’ll just end up focussing on rotor power consumption. But what does ‘better airfoil characteristics’ precisely mean? Is it just larger <span class="math notranslate nohighlight">\(C_l/C_d\)</span>? Larger stall angle of attack? The way the question has been posed might suggest that indeed there is something <em>extra</em> that needs to be accounted for or considered in order to improve rotor performance in forward flight. What that ‘<em>extra</em>’ might be would become clear as the various aerodynamic phenomena, encountered by the rotor, in forward helicopter flight are discussed.</p>
+<p>On a conventional helicopter, the rotor is the sole entity responsible for generating thrust to counter the weight as well as the fuselage drag. While this characteristic itself leads to interesting aerodynamics and rotor performance attributes, there are a ton of pecularities arising just from edgewise rotor flight.</p>
+<center>
+    <img src="../../assets/forces.png" class="medium">
+    <p style="font-size:16px; color:gray; text-align:center;" > UH-60A Helicopter <a href="https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk#/media/File:Jordanian_Air_Force_UH-60_Black_Hawk_helicopter_(cropped).jpg"> [source]</a></p>
+</center><div class="section" id="fixed-wing-wake-vs-rotary-wing-wake">
+<h2>Fixed-wing wake vs Rotary-wing wake<a class="headerlink" href="#fixed-wing-wake-vs-rotary-wing-wake" title="Permalink to this headline">¶</a></h2>
+<div class="image-grid2">
+    <img  src="../../assets/C17Vortex.jpeg" class="medium"/>
+    <img  src="../../assets/FA18CVortex.jpeg" class="medium"/>
+</div>
+<div class="image-grid2">
+  <p > Wing tip vortices behind a Boeing C-17 Globemaster<a href="https://en.wikipedia.org/wiki/Wingtip_vortices#/media/File:C17-Vortex.JPG"> [source]</a>
+  </p>   
+  <p > Wing tip vortices behind a McDonnell Douglas F/A-18 Hornet <a href="https://en.wikipedia.org/wiki/Wingtip_vortices#/media/File:FA-18C_vapor_LEX_and_wingtip_1.jpg"> [source]</a>
+  </p> 
+</div><p> </p>
+<div style="float:right; width:40%;" >
+    <img src="../../assets/B0_fig9_1.png" class="big" />
+    <p style="text-align:center; color:gray; font-size:16px;"> Rotor tip vortex trajectories at difference advance ratios <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
+</div>
+<p> </p>
+<ul class="simple">
+<li><p>Note the changing wake pattern with <span class="math notranslate nohighlight">\(\mu\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v_i\)</span> due to vortex-induced velocity</p>
+<ul>
+<li><p>Biot-Savart law</p></li>
+</ul>
+</li>
+<li><p>high <span class="math notranslate nohighlight">\(v_i\)</span> with tightly spaced rings in hover</p>
+<ul>
+<li><p>high induced power</p></li>
+</ul>
+</li>
+<li><p>low <span class="math notranslate nohighlight">\(v_i\)</span> when rotor quickly moves away</p>
+<ul>
+<li><p>low <em>induced</em> power</p></li>
+<li><p>fast forward flight</p></li>
+<li><p>rotor in climb</p></li>
+</ul>
+</li>
+<li><p>vortex-based methods for better accuracy</p>
+<ul>
+<li><p>free-wake</p></li>
+<li><p>particle-based methods</p></li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<center>
+    <img src="../../assets/4blade_02.gif" class="medium">
+    <p style="text-align:center; color:gray; font-size:16px;"> Free-wake simulation of a 4 bladed rotor in forward flight </p>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;7PcowKB_Dwc&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="400"
+    height="200"
+    src="https://www.youtube.com/embed/7PcowKB_Dwc?start=0&end=40"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="induced-power">
+<h2>Induced power<a class="headerlink" href="#induced-power" title="Permalink to this headline">¶</a></h2>
+<p>The induced velocity in forward flight is stated below. It is to be assumed as agiven. It can be derived using the same principles that the expression for hover and climb cases were obtained, and is again based on the uniform inflow velocity assumption.</p>
+<div class="math notranslate nohighlight">
+\[v_i = \frac{T}{2\rho A U}\]</div>
+<p>where <span class="math notranslate nohighlight">\(U = \left | \bar{V_{\infty}} + \bar{v_i} \right |\)</span> is the vector sum of the oncoming flow velocity and the induced flow velocity. This result is consistent with the expressions obtained for hover and axial flight in that it reduces to the corresponding expressions when appropriate substitutions are made for U and this is shown below.</p>
+<p>In the case of fast forward flight, <span class="math notranslate nohighlight">\(V_{\infty} \text{ or } V_f&gt;&gt;v_i\)</span> and therefore the induced velocity is alternately stated as follows-</p>
+<div class="math notranslate nohighlight">
+\[v_i = \frac{T}{2\rho A U} \approx \frac{T}{2\rho A V_{\infty}}\]</div>
+<div class="section" id="hover">
+<h3>Hover<a class="headerlink" href="#hover" title="Permalink to this headline">¶</a></h3>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/HT_glauert_hover.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Hover <a href=""> </a></p>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fbbbcfe4-d20e-4627-ac81-270d4b17c2de">
+<span class="eqno">(7)<a class="headerlink" href="#equation-fbbbcfe4-d20e-4627-ac81-270d4b17c2de" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{aligned}
+v_{i} &amp;=\frac{T}{2 \rho A U} \\
+&amp;=\frac{T}{2 \rho A \sqrt{\left(V_{\infty} \cos \alpha\right)^{2}+\left(-V_{\infty} \sin \alpha+v_{i}\right)^{2}}} \\
+&amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2} \cos ^{2} \alpha+V_{\infty}^{2} \sin ^{2} \alpha-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
+&amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
+&amp;=\frac{T}{2 \rho A \sqrt{v_{i}^{2}}} \\
+&amp;=\frac{T}{2 \rho A v_{i}} \\
+v_{i}^{2} &amp;=\frac{T}{2 \rho A} \\
+v_{i} &amp;=\sqrt{\frac{T}{2 \rho A}}
+\end{aligned}
+\end{equation}\]</div>
+</div>
+<div class="section" id="vertical-climb">
+<h3>Vertical climb<a class="headerlink" href="#vertical-climb" title="Permalink to this headline">¶</a></h3>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/HT_glauert_climb.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Vertical climb <a href=""> </a></p>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1a764360-5378-45ec-b111-268e8297ee14">
+<span class="eqno">(8)<a class="headerlink" href="#equation-1a764360-5378-45ec-b111-268e8297ee14" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{aligned}
+v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
+&amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+2 V_{\infty} v_{i}+v_{i}^{2}}} \\
+&amp;=\frac{T}{2 \rho A\left(V_{\infty}+v_{i}\right)} \\
+&amp;=-\frac{V_{\infty}}{2}+\sqrt{\frac{T}{2 \rho A}+\frac{V_{\infty}^{2}}{4}} \\
+&amp;=-\frac{V_{\infty}}{2}+\sqrt{v_{h}^{2}+\frac{V_{\infty}^{2}}{4}}
+\end{aligned}
+\end{equation}\]</div>
+</div>
+<div class="section" id="low-forward-speed">
+<h3>Low forward speed<a class="headerlink" href="#low-forward-speed" title="Permalink to this headline">¶</a></h3>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/HT_glauert_low_speed.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Low speed forward flight <a href=""> </a></p>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-81af56f5-4823-46ef-83d4-e12408139600">
+<span class="eqno">(9)<a class="headerlink" href="#equation-81af56f5-4823-46ef-83d4-e12408139600" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{aligned}
+v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
+&amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+v_{i}^{2}}} \\
+\Rightarrow v_i &amp;=\sqrt{-\frac{V_{\infty}^{2}}{2}+\sqrt{\left(\frac{T}{2 \rho A}\right)^{2}+\frac{V_{\infty}^{4}}{4}}} \\
+&amp;=\sqrt{-\frac{V_{\infty}^{2}}{2}+\sqrt{v_{h}^{4}+\frac{V_{\infty}^{4}}{4}}}
+\end{aligned}
+\end{equation}\]</div>
+<p>The low forward speed assumption of <span class="math notranslate nohighlight">\(\alpha\approx 0\)</span> is generally valid for advance ratios <span class="math notranslate nohighlight">\(\mu&lt;0.15\)</span>, where <span class="math notranslate nohighlight">\(\mu = \frac{V_{\infty}}{\Omega R}\)</span>.</p>
+</div>
+<div class="section" id="high-forward-speed">
+<h3>High forward speed<a class="headerlink" href="#high-forward-speed" title="Permalink to this headline">¶</a></h3>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/HT_glauert_fast.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > High speed forward flight <a href=""> </a></p>
+</div>
+<p> 
+ 
+ </p>
+<div class="amsmath math notranslate nohighlight" id="equation-2e4e8b92-a012-42e4-9259-755657193487">
+<span class="eqno">(10)<a class="headerlink" href="#equation-2e4e8b92-a012-42e4-9259-755657193487" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{aligned}
+v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
+&amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}}} \\
+&amp;=\frac{T}{2 \rho A V_{\infty}}
+\end{aligned}
+\end{equation}\]</div>
+<p>The inflow variation with forward speed can then be obtained by <em>stitching-up</em> the results in the different domains. Once the induced velocity is known, the induced power can be simply obtained as <span class="math notranslate nohighlight">\(Tv_i\)</span>. As was mentioned earlier for hover, large mass flow through the rotor disk is key to thrust efficiency of a rotor. When a rotor is tilted for forward flight, a component of the oncoming flow velocity goes through the rotor disk. This increases the effective mass flow rate of air through the disk much like in the rotor climb scenario. Consequently, a smaller increase in velocity needs to be imparted to the flow to get the required momentum change and leads to the reduction in <span class="math notranslate nohighlight">\(v_i\)</span> obtained.</p>
+<center>
+    <img src="../../assets/HT_inflow_v_mu.png" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;"> Rotor inflow versus forward flight speed  <a href=""> </a></p>
+</center></div>
+</div>
+<div class="section" id="aside-rotor-aerodynamics-in-descent-flight">
+<h2>Aside: rotor aerodynamics in descent flight<a class="headerlink" href="#aside-rotor-aerodynamics-in-descent-flight" title="Permalink to this headline">¶</a></h2>
+<p>Descent flight in rotorcraft is usually undertaken at very low speeds. Fast descent speeds can lead to large flow recirculation and turbulence in the flow, leading to high vibrations and loss of control. There are three distinct states that exist with increasing descent flight velocities of a rotor -</p>
+<p>Vortex ring state</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V&lt;0\)</span> but <span class="math notranslate nohighlight">\(V+v_i&gt;0\)</span></p></li>
+</ul>
+<p>Turbulent wake state</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V&lt;0\)</span> and <span class="math notranslate nohighlight">\(V+v_i&lt;0\)</span>, but <span class="math notranslate nohighlight">\(V+2v_i&gt;0\)</span></p></li>
+</ul>
+<p>Windmill brake state</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V&lt;0\)</span>, <span class="math notranslate nohighlight">\(V+v_i&lt;0\)</span>, <span class="math notranslate nohighlight">\(V+2v_i&lt;0\)</span></p></li>
+</ul>
+<center>
+    <img src="../../assets/B0_fig4_3.png" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;"> Rotor descent flight states  <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;HjeRSDsy-nE&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="mi">133</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/HjeRSDsy-nE?start=133"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;05_WFvh9ISk&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/05_WFvh9ISk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>The following show induced velocity of the rotor as a function of climb velocity (negative climb velocity denotes a descent flight state). While not explicitly derived as part of the lectures, the inflow velocity during the windmill brake state, i.e. when the rotor acts as a wind turbine, can be derived using momentum theory along the lines of the derivation for the normal working state. The variation would then be as denoted by the solid lines. However, if the results were simply extended (denoted using dashed lines) to regions that we now understand to be the turbulent wake state or the vortex ring state, the results would not match with that observed in reality (solid lines). This is because the flow is highly turbulent in these scenarios and the simple momentum theory does not capture that and incurs an error. An alternate way of presenting the same results is by plotting the total inflow velocity on the y-axis. When experimental measurements are laid on this figure, notwithstanding the scatter in the measurements, they largely follow the trend of the solid lines.</p>
+<p><strong>It is worth noting that these experimental results are not based on a measured induced velocity in wind tunnel or free-flight, rather the total power consumption of the rotor was measured and simple momentum theory-like relations were assumed to arrive at the corresponding uniform induced inflow velocity. This is why the second plot of total inflow versus climb velocity is used because the total power measured in experiments can be directly used to obtain the net inflow since climb power and induced power cannot be separately measured. Another feature apparent from the figures is that momentum theory, as simple as it is, is capable of predicting the average rotor power consumption very well.</strong></p>
+<p><em>Note that convention followed within these figures is such that <span class="math notranslate nohighlight">\(v\)</span> is used to represent inflow velocity <span class="math notranslate nohighlight">\(v_i\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is used to denote climb velocity <span class="math notranslate nohighlight">\(V_c\)</span>, and <span class="math notranslate nohighlight">\(v_h\)</span> refers to the induced velocity at hover.</em></p>
+<div class="image-grid">
+    <img  src="../../assets/B0_fig4_4.png" class="medium"/>
+    <img  src="../../assets/B0_fig4_5.png" class="medium"/>
+    <img  src="../../assets/B0_fig4_6.png" class="medium"/>
+</div>
+<div class="image-grid">
+    <p style="font-size:16px; color:gray; text-align:center;"  > Rotor induced velocity during axial flight states  <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
+    <p style="font-size:16px; color:gray; text-align:center;"  >  Net rotor inflow during axial flight states  <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
+    <p style="font-size:16px; color:gray; text-align:center;"  > Inflow results based on experimental measurement of different rotors <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E"> [source]</a></p>
+</div>
+</div>
+<div class="section" id="rotor-aerodynamics-assymetry">
+<span id="content-5-ff-t-la-labels"></span><h2>Rotor aerodynamics assymetry<a class="headerlink" href="#rotor-aerodynamics-assymetry" title="Permalink to this headline">¶</a></h2>
+<p>As soon as a rotor starts moving edgewise, a lateral assymetry is introduced with regard to the total in-plane velocity. This assymetry is most prominent at the azimuth locations <span class="math notranslate nohighlight">\(\psi=90°\)</span> and <span class="math notranslate nohighlight">\(\psi=270°\)</span> and decreases progressively to no assymetry at azimuth locations <span class="math notranslate nohighlight">\(\psi=0°\)</span> and <span class="math notranslate nohighlight">\(\psi=180°\)</span>.</p>
+<center>
+    <img src="../../assets/HT_hover_forward.png" class="big">
+    <p style="font-size:16px; color:gray; text-align:center;"  > Tangential velocity distribution in hover versus forward flight (at &psi =90°) </p>
+</center></div>
+<div class="section" id="reverse-flow">
+<h2>Reverse flow<a class="headerlink" href="#reverse-flow" title="Permalink to this headline">¶</a></h2>
+<p>Along with the in-plane flow assymetry in the lateral direction, a reverse flow region occurs in forward flight. This is of concern because the blade sections within this region effectively have an angle of attack close to 180° and are no longer aerodynamically efficient. There is no minimum threshold speed for the reverse flow region to occur but it is not of major concern for low speed flight since rotors generally have a root cutout region of about 20%. Based on the equations given below, this means that only for <span class="math notranslate nohighlight">\(\mu &gt; 0.2\)</span> do blade airfoil sections start experiencing reverse flow.</p>
+<center>
+    <img src="../../assets/HT_reverse_flow.png" class="big">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Reverse flow region during forward flight </p>
+</center><div class="math notranslate nohighlight">
+\[ V_{T}=\Omega \cdot y+V_{F} \cdot \sin \Psi \]</div>
+<div class="math notranslate nohighlight">
+\[ V_{T}=\Omega \cdot y+V_{F} \cdot \sin \Psi=0 \]</div>
+<div class="math notranslate nohighlight">
+\[ y=\frac{-V_{F} \cdot \sin \Psi}{\Omega}=-\frac{V_{F}}{\Omega R} \sin \Psi \cdot R=-\mu \cdot \sin \Psi \cdot R\]</div>
+</div>
+<div class="section" id="profile-power">
+<h2>Profile power<a class="headerlink" href="#profile-power" title="Permalink to this headline">¶</a></h2>
+<p>The drag due to fluid viscosity and due to pressure distribution over the airfoil surface manifests itself within the airfoil drag coefficient. The power required by the rotor to overcome these drag forces can be evaluated by integrating the power required to overcome drag at each blade section and averaged over the azimuth.</p>
+<div class="image-grid">
+    <img  src="../../assets/HT_profile_power_1.png" class="big"/>
+    <img  src="../../assets/HT_profile_power.png" class="big"/>
+</div>
+<div class="image-grid">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Blade section drag due to in-plane velocity </p>
+    <p  style="font-size:16px; color:gray; text-align:center;"> Rotor in forward flight </p>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-06cbaf8e-6548-4800-b368-119f3d43ff45">
+<span class="eqno">(11)<a class="headerlink" href="#equation-06cbaf8e-6548-4800-b368-119f3d43ff45" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{array}{l}
+\displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} P_{0}^{\prime} d y d \Psi \\
+\displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} D^{\prime}.V_T d y d \Psi \\
+\displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi} \int_{0}^{R} \frac{1}{2} \rho C_{d 0} c V_{T}^{2} \cdot\left|V_{T}\right| d y d \Psi \\
+\displaystyle P_{0}=\frac{N_{b}}{4 \pi} \rho C_{d 0} c \int_{0}^{2 \pi} \int_{0}^{R} V_{T}^{2} \cdot\left|V_{T}\right| d y d \Psi \\
+\displaystyle P_{0}=\frac{N_{b}}{4 \pi} \rho C_{d 0} c \cdot\left(\int_{0}^{2 \pi} \int_{0}^{R} V_{T}^{3} d y d \Psi-2 \cdot \int_{\pi}^{2 \pi} \int_{0}^{\frac{-V_{F}sin\Psi}{\Omega}} V_{T}^{3} d y d \Psi\right) \\
+\displaystyle P_{0}=\frac{N_{b}}{4 \pi} \rho C_{d 0} c\left(\int_{0}^{2 \pi} \int_{0}^{R}\left(\Omega \cdot y+V_{F} \cdot \sin \Psi\right)^{3} d y d \Psi-2 \cdot \int_{\pi}^{2 \pi} \int_{0}^{\frac{-V_{F} \cdot \sin \Psi}{\Omega}} \left(\Omega \cdot y+V_{F} \cdot \sin \Psi\right)^{3} d y d \Psi\right) \\
+\displaystyle P_{0}=\frac{N_{b}}{4 \pi} \rho C_{d 0} c\left(\frac{\pi}{2} \Omega^{3} R^{4}+\frac{3 \pi}{2} \Omega R^{2} V_{F}^{2}+2 \cdot \frac{3 \pi V_{F}^{4}}{32 \Omega}\right) \\
+\displaystyle P_{0}=\frac{N_{b}}{4 \pi} \rho C_{d 0} c\left(\frac{\pi}{2} \Omega^{3} R^{4}+\frac{3 \pi}{2} \Omega R^{2} V_{F}^{2}+\frac{3 \pi V_{F}^{4}}{16 \Omega}\right) \\
+\displaystyle P_{0}=\frac{N_{b}}{8} \rho C_{d 0} c \Omega^{3} R^{4}\left(1+3 \frac{V_{F}^{2}}{\Omega^{2} R^{2}}+\frac{3 V_{F}^{4}}{8 \Omega^{4} R^{4}}\right) \\
+\displaystyle P_{0}=\frac{N_{b}}{8} \rho C_{d 0} c \Omega^{3} R^{4}\left(1+3 \mu^{2}+\frac{3}{8} \mu^{4}\right) \\
+\displaystyle P_{0}=\frac{1}{8} \frac{c N_{b}}{\pi R} \pi \rho C_{d 0} \Omega^{3} R^{5}\left(1+3 \mu^{2}+\frac{3}{8} \mu^{4}\right) \\
+\displaystyle P_{0}=\frac{1}{8} \rho \sigma A C_{d 0} V_{TIP}^{3}\left(1+3 \mu^{2}+\frac{3}{8} \mu^{4}\right)
+\end{array}
+\end{equation}\]</div>
+</div>
+<div class="section" id="parasite-power">
+<h2>Parasite power<a class="headerlink" href="#parasite-power" title="Permalink to this headline">¶</a></h2>
+<p>The power expended in order to overcome the fuselage drag of a helicopter is refered to as the parasite power. It is simply the parasite drag times the forward speed where the parasite drag itself is usually stated as an equivalent flat plate area <span class="math notranslate nohighlight">\(f\)</span>. Since fuselage attitude largely remains the same at any speed, <span class="math notranslate nohighlight">\(f\)</span> can be assumed a constant.</p>
+<div class="math notranslate nohighlight">
+\[P_p = D_p*V_{\infty} = \frac{1}{2}\rho V_f^3 f\]</div>
+</div>
+<div class="section" id="power-bucket-curve">
+<h2>Power bucket curve<a class="headerlink" href="#power-bucket-curve" title="Permalink to this headline">¶</a></h2>
+<p>The consumed power breakdown of the entire helicopter is shown below. The power required by the tail rotor <span class="math notranslate nohighlight">\(P_{TR}\)</span> which can be fairly approximated as a fixed percentage (about 10%) of the total power required by the main rotor <a class="footnote-reference brackets" href="#tailrotor" id="id1">1</a>. <span class="math notranslate nohighlight">\(P_a\)</span> here refers to accesories power for onboard equipment and <span class="math notranslate nohighlight">\(P_{tl}\)</span> refers to additional power required to overcome transmission losses. These three power components are small in comparision of the main rotor power <span class="math notranslate nohighlight">\(P_i+P_0\)</span> and the helicopter parasite power <span class="math notranslate nohighlight">\(P_p\)</span>. The characteristic ‘bucket’ curve is a byproduct of the interplay between the latter 3 power components.</p>
+<center>
+    <img src="../../assets/power_curve.png" class="large">
+    <p  style="font-size:16px; color:gray; text-align:center;">Total helicopter power consumption versus forward speed </p>
+</center><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="tailrotor"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Alternately, the tail rotor power can be also obtained from first principles using BET or momentum theory.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures/4_ForwardFlight"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Assignment.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Aerodynamics of Human Powered Helicopter</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="BladeMotionAndControl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Blade Motion and Control</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sumeet Kumar<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

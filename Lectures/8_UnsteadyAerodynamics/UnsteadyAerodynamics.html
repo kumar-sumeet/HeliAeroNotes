@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsteady Aerodynamics &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Theodorsen Theory" href="TheodorsenModel.html" />
+    <link rel="prev" title="Compound Helicopters" href="../7_ModernDesigns/CompoundHelicopters.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Opening.html">
+   Fundamentals of Helicopter Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_CourseOverview.html">
+   Course Overview
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Momentum Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/MT.html">
+   Momentum Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_MT/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blade Element Theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/1_BET.html">
+   Blade element theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/2_BEMT.html">
+   Blade element momentum theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_BET/3_BladeAerodynamics.html">
+   Blade Aerodynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hover
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/1_Hover.html">
+   Hover
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/ResponseToAQuestion.html">
+   Response to a question
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/2_TailRotor.html">
+   Tail Rotor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/3_FM.html">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Hover/4_Performance.html">
+   Performance: Aérospatiale SA 315B Lama
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignment
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Assignment.html">
+   Aerodynamics of Human Powered Helicopter
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Foward Flight
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/RotorAerodynamics.html">
+   Rotor Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
+   Blade Motion and Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/Control.html">
+   Control
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/FastForwardFlight.html">
+   Fast Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modern Designs
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ModernRotors.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/ABC.html">
+   Advancing Blade Concept (ABC)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_ModernDesigns/CompoundHelicopters.html">
+   Compound Helicopters
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../9_DynamicStall/DynamicStall.html">
+   Dynamic Stall
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10_Autogyro/Autogyro.html">
+   Autogyro
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10_Autogyro/Autorotation.html">
+     Autorotation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11_DynamicInflow/DynamicInflow.html">
+   Dynamic Inflow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11_DynamicInflow/PetersHe.html">
+     Peters-He Inflow Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fluid Dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/yourusername/yourbookrepo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/yourusername/yourbookrepo/issues/new?title=Issue%20on%20page%20%2FLectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/yourusername/yourbookrepo/master?urlpath=tree/path/to/book/Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Unsteady Aerodynamics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
+     Steady/quasi-steady airfoil aerodynamics
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics">
+     Unsteady airfoil aerodynamics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
+   add gif here of steady and unsteady airfoil from Waterlily
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relevant-concepts">
+     Relevant concepts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#potential-flow-theory">
+       Potential flow theory
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Unsteady Aerodynamics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Unsteady Aerodynamics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
+     Steady/quasi-steady airfoil aerodynamics
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics">
+     Unsteady airfoil aerodynamics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
+   add gif here of steady and unsteady airfoil from Waterlily
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relevant-concepts">
+     Relevant concepts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#potential-flow-theory">
+       Potential flow theory
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="unsteady-aerodynamics">
+<h1>Unsteady Aerodynamics<a class="headerlink" href="#unsteady-aerodynamics" title="Permalink to this headline">¶</a></h1>
+<p>The relevance of unsteady aerodynamics modelling usually comes up in the context flutter, rapid maneuvers, insect/bird flapping flight etc. Loosely speaking, whenever lift-generating structures flex large enough, and at large enough rates, the quasi-steady assumption used within the BEMT theory leads to inaccuracies and corrections need to be made to account for the aerodynamic loads experienced in such situations. Below is an example of the degree of elastic deformation that a helicopter rotor blade undergoes. Notice that the video is slowed down dramatically (S-56 had a time period of about 0.31s).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;srjbnvTWRJI&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="270"
+    src="https://www.youtube.com/embed/srjbnvTWRJI"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Fundamentally, the motion (or relative oncoming flow) that any airfoil section of the blade is undergoing (experiencing) here can be broken down into the following mutually independent forms. Here, the blade positions in pitch, flap and lead-lag direction are all functions of time. Clearly, the airfoil lift, drag and moments are going to be functions of time as well.</p>
+<center>
+    <img src="../../assets/B3_82_UnsteadyAirfoilMotion.png" class="medium">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Vorticity of a continuum particle [taken from Principles in Helicopter Aerodynamics by JG Leishman] </p>
+</center><p>The idea with regard to accounting for unsteady aerodynamic effects on rotors is not unlike the steady aerodynamics. The NSE are time dependent so, in principle, solving those equations gives one the aerodynamic forces and moments as a function of time. However, the reason that this is not done is not just that one would have to wait a anywhere from a few hours to a few days for simple simulations. As was stressed in the review chapter on 2D aerodynamics solving the complete set of NSE, while <em>exact</em>, is less amenable to intuitive understanding of the phenomena being modelled. Which is why all the engineering theories that were proposed in an effort to understand fluid behavior on lifting bodies, in the aftermath of the first powered aircraft flight, were all highly intuitive and based on direct verifiable evidence. For e.g. the phenomenon of bound circulation around an airfoil was verified in REf…..(<strong>the paper with Glauert and rest from Taha’s lecture</strong>) using …  A theory would be detailed outlining the effect of unsteady flow on 2D airfoil sections. …</p>
+<div class="section" id="steady-quasi-steady-airfoil-aerodynamics">
+<h2>Steady/quasi-steady airfoil aerodynamics<a class="headerlink" href="#steady-quasi-steady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h2>
+<p>The starting vortex of the airfoil-fluid system is apparent.</p>
+<div style="float:right; width:43%;" >
+    <img src="../../assets/B3_85_QuasiSteadyAirfoil.png" class="big" />
+    <p style="font-size:16px; color:gray; text-align:center;" > Quasi-steady airfoil aerodynamics [taken from Principles in Helicopter Aerodynamics by JG Leishman] </p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \frac{\dot{\alpha}}{V} \right]
+\]</div>
+<p>Despite what the <span class="math notranslate nohighlight">\(\dot{\alpha}\)</span> term in Eq <span class="math notranslate nohighlight">\(\eqref{eq:quasi_steady_aero}\)</span> might suggest, it does NOT model unsteady aerodynamics.</p>
+</div>
+<div class="section" id="unsteady-airfoil-aerodynamics">
+<h2>Unsteady airfoil aerodynamics<a class="headerlink" href="#unsteady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h2>
+<p>Whenever a quick change in the flow conditions or the airfoil angle of attack occurs, the airfoil aerodynamics can be very different from its steady/quasi-steady counterpart. That said, the very concepts that help analyse the physics of airfoil aerodynamics, and quantify the aerodynamic forces, can be used to explain the physics behind the aerodynamic behavior of airfoils.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Amine unsteady vs steady airfoil result goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put a picture here like in https://www.youtube.com/watch?v=SpZwyQYd2WA&amp;list=PLCheZLRn7G_ynSVQc9X8hClVxvNLf6hjW&amp;index=29 at 3:53</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall the Kelvin’s circulation theorem and the generation of the starting vortex that takes place as a result of bound circulation getting established around an wing section.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;VcggiVSf5F&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="270"
+    src="https://www.youtube.com/embed/VcggiVSf5F"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>A series of stillshots from the video above are also available in <span id="id1">[]</span>.</p>
+<p>The figure below shows the build-up of lift when the angle of attack of is changed instantaneously. The airfoil lift coefficient (<span class="math notranslate nohighlight">\(C_L\)</span>), instead of following an instantaneous change, undergoes a gradual rise in <span class="math notranslate nohighlight">\(C_L\)</span> and theoretically reaching the steady state value at infinite time. However, <span class="math notranslate nohighlight">\(C_L\)</span> is considered to have reached a steady-state value after a finite time… The peculiar aspect about the form of the <span class="math notranslate nohighlight">\(C_L\)</span> curve is that it is no longer directly proportional to the <span class="math notranslate nohighlight">\(\alpha\)</span>, with the proportionality constant given by <span class="math notranslate nohighlight">\(2\pi\)</span> from thin airfoil theory. We will later discuss the Theodorsen theory to predict this unsteady behavior of pitching and plunging airfoils with reasonable accuracy. This theory is based on potential flow assumption so clearly this <em>delay</em> in lift exhibited is not somehow related compressibility of the fluid (incompressiblity assumption used in potential flow analyses).</p>
+<center>
+    <img src="../../assets/A23_2_AirfoilStepInput.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Airfoil lift developement after step-input <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1853">[source] </a> </p>
+</center><p>The above result is not purely of academic interest. Autogyros<a class="footnote-reference brackets" href="#autogyros" id="id2">1</a> are capable of undertaking a jump take-off where the rotors are spun to high RPM at zero collective and then a rapid increase in collective allows the autogyro to take off as a helicopter. While the change in blade section <span class="math notranslate nohighlight">\(\alpha\)</span> is not exactly instantaneous, the central point is that the associated unsteadiness cannot be ignored if one needs to accurately quantify blade aerodynamics.</p>
+<div class="image-grid2">
+    <img  src="../../assets/Add40_Fig24_AutogyroJumpTakeOff.png" class="medium"/>
+    <img  src="../../assets/B3_Fig1048_CollectiveRamp.png" class="medium"/>
+</div>
+<div class="image-grid2">
+  <p > Schematic showing an autogyro undergoing a jump take-off <a href="https://arc.aiaa.org/doi/pdf/10.2514/1.1205">[source] </a>
+  </p> 
+  <p >  Effect of "ramp" increase in rotor collective on rotor thrust  <a href="https://www.cambridge.org/us/academic/subjects/engineering/aerospace-engineering/principles-helicopter-aerodynamics-2nd-edition-1?format=HB&isbn=9781107013353">[source]) </a>
+  </p>       
+</div><p>At first sight the results corresponding to step change in airfoil <span class="math notranslate nohighlight">\(\alpha\)</span> and ramp change in rotor collective (which by extension can be seen as a ramp change in blade section <span class="math notranslate nohighlight">\(\alpha\)</span>) might suggest that there are different aerodynamic mechanisms at play here in the two scenarios. The unsteady lift approaches the steady state lift assymptotically from the bottom while there is a clear overshoot in the latter case. This is in part because the former is a purely 2D case but the latter is a 3D case. From the ensuing disccusion it’ll be clear that …</p>
+<p><strong>the bit about unsteadiness given by differential equation and not algebraic equation</strong><span id="id3">[]</span></p>
+<p>The difference between the flow behavior in … and .. is immediately apparent.</p>
+<p>In summary, <em>unsteadiness</em> comes from accounting for the vorticity in the wake and when wake vorticity (as in the case of the starting vortex) is not acocunted for the flow is considered to be steady. In addition, a steady airfoil generates lift which is purely due to the circulation of the flow but an airfoil undergoing unsteady motion will generate an added lift that is due to the displacement of the surrounding fluid.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
+<h1>add gif here of steady and unsteady airfoil from Waterlily<a class="headerlink" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily" title="Permalink to this headline">¶</a></h1>
+<p>From the flow field animations above, it is clear that there is a significant difference between the wake of an airfoil when it maintains a constant angle of attck versus when the airfoil is pitching. The differences arise due to the shed vorticity in the airfoil wake. In case of steady airfoil, the starting vortex convects far away but in case of the pitching airfoil vorticity is constantly being shed due to the changing bound circulation around the airfoil. These shed vortices in the vicinity of the airfoil have the potential to influence the aerodynamics of the airfoil and need to be accounted for. The criterion used to decide the threshold when unsteady aerodynamic effects might be significant enough, that they cannot be ignored, is called reduced frequency.</p>
+<p>Look into this later—-</p>
+<p>** Caption and source needed **</p>
+<div class="image-grid2">
+    <img  src="../../assets/T16.png" class="large"/>
+    <img  src="../../assets/T16_2.png" class="large"/>
+</div>
+<div class="image-grid2">
+  <p > Caption_image1 <a href="source_2"> [source]</a>
+  </p>   
+  <p > Caption_image2 <a href="source_1"> [source]</a>
+  </p> 
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Video</span>
+<span class="n">Video</span><span class="p">(</span><span class="s2">&quot;../../assets/PitchingAndMorphingAirfoil.mp4&quot;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span><span class="n">html_attributes</span><span class="o">=</span><span class="s2">&quot;loop autoplay&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="../../assets/PitchingAndMorphingAirfoil.mp4" loop autoplay  width="350" >
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<div class="section" id="relevant-concepts">
+<h2>Relevant concepts<a class="headerlink" href="#relevant-concepts" title="Permalink to this headline">¶</a></h2>
+<p>The necessary concepts for steady fluid analysis have already been covered in the review lecture. Here we build on those concepts and extend them to analyse unsteady fluid behavior.</p>
+<p>An understanding of the following lies at the heart of developing an intuition for why the unsteady aerodynamics theories were formulated the way they were.</p>
+<ul class="simple">
+<li><p>NSE to potential flow theory model</p></li>
+</ul>
+<ul class="simple">
+<li><p>circulatory effect of lifting flow</p></li>
+</ul>
+<ul class="simple">
+<li><p>Kutta-Joukowski theorem</p></li>
+</ul>
+<ul class="simple">
+<li><p>Kelvin’s theorem of circulation</p></li>
+</ul>
+<ul class="simple">
+<li><p>role of <em>sharp</em> trailing-edge</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;pOA3VJHCnWs&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1557</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">1668</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500"
+    height="270"
+    src="https://www.youtube.com/embed/pOA3VJHCnWs?start=1557&end=1668"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given defined shape <span id="id4">[]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the construct since all that changes between them is the sign of the flow direction</p>
+<div class="section" id="potential-flow-theory">
+<h3>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\nabla^2 \phi = 0\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\phi\)</span> is a continuous and differentiable complex function, all we need to do is identify what it would look like for common flow conditions. For e.g. in case of uniform flow from left to right <span class="math notranslate nohighlight">\(\phi(z) = z\)</span>, <span class="math notranslate nohighlight">\(\phi(z) = 1/z\)</span>… Adding the two represents the flow over a circle which certainly is of practical utility. Essentially, the following equation gives us the flow velocity around a cylinder over the entire fluid domain</p>
+<div class="math notranslate nohighlight">
+\[\phi(z) = z+\frac{1}{z}\]</div>
+<p>The above result on its own doesn’t represent significant progress towards our goal of being able to quantify lift around an airfoil/flat plate. The missing piece of the puzzle is the Reimann mapping theorem which allows us to convert the circular domain, for which we know the fluid flow solution, into any other closed shape imaginable. Of course the shape we are particularly interested in is that of a flat plate.</p>
+<p>Potential flow theory is based on the inviscid assumption so clearly the predicted drag force (i.e. force along the direction of flow) is zero leading to the d’Alembert’s paradox. Of course this is not much of a paradox now given we modelled the fluid as an ideal fluid is some sense by ignoring viscosity altogether.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="autogyros"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>They are a class of rotorcraft where an unpowered rotor spins in windmill operating state during flight to generate the vertical thrust necessary to stay aloft while a propeller generates horizontal thrust to overcome drag from the free-spinning rotor. On some designs a clutch mechanism allows to divert engine power to the rotor for initial spin-up while on the ground to facilitate the jump take-off maneuver.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lectures/8_UnsteadyAerodynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../7_ModernDesigns/CompoundHelicopters.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Compound Helicopters</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="TheodorsenModel.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Theodorsen Theory</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sumeet Kumar<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -26,6 +26,18 @@ parts:
     - file: Lectures/2_BET/1_BET
     - file: Lectures/2_BET/2_BEMT
     - file: Lectures/2_BET/3_BladeAerodynamics
+    
+    
+    
+
+  - caption: Hover
+    chapters:
+    - file: Lectures/3_Hover/1_Hover
+    - file: Lectures/3_Hover/ResponseToAQuestion
+    - file: Lectures/3_Hover/2_TailRotor
+    - file: Lectures/3_Hover/3_FM
+    - file: Lectures/3_Hover/4_Performance
+#
 
 
   - caption: References

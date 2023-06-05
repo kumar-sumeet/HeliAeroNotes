@@ -188,6 +188,18 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Foward Flight
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_ForwardFlight/ForwardFlight.html">
+   Forward Flight
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   References
  </span>
 </p>
@@ -301,7 +313,12 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparing-rotors-using-fm">
    Comparing rotors using FM
   </a>
@@ -326,7 +343,12 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Figure of Merit
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparing-rotors-using-fm">
    Comparing rotors using FM
   </a>
@@ -340,7 +362,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="figure-of-merit">
+  <div class="section" id="figure-of-merit">
 <h1>Figure of Merit<a class="headerlink" href="#figure-of-merit" title="Permalink to this headline">¶</a></h1>
 <p>The figure of merit of a rotor is a quantity that is used to assess its efficiency in hover. It is defined as follows-</p>
 <div class="amsmath math notranslate nohighlight">
@@ -366,8 +388,9 @@ F M= \displaystyle \frac{C_{P_{\text{ideal}}}}{C_{P_{i}}+C_{P_{0}}} =\frac{ \lam
   </p>  
 </center><p>Based on the definition in Eq. <span class="math notranslate nohighlight">\(\eqref{eq:FM_def}\)</span>, a high FM is desirable. Then, from the figure shown above, the rotor design has to be such that it operates at a high <span class="math notranslate nohighlight">\(C_T\)</span> value in hover. This is a straightforward result of the <span class="math notranslate nohighlight">\(C_T\)</span>-terms in Eq. <span class="math notranslate nohighlight">\(\eqref{eq:FM1}\)</span> outweighing the <span class="math notranslate nohighlight">\(C_{d0}\)</span>-term and eventually approaching a value of <span class="math notranslate nohighlight">\(1/\kappa\)</span>. This raises questions though - <strong>is it even advisable to operate the rotor at high <span class="math notranslate nohighlight">\(C_T\)</span> in order to realise a high FM<span class="math notranslate nohighlight">\(\rightarrow 1/\kappa = 1/1.15\approx 0.87\)</span>?</strong> or <strong>does Eq. <span class="math notranslate nohighlight">\(\eqref{eq:FM1}\)</span> even hold in this high <span class="math notranslate nohighlight">\(C_T\)</span> range?</strong></p>
 <p>A high <span class="math notranslate nohighlight">\(C_T\)</span> implies that the blade sections are operating at a high mean lift coefficient. Which is not a problem in of itself but the rotor is expected to generate larger thrust in forward flight in order to counter both the drag as well as the weight of the aircraft. Designing the rotor such that it operates at a high <span class="math notranslate nohighlight">\(C_T\)</span> in hover would reduce the margin of thrust available in forward flight and limit the aircraft’s performance. Additionally, the drag coefficient of the blade sections would not stay at the minimum value of <span class="math notranslate nohighlight">\(C_{d0}\)</span> when they generate higher and higher lift. So the profile power coefficient term in Eq. <span class="math notranslate nohighlight">\(\eqref{eq:FM1}\)</span> would actually increase as well, and fairly dramatically at that if you recall the <span class="math notranslate nohighlight">\(\alpha\)</span> vs <span class="math notranslate nohighlight">\(C_D\)</span> plots of NACA23012 from earlier.</p>
+</div>
 <div class="section" id="comparing-rotors-using-fm">
-<h2>Comparing rotors using FM<a class="headerlink" href="#comparing-rotors-using-fm" title="Permalink to this headline">¶</a></h2>
+<h1>Comparing rotors using FM<a class="headerlink" href="#comparing-rotors-using-fm" title="Permalink to this headline">¶</a></h1>
 <p>Alternately, the FM can also be written as-</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -379,7 +402,6 @@ F M= \displaystyle \frac{P_{\text{ideal}}}{P_{i}+P_{0}} =\frac{P_{\text{ideal}}}
     <img src="../../assets/P152_2_2.png" class="large">
     <p style="font-size:16px; color:gray; text-align:center;"> FM of some well known designs <a href="https://vtol.org/store/product/an-abc-status-report-1952.cfm">[source] </a></p>
 </center>
-</div>
 </div>
 
     <script type="text/x-thebe-config">

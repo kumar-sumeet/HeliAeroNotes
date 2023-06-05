@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unsteady Aerodynamics &#8212; Fundamentals of Helicopter Aerodynamics</title>
+    <title>Introduction &#8212; Fundamentals of Helicopter Aerodynamics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -205,13 +205,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../4_ForwardFlight/RotorAerodynamics.html">
-   Rotor Aerodynamics
+  <a class="reference internal" href="../4_ForwardFlight/ForwardFlight.html">
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../4_ForwardFlight/BladeMotionAndControl.html">
-   Blade Motion and Control
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -255,7 +255,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Unsteady Aerodynamics
+   Introduction
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -313,7 +313,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
-   Recap of Fundamentals in Aerodynamics - 2D
+   Recap of Fundamentals in Aerodynamics - 2D and 3D
   </a>
  </li>
 </ul>
@@ -434,34 +434,59 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Unsteady Aerodynamics
+   Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
-     Steady/quasi-steady airfoil aerodynamics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics">
-     Unsteady airfoil aerodynamics
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
+   Steady/quasi-steady airfoil aerodynamics
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics-overview">
+   Unsteady airfoil aerodynamics: Overview
+  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
    add gif here of steady and unsteady airfoil from Waterlily
   </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relevant-concepts-needed">
+   Relevant concepts needed
+  </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relevant-concepts">
-     Relevant concepts
+    <a class="reference internal nav-link" href="#concepts-already-covered">
+     Concepts already covered
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conformal-mapping">
+     Conformal mapping
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#potential-flow-theory">
-       Potential flow theory
+      <a class="reference internal nav-link" href="#mapping-function">
+       Mapping function
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-of-singularities">
+     Method of singularities
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-simple-case">
+       A simple case
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-case">
+       General case
       </a>
      </li>
     </ul>
@@ -478,7 +503,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unsteady Aerodynamics</h1>
+                <h1>Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -490,34 +515,59 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Unsteady Aerodynamics
+   Introduction
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
-     Steady/quasi-steady airfoil aerodynamics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics">
-     Unsteady airfoil aerodynamics
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steady-quasi-steady-airfoil-aerodynamics">
+   Steady/quasi-steady airfoil aerodynamics
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unsteady-airfoil-aerodynamics-overview">
+   Unsteady airfoil aerodynamics: Overview
+  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
    add gif here of steady and unsteady airfoil from Waterlily
   </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relevant-concepts-needed">
+   Relevant concepts needed
+  </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relevant-concepts">
-     Relevant concepts
+    <a class="reference internal nav-link" href="#concepts-already-covered">
+     Concepts already covered
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conformal-mapping">
+     Conformal mapping
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#potential-flow-theory">
-       Potential flow theory
+      <a class="reference internal nav-link" href="#mapping-function">
+       Mapping function
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-of-singularities">
+     Method of singularities
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-simple-case">
+       A simple case
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-case">
+       General case
       </a>
      </li>
     </ul>
@@ -533,8 +583,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="unsteady-aerodynamics">
-<h1>Unsteady Aerodynamics<a class="headerlink" href="#unsteady-aerodynamics" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>The relevance of unsteady aerodynamics modelling usually comes up in the context flutter, rapid maneuvers, insect/bird flapping flight etc. Loosely speaking, whenever lift-generating structures flex large enough, and at large enough rates, the quasi-steady assumption used within the BEMT theory leads to inaccuracies and corrections need to be made to account for the aerodynamic loads experienced in such situations. Below is an example of the degree of elastic deformation that a helicopter rotor blade undergoes. Notice that the video is slowed down dramatically (S-56 had a time period of about 0.31s).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -560,8 +610,9 @@
     <img src="../../assets/B3_82_UnsteadyAirfoilMotion.png" class="medium">
     <p  style="font-size:16px; color:gray; text-align:center;"> Vorticity of a continuum particle [taken from Principles in Helicopter Aerodynamics by JG Leishman] </p>
 </center><p>The idea with regard to accounting for unsteady aerodynamic effects on rotors is not unlike the steady aerodynamics. The NSE are time dependent so, in principle, solving those equations gives one the aerodynamic forces and moments as a function of time. However, the reason that this is not done is not just that one would have to wait a anywhere from a few hours to a few days for simple simulations. As was stressed in the review chapter on 2D aerodynamics solving the complete set of NSE, while <em>exact</em>, is less amenable to intuitive understanding of the phenomena being modelled. Which is why all the engineering theories that were proposed in an effort to understand fluid behavior on lifting bodies, in the aftermath of the first powered aircraft flight, were all highly intuitive and based on direct verifiable evidence. For e.g. the phenomenon of bound circulation around an airfoil was verified in REf…..(<strong>the paper with Glauert and rest from Taha’s lecture</strong>) using …  A theory would be detailed outlining the effect of unsteady flow on 2D airfoil sections. …</p>
-<div class="section" id="steady-quasi-steady-airfoil-aerodynamics">
-<h2>Steady/quasi-steady airfoil aerodynamics<a class="headerlink" href="#steady-quasi-steady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="steady-quasi-steady-airfoil-aerodynamics">
+<h1>Steady/quasi-steady airfoil aerodynamics<a class="headerlink" href="#steady-quasi-steady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h1>
 <p>The starting vortex of the airfoil-fluid system is apparent.</p>
 <div style="float:right; width:43%;" >
     <img src="../../assets/B3_85_QuasiSteadyAirfoil.png" class="big" />
@@ -573,8 +624,8 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 \]</div>
 <p>Despite what the <span class="math notranslate nohighlight">\(\dot{\alpha}\)</span> term in Eq <span class="math notranslate nohighlight">\(\eqref{eq:quasi_steady_aero}\)</span> might suggest, it does NOT model unsteady aerodynamics.</p>
 </div>
-<div class="section" id="unsteady-airfoil-aerodynamics">
-<h2>Unsteady airfoil aerodynamics<a class="headerlink" href="#unsteady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="unsteady-airfoil-aerodynamics-overview">
+<h1>Unsteady airfoil aerodynamics: Overview<a class="headerlink" href="#unsteady-airfoil-aerodynamics-overview" title="Permalink to this headline">¶</a></h1>
 <p>Whenever a quick change in the flow conditions or the airfoil angle of attack occurs, the airfoil aerodynamics can be very different from its steady/quasi-steady counterpart. That said, the very concepts that help analyse the physics of airfoil aerodynamics, and quantify the aerodynamic forces, can be used to explain the physics behind the aerodynamic behavior of airfoils.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -630,7 +681,6 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 <p>The difference between the flow behavior in … and .. is immediately apparent.</p>
 <p>In summary, <em>unsteadiness</em> comes from accounting for the vorticity in the wake and when wake vorticity (as in the case of the starting vortex) is not acocunted for the flow is considered to be steady. In addition, a steady airfoil generates lift which is purely due to the circulation of the flow but an airfoil undergoing unsteady motion will generate an added lift that is due to the displacement of the surrounding fluid.</p>
 </div>
-</div>
 <div class="tex2jax_ignore mathjax_ignore section" id="add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily">
 <h1>add gif here of steady and unsteady airfoil from Waterlily<a class="headerlink" href="#add-gif-here-of-steady-and-unsteady-airfoil-from-waterlily" title="Permalink to this headline">¶</a></h1>
 <p>From the flow field animations above, it is clear that there is a significant difference between the wake of an airfoil when it maintains a constant angle of attck versus when the airfoil is pitching. The differences arise due to the shed vorticity in the airfoil wake. In case of steady airfoil, the starting vortex convects far away but in case of the pitching airfoil vorticity is constantly being shed due to the changing bound circulation around the airfoil. These shed vortices in the vicinity of the airfoil have the potential to influence the aerodynamics of the airfoil and need to be accounted for. The criterion used to decide the threshold when unsteady aerodynamic effects might be significant enough, that they cannot be ignored, is called reduced frequency.</p>
@@ -658,8 +708,11 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
       Your browser does not support the <code>video</code> element.
     </video></div></div>
 </div>
-<div class="section" id="relevant-concepts">
-<h2>Relevant concepts<a class="headerlink" href="#relevant-concepts" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="relevant-concepts-needed">
+<h1>Relevant concepts needed<a class="headerlink" href="#relevant-concepts-needed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="concepts-already-covered">
+<h2>Concepts already covered<a class="headerlink" href="#concepts-already-covered" title="Permalink to this headline">¶</a></h2>
 <p>The necessary concepts for steady fluid analysis have already been covered in the review lecture. Here we build on those concepts and extend them to analyse unsteady fluid behavior.</p>
 <p>An understanding of the following lies at the heart of developing an intuition for why the unsteady aerodynamics theories were formulated the way they were.</p>
 <ul class="simple">
@@ -696,9 +749,110 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 ></iframe>
 </div></div>
 </div>
-<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given defined shape <span id="id4">[]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the construct since all that changes between them is the sign of the flow direction</p>
-<div class="section" id="potential-flow-theory">
-<h3>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h3>
+<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given defined shape <span id="id4">[<a class="reference internal" href="../References.html#id31">HCCV13</a>]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the construct since all that changes between them is the sign of the flow direction</p>
+</div>
+<div class="section" id="conformal-mapping">
+<h2>Conformal mapping<a class="headerlink" href="#conformal-mapping" title="Permalink to this headline">¶</a></h2>
+<p>The development of the potential flow theory to analyse flow around a spinning cylinder and the resultant lift have already been discussed. However, one would imagine that being able to carry out the same excercise for an airfoil would be a more fruitful excercise. And you wouldn’t be wrong but the analysis of the flow around a cylinder, albeit seldom relevant for aerospace applications, is directly related to airfoil analysis or analysis around any given random geometry. The mathematical framework that bridges the two comes from complex analysis called conformal mapping. It states that a mapping or complex function <span class="math notranslate nohighlight">\(f(Y)\)</span> can be found that transforms a domain in <span class="math notranslate nohighlight">\(Y\)</span> to a domain in <span class="math notranslate nohighlight">\(f\)</span> and conversely a function <span class="math notranslate nohighlight">\(Y(f)\)</span> exists that carries out the reverse operation. This means that if we can find such a function that maps a circle to an airfoil then using the same function the entire flowfield around the circle (which we already know) can be mapped to that around an airfoil. So we wouldn’t even explicitly be solving the flow around an airfoil, just get the result for a 2D cylinder and apply the transformation. So far so good, but what is <span class="math notranslate nohighlight">\(f(Y)\)</span>?</p>
+<center>
+    <img src="../../assets/B24_fig6_5mod.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Complex mapping from one domain to another (modified from <a href="https://www.cambridge.org/core/books/lowspeed-aerodynamics/077FAF851C4582F1B7593809752C44AE">[source]) </a></p>
+</center><div class="section" id="mapping-function">
+<h3>Mapping function<a class="headerlink" href="#mapping-function" title="Permalink to this headline">¶</a></h3>
+<p>Before even being able to define <span class="math notranslate nohighlight">\(f(Y)\)</span>, what are the properties that <span class="math notranslate nohighlight">\(f(Y)\)</span> should have? For one it needs to be one-to-one i.e. take every point in <span class="math notranslate nohighlight">\(Y\)</span> to a unique point in <span class="math notranslate nohighlight">\(f\)</span>. In addition, the mapping needs to be differentiable because as we’ll see the velocities get scaled by the derivative at the point of interest. The same is true of <span class="math notranslate nohighlight">\(Y(f)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[z = \xi + \frac{a^2}{\xi} \]</div>
+<center>
+    <img src="../../assets/B24_fig6_9mod.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Joukowski transformation from circle to cambered airfoil (modified from <a href="https://www.cambridge.org/core/books/lowspeed-aerodynamics/077FAF851C4582F1B7593809752C44AE">[source]) </a></p>
+</center><div class="math notranslate nohighlight">
+\[\xi = a e^{i\theta}\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow z = \xi + \frac{a^2}{\xi} = 2a\cos \theta\]</div>
+<p>The circle in the <span class="math notranslate nohighlight">\(\xi\)</span> domain maps to a line of zero thickness in the <span class="math notranslate nohighlight">\(z\)</span> domain. This is the airfoil of interest in this case with zero thickness and the leading and trailing edges located at <span class="math notranslate nohighlight">\(x = -a\)</span> and <span class="math notranslate nohighlight">\(+a\)</span>, respectively.</p>
+<p>Now that the mapping function itself is known, it is relatively straightforward to obtain the flowfield around an airfoil once the flowfield around the cylinder is known. Now, it is one thing to obtain the simplest combination of elementary flows that results in a circular streamline (i.e. doublet in uniform flow) and whole different level of complexity to ensure, that given any kind of flow field (i.e. any combination of elementary flows), a circular streamline can be established. For e.g. the solution of the flow field around a circle in uniform flow was already derived but what if the flow now has an ‘anlge of attack’ as shown above? This is where the circle theorem proposed by Milne-Thompson <span id="id5">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span> comes in.</p>
+<div class="admonition-circle-theorem admonition">
+<p class="admonition-title">Circle theorem</p>
+<p>The circle theorem helps obtain the complex flow field around a cyclinder in the most general case. It states that if <span class="math notranslate nohighlight">\(F(z)\)</span> is the flow field in the absence of the cylinder then the flow field in the presence of the cylinder is given by <span class="math notranslate nohighlight">\(F(z)+\bar{F}(\frac{a^2}{z})\)</span>. The solution is based on the idea of images such that a streamline denoting a solid boundary defines a circle. More details can be obtained from <span id="id6">[<a class="reference internal" href="../References.html#id32">Bat00</a>]</span>(Page 422-423) and <span id="id7">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span>.</p>
+</div>
+<p>Using the circle theorem, the flow field around the cylinder without any circulation is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{split}
+F_{total} &amp;=F(\xi)+\bar{F}(\frac{a^2}{\xi}) \\
+&amp;= U_\infty e^{-i\alpha} \xi + \overline{U_\infty e^{-i\alpha} \frac{a^2}{\bar{\xi}}} \\ 
+&amp;=U_\infty e^{-i\alpha} \xi + U_\infty e^{i\alpha} \frac{a^2}{\xi}
+\end{split}
+\end{equation*}\]</div>
+<p>With the circulation <span class="math notranslate nohighlight">\(\Gamma\)</span>, the flow field is given by</p>
+<div class="math notranslate nohighlight">
+\[F_{total} = U_\infty e^{-i\alpha} \xi + U_\infty e^{i\alpha} \frac{a^2}{\xi}+  \frac{\Gamma}{2\pi i}\text{ln} \xi \]</div>
+<p>The velocity field can be obtained both in the <span class="math notranslate nohighlight">\(\xi\)</span> domain as well as the <span class="math notranslate nohighlight">\(z\)</span> domain. Note that we are primarily interested in the velocity at the surface of the geometry itself because the pressure distribution, and by extension the total lift, can be then obtained using the Bernoulli’s equation.</p>
+<div class="math notranslate nohighlight">
+\[\frac{d F}{d \xi}=U_{\infty} e^{-i \alpha}-U_{\infty} e^{i \alpha} \frac{a^2}{\xi^2}-\frac{\Gamma}{2 \pi i \xi}\]</div>
+<p>Velocity at the cylinder surface</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow F'(|\xi|=a) = \frac{d F}{d \xi} =U_\infty e^{-i\alpha}-U_\infty e^{i(\alpha-2 \theta)}+\frac{i\Gamma}{2 \pi a} e^{-i \theta}\]</div>
+<p>Similarly, velocity in the <span class="math notranslate nohighlight">\(z\)</span> domain can be obtained as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{split}
+w(z)&amp;=\frac{\frac{d F}{d\xi}}{\frac{d z}{d\xi}} \\
+&amp;=\frac{\frac{d F}{d\xi}}{{1-a^2 / \xi^2}}\\
+&amp;=\frac{U_{\infty} e^{-i \alpha} \xi - U_{\infty} e^{i \alpha}\frac{a^2}{\xi}-\frac{\Gamma}{2 \pi i}}{\xi-\frac{a^2}{\xi}}\\
+&amp; =\frac{U_{\infty} \cos \alpha \left(\xi-\frac{a^2}{\xi}\right)-i U_{\infty} \sin \alpha \left(\xi+\frac{a^2}{\xi}\right)-\frac{\Gamma}{2 \pi}}{\xi-\frac{a^2}{\xi}} \\
+&amp; =U_{\infty} \cos \alpha-i \frac{U_{\infty} z\sin \alpha - \frac{\Gamma}{2 \pi}}{\xi-\frac{a^2}{\xi}} \\
+&amp; =U_{\infty} \cos \alpha-i \frac{U_{\infty} z\sin \alpha - \frac{\Gamma}{2 \pi}}{\sqrt{z^2-4a^2}} \\
+\end{split}
+\end{equation*}\]</div>
+<p>It was already states in the context of a cylinder that the lift generated is entirely dependent on the circulation. This is true also in the case of the mapped velocity distribution around the airfoil of zero thickness in the <span class="math notranslate nohighlight">\(z\)</span> domain. We call the mapped zero-thickness geometry in the <span class="math notranslate nohighlight">\(z\)</span> domain an airfoil because the same circulation <span class="math notranslate nohighlight">\(\Gamma\)</span> is also sustained now in the <span class="math notranslate nohighlight">\(z\)</span> domain. Recall that <span class="math notranslate nohighlight">\(\Gamma\)</span> is an arbitrary quantity but lift generated by an airfoil at a given angle of attack is unique and is directly dictated by the amount of <span class="math notranslate nohighlight">\(\Gamma\)</span>. So how is a unique <span class="math notranslate nohighlight">\(\Gamma\)</span> established at a given angle of attack <span class="math notranslate nohighlight">\(\alpha\)</span>. This is where the empirically established Kutta condition comes in.</p>
+<center>
+    <img src="../../assets/B37_fig4_19.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Kutta condition based on the nature of the trailing edge shape. <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source] </a></p>
+</center><p>It is worth noting that the velocity over the airfoil <span class="math notranslate nohighlight">\(w(z)\)</span> blows up at <span class="math notranslate nohighlight">\(z=\pm 2a\)</span> unless the numerator <span class="math notranslate nohighlight">\(U_{\infty} z\sin \alpha - \frac{\Gamma}{2 \pi}\)</span> goes to zero too. Problem is that the denominator goes to zero at <span class="math notranslate nohighlight">\(z=\pm 2a\)</span> but the numerator can only be made zero at either the trailing edge <span class="math notranslate nohighlight">\(+2a\)</span> or the leading edge <span class="math notranslate nohighlight">\(-2a\)</span>. The Kutta condition states that the velocity at the trailing edge needs to be finite so the unique circulation then obtained is given by</p>
+<div class="math notranslate nohighlight">
+\[\Gamma = 4 \pi a U_{\infty}\sin \alpha = \pi c U_{\infty}\sin \alpha\]</div>
+<p>Using the Kutta-Joukowski relation and the definition of coefficient of lift</p>
+<div class="math notranslate nohighlight">
+\[C_L = 2\pi \sin \alpha \approx 2\pi \alpha\]</div>
+<p>Using the Bernoulli’s equation, the pressure distribution is given by -</p>
+<div class="math notranslate nohighlight">
+\[p(x) = \rho U_\infty^2\sin 2\alpha \sqrt{\frac{a - x}{a+x}}\]</div>
+<p>The center of pressure then turns out to be at the quarter chord. Note that the potential flow theory formulation still leaves the unphysical infinite velocity at the leading edge unresolved. However, this is considered acceptable because in reality a high pressure suction peak is observed at the leading edge but not at the trailing edge. Potential flow solution with the Kutta condition imposed is qualitatively able to reproduce that scenario and the infinite velocity at <span class="math notranslate nohighlight">\(z=-2a\)</span> can be considered as a mathematical consequence of idealisation of the flow.</p>
+</div>
+</div>
+<div class="section" id="method-of-singularities">
+<h2>Method of singularities<a class="headerlink" href="#method-of-singularities" title="Permalink to this headline">¶</a></h2>
+<p>The method of singularities presents an alternate technique of obtaining the flow field around an airfoil. Here, the flow field is obtained by directly placing singularities on the airfoil surface and satisfying the no penetration boundary condition on the surface of the airfoil itself. Afterall, this is the bare minimum physical law that the fluid flowing around the airfoil has to satisfy - it cannot flow through the surface of the airfoil.</p>
+<div class="section" id="a-simple-case">
+<h3>A simple case<a class="headerlink" href="#a-simple-case" title="Permalink to this headline">¶</a></h3>
+<p>The simplest formulation of this modelling stragety involves idealisation of the airfoil with a vortex of strength <span class="math notranslate nohighlight">\(\Gamma\)</span> at the airfoil quarter chord.</p>
+<center>
+    <img src="../../assets/QuarterChordVortex.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of flow around an airfoil using a vortex at the quarter chord.</p>
+</center><p>However, unlike the conformal mapping technique above where <span class="math notranslate nohighlight">\(\Gamma\)</span> is the total circulation due to distributed vorticity over the airfoil, the strength of <span class="math notranslate nohighlight">\(\Gamma\)</span> here is obtained by satifying the no penetration condition only at a single point on the airfoil called the collocation point. In this case, the collocation point is chosen to be the <span class="math notranslate nohighlight">\(3c/4\)</span> location to be resultant <span class="math notranslate nohighlight">\(\Gamma\)</span> to be consistent with the result obtained from conformal mapping technique.</p>
+</div>
+<div class="section" id="general-case">
+<h3>General case<a class="headerlink" href="#general-case" title="Permalink to this headline">¶</a></h3>
+<center>
+    <img src="../../assets/GammaDistribution.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of an airfoil via distribution of singularities</p>
+</center><p>Since the unknown <span class="math notranslate nohighlight">\(\gamma(x)\)</span> is an unknown distribution, it cannot be simply obtained via just a single equation as the ‘simple case’ above. Rather the no penetration boundary condition needs to be satisfied at each point on the airfoil surface.</p>
+<center>
+    <img src="../../assets/GammaDistribution.png" class="small">
+    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of an airfoil via distribution of singularities</p>
+</center><p>\begin{aligned}
+\left.V_{\perp}\right)<em>\gamma &amp;= \left.V</em>{\perp}\right)<em>{U</em>{\infty}} \
+\Rightarrow \int \frac{\gamma(x) d x^{\prime}}{2 \pi\left(x-x^{\prime}\right)} &amp;= U_{\infty} \sin \left(\alpha-\theta_c\right) \
+\end{aligned}</p>
+<p>Therefore, the governing equation for <span class="math notranslate nohighlight">\(\gamma(x)\)</span> is given by-</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{\gamma(x) d x^{\prime}}{2 \pi\left(x-x^{\prime}\right)} = U_{\infty} \sin \left(\alpha-\frac{dy_c}{dx}\right)
+\]</div>
+<div class="admonition-sohngen-s-formula admonition">
+<p class="admonition-title">Sohngen’s formula</p>
+<p>The circle theorem helps obtain the complex flow field around a cyclinder in the most general case. It states that if <span class="math notranslate nohighlight">\(F(z)\)</span> is the flow field in the absence of the cylinder then the flow field in the presence of the cylinder is given by <span class="math notranslate nohighlight">\(F(z)+\bar{F}(\frac{a^2}{z})\)</span>. The solution is based on the idea of images such that a streamline denoting a solid boundary defines a circle. More details can be obtained from <span id="id8">[<a class="reference internal" href="../References.html#id32">Bat00</a>]</span>(Page 422-423) and <span id="id9">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span>.</p>
+</div>
 <div class="math notranslate nohighlight">
 \[\nabla^2 \phi = 0\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\phi\)</span> is a continuous and differentiable complex function, all we need to do is identify what it would look like for common flow conditions. For e.g. in case of uniform flow from left to right <span class="math notranslate nohighlight">\(\phi(z) = z\)</span>, <span class="math notranslate nohighlight">\(\phi(z) = 1/z\)</span>… Adding the two represents the flow over a circle which certainly is of practical utility. Essentially, the following equation gives us the flow velocity around a cylinder over the entire fluid domain</p>

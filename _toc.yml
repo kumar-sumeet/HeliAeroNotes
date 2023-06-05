@@ -38,7 +38,10 @@ parts:
     - file: Lectures/3_Hover/3_FM
     - file: Lectures/3_Hover/4_Performance
 #
-
+#
+  - caption: Foward Flight
+    chapters:
+    - file: Lectures/4_ForwardFlight/ForwardFlight
 
   - caption: References
     chapters:

@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="../References.html" />
+    <link rel="next" title="Blade Motion and Control" href="BladeMotionAndControl.html" />
     <link rel="prev" title="Performance: Aérospatiale SA 315B Lama" href="../3_Hover/4_Performance.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -85,7 +85,7 @@
         
       
       
-      <img src="../../_static/HT_logo.png" class="logo" alt="logo">
+      <img src="../../_static/Hover_vvpm.gif" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Fundamentals of Helicopter Aerodynamics</h1>
@@ -195,6 +195,23 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Forward Flight
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BladeMotionAndControl.html">
+   Blade Motion and Control
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../AerodynamicsFundamentals_I.html">
+   Recap of Fundamentals in Aerodynamics - 2D and 3D
   </a>
  </li>
 </ul>
@@ -571,8 +588,8 @@
     <img src="../../assets/HT_glauert_hover.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Hover <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-39c17034-cea0-48f1-b221-ee2f18169fee">
-<span class="eqno">(7)<a class="headerlink" href="#equation-39c17034-cea0-48f1-b221-ee2f18169fee" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1bea3e01-1bb2-48c8-adc5-c8dacac59c6d">
+<span class="eqno">(7)<a class="headerlink" href="#equation-1bea3e01-1bb2-48c8-adc5-c8dacac59c6d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A U} \\
 &amp;=\frac{T}{2 \rho A \sqrt{\left(V_{\infty} \cos \alpha\right)^{2}+\left(-V_{\infty} \sin \alpha+v_{i}\right)^{2}}} \\
@@ -591,8 +608,8 @@ v_{i} &amp;=\sqrt{\frac{T}{2 \rho A}}
     <img src="../../assets/HT_glauert_climb.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Vertical climb <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-10c9aa51-b94b-48ac-a6c7-d2fa99e7fde8">
-<span class="eqno">(8)<a class="headerlink" href="#equation-10c9aa51-b94b-48ac-a6c7-d2fa99e7fde8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0664756d-495e-4181-a2b3-7e0b002ec238">
+<span class="eqno">(8)<a class="headerlink" href="#equation-0664756d-495e-4181-a2b3-7e0b002ec238" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+2 V_{\infty} v_{i}+v_{i}^{2}}} \\
@@ -608,8 +625,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <img src="../../assets/HT_glauert_low_speed.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Low speed forward flight <a href=""> </a></p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-803cf23e-78a0-47a6-9c52-ac2543f681f9">
-<span class="eqno">(9)<a class="headerlink" href="#equation-803cf23e-78a0-47a6-9c52-ac2543f681f9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2d796a0d-e8e6-446e-b471-b82b02fcd9c6">
+<span class="eqno">(9)<a class="headerlink" href="#equation-2d796a0d-e8e6-446e-b471-b82b02fcd9c6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}+v_{i}^{2}}} \\
@@ -628,8 +645,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
 <p> 
  
  </p>
-<div class="amsmath math notranslate nohighlight" id="equation-411a61db-f102-4011-b109-a4971731d5a0">
-<span class="eqno">(10)<a class="headerlink" href="#equation-411a61db-f102-4011-b109-a4971731d5a0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e6746068-b3f9-4f33-a35d-16dfd168f0f1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-e6746068-b3f9-4f33-a35d-16dfd168f0f1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{aligned}
 v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i}+v_{i}^{2}}} \\
 &amp; \approx \frac{T}{2 \rho A \sqrt{V_{\infty}^{2}}} \\
@@ -742,8 +759,8 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
     <p  style="font-size:16px; color:gray; text-align:center;"> Blade section drag due to in-plane velocity </p>
     <p  style="font-size:16px; color:gray; text-align:center;"> Rotor in forward flight </p>
 </div>
-<div class="amsmath math notranslate nohighlight" id="equation-a7a468bb-f855-4d14-abce-a9314c8e5e60">
-<span class="eqno">(11)<a class="headerlink" href="#equation-a7a468bb-f855-4d14-abce-a9314c8e5e60" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-aa8c45b2-e95b-496c-8327-64c0c2e18e8d">
+<span class="eqno">(11)<a class="headerlink" href="#equation-aa8c45b2-e95b-496c-8327-64c0c2e18e8d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{array}{l}
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} P_{0}^{\prime} d y d \Psi \\
 \displaystyle P_{0}=\frac{N_{b}}{2 \pi} \int_{0}^{2 \pi } \int_{0}^{R} D^{\prime}.V_T d y d \Psi \\
@@ -811,10 +828,10 @@ v_{i} &amp;=\frac{T}{2 \rho A \sqrt{V_{\infty}^{2}-2 V_{\infty} \sin \alpha v_{i
             <p class="prev-next-title">Performance: Aérospatiale SA 315B Lama</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../References.html" title="next page">
+    <a class='right-next' id="next-link" href="BladeMotionAndControl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Blade Motion and Control</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

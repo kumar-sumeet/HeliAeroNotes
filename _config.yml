@@ -3,7 +3,8 @@
 
 title: Fundamentals of Helicopter Aerodynamics 
 author: Sumeet Kumar
-logo: HT_logo.png
+#logo: HT_logo.png
+logo: Hover_vvpm.gif
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

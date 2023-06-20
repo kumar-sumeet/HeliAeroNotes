@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-07T12:59:13.100Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="I0Vhs32eSb5AxWrEQXUu" version="21.1.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-05-14T08:35:52.149Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="WUgBD-qHm5i0lbm0brUy" version="21.3.0" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="954" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="952" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -46,8 +46,8 @@
         <mxCell id="b8Hv4RSbSWvBp6GGg8zf-6" value="$$\nu=0$$" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="234" y="388" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="b8Hv4RSbSWvBp6GGg8zf-7" value="$$\nabla^2 = 0&lt;br&gt;$$" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="610" y="385" width="120" height="60" as="geometry" />
+        <mxCell id="b8Hv4RSbSWvBp6GGg8zf-7" value="$$\nabla^2 \phi = 0$$$$\frac{\rho V^2}{2} + p =\text{const.&lt;br&gt;}$$" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="620" y="367.5" width="180" height="95" as="geometry" />
         </mxCell>
         <mxCell id="b8Hv4RSbSWvBp6GGg8zf-8" value="ρ=const." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="535" y="388" width="70" height="30" as="geometry" />

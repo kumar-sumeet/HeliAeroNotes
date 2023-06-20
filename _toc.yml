@@ -16,19 +16,12 @@ parts:
     chapters:
     - file: Lectures/1_MT/MT
     - file: Lectures/1_MT/ResponseToAQuestion
-#    - file: Lectures/1_MT/Summary
    
-
-#    - file: Lectures/2_Hover/Tutorial_0
-
   - caption: Blade Element Theory
     chapters:
     - file: Lectures/2_BET/1_BET
     - file: Lectures/2_BET/2_BEMT
     - file: Lectures/2_BET/3_BladeAerodynamics
-    
-    
-    
 
   - caption: Hover
     chapters:
@@ -37,11 +30,18 @@ parts:
     - file: Lectures/3_Hover/2_TailRotor
     - file: Lectures/3_Hover/3_FM
     - file: Lectures/3_Hover/4_Performance
-#
-#
+
   - caption: Foward Flight
     chapters:
     - file: Lectures/4_ForwardFlight/ForwardFlight
+    - file: Lectures/4_ForwardFlight/BladeMotionAndControl
+#    - file: Lectures/4_ForwardFlight/Control
+#    - file: Lectures/4_ForwardFlight/FastForwardFlight
+ 
+  - caption: Review
+    chapters:
+      - file: Lectures/AerodynamicsFundamentals_I
+
 
   - caption: References
     chapters:

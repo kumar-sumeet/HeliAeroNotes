@@ -381,13 +381,11 @@
     <a class="reference internal nav-link" href="#kutta-joukowski-theorem">
      Kutta-Joukowski theorem
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kutta-condition">
-       Kutta condition
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kutta-condition">
+     Kutta condition
+    </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kelvin-s-circulation-theorem">
@@ -479,13 +477,11 @@
     <a class="reference internal nav-link" href="#kutta-joukowski-theorem">
      Kutta-Joukowski theorem
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kutta-condition">
-       Kutta condition
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kutta-condition">
+     Kutta condition
+    </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kelvin-s-circulation-theorem">
@@ -554,6 +550,7 @@
 </ul>
 <div class="math notranslate nohighlight">
 \[\mathbf{v}. \nabla F = 0\]</div>
+<p>Fluid cannot penetrate the surface of the body in consideration. This seems like a trivial concept to state explicitly but remember that when a problem involving fluids is mathematically stated, the condition at the boundaries of the fluid need to be clearly defined. In the case of an airfoil moving about in <em>infinite</em> fluid, the surface of the airfoil forms one of the boundaries (the other boundary is at infinite distance away and not a source of any disturbance). What happens to the fluid at this boundary, i.e. the surface of the airfoil, dictates what happens in the rest of the fluid. This behavior of the fluid, specifically the velocity in the case of an incompressible flow, is the quantity of interest because this would then eventually lead to the amount of lift generated from the subsequent behavior of the fluid due to the airfoil motion. Since we know from physical observations that fluid parcels do not permeate through object surfaces, the motion of the fluid at this boundary is exactly matched with the motion of the airfoil surface. This is refered to as the no penetration boundary condition.</p>
 <p>Any model of (Newtonian) fluids would have to satisfy the above laws and we do have a model that does that - the Navier-Stokes equations.</p>
 </div>
 <div class="section" id="navier-stokes-equations-nse">
@@ -622,7 +619,7 @@
   </p>       
 </div><p>Some of the salient features of fluid behavior have been summarised below -</p>
 <ul class="simple">
-<li><p>fluid (infintely deformable) follows airfoil contour</p>
+<li><p>fluid (infinitely deformable) follows airfoil contour</p>
 <ul>
 <li><p>a result of rapid random motion of molecules</p></li>
 </ul>
@@ -634,7 +631,7 @@
 </li>
 <li><p>flow sped up on upper surface and slowed down on lower surface</p>
 <ul>
-<li><p>so Bernoulli-based explanation of lift is correct (but not sufficient)</p></li>
+<li><p>so Bernoulli-based explanation of lift is correct (but not sufficient!)</p></li>
 </ul>
 </li>
 <li><p>most lift occurs due to suction pressure on upper side</p></li>
@@ -756,12 +753,22 @@
 </div>
 <div class="section" id="potential-flow-theory">
 <h2>Potential flow theory<a class="headerlink" href="#potential-flow-theory" title="Permalink to this headline">¶</a></h2>
-<p>We are fixated quite a bit on the rotationality of the flow <span class="math notranslate nohighlight">\(\nabla \times \mathbf{V}\)</span>, or its lack thereof. This is for a good reason, the irrotationality condition <span class="math notranslate nohighlight">\(\nabla \times \mathbf{V} = 0\)</span> guarantees the existence of a <span class="math notranslate nohighlight">\(\phi\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{V} = \nabla \phi\)</span>. This, together with the continuity equation for an incompressible flow gives the Laplace’s equation <span class="math notranslate nohighlight">\( \nabla^2 \phi = 0\)</span>. This is valid irrespective of whether the flow is unsteady and is true for both 2D and 3D representations. Alternately, if we begin with the incompressibility assumption <span class="math notranslate nohighlight">\(\nabla.\mathbf{V} = 0\)</span>, then for the special case of 2D flow scenarios the irrotationality assumption allows the possibility of some function <span class="math notranslate nohighlight">\(\psi\)</span> such that -</p>
+<p>We are fixated quite a bit on the rotationality of the flow <span class="math notranslate nohighlight">\(\nabla \times \mathbf{V}\)</span>, or its lack thereof. This is for a good reason. The irrotationality condition <span class="math notranslate nohighlight">\(\nabla \times \mathbf{V} = 0\)</span> guarantees the existence of a <span class="math notranslate nohighlight">\(\phi\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{V} = \nabla \phi\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{V} = u\hat{i} + v\hat{j}\]</div>
+<div class="math notranslate nohighlight">
+\[u = \frac{\partial \phi }{\partial x }, v = \frac{\partial \phi }{\partial y } \]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \nabla \times \mathbf{V} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla . \mathbf{V} = \frac{\partial^2 \phi }{\partial x^2 } +\frac{\partial^2 \phi }{\partial y^2 } = \nabla^2\phi = 0\]</div>
+<p>This, together with the continuity equation for an incompressible flow gives the Laplace’s equation <span class="math notranslate nohighlight">\( \nabla^2 \phi = 0\)</span>. This is valid irrespective of whether the flow is unsteady and is true for both 2D and 3D representations. Alternately, if we begin with the incompressibility assumption <span class="math notranslate nohighlight">\(\nabla.\mathbf{V} = 0\)</span>, then for the special case of 2D flow scenarios the irrotationality assumption allows the possibility of some function <span class="math notranslate nohighlight">\(\psi\)</span> such that it automatically satisfies the irrotationality condition.</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{V} = u\hat{i} + v\hat{j}\]</div>
 <div class="math notranslate nohighlight">
 \[u = \frac{\partial \psi }{\partial y }, v = -\frac{\partial \psi }{\partial x } \]</div>
-<p>The above formulation was based on the validity of the continuity equation but it automatically satisfies the irrotationality condition -</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \nabla.\mathbf{V} = 0\]</div>
 <div class="math notranslate nohighlight">
 \[\nabla \times \mathbf{V} = \frac{\partial^2 \psi }{\partial x^2 } -\frac{\partial^2 \psi }{\partial y^2 } = \nabla^2\psi = 0\]</div>
 <p>Physically, <span class="math notranslate nohighlight">\(\psi\)</span> denotes a streamline in a flow and is called the stream function.</p>
@@ -774,9 +781,9 @@ d \psi &amp; =\frac{\partial \psi}{\partial x} d x+\frac{\partial \psi}{\partial
 \end{equation*}\]</div>
 <div class="math notranslate nohighlight">
 \[\text {streamline equation} \rightarrow \frac{d x}{u}=\frac{d y}{v} \text { or } u d y-v d x=0\]</div>
-<p>Not just that, the difference in the magnitude of <span class="math notranslate nohighlight">\(\psi\)</span> between two streamlines is related to the rate of mass flow of fluid between the two streamlines.</p>
+<p>Not just that, the difference in the magnitude of <span class="math notranslate nohighlight">\(\psi\)</span> between two streamlines is related to the rate of mass flow of fluid between the two streamlines (for <span class="math notranslate nohighlight">\(\rho\)</span>=const).</p>
 <div class="math notranslate nohighlight">
-\[\rho V = \Delta \psi = c_2 - c_1\]</div>
+\[ \rho V = \rho\Delta \psi = c_2 - c_1\]</div>
 <center>
     <img src="../assets/B37_fig2_40.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Flow between two streamlines. <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source] </a></p>
@@ -793,10 +800,10 @@ d \psi &amp; =\frac{\partial \psi}{\partial x} d x+\frac{\partial \psi}{\partial
 <p>where <span class="math notranslate nohighlight">\(\bar{w}\)</span> is the conjugate of the velocity in the complex domain.</p>
 <div class="section" id="elementary-flows">
 <h3>Elementary flows<a class="headerlink" href="#elementary-flows" title="Permalink to this headline">¶</a></h3>
-<p>So posing the problem of a <em>real-world</em> fluid flow in abstract terms of complex analysis provides us the insight that the functions <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, which are used to represent <em>real</em> fluid flow velocities, are indeed continuous and infinitely differentiable everywhere in the domain. Additionally, <span class="math notranslate nohighlight">\(F(z)\)</span> also follows the Laplace’s equation-</p>
+<p>So posing the problem of a <em>real-world</em> fluid flow in abstract terms of complex analysis provides us the insight that the functions <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, which are used to represent <em>real</em> fluid flow velocities, are indeed continuous and infinitely differentiable everywhere in the domain. Additionally, <span class="math notranslate nohighlight">\(F(z)\)</span> also satisfies the Laplace’s equation since both <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> satisfy it.</p>
 <div class="math notranslate nohighlight">
 \[\nabla^2 F(z) = 0\]</div>
-<p>This is a useful because the Laplace’s equation is linear. If the function <span class="math notranslate nohighlight">\(F(z)\)</span> can simply be evaluated for simple elementary flows and these elementary flows can be used to create the flow field around any complicated geometry then <span class="math notranslate nohighlight">\(F(z)\)</span> can be obtained essentially for any complicated geometry. Knowing <span class="math notranslate nohighlight">\(F(z)\)</span>, the flow velocity around any geometry can be evaluated and thereafter using the Bernoulli’s equation to get the pressure distribution is a straightforward excercise. The question arises, what are these elementary flows?</p>
+<p>This is a useful because the Laplace’s equation is linear. If the function <span class="math notranslate nohighlight">\(F(z)\)</span> can simply be evaluated for simple elementary flows and these elementary flows can be used to create the flow field around any complicated geometry then <span class="math notranslate nohighlight">\(F(z)\)</span> can be obtained essentially for any complicated geometry. Knowing <span class="math notranslate nohighlight">\(F(z)\)</span>, the flow velocity around any geometry can be evaluated and thereafter using the Bernoulli’s equation to get the pressure distribution is a straightforward excercise. The question arises, what sort elementary flows are useful?</p>
 <ul class="simple">
 <li><p>Uniform flow
 $<span class="math notranslate nohighlight">\(F(z) = U_\infty z \)</span>$</p></li>
@@ -804,14 +811,12 @@ $<span class="math notranslate nohighlight">\(F(z) = U_\infty z \)</span>$</p></
 $<span class="math notranslate nohighlight">\(F(z) = U_\infty e^{-i\alpha} z \)</span>$</p></li>
 <li><p>Source/Sink
 $<span class="math notranslate nohighlight">\(F(z) = \frac{m}{2\pi}\text{ln} z\)</span>$</p></li>
-<li><p>Source/Sink
-$<span class="math notranslate nohighlight">\(F(z) = \frac{m}{2\pi}\text{ln} z\)</span>$</p></li>
 <li><p>Line vortex
 $<span class="math notranslate nohighlight">\(F(z) = \frac{\Gamma}{2\pi i}\text{ln} z\)</span>$</p></li>
 <li><p>Doublet
 $<span class="math notranslate nohighlight">\(F(z) = \frac{\mu}{2\pi z}\)</span>$</p></li>
 </ul>
-<p>The elementary flow fields represented by the complex function <span class="math notranslate nohighlight">\(F(z)\)</span> satisfy the continuity equation as well as the irrotationality condition.</p>
+<p>The elementary flow fields represented by the complex function <span class="math notranslate nohighlight">\(F(z)\)</span> satisfy the continuity equation as well as the irrotationality condition everywhere in the domain except at the point where the singularity exists. That is okay because the flow filed right at the point of singularity, or close to it, is not of interest to us.</p>
 </div>
 <div class="section" id="practical-application-from-elementary-solutions">
 <h3>Practical application from elementary solutions<a class="headerlink" href="#practical-application-from-elementary-solutions" title="Permalink to this headline">¶</a></h3>
@@ -848,10 +853,10 @@ F^{\prime}&amp;=U_{\infty}-\frac{\mu}{2 \pi z^2} \\
 \end{split}
 \end{equation*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(V_r\)</span> and <span class="math notranslate nohighlight">\(V_\theta\)</span> represent the radial and the tangential components of the flow velocity around the cylinder. In order to confirm that a doublet in a free stream indeed represents flow around a cyclinder, simply the no-penetration boundary condition should be satisfied, i.e. <span class="math notranslate nohighlight">\(V_r(R)=0\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd5a8c07-c4d9-4370-a18b-6e2b811f3eab">
-<span class="eqno">(12)<a class="headerlink" href="#equation-dd5a8c07-c4d9-4370-a18b-6e2b811f3eab" title="Permalink to this equation">¶</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-50a7c995-1f50-466c-818f-f0dcda5556bb">
+<span class="eqno">(12)<a class="headerlink" href="#equation-50a7c995-1f50-466c-818f-f0dcda5556bb" title="Permalink to this equation">¶</a></span>\[\begin{align} 
 V_r(R)&amp;=0 \\
-\Rightarrow R &amp;= \sqrt{\frac{\mu }{2\pi U_\infty}}
+\Rightarrow R &amp;= \sqrt{\frac{\mu }{2\pi U_\infty}} = \text{const.}
 \end{align}\]</div>
 <p>The radius of the cylinder depends on the strength of the doublet as well as the free stream velocity combination used to construct the flow field. Usually, you’d want to model flow around a specific cylinder in a flow so <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(U_\infty\)</span> are known and <span class="math notranslate nohighlight">\(\mu\)</span> can be obtained by satisfying the no-penetration condition above. This gives-</p>
 <div class="math notranslate nohighlight">
@@ -901,23 +906,23 @@ V_r(R)&amp;=0 \\
     <img src="../assets/B37_fig3_32.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Flow around a circular cylinder with circulation. <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source] </a></p>
 </center><p>Clearly, if indeed there is lift generated in the above case it has to be related to the circulation strength <span class="math notranslate nohighlight">\(\Gamma\)</span>. In fact, if carry out the same excercise as the non-lifting cylinder case discussed earlier, the amount of lift generated (per unit length since its 2D) turns out to be -</p>
- <p  style=" text-align:center;"> $L´ = \rho V_{\infty}\Gamma$<p>This result leads to the more general case that the lifting force generated by any entity in an incompressible, inviscid, irrotational flow in an unbounded fluid is proportional to the circulation around it and perpendicular to the oncoming flow velocity direction. This relation is a consequence of the Kutta-Joukowski theorem. A more general notation for identifying the direction of resultant force using the Kutta-Joukowski theorem can be obtained by defining the direction of <span class="math notranslate nohighlight">\(\Gamma\)</span> as a vector quantity based on the right hand rule and using the following relation to give the resultant lift force per unit span (<span class="math notranslate nohighlight">\(\mathbf{Q}_{\infty}=\mathbf{V}_{\infty}\)</span>) -</p>
+<div class="math notranslate nohighlight">
+\[L´ = \rho V_{\infty}\Gamma\]</div>
+<p>This result leads to the more general case that the lifting force generated by any entity in an incompressible, inviscid, irrotational flow in an unbounded fluid is proportional to the circulation around it and perpendicular to the oncoming flow velocity direction. This relation is a consequence of the Kutta-Joukowski theorem. A more general notation for identifying the direction of resultant force using the Kutta-Joukowski theorem can be obtained by defining the direction of <span class="math notranslate nohighlight">\(\Gamma\)</span> as a vector quantity based on the right hand rule and using the following relation to give the resultant lift force per unit span (<span class="math notranslate nohighlight">\(\mathbf{Q}_{\infty}=\mathbf{V}_{\infty}\)</span>) -</p>
 <div class="math notranslate nohighlight">
 \[ \mathbf{L´}= \rho \mathbf{Q}_{\infty} \times  \mathbf{\Gamma}\]</div>
 <center>
-    <img src="../assets/B24_Fig316.png" class="big">
+    <img src="../assets/B24_Fig316.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Vector notation for Kutta-Joukowski theorem (<a href="https://www.cambridge.org/core/books/lowspeed-aerodynamics/077FAF851C4582F1B7593809752C44AE">[source]) </a></p>
 </center><p>This relation tells us the simple fact that lift is related to the circulation around the body in question. So if the circulation were zero, there would be no lift generated. On the other hand, if you knew precisely the circulation around the cross-section of cylinder, or more practical entities of interest such as a wing or a blade, you could get the lift per unit span and the total lift would simply be an integral over all such sections over its span. Precise experiments carried out in the wind tunnel by Bryant and Williams <span id="id10">[<a class="reference internal" href="References.html#id14">BW26</a>]</span> with wing sections, where the flow velocities around these section have been measured, show that indeed the effect of an airfoil is to introduce a circulation around itself and that circulation everywhere else in the fluid domain is zero, or rather close to zero, such that the potential flow theory assumption of irrotational flow is not misplaced.</p>
 <center>
     <img src="../assets/Add54_Fig8.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Schematic of the experimentally measured circulation around an airfoil section <a href="https://royalsocietypublishing.org/doi/epdf/10.1098/rsta.1926.0005">[source] </a></p>
-</center><p>Note that the contours used in the experiments of Bryant and Williams were perpendicular to the wake of the airfoil. This is to ensure that that the effect of the vorticity in the wake of the airfoil is not included in the circulation measurement around the airfoil. For modelling purposes</p>
-<center>
-    <img src="../assets/BA8_fig2_12.png" class="big">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Schematic of the actual vorticity distribution around an airfoil and in its wake compared with the simplified model  <a href="https://mitpress.mit.edu/9780262526449/flight-vehicle-aerodynamics/">[source] </a></p>
-</center><div class="section" id="kutta-condition">
-<h3>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h3>
-<p>Based on the potential flow theory, lift generation can be predicted using a simple relation given by the Kutta-Joukowski theorem. This raises the natural question, how does one obtain <span class="math notranslate nohighlight">\(\Gamma\)</span>!? Potential flow theory, on its own cannot uniquely predict the amount of lift an airfoil is capable of generating. For example, either flow field representations given below for the same <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(V_{\infty}\)</span>, and by extension the different circulations around the airfoils, are valid/possible within the framework of potential flow theory. Which one is correct?</p>
+</center><p>Note that the contours used in the experiments of Bryant and Williams were perpendicular to the wake of the airfoil. This is to ensure that that the effect of the vorticity in the wake of the airfoil is not included in the circulation measurement around the airfoil.</p>
+</div>
+<div class="section" id="kutta-condition">
+<h2>Kutta condition<a class="headerlink" href="#kutta-condition" title="Permalink to this headline">¶</a></h2>
+<p>Based on the potential flow theory, lift generation can be predicted using a simple relation given by the Kutta-Joukowski theorem. This raises the natural question, how does one obtain <span class="math notranslate nohighlight">\(\Gamma\)</span>!? Potential flow theory, on its own cannot uniquely predict the amount of lift an airfoil is capable of generating. Since the amount of circulation in the flow is undecided, some more physics needs to be modelled in order to account for this. We could either go to the origins of the potential flow theory and see if some of the assumptions made can be relaxed to include more physics for this purpose. This is bound to make the equations more involved that the Laplace equation. Alternately, this is done using the Kutta condition. To illustrate the situation schematically, consider the two flow representations shown below for the same <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(V_{\infty}\)</span> but different circulations around the airfoils. Both are valid/possible within the framework of potential flow theory, which one is correct?</p>
 <div class="image-grid2">
     <img  src="../assets/BA3_fig7_1_3b.png" class="medium"/>
     <img  src="../assets/BA3_fig7_1_3c.png" class="medium"/>
@@ -929,20 +934,39 @@ V_r(R)&amp;=0 \\
   </p>       
 </div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct and unique<a class="footnote-reference brackets" href="#uniqueness" id="id11">3</a>. This is achieved by enforcing what is called the Kutta condition. Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id12">[<a class="reference internal" href="References.html#id42">RL13</a>]</span>.</p>
 <div class="image-grid2">
-    <img  src="../assets/BA37_fig4_18a.png" class="medium"/>
-    <img  src="../assets/BA37_fig4_18c.png" class="medium"/>
+    <img  src="../assets/B37_fig4_18a.png" class="medium"/>
+    <img  src="../assets/B37_fig4_18c.png" class="medium"/>
 </div>
 <div class="image-grid2">
   <p > Instantaneous flow field just from impulsive start of airfoil <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source] </a>
   </p> 
   <p >  Steady state flow field around an airfoil <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source]) </a>
   </p>       
-</div><p>Remember that the Kutta condition is an engineering approximation that is based on experimental observations rather than mathematically derived from first principles. Images of flow field development taken at the instant flow is started around an airfoil suggest that there some flow turning occurs at the airfoil trailing edge but large shear forces encountered quickly make the flow pass smoothly at the trailing edge rather than turn around it. The Kutta condition is an indispensable part of introductory aerodynamics textbooks owing to the success of potential flow theory together with this empirically observed assumption.</p>
-</div>
+</div><p>Potential flow theory alone cannot determine the amount of circulation around a body. This is true in the case of steady as well as unsteady aerodynamics. Even the widely used thin airfoil theory results of the lift curve slope=<span class="math notranslate nohighlight">\(2\pi\)</span>, <span class="math notranslate nohighlight">\(C_{m_{c/4}}=0\)</span> etc. are obtained after imposing an additional condition based on the flow physics. Purely following the mathematical construct of potential flow theory would not give us a unique solution (and hence <em>no</em> solution). The amount of circulation decides where the stagnation points would be. The Kutta condition tells us where the stagnation points ought to be in the case of flow around an airfoil. Therefore, by extension it helps identify a unique circulation that exists around an airfoil at a given angle of attack.</p>
+<p>The Kutta condition is an engineering approximation that is based on experimental observations rather than mathematically derived from first principles. Images of flow field development taken at the instant flow is started around an airfoil suggest that there some flow turning occurs at the airfoil trailing edge but large shear forces encountered quickly make the flow pass smoothly at the trailing edge rather than turn around it. The Kutta condition is an indispensable part of introductory aerodynamics textbooks owing to the success of potential flow theory together with this empirically observed assumption.</p>
 </div>
 <div class="section" id="kelvin-s-circulation-theorem">
 <h2>Kelvin’s circulation theorem<a class="headerlink" href="#kelvin-s-circulation-theorem" title="Permalink to this headline">¶</a></h2>
-<p>For an inviscid, incompressible fluid of constant density, the circulation around any closed loop within the fluid remains time-invariant. For an airfoil initially at rest within a fluid, the circulation around any contour within the fluid is going to be zero. When the fluid is set in motion there is vorticity due to the uniform fluid velocity, yet we now know (from the discussion aboce) that there would be a circulation set around the airfoil. The Kelvin’s circulation theorem implies that a vorticity of opposite sign must be getting introduced in the fluid so that the net circulation around any closed contour, that includes the airfoil in it, must be zero.</p>
+<p>For an inviscid, incompressible fluid of constant density, the circulation around any closed loop within the fluid remains time-invariant. For an airfoil initially at rest within a fluid, the circulation around any contour within the fluid is going to be zero. When the fluid is set in motion there is vorticity due to the uniform fluid velocity, yet we now know (from the discussion aboce) that there would be a circulation set around the airfoil. The Kelvin’s circulation theorem implies that a vorticity of opposite sign must be getting introduced in the fluid so that the net circulation around any closed contour, that includes the airfoil in it, must be zero. The video below demonstrates this perfectly. A series of stillshots from the video above are also available in <span id="id13">[<a class="reference internal" href="References.html#id38">TtranslatorH34</a>]</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;VcggiVSf5F8&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="800"
+    height="400"
+    src="https://www.youtube.com/embed/VcggiVSf5F8"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 <div class="image-grid2">
     <img  src="../assets/B37_fig421_a.png" class="medium"/>
     <img  src="../assets/B37_fig421_b.png" class="medium"/>
@@ -952,16 +976,12 @@ V_r(R)&amp;=0 \\
   </p> 
   <p >  Starting vortex observed behind an airfoil in a fluid (<a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source]) </a>
   </p>       
-</div><p>Section 9.4 in <span id="id13">[<a class="reference internal" href="References.html#id29">Gla36</a>]</span> presents a concise and clear explanation of the development of the bound and starting vortices and the interested students are encouraged to read the relevant couple of pages for this reference.</p>
+</div><p>Section 9.4 in <span id="id14">[<a class="reference internal" href="References.html#id29">Gla36</a>]</span> presents a concise and clear explanation of the development of the bound and starting vortices and the interested students are encouraged to read the relevant couple of pages for this reference.</p>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="d-aerodynamics">
 <h1>3D aerodynamics<a class="headerlink" href="#d-aerodynamics" title="Permalink to this headline">¶</a></h1>
-<p>Also referred to as finite-wing</p>
-<center>
-    <img src="../assets/Wing_vortices.png" class="medium">
-    <p style="font-size:12px; color:gray; text-align:center;" > </p>
-</center><p>The validity of Prandtl’s theory of circulation was established for the 2D airfoil (infinite wing) case by experiments conducted by Bryant and Williams <span id="id14">[<a class="reference internal" href="References.html#id14">BW26</a>]</span>. The corresponding verification tests for the finite wing case were conducted by Fage and Simmons <span id="id15">[<a class="reference internal" href="References.html#id15">FS26</a>]</span>. This is shown schematically below where flowfield velocity measurements were carried out in 4 different planes (A, B, C and D) before and after the wing.</p>
+<p>The validity of Prandtl’s theory of circulation was established for the 2D airfoil (infinite wing) case by experiments conducted by Bryant and Williams <span id="id15">[<a class="reference internal" href="References.html#id14">BW26</a>]</span>. The corresponding verification tests for the finite-wing case were conducted by Fage and Simmons <span id="id16">[<a class="reference internal" href="References.html#id15">FS26</a>]</span>. This is shown schematically below where flowfield velocity measurements were carried out in 4 different planes (A, B, C and D) before and after the wing.</p>
 <center>
     <img src="../assets/BA13_Fig95.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;">  Schematic representation of flow profiles behind a finite wing 
@@ -972,12 +992,12 @@ V_r(R)&amp;=0 \\
 </center><p>The contours <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(C_o\)</span> are seemingly unrelated as far as the flow field is concerned. However, if Prandtl’s lifting line theory is to be believed then the circulation about the two contours should be equal. Additionally, since the circulation about <span class="math notranslate nohighlight">\(C_o\)</span> represents bound circulation, it is related to the lifting force generated by the wing -</p>
 <div class="math notranslate nohighlight">
 \[\Gamma_b = \frac{2VSC_L}{b\pi}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\Gamma_b\)</span> is the circulation due to vorticity bound to the wing, <span class="math notranslate nohighlight">\(V\)</span> is the oncoming flow velocity, <span class="math notranslate nohighlight">\(S\)</span> is the area of the wing and <span class="math notranslate nohighlight">\(b\)</span> is its span. Based on their meticulous flow field measurements using a hot wire probe, Fage and Simmons showed all the above assertions to be true. The two experiments of <span id="id16">[<a class="reference internal" href="References.html#id14">BW26</a>]</span> and <span id="id17">[<a class="reference internal" href="References.html#id14">BW26</a>]</span> had helped establish that indeed the <em>theory</em> of circulation conformed with reality.</p>
+<p>where <span class="math notranslate nohighlight">\(\Gamma_b\)</span> is the circulation due to vorticity bound to the wing, <span class="math notranslate nohighlight">\(V\)</span> is the oncoming flow velocity, <span class="math notranslate nohighlight">\(S\)</span> is the area of the wing and <span class="math notranslate nohighlight">\(b\)</span> is its span. Based on their meticulous flow field measurements using a hot wire probe, Fage and Simmons showed all the above assertions to be true. The two experiments of <span id="id17">[<a class="reference internal" href="References.html#id14">BW26</a>]</span> and <span id="id18">[<a class="reference internal" href="References.html#id14">BW26</a>]</span> had helped establish that indeed the <em>theory</em> of circulation conformed with reality.</p>
 <div class="image-grid2">
     <img  src="../assets/BA14_Fig147.png" class="small"/>
     <img  src="../assets/BA14_Fig148.png" class="small"/>   
 </div>
-<div class="image-grid">  
+<div class="image-grid2">  
   <p > Tip vortices generated at the wing tips of a finite wing <a href="https://books.google.de/books/about/Applied_Hydro_and_Aeromechanics.html?id=Ds-bd0zAwIYC&redir_esc=y">[source] </a>
   </p>
   <p>  Modelling a finite wing using bound and trailing vortices <a href="https://books.google.de/books/about/Applied_Hydro_and_Aeromechanics.html?id=Ds-bd0zAwIYC&redir_esc=y">[source] </a>
@@ -986,14 +1006,11 @@ V_r(R)&amp;=0 \\
 <center>
     <img src="../assets/BA8_fig5_6.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Source of induced velocity on a finite-wing using Prandtl's lifting-line theory  <a href="https://mitpress.mit.edu/9780262526449/flight-vehicle-aerodynamics/">[source] </a></p>
-</center><center>
-    <img src="../assets/BA8_figE_1.png" class="big">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Finite-wing wake modelling using Prandtl's lifting-line theory <a href="https://mitpress.mit.edu/9780262526449/flight-vehicle-aerodynamics/">[source] </a></p>
 </center><div class="section" id="final-comments">
 <h2>Final Comments<a class="headerlink" href="#final-comments" title="Permalink to this headline">¶</a></h2>
 <p>The above, seemingly dissociated, set of concepts are nothing new and have been covered at length in fundamental fluid dynamics courses. These would all be used in order to build the framework for unsteady aerodynamics analyses.</p>
 <p>One thing worth emphasising again before moving on is that the Kutta condition is an engineering condition that is imposed on the flow in order to obtain deterministic properties of lift and moment around an airfoil. It is not derived mathematically from first principles. While it has successfully been used for steady airfoil analysis, unsteady airfoil analysis presents a challenge because experimental observations suggest that indeed the flow can briefly turn around the airfoil trailing-edge when rapid motion is involved. So the Kutta condition isn’t strictly applicable for unsteady flows {cite}’A29_R51’. Neither is it helpful for cases when a sharp edge doesn’t exist, for e.g. the airship-like body from the tests of Fuhrmann and Prandtl above, or when more than one sharp edges exist for some random profile (i.e. not necessarily an airfoil-like profile). However, early unsteady airfoil theory was developed accepting the validity of the Kutta condition even for unsteady airfoil motion and has been shown to provide acceptable prediction of unsteady airfoil lift and moments.</p>
-<p>Potential flow theory-based results remain meaningful only in when the flow remains attached to the airfoil. In flow conditions where there is large scale separation, the linearity imposed on the solutions by the potential flow theory introduces inaccuracies. If you are still wondering, how on Earth does a flow model based on zero viscosity give results that are representative of viscous real-world flows well you are not alone since some of the brightest minds of the 20th century struggled with the same ideas. This struggle is chronicled in <span id="id18">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span> as a clash between the British and the German school of aerodynamicists. The theories proposed by the latter school were eventually universally accepted once supporting experimental evidence was obtained and the entire saga has been artfully concluded in the final passages of <span id="id19">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span>.</p>
+<p>Potential flow theory-based results remain meaningful only in when the flow remains attached to the airfoil. In flow conditions where there is large scale separation, the linearity imposed on the solutions by the potential flow theory introduces inaccuracies. If you are still wondering, how on Earth does a flow model based on zero viscosity give results that are representative of viscous real-world flows well you are not alone since some of the brightest minds of the 20th century struggled with the same ideas. This struggle is chronicled in <span id="id19">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span> as a clash between the British and the German school of aerodynamicists. The theories proposed by the latter school were eventually universally accepted once supporting experimental evidence was obtained and the entire saga has been artfully concluded in the final passages of <span id="id20">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span>.</p>
 <div class="admonition-david-bloor-in-enigma-of-the-aerofoil admonition">
 <p class="admonition-title">David Bloor in ‘Enigma of the Aerofoil’</p>
 <p>The German advances in the understanding of lift and the properties of wings depended on the use of abstract and unreal concepts that were sometimes employed with questionable logic. Progress in aerodynamics thus depended on the triumph of falsity over truth. Everyone knows that false premises can sometimes lead to true conclusions and that evidence can sometimes support false theories, but the story of the aerofoil involved more than this. The successful strategy involved the deliberate use of known falsehoods poised in artful balance with accepted truths. The supporters of the theory of circulation showed how simple falsehoods could yield dependable conclusions when dealing with a complex and otherwise intractable reality. This is the real enigma of the aerofoil… The enigma of the aerofoil is the enigma of all knowledge.</p>

@@ -217,6 +217,23 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Unsteady Aerodynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../8_UnsteadyAerodynamics/TheodorsenModel.html">
+   Theodorsen Theory
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   References
  </span>
 </p>
@@ -578,7 +595,7 @@
 ></iframe>
 </div></div>
 </div>
-<p>The right cylindrical wake model of a rotor, shown above, was first proposed by Joukowsky as the case of an ideal model <span id="id1">[<a class="reference internal" href="../References.html#id41">Kui18</a>]</span>(Section 1.2). Such a wake structure is valid only in the limit of a lightly loaded rotor because otherwise wake contraction has to be accounted for in order to obtain accurate results. ‘Free-wake’ models are more commonly used to model rotor tip vortices as shown below. Here the tip vortices from the rotor blades evolve freely under the influence of one another. The induced velocity, from these vortices, is calculated using the Biot-Savart law and gives a more accurate estimate compared to the annular momentum theory that was introduced in the BEMT chapter. It is worth noting the constriction of the rotor streamtube in the wake of the rotor. This constriction has been observed to occur for rotors in reality and is something that the momentum theory captures as well.</p>
+<p>The right cylindrical wake model of a rotor, shown above, was first proposed by Joukowsky as the case of an ideal model <span id="id1">[<a class="reference internal" href="../References.html#id44">Kui18</a>]</span>(Section 1.2). Such a wake structure is valid only in the limit of a lightly loaded rotor because otherwise wake contraction has to be accounted for in order to obtain accurate results. ‘Free-wake’ models are more commonly used to model rotor tip vortices as shown below. Here the tip vortices from the rotor blades evolve freely under the influence of one another. The induced velocity, from these vortices, is calculated using the Biot-Savart law and gives a more accurate estimate compared to the annular momentum theory that was introduced in the BEMT chapter. It is worth noting the constriction of the rotor streamtube in the wake of the rotor. This constriction has been observed to occur for rotors in reality and is something that the momentum theory captures as well.</p>
 <center>
     <img src="../../assets/4blade_hover.gif" class="medium">
     <p style="text-align:center; color:gray; font-size:16px;"> Free-wake simulation of a 4 bladed rotor in hover flight </p>
@@ -593,7 +610,7 @@
 <center>
     <img src="../../assets/B0_fig9_22.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Schematic of blade-vortex interaction and the induce loading <a href="https://www.cambridge.org/core/books/rotorcraft-aeromechanics/6DE729BB2AFED9F94E59823086568C1E">[source] </a></p>
-</center><p>The angle of attack within of the blade sections influenced by the vortex changes suddenly thereby changing the aerodynamic loads. This change in angle of attack can be quantified if the velocity induced by the tip vortex interacting with the blade can be quantified. This is done using the Biot-Savart law that was originally proposed in the field of electromagnetism. The following presents the derivation of the expression and is based on the discussion in <span id="id2">[<a class="reference internal" href="../References.html#id33">Bat00</a>]</span>(Section 2.4).</p>
+</center><p>The angle of attack within of the blade sections influenced by the vortex changes suddenly thereby changing the aerodynamic loads. This change in angle of attack can be quantified if the velocity induced by the tip vortex interacting with the blade can be quantified. This is done using the Biot-Savart law that was originally proposed in the field of electromagnetism. The following presents the derivation of the expression and is based on the discussion in <span id="id2">[<a class="reference internal" href="../References.html#id36">Bat00</a>]</span>(Section 2.4).</p>
 <p>The velocity field within a fluid satisfies the following equations related to the rate of expansion of the fluid and local vorticity (<span class="math notranslate nohighlight">\(\boldsymbol{\omega}\)</span>), respectively -</p>
 <div class="math notranslate nohighlight">
 \[\text{Rate of expansion} = \nabla \cdot \boldsymbol{u}\]</div>
@@ -684,8 +701,8 @@
 </div>
 <p>Such high thrust oscillations are intrinsic to coaxial rotor designs. High vibrations were one of the reasons that Sikorsky <a href="https://www.sikorskyarchives.com/S-69%20(XH-59A).php">discontinued the XH-59A program </a> (precursor to the succesful X2 demonstrator). They still exist on the <a href="https://en.wikipedia.org/wiki/Sikorsky_S-97_Raider">Raider </a> and <a href="https://en.wikipedia.org/wiki/Sikorsky%E2%80%93Boeing_SB-1_Defiant">Defiant </a> designs, currently being extensively tested as a viable proposal to replace ageing helicopter fleet in the US armed forces, but are taken care of using vibration supressors.</p>
 <p>Another aspect of rotor design worth mentioning here is from the structural design point of view. Consider for e.g. the cases of the Bo 105 rotor (<span class="math notranslate nohighlight">\(R= 4.912\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 45\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 44.505\)</span> rad/s) and the UH60 rotor (<span class="math notranslate nohighlight">\(R= 8.178\)</span> m, blade weight <span class="math notranslate nohighlight">\(m_b\approx 95\)</span> kg, and <span class="math notranslate nohighlight">\(\Omega = 27.017\)</span> rad/s). The former is a 2.5 ton helicopter and the latter a 10 ton design.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31829e96-b2b9-463d-9906-d754b52b23af">
-<span class="eqno">(5)<a class="headerlink" href="#equation-31829e96-b2b9-463d-9906-d754b52b23af" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-324c768a-ff63-49ab-aa98-0f7a805fb816">
+<span class="eqno">(5)<a class="headerlink" href="#equation-324c768a-ff63-49ab-aa98-0f7a805fb816" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \text{Bo 105 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\
 &amp;= 218906 \quad \text{N} \\
 \text{UH60 hinge force} &amp;\approx m_b*\Omega^2 *(R/2)\\

@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="References.html" />
+    <link rel="next" title="Unsteady Aerodynamics" href="8_UnsteadyAerodynamics/UnsteadyAerodynamics.html" />
     <link rel="prev" title="Blade Motion and Control" href="4_ForwardFlight/BladeMotionAndControl.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -212,6 +212,23 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Recap of Fundamentals in Aerodynamics - 2D and 3D
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Unsteady Aerodynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_UnsteadyAerodynamics/UnsteadyAerodynamics.html">
+   Unsteady Aerodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_UnsteadyAerodynamics/TheodorsenModel.html">
+   Theodorsen Theory
   </a>
  </li>
 </ul>
@@ -533,7 +550,7 @@
 <div><p>On a strictly mathematical level, engineers know how to design planes that will stay aloft. But equations don’t explain why aerodynamic lift occurs. There are two competing theories that illuminate the forces and factors of lift. Both are incomplete explanations. Aerodynamicists have recently tried to close the gaps in understanding. Still, no consensus exists.</p>
 </div></blockquote>
 <p style="text-align:right" > <a href="https://www.scientificamerican.com/article/no-one-can-explain-why-planes-stay-in-the-air/"> Scientific American</a> </p><p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. As some of the quotes above imply, the mathematical theory of fluid behavior, and by extension the mathematiacl theory of flight, are well established. However, given the complex equations involved a straightforward cause and effect relation is difficult to establish and hence a simple intuitive explanation for something even as common and fundamental as the process of lift generation on an airfoil is still missing. Nevertheless, below we try to make as much progress as possible in the improving/refreshing the understanding of the fundamental fluid dynamics concepts involved.</p>
-<p>This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id34">McL13</a>]</span>, in particular Chapter 7 from this reference. Additionally, <span id="id2">[<a class="reference internal" href="References.html#id19">PJ06a</a>]</span> and <span id="id3">[<a class="reference internal" href="References.html#id20">PJ06b</a>]</span> provide a good overview of the historical development of the field of fluid dynamics.</p>
+<p>This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id37">McL13</a>]</span>, in particular Chapter 7 from this reference. Additionally, <span id="id2">[<a class="reference internal" href="References.html#id22">PJ06a</a>]</span> and <span id="id3">[<a class="reference internal" href="References.html#id23">PJ06b</a>]</span> provide a good overview of the historical development of the field of fluid dynamics.</p>
 <div class="section" id="bodies-in-fluids">
 <h2>Bodies in fluids<a class="headerlink" href="#bodies-in-fluids" title="Permalink to this headline">¶</a></h2>
 <p>Understanding the nature of forces acting on bodies of arbitrary shape is in our interest if the objective is to minimise the amount of work done in order to overcome the resistive forces due to friction caused due to relative motion between the body and the surrounding fluid. Optimum hull design of a cruise ship, minimum drag profile of a competitive road cyclist+cycle etc are a few examples where an understanding of fluid behavior would help achieve the objectives. Of course, we need not look too far for examples because a helicopter has various entities that might benefit from design based on a sound knowhow in fluid dynamics. A streamlined fuselage design such that drag (rotorcraft fuselage drag is referred to as parasite drag) is minimised would go a long way in reducing operating costs.</p>
@@ -682,7 +699,7 @@
 </div>
 <div class="section" id="generation-of-lift">
 <h2>Generation of lift<a class="headerlink" href="#generation-of-lift" title="Permalink to this headline">¶</a></h2>
-<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id5">[<a class="reference internal" href="References.html#id34">McL13</a>]</span>.</p>
+<p>“Lift is an interaction in which the airfoil and the fluid exchange equal and opposite forces (as per Newton’s third law)” - <span id="id5">[<a class="reference internal" href="References.html#id37">McL13</a>]</span>.</p>
 <div style="float:right; width:25%;" >
     <img src="../assets/AA_C1_CP_contour.png" class="big" />
     <p style="text-align:center; color:gray; font-size:60%;"> Coefficient of pressure contour plot of NACA23012 airfoil at $M=0.4$ and $\alpha = 2^°$ <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1101#:~:text=The%20aerodynamic%20efficiency%20was%20evaluated,%3D%200.6%20at%20Cl%20%3D%200.85.">[source] </a>
@@ -853,8 +870,8 @@ F^{\prime}&amp;=U_{\infty}-\frac{\mu}{2 \pi z^2} \\
 \end{split}
 \end{equation*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(V_r\)</span> and <span class="math notranslate nohighlight">\(V_\theta\)</span> represent the radial and the tangential components of the flow velocity around the cylinder. In order to confirm that a doublet in a free stream indeed represents flow around a cyclinder, simply the no-penetration boundary condition should be satisfied, i.e. <span class="math notranslate nohighlight">\(V_r(R)=0\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50a7c995-1f50-466c-818f-f0dcda5556bb">
-<span class="eqno">(12)<a class="headerlink" href="#equation-50a7c995-1f50-466c-818f-f0dcda5556bb" title="Permalink to this equation">¶</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-680c4819-aec3-4bfc-bf94-a0b52ab9b607">
+<span class="eqno">(12)<a class="headerlink" href="#equation-680c4819-aec3-4bfc-bf94-a0b52ab9b607" title="Permalink to this equation">¶</a></span>\[\begin{align} 
 V_r(R)&amp;=0 \\
 \Rightarrow R &amp;= \sqrt{\frac{\mu }{2\pi U_\infty}} = \text{const.}
 \end{align}\]</div>
@@ -870,7 +887,7 @@ V_r(R)&amp;=0 \\
 <div class="math notranslate nohighlight">
 \[\Rightarrow \psi |_A = \psi |_B = 0\]</div>
 <p>The streamline <span class="math notranslate nohighlight">\(\psi=0\)</span> defines the boundary of the cylinder.</p>
-<p>One of the early experiments by Fuhrmann and Prandtl involving flow around a slender airship-like body in a wind tunnel showed that indeed the measured pressure distribution around the body matched that predicted by theory <span id="id7">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span>. The theoretical pressure was obtained using potential flow theory where the geometry was modelled by placing multiple sinks and sources in a uniform flow as shown below.</p>
+<p>One of the early experiments by Fuhrmann and Prandtl involving flow around a slender airship-like body in a wind tunnel showed that indeed the measured pressure distribution around the body matched that predicted by theory <span id="id7">[<a class="reference internal" href="References.html#id40">Blo19</a>]</span>. The theoretical pressure was obtained using potential flow theory where the geometry was modelled by placing multiple sinks and sources in a uniform flow as shown below.</p>
 <center>
     <img src="../assets/BA13_Fig53.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Fuhrmann and Prandtl study of a uniform flow around an airship-like solid body. <a href="https://press.uchicago.edu/ucp/books/book/chicago/E/bo12024403.html">[source]) </a></p>
@@ -894,7 +911,7 @@ V_r(R)&amp;=0 \\
 <li><p>conformal theory used to obtain analytic results of pressure distribution</p></li>
 <li><p>also used in unsteady aerodynamic theories - for e.g. Theodorsen theory</p></li>
 </ul>
-<p>The potential flow theory discussion above is partially based on the details presented in <span id="id9">[<a class="reference internal" href="References.html#id35">Sen14</a>]</span>(Chapter 3). Students interested in the derivation of some of the results presented above can refer this source.</p>
+<p>The potential flow theory discussion above is partially based on the details presented in <span id="id9">[<a class="reference internal" href="References.html#id38">Sen14</a>]</span>(Chapter 3). Students interested in the derivation of some of the results presented above can refer this source.</p>
 </div>
 </div>
 <div class="section" id="kutta-joukowski-theorem">
@@ -932,7 +949,7 @@ V_r(R)&amp;=0 \\
   </p> 
   <p >  Streamlines representation around an airfoil based on a mathematically valid potential flow solution (not a real flow) <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a>
   </p>       
-</div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct and unique<a class="footnote-reference brackets" href="#uniqueness" id="id11">3</a>. This is achieved by enforcing what is called the Kutta condition. Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id12">[<a class="reference internal" href="References.html#id42">RL13</a>]</span>.</p>
+</div><p>In reality, only the one on the left is observed. This is a consequence of the viscosity of fluids in nature and the fact that they cannot turn around sharp corners (airfoil trailing edges are sharp enough). Since potential flow theory doesn’t model viscosity, a condition needs to be mathematically enforced so that the resulting flow field obtained is physically correct and unique<a class="footnote-reference brackets" href="#uniqueness" id="id11">3</a>. This is achieved by enforcing what is called the Kutta condition. Based on what your favorite reference textbook for fluid dynamics is, this could also be referred to as the Joukowski condition <span id="id12">[<a class="reference internal" href="References.html#id45">RL13</a>]</span>.</p>
 <div class="image-grid2">
     <img  src="../assets/B37_fig4_18a.png" class="medium"/>
     <img  src="../assets/B37_fig4_18c.png" class="medium"/>
@@ -947,7 +964,7 @@ V_r(R)&amp;=0 \\
 </div>
 <div class="section" id="kelvin-s-circulation-theorem">
 <h2>Kelvin’s circulation theorem<a class="headerlink" href="#kelvin-s-circulation-theorem" title="Permalink to this headline">¶</a></h2>
-<p>For an inviscid, incompressible fluid of constant density, the circulation around any closed loop within the fluid remains time-invariant. For an airfoil initially at rest within a fluid, the circulation around any contour within the fluid is going to be zero. When the fluid is set in motion there is vorticity due to the uniform fluid velocity, yet we now know (from the discussion aboce) that there would be a circulation set around the airfoil. The Kelvin’s circulation theorem implies that a vorticity of opposite sign must be getting introduced in the fluid so that the net circulation around any closed contour, that includes the airfoil in it, must be zero. The video below demonstrates this perfectly. A series of stillshots from the video above are also available in <span id="id13">[<a class="reference internal" href="References.html#id38">TtranslatorH34</a>]</span>.</p>
+<p>For an inviscid, incompressible fluid of constant density, the circulation around any closed loop within the fluid remains time-invariant. For an airfoil initially at rest within a fluid, the circulation around any contour within the fluid is going to be zero. When the fluid is set in motion there is vorticity due to the uniform fluid velocity, yet we now know (from the discussion aboce) that there would be a circulation set around the airfoil. The Kelvin’s circulation theorem implies that a vorticity of opposite sign must be getting introduced in the fluid so that the net circulation around any closed contour, that includes the airfoil in it, must be zero. The video below demonstrates this perfectly. A series of stillshots from the video above are also available in <span id="id13">[<a class="reference internal" href="References.html#id41">TtranslatorH34</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
@@ -976,7 +993,7 @@ V_r(R)&amp;=0 \\
   </p> 
   <p >  Starting vortex observed behind an airfoil in a fluid (<a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source]) </a>
   </p>       
-</div><p>Section 9.4 in <span id="id14">[<a class="reference internal" href="References.html#id29">Gla36</a>]</span> presents a concise and clear explanation of the development of the bound and starting vortices and the interested students are encouraged to read the relevant couple of pages for this reference.</p>
+</div><p>Section 9.4 in <span id="id14">[<a class="reference internal" href="References.html#id32">Gla36</a>]</span> presents a concise and clear explanation of the development of the bound and starting vortices and the interested students are encouraged to read the relevant couple of pages for this reference.</p>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="d-aerodynamics">
@@ -1009,8 +1026,8 @@ V_r(R)&amp;=0 \\
 </center><div class="section" id="final-comments">
 <h2>Final Comments<a class="headerlink" href="#final-comments" title="Permalink to this headline">¶</a></h2>
 <p>The above, seemingly dissociated, set of concepts are nothing new and have been covered at length in fundamental fluid dynamics courses. These would all be used in order to build the framework for unsteady aerodynamics analyses.</p>
-<p>One thing worth emphasising again before moving on is that the Kutta condition is an engineering condition that is imposed on the flow in order to obtain deterministic properties of lift and moment around an airfoil. It is not derived mathematically from first principles. While it has successfully been used for steady airfoil analysis, unsteady airfoil analysis presents a challenge because experimental observations suggest that indeed the flow can briefly turn around the airfoil trailing-edge when rapid motion is involved. So the Kutta condition isn’t strictly applicable for unsteady flows {cite}’A29_R51’. Neither is it helpful for cases when a sharp edge doesn’t exist, for e.g. the airship-like body from the tests of Fuhrmann and Prandtl above, or when more than one sharp edges exist for some random profile (i.e. not necessarily an airfoil-like profile). However, early unsteady airfoil theory was developed accepting the validity of the Kutta condition even for unsteady airfoil motion and has been shown to provide acceptable prediction of unsteady airfoil lift and moments.</p>
-<p>Potential flow theory-based results remain meaningful only in when the flow remains attached to the airfoil. In flow conditions where there is large scale separation, the linearity imposed on the solutions by the potential flow theory introduces inaccuracies. If you are still wondering, how on Earth does a flow model based on zero viscosity give results that are representative of viscous real-world flows well you are not alone since some of the brightest minds of the 20th century struggled with the same ideas. This struggle is chronicled in <span id="id19">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span> as a clash between the British and the German school of aerodynamicists. The theories proposed by the latter school were eventually universally accepted once supporting experimental evidence was obtained and the entire saga has been artfully concluded in the final passages of <span id="id20">[<a class="reference internal" href="References.html#id37">Blo19</a>]</span>.</p>
+<p>One thing worth emphasising again before moving on is that the Kutta condition is an engineering condition that is imposed on the flow in order to obtain deterministic properties of lift and moment around an airfoil. It is not derived mathematically from first principles. While it has successfully been used for steady airfoil analysis, unsteady airfoil analysis presents a challenge because experimental observations suggest that indeed the flow can briefly turn around the airfoil trailing-edge when rapid motion is involved. So the Kutta condition isn’t strictly applicable for unsteady flows <span id="id19">[<a class="reference internal" href="References.html#id25">TR19</a>]</span>. Neither is it helpful for cases when a sharp edge doesn’t exist, for e.g. the airship-like body from the tests of Fuhrmann and Prandtl above, or when more than one sharp edges exist for some random profile (i.e. not necessarily an airfoil-like profile). However, early unsteady airfoil theory was developed accepting the validity of the Kutta condition even for unsteady airfoil motion and has been shown to provide acceptable prediction of unsteady airfoil lift and moments.</p>
+<p>Potential flow theory-based results remain meaningful only in when the flow remains attached to the airfoil. In flow conditions where there is large scale separation, the linearity imposed on the solutions by the potential flow theory introduces inaccuracies. If you are still wondering, how on Earth does a flow model based on zero viscosity give results that are representative of viscous real-world flows well you are not alone since some of the brightest minds of the 20th century struggled with the same ideas. This struggle is chronicled in <span id="id20">[<a class="reference internal" href="References.html#id40">Blo19</a>]</span> as a clash between the British and the German school of aerodynamicists. The theories proposed by the latter school were eventually universally accepted once supporting experimental evidence was obtained and the entire saga has been artfully concluded in the final passages of <span id="id21">[<a class="reference internal" href="References.html#id40">Blo19</a>]</span>.</p>
 <div class="admonition-david-bloor-in-enigma-of-the-aerofoil admonition">
 <p class="admonition-title">David Bloor in ‘Enigma of the Aerofoil’</p>
 <p>The German advances in the understanding of lift and the properties of wings depended on the use of abstract and unreal concepts that were sometimes employed with questionable logic. Progress in aerodynamics thus depended on the triumph of falsity over truth. Everyone knows that false premises can sometimes lead to true conclusions and that evidence can sometimes support false theories, but the story of the aerofoil involved more than this. The successful strategy involved the deliberate use of known falsehoods poised in artful balance with accepted truths. The supporters of the theory of circulation showed how simple falsehoods could yield dependable conclusions when dealing with a complex and otherwise intractable reality. This is the real enigma of the aerofoil… The enigma of the aerofoil is the enigma of all knowledge.</p>
@@ -1062,10 +1079,10 @@ V_r(R)&amp;=0 \\
             <p class="prev-next-title">Blade Motion and Control</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="References.html" title="next page">
+    <a class='right-next' id="next-link" href="8_UnsteadyAerodynamics/UnsteadyAerodynamics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Unsteady Aerodynamics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

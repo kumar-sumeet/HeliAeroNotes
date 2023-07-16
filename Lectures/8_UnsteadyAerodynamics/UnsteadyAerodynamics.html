@@ -438,23 +438,6 @@
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-of-singularities">
-     Method of singularities
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-simple-case">
-       A simple case
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#general-case">
-       General case
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unsteady-development-of-steady-lift">
      Unsteady Development of Steady lift
     </a>
@@ -577,23 +560,6 @@
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-of-singularities">
-     Method of singularities
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-simple-case">
-       A simple case
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#general-case">
-       General case
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unsteady-development-of-steady-lift">
      Unsteady Development of Steady lift
     </a>
@@ -632,10 +598,9 @@
 </div>
 <div class="section" id="quasi-steady-airfoil-aerodynamics">
 <h2>Quasi-steady airfoil aerodynamics<a class="headerlink" href="#quasi-steady-airfoil-aerodynamics" title="Permalink to this headline">¶</a></h2>
+<p>Quasi-steady modelling of airfoil aerodynamics leads to a similar result as the steady modelling case provided the effective angle of attack is measured at the three quarter-chord position. While the following result can be derived using concepts already discussed in the review chapter, that is not the subject of this chapter and can be assumed to be agiven.</p>
 <div class="math notranslate nohighlight">
-\[
-C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \frac{\dot{\alpha}}{V} \right]
-\]</div>
+\[C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \frac{\dot{\alpha}}{V} \right] = 2\pi\alpha_{3c/4}\]</div>
 <center>
      <img src="../../assets/B3_85_QuasiSteadyAirfoil.png" class="big" />
     <p style="font-size:16px; color:gray; text-align:center;" > Quasi-steady airfoil aerodynamics <a href="https://www.cambridge.org/us/academic/subjects/engineering/aerospace-engineering/principles-helicopter-aerodynamics-2nd-edition-1?format=HB&isbn=9781107013353">[source]) </a></p>
@@ -706,13 +671,13 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 <li><p>Kelvin’s theorem of circulation</p></li>
 <li><p>Kutta condition</p></li>
 </ul>
-<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given shape <span id="id3">[<a class="reference internal" href="../References.html#id32">HCCV13</a>]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the same construct since all that changes between them is the sign of the flow direction.</p>
+<p>There are 4 fundamental constructs in potential flow theory that, when used in combination, help fully define potential flow about any body of any given shape <span id="id3">[<a class="reference internal" href="../References.html#id35">HCCV13</a>]</span>(Pg 157). These constructs are parallel uniform flow, sources, sinks, doublets and point vortex. Sources and sinks are essentially the same construct since all that changes between them is the sign of the flow direction. Next we discuss about the final concept that is required before formally looking at the derivation of the Theodorsen unsteady airfoil theory.</p>
 <div class="section" id="conformal-mapping">
 <h2>Conformal mapping<a class="headerlink" href="#conformal-mapping" title="Permalink to this headline">¶</a></h2>
 <p>The development of the potential flow theory to analyse flow around a spinning cylinder and the resultant lift have already been discussed. However, one would imagine that being able to carry out the same excercise for an airfoil would be a more fruitful excercise. And you wouldn’t be wrong but the analysis of the flow around a cylinder, albeit seldom relevant for aerospace applications, is directly related to airfoil analysis or analysis around any given random geometry. The mathematical framework that bridges the two comes from complex analysis called conformal mapping. It states that a mapping or complex function <span class="math notranslate nohighlight">\(F(\xi)\)</span> can be found that transforms a domain <span class="math notranslate nohighlight">\(\xi\)</span> to a domain <span class="math notranslate nohighlight">\(z\)</span> and conversely a function <span class="math notranslate nohighlight">\(F(z)\)</span> exists that carries out the reverse operation. This means that if we can find such a function that maps a circle to an airfoil then using the same function the entire flowfield around the circle (which we already know) can be mapped to that around an airfoil. So we wouldn’t even explicitly be solving the flow around an airfoil, just get the result for a 2D cylinder and apply the transformation. So far so good, but how does a suitable <span class="math notranslate nohighlight">\(F(\xi)\)</span> look like?</p>
 <center>
     <img src="../../assets/ConformalMapping_intro.png" class="large">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Complex mapping from one domain to another </p>
+    <p  style="font-size:16px; color:gray; text-align:center;"> Complex mapping from cylinder domain to airfoil domain </p>
 </center><div class="section" id="mapping-function">
 <h3>Mapping function<a class="headerlink" href="#mapping-function" title="Permalink to this headline">¶</a></h3>
 <p>Conformal mapping refers to a complex analysis technique of transforming one domain to another while preserving (signed) Euclidean angles. The conformal map that achieves this is called the Joukowski transformation where the body in the <span class="math notranslate nohighlight">\(\xi\)</span> domain is a cylinder and it is mapped to a flat plate in the <span class="math notranslate nohighlight">\(z\)</span> domain. How exactly the mapping relation itself comes about is a different branch of mathematics altogether but for our purposes suffice it to say that this convenient relation exists and is simple enough to quickly see that indeed the boundary of the circle gets mapped to the boundary of the flat plate.</p>
@@ -727,10 +692,10 @@ C_l = 2\pi\left [\alpha +\frac{\dot{h}}{V}+b \left ( \frac{1}{2}-a \right ) \fra
 <div class="math notranslate nohighlight">
 \[\Rightarrow z = \xi + \frac{a^2}{\xi} = 2a\cos \theta\]</div>
 <p>The circle in the <span class="math notranslate nohighlight">\(\xi\)</span> domain maps to a line of zero thickness in the <span class="math notranslate nohighlight">\(z\)</span> domain. This is the airfoil of interest in this case with zero thickness and the leading and trailing edges located at <span class="math notranslate nohighlight">\(x = -2a\)</span> and <span class="math notranslate nohighlight">\(+2a\)</span>, respectively.</p>
-<p>Once the mapping function itself is known, it is relatively straightforward to obtain the flowfield around an airfoil once the flowfield around the cylinder is known. Now, it is one thing to obtain the simplest combination of elementary flows that results in a circular streamline (i.e. doublet in uniform flow) and whole different level of complexity to ensure, that given any kind of flow field, i.e. any combination of elementary flows, a circular streamline can be established. For e.g. the solution of the flow field around a circle in uniform flow was already derived but what if the flow now has an ‘anlge of attack’ as shown above? This is where the circle theorem proposed by Milne-Thompson <span id="id4">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span> comes in.</p>
+<p>Once the mapping function itself is known, it is relatively straightforward to obtain the flowfield around an airfoil once the flowfield around the cylinder is known. Now, it is one thing to obtain the simplest combination of elementary flows that results in a circular streamline (i.e. doublet in uniform flow) and whole different level of complexity to ensure, that given any kind of flow field, i.e. any combination of elementary flows, a circular streamline can be established. For e.g. the solution of the flow field around a circle in uniform flow was already derived but what if the flow now has an ‘angle of attack’ as shown above? This is where the circle theorem proposed by Milne-Thompson <span id="id4">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span> comes in.</p>
 <div class="admonition-circle-theorem admonition">
 <p class="admonition-title">Circle theorem</p>
-<p>The circle theorem helps obtain the complex flow field around a cylinder in the most general case. It states that if <span class="math notranslate nohighlight">\(F(z)\)</span> is the flow field in the absence of the cylinder then the flow field in the presence of the cylinder is given by <span class="math notranslate nohighlight">\(F(z)+\bar{F}(\frac{a^2}{z})\)</span>. The solution is based on the idea of images such that a streamline denoting a solid boundary defines a circle. More details can be obtained from <span id="id5">[<a class="reference internal" href="../References.html#id33">Bat00</a>]</span>(Page 422-423) and <span id="id6">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span>.</p>
+<p>The circle theorem helps obtain the complex flow field around a cylinder in the most general case. It states that if <span class="math notranslate nohighlight">\(F(z)\)</span> is the flow field in the absence of the cylinder then the flow field in the presence of the cylinder is given by <span class="math notranslate nohighlight">\(F(z)+\bar{F}(\frac{a^2}{z})\)</span>. The solution is based on the idea of images such that a streamline denoting a solid boundary defines a circle. More details can be obtained from <span id="id5">[<a class="reference internal" href="../References.html#id36">Bat00</a>]</span>(Page 422-423) and <span id="id6">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span>.</p>
 </div>
 <p>Using the circle theorem, the flow field around the cylinder without any circulation is given by</p>
 <div class="amsmath math notranslate nohighlight">
@@ -744,17 +709,17 @@ F_{total} &amp;=F(\xi)+\bar{F}(\frac{a^2}{\xi}) \\
 <p>With the circulation <span class="math notranslate nohighlight">\(\Gamma\)</span>, the flow field is given by</p>
 <div class="math notranslate nohighlight">
 \[F_{total} = U_\infty e^{-i\alpha} \xi + U_\infty e^{i\alpha} \frac{a^2}{\xi}+  \frac{\Gamma}{2\pi i}\text{ln} \xi \]</div>
-<p>The velocity field can be obtained both in the <span class="math notranslate nohighlight">\(\xi\)</span> domain as well as the <span class="math notranslate nohighlight">\(z\)</span> domain. Note that we are primarily interested in the velocity at the surface of the geometry itself because the pressure distribution, and by extension the total lift, can be then obtained using the Bernoulli’s equation.</p>
+<p>Note that we added the potential due to a vortex at the center of the cylinder later since the vortex does not disturb the circular streamline already established by the application of the circle theorem. The velocity field can be obtained both in the <span class="math notranslate nohighlight">\(\xi\)</span> domain as well as the <span class="math notranslate nohighlight">\(z\)</span> domain. Note that we are primarily interested in the velocity at the surface of the geometry itself because the pressure distribution, and by extension the total lift, can be then obtained using the Bernoulli’s equation.</p>
 <div class="math notranslate nohighlight">
 \[\frac{d F}{d \xi}=U_{\infty} e^{-i \alpha}-U_{\infty} e^{i \alpha} \frac{a^2}{\xi^2}-\frac{\Gamma}{2 \pi i \xi}\]</div>
 <p>Velocity at the cylinder surface</p>
 <div class="math notranslate nohighlight">
-\[\Rightarrow F'(|\xi|=a) = \frac{d F}{d \xi} =U_\infty e^{-i\alpha}-U_\infty e^{i(\alpha-2 \theta)}+\frac{i\Gamma}{2 \pi a} e^{-i \theta}\]</div>
-<p>Similarly, velocity in the <span class="math notranslate nohighlight">\(z\)</span> domain can be obtained as</p>
+\[\Rightarrow w(\xi) = F'(|\xi|=a) = \frac{d F}{d \xi} =U_\infty e^{-i\alpha}-U_\infty e^{i(\alpha-2 \theta)}+\frac{i\Gamma}{2 \pi a} e^{-i \theta}\]</div>
+<p>Similarly, velocity in the <span class="math notranslate nohighlight">\(z\)</span> domain can be obtained using the complex formula that relates derivatives in the two domains related via a conformal transformation</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \begin{split}
-w(z)&amp;=\frac{\frac{d F}{d\xi}}{\frac{d z}{d\xi}} \\
+w(z)&amp;=\frac{w(\xi)}{\frac{d z}{d\xi}} \\
 &amp;=\frac{\frac{d F}{d\xi}}{{1-a^2 / \xi^2}}\\
 &amp;=\frac{U_{\infty} e^{-i \alpha} \xi - U_{\infty} e^{i \alpha}\frac{a^2}{\xi}-\frac{\Gamma}{2 \pi i}}{\xi-\frac{a^2}{\xi}}\\
 &amp; =\frac{U_{\infty} \cos \alpha \left(\xi-\frac{a^2}{\xi}\right)-i U_{\infty} \sin \alpha \left(\xi+\frac{a^2}{\xi}\right)-\frac{\Gamma}{2 \pi}}{\xi-\frac{a^2}{\xi}} \\
@@ -771,19 +736,19 @@ w(z)&amp;=\frac{\frac{d F}{d\xi}}{\frac{d z}{d\xi}} \\
     <p  style="font-size:16px; color:gray; text-align:center;"> Kutta condition based on the nature of the trailing edge shape. <a href="https://www.mheducation.com/highered/product/fundamentals-aerodynamics-anderson/M9781259129919.html">[source] </a></p>
 </center><p>It is worth noting that the velocity over the airfoil <span class="math notranslate nohighlight">\(w(z)\)</span> blows up at <span class="math notranslate nohighlight">\(z=\pm 2a\)</span> unless the numerator <span class="math notranslate nohighlight">\(U_{\infty} z\sin \alpha - \frac{\Gamma}{2 \pi}\)</span> goes to zero too. Problem is that the denominator goes to zero at <span class="math notranslate nohighlight">\(z=\pm 2a\)</span> but the numerator can only be made zero at either the trailing edge <span class="math notranslate nohighlight">\(+2a\)</span> or the leading edge <span class="math notranslate nohighlight">\(-2a\)</span>. The Kutta condition states that the velocity at the trailing edge needs to be finite so the unique circulation then obtained is given by</p>
 <div class="math notranslate nohighlight">
-\[\Gamma = 4 \pi a U_{\infty}\sin \alpha = \pi c U_{\infty}\sin \alpha\]</div>
+\[\Gamma = 4 \pi a U_{\infty}\sin \alpha = 2\pi c U_{\infty}\sin \alpha\]</div>
 <p>Using the Kutta-Joukowski relation and the definition of coefficient of lift</p>
 <div class="math notranslate nohighlight">
 \[C_L = 2\pi \sin \alpha \approx 2\pi \alpha\]</div>
 <p>Using the Bernoulli’s equation, the pressure distribution is given by -</p>
 <div class="math notranslate nohighlight">
 \[p(x) = \rho U_\infty^2\sin 2\alpha \sqrt{\frac{a - x}{a+x}}\]</div>
-<p>The center of pressure then turns out to be at the quarter chord. Note that the potential flow theory formulation still leaves the unphysical infinite velocity at the leading edge unresolved. However, this is considered acceptable because in reality a high pressure suction peak is observed at the leading edge but not at the trailing edge. Potential flow solution with the Kutta condition imposed is qualitatively able to reproduce that scenario and the infinite velocity at <span class="math notranslate nohighlight">\(z=-2a\)</span> can be considered as a mathematical consequence of idealisation of the flow.</p>
+<p>The center of pressure then turns out to be at the quarter chord. Note that the potential flow theory formulation still leaves the unphysical infinite velocity at the leading edge unresolved. However, this is considered acceptable because in reality a high pressure suction peak is observed at the leading edge but not at the trailing edge. Potential flow solution with the Kutta condition imposed is qualitatively able to reproduce that scenario and the infinite velocity at <span class="math notranslate nohighlight">\(z=-2a\)</span> can be considered as a mathematical consequence of idealisation of the flow within the framework of potential flow theory.</p>
 </div>
 <div class="section" id="further-results-discussion">
 <h3>Further results/discussion<a class="headerlink" href="#further-results-discussion" title="Permalink to this headline">¶</a></h3>
 <center>
-    <img src="../../assets/JoukowskiZPlane.png" class="large">
+    <img src="../../assets/JoukowskiZPlane.png" class="Large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Complex mapping from cylinder to an airfoil</p>
 </center><p>Using the Joukowski’s conformal mapping, the surface of a cylinder maps to a flat plate along the x-axis.</p>
 <div class="math notranslate nohighlight">
@@ -807,10 +772,10 @@ X+i Y=r(\cos \theta+i \sin \theta)=r e^{i \theta}
 <p>Similarly, position on the X-axis transform in the z-domain to the x-axis.</p>
 <div class="math notranslate nohighlight">
 \[ x=X+b^2 / 4 X, \quad y=Y=0 \]</div>
-<p>Similarly, the velocities between the two domains get mapped as shown below.</p>
+<p>The velocities between the two domains get mapped as shown below.</p>
 <center>
     <img src="../../assets/VelocityZPlane.png" class="large">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Velocity transformation using Joukowski conformal mapping </p>
+    <p  style="font-size:16px; color:gray; text-align:center;"> Velocity transformation from the $\xi$-domain to the $z$-domain </p>
 </center><div class="math notranslate nohighlight">
 \[
 u-i v=\frac{V_X-i V_Y}{[d(x+i y) / d(X+i Y)]} 
@@ -832,6 +797,7 @@ u-i v=\frac{V_X-i V_Y}{[d(x+i y) / d(X+i Y)]}
 &amp; |v|=\frac{\left|V_r\right|}{|2 \sin \theta|} 
 \end{aligned}
 \end{split}\]</div>
+<p>And in the domain <span class="math notranslate nohighlight">\(0 \leq \theta \leq \pi\)</span>, for e.g.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left.\begin{array}{l}
@@ -839,14 +805,24 @@ V_\theta=-2 u \sin \theta \\
 V_r=2 v \sin \theta,
 \end{array}\right\} 0 \leq \theta \leq \pi 
 \end{split}\]</div>
-<p>Based on the velocity distribution, the corresponding potential function can be obtained-</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>If the tangential flow velocity at in the cylinder domain is non-zero at <span class="math notranslate nohighlight">\(\theta=0\)</span> then that translates to <span class="math notranslate nohighlight">\(u=\infty\)</span> at the trailing-edge of the airfoil in the z-domain.</p>
+</div>
+<p>Based on the velocity distribution, the corresponding potential function on the airfoil surface <span class="math notranslate nohighlight">\(\phi(x)\)</span> can be obtained-</p>
+<div class="math notranslate nohighlight">
+\[\phi(x_1)-\phi(x_2) = \int_{x_2}^{x_1}\frac{\partial \phi}{\partial x} dx\]</div>
+<p>and in particular</p>
 <div class="math notranslate nohighlight">
 \[\phi(x)-\phi_{LE} = \int_{LE}^{x}\frac{\partial \phi}{\partial x} dx\]</div>
-<p>Additionally, unlike the stream function <span class="math notranslate nohighlight">\(\psi\)</span>, the value of the scalar potential function <span class="math notranslate nohighlight">\(\phi\)</span> itself at a given point does not have a physical meaning. It is the derivatives of <span class="math notranslate nohighlight">\(\phi\)</span> that need to satisfy the relevant conditions so the value at any given location can be chosen as the reference and set to 0. In this case <span class="math notranslate nohighlight">\(\phi_{LE}=0\)</span> is assumed so. Also, to avoid confusion the variable of integration is changed to <span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
-<p>\begin{aligned}
-\phi(\theta) &amp;= \int_{\pi}^{\theta}\frac{-V_\varphi}{2\sin \varphi} (-b\sin \varphi d\varphi) \
-&amp; =\frac{-b}{2}\int_{\theta}^{\pi}V_\varphi d\varphi \
-\end{aligned}</p>
+<p>Additionally, unlike the stream function <span class="math notranslate nohighlight">\(\psi\)</span>, the value of the scalar potential function <span class="math notranslate nohighlight">\(\phi\)</span> itself at a given point does not have a physical meaning. It is the derivatives of <span class="math notranslate nohighlight">\(\phi\)</span> that need to satisfy the relevant conditions so the value at any given location can be chosen as the reference and set to 0. In this case <span class="math notranslate nohighlight">\(\phi_{LE}=0\)</span> is assumed to simplify the above expression. Also, to avoid confusion the variable of integration is changed to <span class="math notranslate nohighlight">\(\varphi\)</span> in order to use the polar coordinates instead of Cartesian coordinates.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+\begin{split}
+\phi(\theta) &amp;= \int_{\pi}^{\theta}\frac{-V_\theta}{2\sin \varphi} (-b\sin \varphi d\varphi) \\
+&amp;=\frac{-b}{2}\int_{\theta}^{\pi}V_\theta d\varphi 
+\end{split}
+\end{equation*}\]</div>
 <p>So once the tangential flow velocity around a cylinder is known, the potential function can be obtained in a straightforward manner.</p>
 </div>
 <div class="section" id="linearised-unsteady-bernoulli-s-equation">
@@ -854,70 +830,28 @@ V_r=2 v \sin \theta,
 <p>The general unsteady Bernoulli’s equation is given by the following expression</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \phi}{\partial t}+\frac{|\nabla \phi|^2}{2}+F+\frac{p}{\rho}=\text { constant }\]</div>
-<p>Where, <span class="math notranslate nohighlight">\(\left | F \right |=gz\)</span> is the body force acting on the fluid and can be neglected for our purposes since the fluid flows horizontally. Assume the above expression to be given (for derivation one can consult Section 2.12 in <span id="id7">[<a class="reference internal" href="../References.html#id35">Sen14</a>]</span>).</p>
-<p>\begin{aligned}
-p-p_\infty = &amp; -\rho\left [ \frac{\partial \phi}{\partial t}+\frac{|\nabla \phi|^2-U_\infty^2}{2} \right ] \
-&amp; = -\rho\left [ \frac{\partial \phi}{\partial t}+\frac{|\mathbf{V}|^2-U_\infty^2}{2} \right ] \
-&amp; \approx -\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty u \right ] \
-&amp; = -\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty \frac{\partial \phi}{\partial x}  \right ]
-\end{aligned}</p>
-<p>Here <span class="math notranslate nohighlight">\(|\nabla \phi|^2 = |\mathbf{V}|^2\)</span> is a non-linear term which has been linearised about the mean flow velocity of <span class="math notranslate nohighlight">\(U_\infty\)</span>. Additionally, <span class="math notranslate nohighlight">\(\mathbf{V} = (u+U_\infty)\hat{i}+v\hat{j}\)</span> was assumed in the above derivation where <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v&lt;&lt;U_\infty\)</span>.</p>
-<p>The total lift generated over the airfoil surface spanning from <span class="math notranslate nohighlight">\(-b\)</span> to <span class="math notranslate nohighlight">\(+b\)</span> is given by-</p>
+<p>Where, <span class="math notranslate nohighlight">\(\left | F \right |=gz\)</span> is the body force acting on the fluid and can be neglected for our purposes since the fluid flows horizontally. Assume the above expression to be given (for derivation one can consult Section 2.12 in <span id="id7">[<a class="reference internal" href="../References.html#id38">Sen14</a>]</span>).</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*} 
-\begin{split} 
-L &amp;= \int_{-b}^{b}p_l-p_u dx \\
-&amp;= \int_{-b}^{b}2\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty \frac{\partial \phi}{\partial x}  \right ] dx 
+\begin{split}
+p-p_\infty = &amp; -\rho\left [ \frac{\partial \phi}{\partial t}+\frac{|\nabla \phi|^2-U_\infty^2}{2} \right ] \\
+&amp; = -\rho\left [ \frac{\partial \phi}{\partial t}+\frac{|\mathbf{V}|^2-U_\infty^2}{2} \right ] \\
+&amp; \approx -\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty u \right ] \\
+&amp; = -\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty \frac{\partial \phi}{\partial x}  \right ] 
 \end{split}
 \end{equation*}\]</div>
-<p>Again, assuming <span class="math notranslate nohighlight">\(\phi_{LE}=0\)</span> the lift expression simplifies to</p>
-<div class="math notranslate nohighlight">
-\[L=2\rho\int_{-b}^{b}2\rho \frac{\partial \phi_u}{\partial t} dx +U_\infty \phi_{TE}\]</div>
-<p>So once the potential function on the upper surface of the airfoil is known, the total unsteady lift at a given instant of time can be evaluated in a straightforward manner.</p>
-</div>
-</div>
-<div class="section" id="method-of-singularities">
-<h2>Method of singularities<a class="headerlink" href="#method-of-singularities" title="Permalink to this headline">¶</a></h2>
-<p>The method of singularities presents an alternate technique of obtaining the flow field around an airfoil. Here, the flow field is obtained by directly placing singularities on the airfoil surface and satisfying the no penetration boundary condition on the surface of the airfoil itself. Afterall, this is the bare minimum physical law that the fluid flowing around the airfoil has to satisfy - it cannot flow through the surface of the airfoil.</p>
-<div class="section" id="a-simple-case">
-<h3>A simple case<a class="headerlink" href="#a-simple-case" title="Permalink to this headline">¶</a></h3>
-<p>The simplest formulation of this modelling stragety involves idealisation of the airfoil with a vortex of strength <span class="math notranslate nohighlight">\(\Gamma\)</span> at the airfoil quarter chord.</p>
-<center>
-    <img src="../../assets/QuarterChordVortex.png" class="big">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of flow around an airfoil using a vortex at the quarter chord.</p>
-</center><p>However, unlike the conformal mapping technique above where <span class="math notranslate nohighlight">\(\Gamma\)</span> is the total circulation due to distributed vorticity over the airfoil, the strength of <span class="math notranslate nohighlight">\(\Gamma\)</span> here is obtained by satifying the no penetration condition only at a single point on the airfoil called the collocation point. In this case, the collocation point is chosen to be the <span class="math notranslate nohighlight">\(3c/4\)</span> location to be resultant <span class="math notranslate nohighlight">\(\Gamma\)</span> to be consistent with the result obtained from conformal mapping technique.</p>
-</div>
-<div class="section" id="general-case">
-<h3>General case<a class="headerlink" href="#general-case" title="Permalink to this headline">¶</a></h3>
-<center>
-    <img src="../../assets/GammaDistribution.png" class="big">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of an airfoil via distribution of singularities</p>
-</center><p>Since the unknown <span class="math notranslate nohighlight">\(\gamma(x)\)</span> is an unknown distribution, it cannot be simply obtained via just a single equation as the ‘simple case’ above. Rather the no penetration boundary condition needs to be satisfied at each point on the airfoil surface.</p>
-<center>
-    <img src="../../assets/GammaDistributionNoPenetration.png" class="large">
-    <p  style="font-size:16px; color:gray; text-align:center;"> Idealisation of an airfoil via distribution of singularities</p>
-</center><p>\begin{aligned}
-\left.V_{\perp}\right)<em>\gamma &amp;= \left.V</em>{\perp}\right)<em>{U</em>{\infty}} \
-\Rightarrow \int \frac{\gamma(x) d x^{\prime}}{2 \pi\left(x-x^{\prime}\right)} &amp;= U_{\infty} \sin \left(\alpha-\theta_c\right) \
-\end{aligned}</p>
-<p>Therefore, the governing equation for <span class="math notranslate nohighlight">\(\gamma(x)\)</span> is given by-</p>
-<div class="math notranslate nohighlight">
-\[\int \frac{\gamma(x) d x^{\prime}}{2 \pi\left(x-x^{\prime}\right)} = U_{\infty} \sin \left(\alpha-\frac{dy_c}{dx}\right)
-\]</div>
-<div class="admonition-sohngen-s-formula admonition">
-<p class="admonition-title">Sohngen’s formula</p>
-<p>The circle theorem helps obtain the complex flow field around a cyclinder in the most general case. It states that if <span class="math notranslate nohighlight">\(F(z)\)</span> is the flow field in the absence of the cylinder then the flow field in the presence of the cylinder is given by <span class="math notranslate nohighlight">\(F(z)+\bar{F}(\frac{a^2}{z})\)</span>. The solution is based on the idea of images such that a streamline denoting a solid boundary defines a circle. More details can be obtained from <span id="id8">[<a class="reference internal" href="../References.html#id33">Bat00</a>]</span>(Page 422-423) and <span id="id9">[<a class="reference internal" href="../References.html#id16">MT40</a>]</span>.</p>
-</div>
+<p>Here <span class="math notranslate nohighlight">\(|\nabla \phi|^2 = |\mathbf{V}|^2\)</span> is a non-linear term which has been linearised about the mean flow velocity of <span class="math notranslate nohighlight">\(U_\infty\)</span>. Additionally, <span class="math notranslate nohighlight">\(\mathbf{V} = (u+U_\infty)\hat{i}+v\hat{j}\)</span> was assumed in the above derivation where <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v&lt;&lt;U_\infty\)</span>.</p>
+<p>So once the potential function on the surface of the airfoil is known, the total unsteady lift at a given instant of time can be evaluated in a straightforward manner.</p>
 </div>
 </div>
 <div class="section" id="unsteady-development-of-steady-lift">
 <h2>Unsteady Development of Steady lift<a class="headerlink" href="#unsteady-development-of-steady-lift" title="Permalink to this headline">¶</a></h2>
-<p>We now know that in case of an impulsively started flow, Kelvin’s theorem needs to apply and consequently a starting vortex is shed in the wake as a vorticity of equal magnitude develops around the airfoil. In reality, this circulation develops due to the viscous property of fluids which is completely ignored in the potential flow theory that has been used as the modelling strategy. Instead, the Kutta condition has been used to uniquely quantify the circulatory effect around the airfoil. Based on the level of modelling fidelity, this unsteady scenario that exists at the moment of generation of the starting vortex, the total lift can be evaluated using either distributed vorticity method or the concentrated vorticity method discussed above.</p>
+<p>We now know that in case of an impulsively started flow, Kelvin’s theorem needs to apply and consequently a starting vortex is shed in the wake as a vorticity of equal magnitude develops around the airfoil. In reality, this circulation develops due to the viscous property of fluids which is completely ignored in the potential flow theory that has been used as the modelling strategy. Instead, the Kutta condition has been used to uniquely quantify the circulatory effect around the airfoil. Based on the level of modelling fidelity, the total lift can be evaluated either assuming distributed vorticity or concentrated vorticity.</p>
 <center>
     <img src="../../assets/BoundStartingVortexT0+.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Two levels of modelling instantaneous circulation due to bound and starting vortex after impulsive start of flow</p>
 </center>
-<p>Since the starting vortex is close to the airfoil it induces a velocity on the surface of the airfoil much like the induced velocity concept we’ve now become familiar with in the context of finte-wing theory. <em>So even 2D airfoils experience an induced velocity when unsteadiness is accounted for.</em> As time progresses the starting vortex drifts apart from the airfoil and the corresponding induced velocity effect on the airfoil decreases. After sufficiently long time, the effect of the starting vortex is negligible so its even its mere presence is ignored and we have the familiar picture of steady-state lift generation around an airfoil represented as bound vorticity that we are familiar with.</p>
+<p>Since the starting vortex is close to the airfoil it induces a velocity on the surface of the airfoil much like the induced velocity concept we’ve now become familiar with in the context of finite-wing theory. <em>So even 2D airfoils experience an induced velocity when unsteadiness is accounted for, steady airfoils don’t!.</em> As time progresses the starting vortex drifts away from the airfoil and the corresponding induced velocity effect on the airfoil decreases. After sufficiently long time, the effect of the starting vortex is negligible such that even its mere presence is ignored and we have the familiar picture of steady-state lift generation around an airfoil represented as bound vorticity that we are familiar with.</p>
 <center>
     <img src="../../assets/BoundVortexLargeTime.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Two levels of modelling instantaneous circulation due to bound and starting vortex after impulsive start of flow</p>
@@ -925,7 +859,7 @@ L &amp;= \int_{-b}^{b}p_l-p_u dx \\
 </div>
 <div class="section" id="unsteady-lift-due-to-airfoil-motion">
 <h2>Unsteady Lift due to Airfoil Motion<a class="headerlink" href="#unsteady-lift-due-to-airfoil-motion" title="Permalink to this headline">¶</a></h2>
-<p>Now, extending the above strategy of modelling <em>true</em> unsteadiness i.e. the airfoil is undergoing motion such that its angle of attack is constantly changing. Using the physical model that has been used until now based on established fluid dynamics prinicples, airfoil motion immediately implies changing angle of attack. This in turn means a varying bound circulation around the airfoil and, therefore, more ‘starting’ vortices except now they are refered to as shed vortices. Like the starting vortex in the case of steady flow, shed vortices are emanated from the airfoil trailing-edge and thereafter move with the free stream flow and their effect on the airfoil can be neglected when they get far fro the airfoil. However, due to the varying bound vorticity around the airfoil there is new shed vortices continuously introduced into the flow from the trailing-edge. Even after sufficiently long time the lift generated by the airfoil will not reach a steady state because - 1) the airfoil is moving so the angle of attack is not constant and 2) the airfoil is continuously under the influence of induced velocity of shed vortices. The shed vortices are continuously drifting away from the airfoil so their effect on the airfoil is also continuously varying. Keeping track of this time varying strength and position of shed vortices, in order to quantify their influence on the airfoil and thereby help evaluate the net lift generated by the airfoil is what unsteady aerodynamics analysis is all about in a nutshell. If you do not account for the effect of the wake, then one ends up with the steady aerodynamics domain of analysis.</p>
+<p>Now, extending the above strategy of modelling unsteadiness when the airfoil is undergoing motion such that its angle of attack is constantly changing. Using the physical model that has been used until now based on established fluid dynamics prinicples, airfoil motion immediately implies changing angle of attack. This in turn means a varying bound circulation around the airfoil and, therefore, more ‘starting’ vortices except now they are refered to as shed vortices. Like the starting vortex, shed vortices are emanated from the airfoil trailing-edge and thereafter move with the free stream and their effect on the airfoil can be neglected when they get far from the airfoil. However, due to the varying bound vorticity around the airfoil there is new shed vortices continuously introduced into the flow from the trailing-edge. Even after sufficiently long time the lift generated by the airfoil will not reach a steady state because - 1) the airfoil is moving so the angle of attack is not constant and 2) the airfoil is continuously under the influence of induced velocity of shed vortices. The shed vortices are continuously drifting away from the airfoil so their effect on the airfoil is also continuously varying. Keeping track of this time varying strength and position of shed vortices, in order to quantify their influence on the airfoil, and thereby help evaluate the net lift generated by the airfoil, is what unsteady aerodynamics analysis is all about in a nutshell. If you do not account for the effect of the wake, then one ends up with the steady aerodynamics domain of analysis.</p>
 <center>
     <img src="../../assets/BoundShedVortexUnsteady.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Instantaneous circulation due to bound and starting vortex after impulsive start of flow</p>

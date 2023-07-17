@@ -610,7 +610,7 @@ In this case, the system is expected to have the following characteristics-
 <center>
     <img src="../../assets/A21_fig2.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Airfoil+trailing-edge flap model in Theodorsen model <a href="https://ntrs.nasa.gov/api/citations/19930090935/downloads/19930090935.pdf">[source] </a></p>
-</center><p>The schematic model of the airfoil with trailing-edge used in the Theodorsen model is shown above. The airfoil is placed such that the origin coincides with the mid-chord of the airfoil. The total chord length is <span class="math notranslate nohighlight">\(2b\)</span> where <span class="math notranslate nohighlight">\(b\)</span> is referred to as the semi-chord. This is done because quite often it is the semi-chord that keeps popping up in expressions rather than the total chord itself. The symbol <span class="math notranslate nohighlight">\(c\)</span> is reserved for the distance of the flap hinge from the mid-chord. The oncoming flow velocity is assumed to be constant within Theodorsen model and only steady-state aerodynamic pressure distribution over the airfoil due harmonic motion can be solved - no transients allowed.</p>
+</center><p>The schematic model of the airfoil with trailing-edge used in the Theodorsen model is shown above. The airfoil is placed such that the origin coincides with the mid-chord of the airfoil. The total chord length is <span class="math notranslate nohighlight">\(2b\)</span> where <span class="math notranslate nohighlight">\(b\)</span> is referred to as the semi-chord. This is done because quite often it is the semi-chord that keeps popping up in expressions rather than the total chord itself. The symbol <span class="math notranslate nohighlight">\(c\)</span> is reserved for the distance of the flap hinge from the mid-chord. The oncoming flow velocity is assumed to be constant within Theodorsen model and only steady-state aerodynamic pressure distribution over the airfoil due harmonic motion can be solved - no transients allowed. The centers of gravity of the airfoil and the trailing-edge flap are relevant here because Theodorsen went on to use the results of the model to analyse flutter.</p>
 <div class="section" id="final-equations">
 <h2>Final equations<a class="headerlink" href="#final-equations" title="Permalink to this headline">¶</a></h2>
 <p>The total lift acting on the complete airfoil (i.e. together with flap) is</p>
@@ -760,6 +760,8 @@ L &amp;= \int_{-b}^{b}p_l-p_u dx \\
 <li><p><span class="math notranslate nohighlight">\(L_{NC}=0\)</span> if <span class="math notranslate nohighlight">\(\frac{\partial \phi}{\partial t}=0\)</span></p></li>
 </ul>
 </li>
+</ul>
+<ul class="simple">
 <li><p>Also refered to as lift due to added mass<br />
 <span class="math notranslate nohighlight">\(L_{NC} = \underbrace{\pi \rho b^2}_\text{added mass} \underbrace{\left[(U \dot{\alpha}+\ddot{h}-\ddot{\alpha} a b) \right]}_\text{acceleration at mid-chord}\)</span></p>
 <ul>
@@ -767,11 +769,15 @@ L &amp;= \int_{-b}^{b}p_l-p_u dx \\
 <li><p>the amount of fluid influenced depends on size of airfoil</p></li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(L_{NC}\)</span> can be thought of as the reactionary inertial force acted on the airfoil by the fluid</p>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(L_{NC}\)</span> is the reactionary inertial force acted on the airfoil by the fluid</p>
 <ul>
 <li><p>airfoil lift acts opposite to the direction of airfoil acceleration</p></li>
 </ul>
 </li>
+</ul>
+<ul class="simple">
 <li><p>Net <span class="math notranslate nohighlight">\(L_{NC}\)</span> over one actuation cycle is 0</p></li>
 </ul>
 <p>There are some additional results worth noting based on the derivation so far. The velocity in the cylinder domain at the point corresponding to the airfoil trailing-edge is given by</p>
@@ -833,7 +839,7 @@ V_\theta(\frac{b}{2},0)&amp;=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) +\frac{\
 <div class="math notranslate nohighlight">
 \[ V_{\theta,C}(\frac{b}{2},0) = -\frac{1}{\pi b}\int_{b}^{\infty} \gamma_w(z,t)\sqrt{ \frac{z+b}{z-b}}dz\]</div>
 <center>
-    <img src="../../assets/TheodorsenGammaWake.png" class="medium">
+    <img src="../../assets/TheodorsenGammaWake.png" class="Large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Conformal representation of a flat plate (airfoil) as a circle within the Theodorsen model.</p>
 </center><p>Much like the steady aerodynamics case, the Kutta condition in the unsteady aerodynamics case needs to be satisfied which takes the form</p>
 <div class="math notranslate nohighlight">
@@ -890,7 +896,7 @@ V_\theta(\frac{b}{2},0)&amp;=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) +\frac{\
 <p>where,</p>
 <div class="math notranslate nohighlight">
 \[L_{QS}= \rho U^2 b 2\pi\alpha_{3c/4}(t)=\rho U\int_{b}^{\infty} \gamma_w(z,t)\sqrt{ \frac{z+b}{z-b}}dz \]</div>
-<p>So, the circulatory component of lift (i.e. lift due to circulation around the airfoil) is equal to the quasi-steady lift times a factor that is a function of the wake. Since <span class="math notranslate nohighlight">\(\gamma_w\)</span> is unknown, the integrals cannot be solved for general airfoil motion. Therefore, while the non-circulatory component of lift acting on an airfoil can be obtained for any random motion, the circulatory component can only be obtained for specific types of motion for which the integrals involving <span class="math notranslate nohighlight">\(\gamma_w\)</span> CAN be solved. Theodorsen solved them assuming simple harmonic motion of the airfoil i.e. <span class="math notranslate nohighlight">\(\alpha_{3c/4}=\alpha_0 e^{i\omega t}\)</span>. The crucial bit of realisation necessary for a solution comes from the equation for <span class="math notranslate nohighlight">\(L_{QS}\)</span> which is linear (or the integral circulation equation mentioned earlier), a not-so-easily solvable integral equation but linear nonetheless, and the property of linear systems that respond harmonically to harmonic excitation with certain amplitude and a phase shift. With that in mind, the ‘response’ of our system <span class="math notranslate nohighlight">\(\gamma_w\)</span> would be of the form</p>
+<p>So, the circulatory component of lift (i.e. lift due to circulation around the airfoil) is equal to the quasi-steady lift times a factor that is a function of the wake. Since <span class="math notranslate nohighlight">\(\gamma_w\)</span> is unknown, the integrals cannot be solved for general airfoil motion. Therefore, while the non-circulatory component of lift acting on an airfoil can be obtained for any random motion, the circulatory component can only be obtained for specific types of motion for which the integrals involving <span class="math notranslate nohighlight">\(\gamma_w\)</span> CAN be solved. Theodorsen solved them assuming simple harmonic motion of the airfoil i.e. <span class="math notranslate nohighlight">\(\alpha_{3c/4}=\alpha_0 e^{i\omega t}\)</span>. The crucial bit of realisation necessary for a solution comes from the equation for <span class="math notranslate nohighlight">\(L_{QS}\)</span> (or the integral circulation equation mentioned earlier) which is linear, a not-so-easily solvable integral equation but linear nonetheless, and the property of linear systems that respond harmonically to harmonic excitation with certain amplitude and a phase shift. With that in mind, the ‘response’ of our system <span class="math notranslate nohighlight">\(\gamma_w\)</span> would be of the form</p>
 <div class="math notranslate nohighlight">
 \[\gamma_w(z,t) = \gamma_w(z)e^{i\omega t +\phi} = \overline{\gamma}_w(z)e^{i\omega t}\]</div>
 <p>Not just that, because any shed vortices in the wake move with the flow speed <span class="math notranslate nohighlight">\(U\)</span>, the following relation also exists</p>

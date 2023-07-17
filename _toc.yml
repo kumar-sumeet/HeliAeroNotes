@@ -42,6 +42,30 @@ parts:
     chapters:
       - file: Lectures/AerodynamicsFundamentals_I
 
+  - caption: Unsteady Aerodynamics
+    chapters:
+      - file: Lectures/8_UnsteadyAerodynamics/UnsteadyAerodynamics
+      - file: Lectures/8_UnsteadyAerodynamics/TheodorsenModel
+#      - file: Lectures/8_UnsteadyAerodynamics/Loewy
+#      - file: Lectures/9_DynamicStall/DynamicStall
+##        sections:
+##          - file: Lectures/9_DynamicStall/PetersHe
+#      - file: Lectures/10_Autogyro/Autogyro
+#        sections:
+#          - file: Lectures/10_Autogyro/Autorotation
+##          - file: Lectures/10_Autogyro/Autogyro
+#      - file: Lectures/11_DynamicInflow/DynamicInflow
+#        sections:
+#          - file: Lectures/11_DynamicInflow/PetersHe
+#        
+
+#- caption: Modern Designs
+#    chapters:
+#      - file: Lectures/7_ModernDesigns/ModernRotors
+#      - file: Lectures/7_ModernDesigns/ActiveRotors
+#      - file: Lectures/7_ModernDesigns/ABC
+#      - file: Lectures/7_ModernDesigns/CompoundHelicopters
+#      - file: Lectures/7_ModernDesigns/NovelBladePlanforms
 
   - caption: References
     chapters:

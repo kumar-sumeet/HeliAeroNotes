@@ -408,7 +408,7 @@
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id7">
        No-penetration boundary condition
       </a>
      </li>
@@ -418,7 +418,7 @@
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id8">
        Putting it all together
       </a>
      </li>
@@ -517,7 +517,7 @@
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id7">
        No-penetration boundary condition
       </a>
      </li>
@@ -527,7 +527,7 @@
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id8">
        Putting it all together
       </a>
      </li>
@@ -620,11 +620,11 @@ In this case, the system is expected to have the following characteristics-
 L= \underbrace{\rho b^2\left(U \pi \dot{\alpha}+\pi \ddot{h}-\pi b a \ddot{\alpha}-U T_4 \dot{\beta}-T_1 b \ddot{\beta}\right)}_\text{non-circulatory} +  \underbrace{2 \pi \rho U b C(k)\left\{U \alpha+\dot{h}+ b\left(\frac{1}{2}-a\right) \dot{\alpha}+\frac{1}{\pi} T_{10} U \beta\right.  \left.+b \frac{1}{2 \pi} T_{11} \dot{\beta}\right\}}_\text{circulatory}
 \end{split}
 \end{equation*}\]</div>
-<p>Moment acting about the airfoil quarter-chord is</p>
+<p>Moment acting about the airfoil pitching location <span class="math notranslate nohighlight">\(x=ba\)</span> is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*} 
 \begin{split}
-M_\alpha = &amp; \underbrace{-\rho b^2\left[\pi\left(\frac{1}{2}-a\right) U b \dot{\alpha}+\pi b^2\left(\frac{1}{8}+a^2\right) \ddot{\alpha} +\left(T_4+T_{10}\right) U^2 \beta +\left(T_1-T_8-(c-a) T_4+\frac{1}{2} T_{11}\right) U b \dot{\beta} -\left(T_7+(c-a) T_1\right) b^2 \ddot{\beta}-a \pi b \ddot{h}\right]}_\text{non-circulatory} \\
+M = &amp; \underbrace{-\rho b^2\left[\pi\left(\frac{1}{2}-a\right) U b \dot{\alpha}+\pi b^2\left(\frac{1}{8}+a^2\right) \ddot{\alpha} +\left(T_4+T_{10}\right) U^2 \beta +\left(T_1-T_8-(c-a) T_4+\frac{1}{2} T_{11}\right) U b \dot{\beta} -\left(T_7+(c-a) T_1\right) b^2 \ddot{\beta}-a \pi b \ddot{h}\right]}_\text{non-circulatory} \\
 &amp; \underbrace{+2 \rho U b^2 \pi\left(a+\frac{1}{2}\right) C(k)\left[U \alpha+\dot{h}+b\left(\frac{1}{2}-a\right) \dot{\alpha}\right.  \left.+\frac{1}{\pi} T_{10} U \beta+b \frac{1}{2} T_{11} \dot{\beta}\right]}_\text{circulatory}
 \end{split}
 \end{equation*}\]</div>
@@ -711,6 +711,9 @@ V_\theta(\frac{b}{2},\theta) &amp;= -\frac{1}{2\pi }\int_{\theta}^{\pi }\frac{q(
 &amp;=-\frac{1}{2\pi }\int_{\theta}^{\pi }\frac{4\sin\varphi v_{motion} \sin\varphi d\varphi}{\cos \theta -\cos \varphi}
 \end{split}
 \end{equation*}\]</div>
+<p>Substituting for <span class="math notranslate nohighlight">\(v_motion\)</span> brings the integral in the form of the so called Galuert’s integral <span class="math notranslate nohighlight">\(I_n\)</span>, commonly used in thin airfoil theory results, provided in <span id="id5">[<a class="reference internal" href="../References.html#id32">Gla36</a>]</span>(Pg 92-93).</p>
+<div class="math notranslate nohighlight">
+\[I_n=\int_0^\pi \frac{\cos n \theta}{\cos \theta-\cos \phi} d \theta=\pi \frac{\sin n \phi}{\sin \phi} .\]</div>
 <p>Again skipping the intermediate steps, the final result obtained as a consequence of carrying out the above integration is as follows-</p>
 <div class="math notranslate nohighlight">
 \[V_\theta(\frac{b}{2},\theta)=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) \cos \theta+\frac{\dot{\alpha}b}{2} \cos 2 \theta\right]\]</div>
@@ -729,7 +732,7 @@ V_\theta(\frac{b}{2},\theta) &amp;= -\frac{1}{2\pi }\int_{\theta}^{\pi }\frac{q(
 \[\phi_{TE} = \phi_{cyl}(\theta =0) = 0\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \phi(\theta)}{\partial t} = b\left[(U \dot\alpha+\ddot{h}-\ddot{\alpha} a b) \sin \theta+\frac{\ddot{\alpha}b}{2} \sin 2 \theta\right]\]</div>
-<p>Note that the Theodorsen theory assumes a constant oncoming flow velocity <span class="math notranslate nohighlight">\(U\)</span>, however if the oncoming flow velocity is also time-varying then the above expression for <span class="math notranslate nohighlight">\(\frac{\partial \phi}{\partial t}\)</span> changes accordingly. Recall that a general airfoil section on rotor blade undergoes pitching, plunging and lead-lag motion so a general unsteady model that incorporates time-varying oncoming flow velocity is more relevant for rotocraft applications. Additionally, during forward flight motion there is a large time-varying component of the oncoming flow velocity too. Such a model exists and was proposed by Greenberg <span id="id5">[<a class="reference internal" href="../References.html#id20">Gre47</a>]</span> a few years after the Theodorsen’s model. However we continue to focus on the Theodorsen model for its <em>relative</em> simplicity.</p>
+<p>Note that the Theodorsen theory assumes a constant oncoming flow velocity <span class="math notranslate nohighlight">\(U\)</span>, however if the oncoming flow velocity is also time-varying then the above expression for <span class="math notranslate nohighlight">\(\frac{\partial \phi}{\partial t}\)</span> changes accordingly. Recall that a general airfoil section on rotor blade undergoes pitching, plunging and lead-lag motion so a general unsteady model that incorporates time-varying oncoming flow velocity is more relevant for rotocraft applications. Additionally, during forward flight motion there is a large time-varying component of the oncoming flow velocity too. Such a model exists and was proposed by Greenberg <span id="id6">[<a class="reference internal" href="../References.html#id20">Gre47</a>]</span> a few years after the Theodorsen’s model. However we continue to focus on the Theodorsen model for its <em>relative</em> simplicity.</p>
 <p>From the last chapter, recall that</p>
 <div class="math notranslate nohighlight">
 \[p-p_\infty = -\rho\left [ \frac{\partial \phi}{\partial t}+U_\infty \frac{\partial \phi}{\partial x}  \right ] \]</div>
@@ -808,8 +811,8 @@ V_\theta(\frac{b}{2},0)&amp;=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) +\frac{\
 <h3>Conservation of circulation<a class="headerlink" href="#conservation-of-circulation" title="Permalink to this headline">¶</a></h3>
 <p>That the dominant mechanism of lift generation by an airfoil is by introducing circulation has already been discussed. Any change in this circulation proceeds with shedding of an equivalent vortex of opposite strength in the wake that then moves away from the airfoil with the freestream. So clearly one needs to solve the flowfield for the situation when there is a vortex in the wake. We do this in the cylinder domain but now care needs to be taken because the addition of vortices that do not lie at the center of the cylinder as a streamline already established via placement of sources/sinks.</p>
 </div>
-<div class="section" id="id6">
-<h3>No-penetration boundary condition<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>No-penetration boundary condition<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>The no-penetration boundary condition was already satisfied when solving for the non-circulatory flow. In the Theodorsen’s model this boundary condition is continued to be satisfied by judicious placement of <span class="math notranslate nohighlight">\(-\Gamma\)</span> such that the surface of the cylinder continues to be a streamline i.e. there is no flow perpendicular to it. The distance from the center of cylinder where the vortex needs to be placed is</p>
 <div class="math notranslate nohighlight">
 \[d = \frac{b^2}{4X}\]</div>
@@ -821,8 +824,8 @@ V_\theta(\frac{b}{2},0)&amp;=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) +\frac{\
 <div class="math notranslate nohighlight">
 \[V_\theta(\frac{b}{2},0)_{NC} + V_\theta(\frac{b}{2},0)_{C} =0\]</div>
 </div>
-<div class="section" id="id7">
-<h3>Putting it all together<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>Putting it all together<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[F=\frac{\Gamma}{2 \pi i}[\ln (\xi-X)-\ln (\xi-d)]\]</div>
 <div class="math notranslate nohighlight">
@@ -881,7 +884,7 @@ V_\theta(\frac{b}{2},0)&amp;=2\left[(U \alpha+\dot{h}-\dot{\alpha} a b) +\frac{\
 <div class="admonition-aside admonition">
 <p class="admonition-title">Aside</p>
 <p>The above result suggests that the influence of the starting vortex, on the lift generated by an airfoil in case of a steady angle of attack, reduces as the vortex moves downstream with the flow. In fact as <span class="math notranslate nohighlight">\(t\rightarrow \infty\)</span> so does <span class="math notranslate nohighlight">\(z\rightarrow \infty\)</span>, making the total lift generated by the airfoil reduce to the familiar Kutta-Joukowski expression. However, when the starting vortex is close to the airfoil trailing-edge the above result suggests that the amount of lift generated can get very large and even <span class="math notranslate nohighlight">\(L_C \rightarrow \infty\)</span> when <span class="math notranslate nohighlight">\(z\rightarrow b\)</span>. One would presume that the situation modelled by the above expression relates closely to the step increase of angle of attack where a single discrete starting vortex might be formed in the flow corresponding to an equivalent circulation established around the airfoil. This is something that is of course not what is observed in reality as has been mentioned earlier.</p>
-<p>The disconnect comes from the fact that <span class="math notranslate nohighlight">\(\left.  \Gamma_{bound}  \right |_{t=0+} \neq  \left.  \Gamma_{bound}  \right |_{t\rightarrow \infty}\)</span>. In fact <span class="math notranslate nohighlight">\(\Gamma_{bound}\)</span> develops progressively around the airfoil as time progresses and this is sometimes referred to as the ‘Wagner effect’ <span id="id8">[<a class="reference internal" href="../References.html#id17">San03</a>]</span> after Herbert Wagner who was the first to propose analytical expressions for the development of this unsteady lift on an impulsively pitched airfoil <span id="id9">[<a class="reference internal" href="../References.html#id21">Wag25</a>]</span> as shown above.</p>
+<p>The disconnect comes from the fact that <span class="math notranslate nohighlight">\(\left.  \Gamma_{bound}  \right |_{t=0+} \neq  \left.  \Gamma_{bound}  \right |_{t\rightarrow \infty}\)</span>. In fact <span class="math notranslate nohighlight">\(\Gamma_{bound}\)</span> develops progressively around the airfoil as time progresses and this is sometimes referred to as the ‘Wagner effect’ <span id="id9">[<a class="reference internal" href="../References.html#id17">San03</a>]</span> after Herbert Wagner who was the first to propose analytical expressions for the development of this unsteady lift on an impulsively pitched airfoil <span id="id10">[<a class="reference internal" href="../References.html#id21">Wag25</a>]</span> as shown above.</p>
 <center>
     <img src="../../assets/A23_2_AirfoilStepInput.png" class="large">
     <p  style="font-size:16px; color:gray; text-align:center;"> Airfoil lift developement after step-input <a href="https://arc.aiaa.org/doi/pdf/10.2514/6.2019-1853">[source] </a> </p>
@@ -952,7 +955,7 @@ L &amp;= L_{NC}+L_C \\
 </div>
 <p>For an exemplary case of an airfoil of chord <span class="math notranslate nohighlight">\(c\)</span> pitching as <span class="math notranslate nohighlight">\(\alpha = \alpha_0 \sin (\omega t)\)</span> in an oncoming flow with freestream velocity of <span class="math notranslate nohighlight">\(U_\infty\)</span>, the corresponding unsteady lift then is given by</p>
 <div class="math notranslate nohighlight">
-\[L =\pi \rho b^2 \alpha_0 \left[(U\omega \cos (\omega t +\phi)+\omega^2 \cos (\omega t+\phi) a b) \right]  + 2 \rho U^2 b \pi \left | C(k) \right | \left [\sin (\omega t+\phi) + b \left ( \frac{1}{2}-a \right ) \frac{\omega \cos (\omega t+\phi)}{V} \right]\]</div>
+\[L =\pi \rho b^2 \alpha_0 \left[(U\omega \cos (\omega t)+\omega^2 \cos (\omega t) a b) \right]  + 2 \rho U^2 b \pi \left | C(k) \right | \left [\sin (\omega t+\phi) + b \left ( \frac{1}{2}-a \right ) \frac{\omega \cos (\omega t+\phi)}{V} \right]\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> is the phase of the complex <span class="math notranslate nohighlight">\(C(k)\)</span> at <span class="math notranslate nohighlight">\(k=\omega b/U_\infty\)</span>.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="summary-and-final-thoughts">

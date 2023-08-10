@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/sumeetkumar/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import plotly.graph_objects as go
+import glob
+import matplotlib.pyplot as plt
+import plotly.express as px
+import pandas as pd
+from plotly.graph_objects import Layout
+import os
+import plotly.io as pio
+
+def pathformach(filepath=f"MCC0.00/"):
+    all_files = glob.glob(filepath + "**/00_coeff00.dat")
+    li = [pd.read_csv(filename, index_col=None, header=0, sep='\s+') for filename in all_files]
+    df = pd.concat(li , axis=0, ignore_index=True)
+    col_names = {'MACH':'M', 'ALPHA':'Alpha', 'C-lift':'Cl','C-drag': 'Cd', 'C-my':'Cm'}
+    df.rename(columns=col_names, inplace=True)
+    df.sort_values(['M', 'Alpha','Cd'], inplace=True)
+    return(df)
+
+def machplot(filepath,coef):
+    df=pathformach(filepath)
+    pio.templates.default = "simple_white"
+
+    fig= px.line(df, x="Alpha", y=coef, color="M",color_discrete_sequence= px.colors.sequential.Plasma_r,)
+    pio.templates.default = "simple_white"
+
+    fig.update_layout(
+    title= coef + " vs. Alpha",
+    xaxis_title="Alpha [deg]", 
+    yaxis_title= coef)
+    fig.update_xaxes(range=[-15, 15])
+
+    fig.update_traces(textposition='top center')
+    fig.update_xaxes(showline=True, linewidth=1, linecolor='black',
+                 mirror=False, showgrid=True, gridwidth=1, gridcolor='Gray', zeroline=True, 
+                 zerolinewidth=2, zerolinecolor='black')
+    fig.update_yaxes(showline=True, linewidth=1, linecolor='black', 
+                 showgrid=True, gridwidth=0.5, gridcolor='Gray', mirror=False,zeroline=True,
+                 zerolinewidth=1, zerolinecolor='Gray')
+    return fig.show()
+
+machplot(f"MCC0.00/","Cl")
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m<ipython-input-1-df437a53519d>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mimport[0m [0mplotly[0m[0;34m.[0m[0mgraph_objects[0m [0;32mas[0m [0mgo[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mimport[0m [0mglob[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mplotly[0m[0;34m.[0m[0mexpress[0m [0;32mas[0m [0mpx[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'plotly'
+ModuleNotFoundError: No module named 'plotly'
+

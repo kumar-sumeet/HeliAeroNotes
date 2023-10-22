@@ -549,7 +549,7 @@
 <blockquote class="epigraph">
 <div><p>On a strictly mathematical level, engineers know how to design planes that will stay aloft. But equations don’t explain why aerodynamic lift occurs. There are two competing theories that illuminate the forces and factors of lift. Both are incomplete explanations. Aerodynamicists have recently tried to close the gaps in understanding. Still, no consensus exists.</p>
 </div></blockquote>
-<p style="text-align:right" > <a href="https://www.scientificamerican.com/article/no-one-can-explain-why-planes-stay-in-the-air/"> Scientific American</a> </p><p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. As some of the quotes above imply, the mathematical theory of fluid behavior, and by extension the mathematiacl theory of flight, are well established. However, given the complex equations involved a straightforward cause and effect relation is difficult to establish and hence a simple intuitive explanation for something even as common and fundamental as the process of lift generation on an airfoil is still missing. Nevertheless, below we try to make as much progress as possible in the improving/refreshing the understanding of the fundamental fluid dynamics concepts involved.</p>
+<p style="text-align:right" > <a href="https://www.scientificamerican.com/article/no-one-can-explain-why-planes-stay-in-the-air/"> Scientific American</a> </p><p>This chapter is a whirlwind tour of some of the basics of airfoil aerodynamics that is relevant for this course. Since airfoils can be imagined as the basic building blocks that make up the rotor, the fundamental understanding of airfoil aerodynamics laid down here would help develop a more intuitive understanding of rotor aerodynamics. As some of the quotes above imply, the mathematical theory of fluid behavior, and by extension the mathematiacl theory of flight, are well established. However, given the complex equations involved a straightforward cause and effect relation is difficult to establish and hence a simple intuitive explanation for something even as common and fundamental as the process of lift generation on an airfoil is still missing. Nevertheless, below we try to make as much progress as possible in the improving/refreshing the understanding of the fundamental fluid dynamics concepts involved. It is hoped that the discussions in this chapter will make the fundamental concepts, underlying much of fluid dynamics, more intuitive than the involved mathematical equations themselves.</p>
 <p>This chapter is predominantly based on the content in <span id="id1">[<a class="reference internal" href="References.html#id37">McL13</a>]</span>, in particular Chapter 7 from this reference. Additionally, <span id="id2">[<a class="reference internal" href="References.html#id22">PJ06a</a>]</span> and <span id="id3">[<a class="reference internal" href="References.html#id23">PJ06b</a>]</span> provide a good overview of the historical development of the field of fluid dynamics.</p>
 <div class="section" id="bodies-in-fluids">
 <h2>Bodies in fluids<a class="headerlink" href="#bodies-in-fluids" title="Permalink to this headline">¶</a></h2>
@@ -736,7 +736,7 @@
 <center>
     <img src="../assets/BA3_fig3_3_5.png" class="big">
     <p  style="font-size:16px; color:gray; text-align:center;"> Vorticity of a continuum particle/element (modified from <a href="https://www.wiley.com/en-us/Understanding+Aerodynamics%3A+Arguing+from+the+Real+Physics-p-9781119967514">[source]) </a></p>
-</center><p>Fluid dynamics, as it concerns aerospace engineering, is largely about keeping track of vorticity generation and vorticity transport. It is introduced into the flow due to no-slip condition at the airfoil surface (or the surface of any body for that matter). This vorticity doesn‘t just immediately dissipate/dissapear and keeping track of it is imperative to get overall aerodynamics right.</p>
+</center><p>Fluid dynamics, as it concerns aerospace engineering, is largely about keeping track of vorticity generation and vorticity transport. It is introduced into the flow due to no-slip condition at the airfoil surface (or the surface of any body for that matter). This vorticity doesn‘t just immediately dissipate/dissapear and keeping track of it is imperative to get overall aerodynamics right. Note that viscosity is not necessary in order to generate vorticity, based on the flow profiles shown above if <em>somehow</em> a velocity shear exists between two layers of fluid then we know from the definition that a sheet of vorticity exists between those two layers and viscosity does not even come into the picture.</p>
 <p>Recall that the velocity profile within the boundary layer on the upper surface looks like that shown in figure (c) above, where the lower fluid layers always have a lower velocity than the ones above them leading to a shearing effect and consequently generate vorticity in the fluid. The figure below shows varying degrees of modelling fidelity where the vorticity distributed within the fluid volume in the boundary layer is approximated as lumped as a sheet over the surface of the airfoil itself or lumped over a line (usually the camber line of the airfoil). Alternately, the entire distributed circulatory effect of the airfoil can also be lumped at just one point on the airfoil (usually the quarter-chord). With each simplification the accuracy of the velocity field prediction is affected, especially close (within a few chord lengths) to the airfoil. However, for most applications (including rotary-wing analysis) representing the circulation around the airfoil as lumped at the quarter chord location suffices and modelling the wake of the blade (finite-wing) using Prandtl’s lifting-line theory becomes more relevant for accurate analysis.</p>
 <center>
     <img src="../assets/BA8_fig2_12.png" class="big">
@@ -763,6 +763,7 @@
     src="https://www.youtube.com/embed/pOA3VJHCnWs"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>
@@ -869,8 +870,8 @@ F^{\prime}&amp;=U_{\infty}-\frac{\mu}{2 \pi z^2} \\
 \end{split}
 \end{equation*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(V_r\)</span> and <span class="math notranslate nohighlight">\(V_\theta\)</span> represent the radial and the tangential components of the flow velocity around the cylinder. In order to confirm that a doublet in a free stream indeed represents flow around a cyclinder, simply the no-penetration boundary condition should be satisfied, i.e. <span class="math notranslate nohighlight">\(V_r(R)=0\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e6bdd57c-0fd0-4f0e-ab28-a53373b24cbf">
-<span class="eqno">(12)<a class="headerlink" href="#equation-e6bdd57c-0fd0-4f0e-ab28-a53373b24cbf" title="Permalink to this equation">¶</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-d2eeec5f-4ffd-49cc-afd3-8f14368de3a4">
+<span class="eqno">(12)<a class="headerlink" href="#equation-d2eeec5f-4ffd-49cc-afd3-8f14368de3a4" title="Permalink to this equation">¶</a></span>\[\begin{align} 
 V_r(R)&amp;=0 \\
 \Rightarrow R &amp;= \sqrt{\frac{\mu }{2\pi U_\infty}} = \text{const.}
 \end{align}\]</div>
@@ -979,6 +980,7 @@ V_r(R)&amp;=0 \\
     src="https://www.youtube.com/embed/VcggiVSf5F8"
     frameborder="0"
     allowfullscreen
+
 ></iframe>
 </div></div>
 </div>

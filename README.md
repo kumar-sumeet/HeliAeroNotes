@@ -3,8 +3,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Fundamentals of Helicopter Aerodynamics (TUM) 
-
-Course Notes for SoSe 2022
+This repository comprises of a number of Jupyter Notebooks that compile together to form a Jupyter Book (see [here](https://kumar-sumeet.github.io/HeliAeroNotes/Opening.html)). This forms the course notes as well as the presentation slides used within the supplementary course [Fundamental of Helicopter Aerodynamics](https://www.asg.ed.tum.de/ht/teaching/lectures-summer-term/fundamentals-of-helicopter-aerodynamics/) offered at the Institute for Rotorcraft and Vertical Flight during the Summer Semester. This course has been offered at the institute in this format in 2022 and 2023. The next interation of this course would be offered in Summer 2024.
 
 
 <!-- #region -->
